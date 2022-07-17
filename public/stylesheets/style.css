@@ -1,0 +1,321 @@
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(-grey), var(--grey), var(--black1));
+}
+
+:root {
+    --primary: #441c6c;
+    --lighter25: #6a2ca9;
+    --secondary: #1cfcbc;
+    --opposite: #c4f444;
+    --black1: #222;
+    --black2: #ccc1;
+    --grey: #ccc;
+    --white: #fff;
+}
+
+.bg-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.bg-container:before {
+    content: '';
+    position: absolute;
+    width: 3200px;
+    height: 2700px;
+    border-radius: 45%;
+    background: linear-gradient(-45deg, var(--primary), var(--primary));
+    top: -18%;
+    right: 40%;
+    transform: translatey(-50%);
+}
+
+.panel-container {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 15rem;
+    background-color: transparent;
+}
+
+.form-container {
+    min-height: 88vh;
+}
+
+.section {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: var(--white);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 5;
+}
+
+.section:hover {
+    color: var(--secondary);
+}
+
+.parent {
+    overflow: hidden;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div2 {
+    z-index: 2;
+    padding: 1rem 2rem;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.image {
+    width: 100%;
+}
+
+.div3 {
+    z-index: 4;
+    padding: 0% 5rem;
+    grid-area: 1 / 2 / 6 / 6;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+    text-align: start;
+    padding: 2% 3%;
+}
+
+.form-container header {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 0 0 30px 0;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.form-container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-outer form {
+    display: flex;
+    width: 300%;
+}
+
+.form-outer form .page {
+    padding: 0 10%;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form-outer form .page .field {
+    width: 530px;
+    height: 50px;
+    margin: 50px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -50px;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 28px;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    background: transparent;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+form .page .btns button {
+    margin-top: -20px!important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.form-container .c-progress-bar {
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+}
+
+.form-container .c-progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .c-progress-bar .step p {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.c-progress-bar .step .bullet {
+    height: 45px;
+    width: 45px;
+    border: 2px solid var(--white);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.c-progress-bar .step .bullet.active {
+    border-color: var(--secondary);
+    background: var(--secondary);
+}
+
+.c-progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--white);
+}
+
+.c-progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.c-progress-bar .step .bullet:before,
+.c-progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 100%;
+    height: 4px;
+    width: 950%;
+    background: var(--white);
+}
+
+.c-progress-bar .step .bullet.active:after {
+    background: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.c-progress-bar .step:last-child .bullet:before,
+.c-progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.c-progress-bar .step p.active {
+    color: var(--secondary);
+    transition: 0.2s linear;
+}
+
+.c-progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.c-progress-bar .step .check.active {
+    display: block;
+    color: var(--primary);
+}
+
+.div4 {
+    padding-top: 2rem;
+    grid-area: 1 / 2 / 2 / 6;
+}
+
+.div5 {
+    z-index: 2;
+    background-color: var(--secondary);
+    grid-area: 4 / 5 / 6 / 6;
+    border-top-left-radius: 100%;
+}
