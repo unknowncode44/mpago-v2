@@ -16,6 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,600;0,800;0,900;1,300;1,600;1,800;1,900&display=swap" rel="stylesheet">
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
     <!-- Importamos los icons de Ionic -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -24,8 +28,40 @@
 </head>
 
 <body>
+    <div class="bg-wrapper">
+        <div class="bg-top-container">
+        </div>
 
-    <form action="add-runner" method="post">
+        <div class="container py-2 content-container">
+            <div id="top-row" class="row text-center">
+                <div id="logo-container" class="col-md-3 logo-container">
+                    <img src="/images/MMR2022/MMR-Logo-Negativo-PNG.png" alt="">
+                </div>
+                <div id="nav-items" class="col-md-9">
+                    <div class="row py-3 text-center">
+                        <div class="col-5"></div>
+                        <div class="col"><a class="nav-sections" href="#">Inscripcion</a></div>
+                        <div class="col"><a class="nav-sections" href="#">La Carrera</a></div>
+                        <div class="col"><a class="nav-sections" href="#">Informacion</a></div>
+                        <div class="col"><a class="nav-sections" href="#">Reglamento</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <form action="add-runner" method="post">
         <input type="text" name="runnerName">
         <input type="number" name="runnerAge">
         <input type="text" name="runnerEmail">
@@ -41,7 +77,7 @@
             <a href="borrar/<%= item.id %>">Borra</a>
             <% })%>
 
-    </form>
+    </form> -->
 
 
     <!-- <div class="parent bg-container">

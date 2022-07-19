@@ -1,21 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html,
 body {
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+    background: var(--black2);
     overflow: hidden;
-    background: linear-gradient(45deg, var(-grey), var(--grey), var(--black1));
 }
 
 :root {
-    --primary: #441c6c;
-    --lighter25: #6a2ca9;
-    --secondary: #1cfcbc;
-    --opposite: #c4f444;
+    --primary: #461D6C;
+    --lighter25: #582487;
+    --secondary: #00FABA;
+    --opposite: #b9e293;
     --black1: #222;
-    --black2: #ccc1;
+    --black2: #262626;
     --grey: #ccc;
     --white: #fff;
 }
+
+.bg-wrapper {
+    z-index: 0;
+    position: relative;
+    height: 100vh;
+    min-width: 100% !important;
+    overflow: hidden;
+    background: var(--black2);
+}
+
+
+/* .bg-top-container::before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    height: 60vh;
+    width: 60vh;
+    background: var(--primary);
+    border-radius: 50%;
+    transform: scale(3.5);
+    transition: all 2s linear;
+} */
+
+.bg-top-container {
+    z-index: 1;
+    position: relative;
+    height: 60vh;
+    min-width: 100%;
+    border-bottom-left-radius: 120%;
+    border-bottom-right-radius: 120%;
+    background: rgb(88, 36, 135);
+    background: linear-gradient(187deg, rgba(88, 36, 135, 1) 0%, rgba(70, 29, 108, 1) 100%);
+    transform: scaleX(2);
+    transition: all 1s linear;
+}
+
+.content-container {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    min-width: 100% !important;
+    min-height: 100vh;
+    background: transparent;
+}
+
+.logo-container {
+    padding: 4px;
+}
+
+.logo-container img {
+    height: auto;
+    max-width: 100%;
+    transform: translateY(-12%);
+    transition: all 1s linear;
+}
+
+.nav-sections {
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+    .nav-sections {
+        font-size: small;
+    }
+}
+
+@media (max-width: 420px) {
+    .nav-sections {
+        display: none;
+    }
+    .logo-container {
+        min-width: 50% !important;
+        min-height: fit-content;
+        text-align: center !important;
+    }
+}
+
+.nav-sections:hover {
+    color: var(--secondary);
+}
+
+
+/* 
+
+
+
+
+
+
+
+
+
+*/
 
 .bg-container {
     position: relative;

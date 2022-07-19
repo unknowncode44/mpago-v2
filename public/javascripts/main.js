@@ -1,3 +1,21 @@
+// ## DETECTAR EL TAMANO DE SCREEN
+
+
+
+var windowHeight = screen.height
+var windowWidth = screen.width
+
+console.log(windowHeight + '+' + windowWidth);
+
+const topRow = document.getElementById('top-row')
+const navBar = document.getElementById('nav-items')
+if (windowWidth <= 420) {
+    console.log('menor que 420');
+    topRow.removeChild(navBar)
+}
+
+
+
 // ## Crear Categorias ##
 var categories = ['Kids', '5k', '10k', '21k'] // listamos las categorias
 var select = document.getElementById('categoriesSelect') // identificamos el elemento select del html
