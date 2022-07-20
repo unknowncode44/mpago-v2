@@ -5,7 +5,15 @@
 var windowHeight = screen.height
 var windowWidth = screen.width
 
-console.log(windowHeight + '+' + windowWidth);
+function gdc(a,b) {
+    return (b==0) ? a : gdc(b, a%b)
+}
+
+var r = gdc(windowWidth, windowHeight)
+
+var aspectRatio = `Aspect Ratio: ${(windowWidth/windowHeight).toFixed()}:${windowHeight/r}`
+
+console.log(aspectRatio);
 
 
 

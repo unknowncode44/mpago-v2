@@ -211,7 +211,46 @@ body {
     border: 2px solid var(--secondary);
 }
 
-@media (max-aspect-ratio: 16/9) {
+@media (max-width: 1780px){
+    .banner-text-container {
+        transform: translateY(150px);
+        
+    }
+
+    .banner-text p {
+        margin-bottom: 2rem !important;
+    }
+    .banner-row {
+        transform: translateY(60px);
+        padding-inline-start: 5rem;
+        padding-inline-end: 5rem;
+    }
+
+    .card-number {
+        font-size: 60px;
+    }
+
+    .banner-card-text {
+        font-size: 28px;
+    }
+
+    .banner-text-container .banner-text p {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 4rem !important;
+    }
+
+    .banner-btn button {
+        height: calc(120% + 15px);
+        font-size: 24px;
+        transform: translateY(-40px);
+        
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
     html {
         overflow-x: hidden;
     }
@@ -224,6 +263,10 @@ body {
         height: 100%;
         border-bottom-left-radius: 5%;
         border-bottom-right-radius: 5%;
+    }
+
+    .banner-row {
+        padding: 0;
     }
     .navigation ul {
         display: none;
@@ -261,13 +304,17 @@ body {
         background-color: rgba(255, 255, 255, 0.3) !important;
         margin-bottom: 2rem;
     }
+
+    .banner-card-inner {
+        max-height: 15rem !important;
+    }
     .card-number {
-        font-size: 12rem;
-        color: var(--secondary);
+        font-size: 10rem;
+
     }
     .banner-card-text {
-        font-size: 5rem;
-        color: var(--secondary);
+        font-size: 4rem;
+
     }
     .navigation {
         height: 220px !important;
@@ -275,7 +322,7 @@ body {
         opacity: 0.9;
     }
     .banner-cards {
-        transform: translateY(60vh);
+        transform: translateY(55vh);
     }
     .banner-btn button {
         height: calc(200% + 15px);
@@ -299,6 +346,12 @@ body {
         font-size: 30px;
         font-weight: 500;
         margin-bottom: 4rem !important;
+    }
+
+    .card-custom:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        height: 33vh !important;
+        color: var(--secondary) !important;
     }
 }
 
