@@ -63,8 +63,6 @@ body {
     list-style: none;
 }
 
-
-
 .nav-sections a {
     margin: 0 15px;
     position: relative;
@@ -81,23 +79,228 @@ body {
 
 .nav-sections a:hover {
     color: var(--secondary);
-    
 }
 
 .banner {
+    z-index: 995;
     position: relative;
     width: 100%;
     height: 70vh;
-    background: rgb(88, 36, 135);
-    background: linear-gradient(187deg, rgba(88, 36, 135, 1) 100%, rgba(70, 29, 108, 1) 0%);
-    border-bottom-right-radius: 20%;
-    border-bottom-left-radius: 20%;
-
+    background-image: linear-gradient(to bottom, #411d5a, #421d5d, #431d60, #441d64, #451d67, #4b236d, #512972, #572f78, #633d81, #704b8a, #7c5993, #88679c);
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
 }
 
+.banner-text-container {
+    position: absolute;
+    top: 0;
+    z-index: 4 !important;
+    position: relative !important;
+    justify-content: center !important;
+    align-items: center!important;
+    text-align: center!important;
+    min-height: 30vh !important;
+    width: 100%;
+    transition: 0.5s ease;
+}
 
+.banner-text-container .banner-text h1 {
+    min-width: 100%;
+    color: var(--white);
+    font-size: 46px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bolder;
+}
 
+.banner-text-container .banner-text p {
+    min-width: 80%;
+    color: var(--white);
+    font-size: 24px;
+}
 
+.banner .background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    opacity: 0.05;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.banner-cards {
+    z-index: 996;
+    width: 100%;
+    position: absolute;
+    bottom: 15vh;
+    left: 0;
+    height: auto;
+}
+
+.banner-row {
+    min-height: 35vh;
+}
+
+.card-custom {
+    color: var(--white) !important;
+    height: 30vh !important;
+    min-width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 15px !important;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    overflow: hidden;
+    position: relative;
+    padding: 2% 3%;
+    transition: 0.6s;
+}
+
+.card-number {
+    font-size: 6rem;
+    margin: 0;
+    margin-top: 1rem;
+    height: 100% !important;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-card-text {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.card-custom:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    height: 35vh !important;
+    color: var(--secondary) !important;
+}
+
+.banner-btn button {
+    padding: 10px 25px;
+    height: calc(120% + 15px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.banner-btn button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+@media (max-aspect-ratio: 16/9) {
+    html {
+        overflow-x: hidden;
+    }
+    .banner {
+        border-bottom-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+    }
+    .banner .background-video {
+        width: auto;
+        height: 100%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .nv-logo img {
+        transform: scale(1.8);
+        height: 180px;
+        max-width: auto;
+        transition: all 1s linear;
+        margin-bottom: 10px;
+    }
+    .menu-btn {
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        margin-inline-end: 5%;
+        border-radius: 5%;
+        text-align: center;
+        display: flex;
+        padding: 0;
+        width: 180px;
+        height: 80%;
+        background-color: transparent;
+        color: var(--white);
+        border: 1px solid var(--grey);
+    }
+    .menu-btn .menu-icon {
+        color: var(--white);
+        font-size: 10rem;
+        width: 100%;
+        text-decoration: none;
+    }
+    .menu-btn:hover .menu-icon {
+        color: var(--secondary);
+    }
+    .card-custom {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        margin-bottom: 2rem;
+    }
+    .card-number {
+        font-size: 12rem;
+        color: var(--secondary);
+    }
+    .banner-card-text {
+        font-size: 5rem;
+        color: var(--secondary);
+    }
+    .navigation {
+        height: 220px !important;
+        background: var(--primary);
+        opacity: 0.9;
+    }
+    .banner-cards {
+        transform: translateY(60vh);
+    }
+    .banner-btn button {
+        height: calc(200% + 15px);
+        font-size: 32px;
+        font-weight: 300;
+        background: transparent;
+        color: var(--secondary);
+        border: 2px solid var(--secondary);
+    }
+    .banner-text-container .banner-text h1 {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 56px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .banner-text-container .banner-text p {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 4rem !important;
+    }
+}
 
 
 /* 
@@ -136,6 +339,8 @@ body {
     transform: scale(3.5);
     transition: all 2s linear;
 } */
+
+
 /* 
 .bg-top-container {
     z-index: 1;

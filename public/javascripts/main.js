@@ -7,12 +7,6 @@ var windowWidth = screen.width
 
 console.log(windowHeight + '+' + windowWidth);
 
-const topRow = document.getElementById('top-row')
-const navBar = document.getElementById('nav-items')
-if (windowWidth <= 420) {
-    console.log('menor que 420');
-    topRow.removeChild(navBar)
-}
 
 
 
