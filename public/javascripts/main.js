@@ -5,15 +5,19 @@
 var windowHeight = screen.height
 var windowWidth = screen.width
 
-function gdc(a,b) {
-    return (b==0) ? a : gdc(b, a%b)
+function gdc(a, b) {
+    return (b == 0) ? a : gdc(b, a % b)
 }
-
 var r = gdc(windowWidth, windowHeight)
-
 var aspectRatio = `Aspect Ratio: ${(windowWidth/windowHeight).toFixed()}:${windowHeight/r}`
-
 console.log(aspectRatio);
+
+// ## EFECTO NAVBAR ON SCROLL ##
+
+window.addEventListener("scroll", function() {
+    var header = this.document.querySelector('header');
+    header.classList.toggle("sticky", this.window.scrollY > 0);
+})
 
 
 
