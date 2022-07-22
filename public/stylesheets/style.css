@@ -285,12 +285,10 @@ body {
         font-size: 24px;
         transform: translateY(-40px);
     }
-
     .race-wrapper {
         margin: 0% !important;
         padding-top: 0px;
     }
-
     .race-shape {
         z-index: 1001;
         width: 400px !important;
@@ -300,23 +298,19 @@ body {
         shape-outside: circle();
         margin: 110px 0px 40px 30px;
     }
-
     .race-shape img {
         margin-top: 20%;
         height: 250px !important;
         width: auto;
     }
-    
     .race-wrapper p {
         font-size: 16px !important;
         padding-top: 2px !important;
         padding-bottom: 2px !important;
     }
-    
     .race-wrapper h1 {
         font-size: 35px !important;
     }
-    
     .race-wrapper h3 {
         color: var(--grey);
         z-index: 1000;
@@ -328,29 +322,23 @@ body {
         font-style: italic;
         text-transform: uppercase;
     }
-    
     .race-wrapper .race-icon-location {
         margin-inline-end: 1rem;
         padding-top: 5px;
     }
-
     .categories-wrapper {
         padding-top: 10% !important;
-       padding-inline-end: 20rem !important;
-       padding-inline-start: 20rem !important;
+        padding-inline-end: 20rem !important;
+        padding-inline-start: 20rem !important;
     }
- 
     .cat-card {
         padding: 0 !important;
         height: 35vh !important;
     }
-
     .cat-col-card {
         padding: 0% !important;
     }
-
-
- }
+}
 
 
 /* #### BREAKPOINTS < MOBILE SCREEN ##### */
@@ -557,6 +545,7 @@ body section .categories {
 }
 
 .cat-card {
+    z-index: 991;
     height: 40vh;
     width: 100%;
     color: var(--white) !important;
@@ -574,7 +563,58 @@ body section .categories {
 
 .cat-card:hover {
     transform: scale(1.02);
-    background: var(--primary) !important;
+    opacity: 0.9;
+}
+
+.cat-card:hover .card-inner-sape {
+    min-width: 100%;
+    min-height: 150%;
+    border-radius: 0%;
+    transition: 0.3s linear;
+    background: var(--secondary);
+}
+
+.categories-wrapper .cat-shape1 {
+    position: absolute;
+    z-index: 990;
+    min-width: 40%;
+    height: 100vh;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 70%;
+    border-top-right-radius: 40%;
+    background-image: linear-gradient(to bottom, #411d5a, #421d5d, #431d60, #441d64, #451d67, #4b236d, #512972);
+    transform: translateX(-10%);
+}
+
+.categories-wrapper .cat-shape2 {
+    position: absolute;
+    z-index: 990;
+    min-width: 26%;
+    height: 40vh;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    border-top-right-radius: 70%;
+    background: var(--lighter25);
+    transform: translateX(250%) translateY(25vh);
+}
+
+.cat-card img {
+    max-width: 90%;
+    opacity: 0.03;
+}
+
+.cat-card .card-inner-sape {
+    z-index: 1024;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    min-height: 50%;
+    border-bottom-left-radius: 100%;
+    background: var(--secondary);
+    opacity: 0.9;
 }
 
 
