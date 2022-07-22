@@ -257,13 +257,13 @@ body {
 
 @media (max-width: 1780px) {
     .banner-text-container {
-        transform: translateY(150px);
+        transform: translateY(-20px);
     }
     .banner-text p {
         margin-bottom: 2rem !important;
     }
     .banner-row {
-        transform: translateY(60px);
+        transform: translateY(-100px);
         padding-inline-start: 5rem;
         padding-inline-end: 5rem;
     }
@@ -281,11 +281,76 @@ body {
         margin-bottom: 4rem !important;
     }
     .banner-btn button {
-        height: calc(120% + 15px);
+        height: calc(110% + 15px);
         font-size: 24px;
         transform: translateY(-40px);
     }
-}
+
+    .race-wrapper {
+        margin: 0% !important;
+        padding-top: 0px;
+    }
+
+    .race-shape {
+        z-index: 1001;
+        width: 400px !important;
+        max-height: 80vh !important;
+        float: right;
+        top: 0% !important;
+        shape-outside: circle();
+        margin: 110px 0px 40px 30px;
+    }
+
+    .race-shape img {
+        margin-top: 20%;
+        height: 250px !important;
+        width: auto;
+    }
+    
+    .race-wrapper p {
+        font-size: 16px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    
+    .race-wrapper h1 {
+        font-size: 35px !important;
+    }
+    
+    .race-wrapper h3 {
+        color: var(--grey);
+        z-index: 1000;
+        margin: 0;
+        padding: 5px;
+        font-size: 22px !important;
+        min-width: 100%;
+        font-weight: 500;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    
+    .race-wrapper .race-icon-location {
+        margin-inline-end: 1rem;
+        padding-top: 5px;
+    }
+
+    .categories-wrapper {
+        padding-top: 10% !important;
+       padding-inline-end: 20rem !important;
+       padding-inline-start: 20rem !important;
+    }
+ 
+    .cat-card {
+        padding: 0 !important;
+        height: 35vh !important;
+    }
+
+    .cat-col-card {
+        padding: 0% !important;
+    }
+
+
+ }
 
 
 /* #### BREAKPOINTS < MOBILE SCREEN ##### */
