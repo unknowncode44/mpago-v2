@@ -259,6 +259,10 @@ body {
     .banner-text-container {
         transform: translateY(-20px);
     }
+
+    .nav-sections a {
+        font-size: small;
+    }
     .banner-text p {
         margin-bottom: 2rem !important;
     }
@@ -327,14 +331,24 @@ body {
         padding-top: 5px;
     }
     .categories-wrapper {
-        padding-top: 10% !important;
-        padding-inline-end: 20rem !important;
-        padding-inline-start: 20rem !important;
+        margin-top: 0% !important;
+        padding-top: 9% !important;
+        /* padding-inline-end: 20rem !important; */
+        /* padding-inline-start: 20rem !important; */
     }
+
     .cat-card {
         padding: 0 !important;
         height: 35vh !important;
     }
+
+
+    .cat-card-row {
+        padding-inline-start: 10rem;
+        padding-inline-end: 10rem;
+    }
+
+    
     .cat-col-card {
         padding: 0% !important;
     }
