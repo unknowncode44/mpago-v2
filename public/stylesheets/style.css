@@ -259,6 +259,7 @@ body {
     .banner-text-container {
         transform: translateY(-20px);
     }
+
     .nav-sections a {
         font-size: small;
     }
@@ -274,12 +275,12 @@ body {
         font-size: 60px;
     }
     .banner-card-text {
-        font-size: 28px;
+        font-size: 24px;
     }
     .banner-text-container .banner-text p {
         min-width: 100%;
         color: var(--white);
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 300;
         margin-bottom: 4rem !important;
     }
@@ -289,7 +290,20 @@ body {
         transform: translateY(-40px);
     
     
-      }  
+    }
+    
+    /* STICKY NAVBAR */
+
+    .sticky {
+        padding: 0px 30px;
+    }
+    
+    .sticky .nv-logo img {
+        transform: scale(1.2);
+        height: 80px;
+        max-width: auto;
+        transition: 0.4s;
+    }
       
       /* ##### RACE #### */
 
