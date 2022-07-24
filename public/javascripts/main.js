@@ -5,6 +5,8 @@
 var windowHeight = screen.height
 var windowWidth = screen.width
 
+console.log(`W: ${windowWidth} : H: ${windowHeight}`);
+
 function gdc(a, b) {
     return (b == 0) ? a : gdc(b, a % b)
 }
