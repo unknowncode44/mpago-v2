@@ -287,23 +287,29 @@ body {
         height: calc(110% + 15px);
         font-size: 24px;
         transform: translateY(-40px);
-    }
+    
+    
+      }  
+      
+      /* ##### RACE #### */
+
     .race-wrapper {
         margin: 0% !important;
-        padding-top: 0px;
+        padding-top: 0px !important;
     }
     .race-shape {
         width: 400px !important;
         max-height: 85vh !important;
         top: -10% !important;
+        margin-left: 2% !important;
     }
     .race-shape img {
-        margin-top: 30% !important;
+        margin-top: 20% !important;
         height: 250px !important;
         width: auto;
     }
     .race-wrapper p {
-        font-size: 20px !important;
+        font-size: 16px !important;
         padding-top: 2px !important;
         padding-bottom: 2px !important;
     }
@@ -343,10 +349,10 @@ body {
         padding: 0% !important;
     }
     .cat-card .card-inner-content h1 {
-        font-size: 6em !important;
+        font-size: 4em !important;
     }
     .cat-card .card-inner-content ul {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
     }
     .cat-card .card-btn,
     .cat-card .card-btn2 {
@@ -362,10 +368,11 @@ body {
     }
     .cat-card .card-btn button,
     .cat-card .card-btn2 button {
-        font-weight: 500 !important;
+        font-weight: 600 !important;
         padding: 2% !important;
         max-width: 180px !important;
-        font-size: 1rem !important;
+        font-size: 0.8em !important;
+        transition: 0.2s;
     }
     .cat-card .card-btn button:hover,
     .cat-card .card-btn2 button:hover {
