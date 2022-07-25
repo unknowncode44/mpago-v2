@@ -241,269 +241,6 @@ body {
 }
 
 
-/*  */
-
-
-/*  */
-
-
-/*  */
-
-
-/*  */
-
-
-/* #### BREAKPOINTS < 1780 PIXELS ##### */
-
-@media (max-width: 1780px) {
-    /* NAV Y BANNER */
-    .banner-text-container {
-        transform: translateY(-20px);
-    }
-    .nv-logo {
-        transform: scale(0.8) !important;
-    }
-    .nav-sections a {
-        font-size: small;
-    }
-    .banner-text p {
-        margin-bottom: 2rem !important;
-    }
-    .banner-text h1 {
-        margin-bottom: 0.5rem !important;
-        font-size: 36px !important;
-    }
-    .banner-row {
-        transform: translateY(-100px);
-        padding-inline-start: 5rem;
-        padding-inline-end: 5rem;
-    }
-    .card-number {
-        font-size: 60px;
-    }
-    .banner-card-text {
-        font-size: 24px;
-    }
-    .banner-text-container .banner-text p {
-        min-width: 100%;
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 300;
-        margin-bottom: 4rem !important;
-    }
-    .banner-btn button {
-        height: calc(110% + 15px);
-        font-size: 24px;
-        transform: translateY(-40px);
-    }
-    /* STICKY NAVBAR */
-    .sticky {
-        padding: 0px 30px;
-    }
-    .sticky .nv-logo img {
-        transform: scale(1.2);
-        height: 80px;
-        max-width: auto;
-        transition: 0.4s;
-    }
-    /* ##### RACE #### */
-    .race-wrapper {
-        margin: 0% !important;
-        padding-top: 0px !important;
-        align-items: flex-start !important;
-    }
-    .race-shape {
-        width: 400px !important;
-        max-height: 85vh !important;
-        top: -10% !important;
-        margin-left: 2% !important;
-    }
-    .race-shape img {
-        margin-top: 20% !important;
-        height: 250px !important;
-        width: auto;
-    }
-    .race-wrapper p {
-        font-size: 16px !important;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
-    }
-    .race-wrapper h1 {
-        font-size: 35px !important;
-    }
-    .race-wrapper h3 {
-        color: var(--grey);
-        z-index: 1000;
-        margin: 0;
-        padding: 5px;
-        font-size: 22px !important;
-        min-width: 100%;
-        font-weight: 500;
-        font-style: italic;
-        text-transform: uppercase;
-    }
-    .race-wrapper .race-icon-location {
-        margin-inline-end: 1rem;
-        padding-top: 5px;
-    }
-    .categories-wrapper {
-        margin-top: 0% !important;
-        padding-top: 9% !important;
-        /* padding-inline-end: 20rem !important; */
-        /* padding-inline-start: 20rem !important; */
-    }
-    .cat-card {
-        padding: 0 !important;
-        height: 35vh !important;
-    }
-    .cat-card-row {
-        padding-inline-start: 10rem;
-        padding-inline-end: 10rem;
-    }
-    .cat-col-card {
-        padding: 0% !important;
-    }
-    .cat-card .card-inner-content h1 {
-        font-size: 4em !important;
-    }
-    .cat-card .card-inner-content ul {
-        font-size: 1em !important;
-    }
-    .cat-card .card-btn,
-    .cat-card .card-btn2 {
-        z-index: 1025;
-        position: absolute;
-        margin-top: 2rem;
-        right: -30%;
-        bottom: 30%;
-        transition: 0.6s;
-    }
-    .cat-card .card-btn2 {
-        bottom: 10%;
-    }
-    .cat-card .card-btn button,
-    .cat-card .card-btn2 button {
-        font-weight: 600 !important;
-        padding: 2% !important;
-        max-width: 180px !important;
-        font-size: 0.8em !important;
-        transition: 0.2s;
-    }
-    .cat-card .card-btn button:hover,
-    .cat-card .card-btn2 button:hover {
-        color: var(--secondary);
-        background: var(--primary);
-    }
-    .cat-card .card-btn button .card-time-btn,
-    .cat-card .card-btn2 button .card-time-btn {
-        padding-right: 0.3rem !important;
-    }
-}
-
-
-/* #### BREAKPOINTS < MOBILE SCREEN ##### */
-
-@media only screen and (max-device-width: 480px) {
-    html {
-        overflow-x: hidden;
-    }
-    .banner {
-        border-bottom-right-radius: 5%;
-        border-bottom-left-radius: 5%;
-    }
-    .banner .background-video {
-        width: auto;
-        height: 100%;
-        border-bottom-left-radius: 5%;
-        border-bottom-right-radius: 5%;
-    }
-    .banner-row {
-        padding: 0;
-    }
-    .navigation ul {
-        display: none;
-    }
-    .nv-logo img {
-        transform: scale(1.8);
-        height: 180px;
-        max-width: auto;
-        transition: all 0.4s ease-in;
-        margin-bottom: 10px;
-    }
-    .menu-btn {
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-        margin-inline-end: 5%;
-        border-radius: 15%;
-        text-align: center;
-        display: flex;
-        padding: 0;
-        width: 180px;
-        height: 80%;
-        background-color: transparent;
-        color: var(--white);
-        border: 1px solid var(--grey);
-    }
-    .menu-btn .menu-icon {
-        color: var(--white);
-        font-size: 10rem;
-        width: 100%;
-        text-decoration: none;
-    }
-    .menu-btn:hover .menu-icon {
-        color: var(--secondary);
-    }
-    .card-custom {
-        background-color: rgba(255, 255, 255, 0.3) !important;
-        margin-bottom: 2rem;
-    }
-    .banner-card-inner {
-        max-height: 15rem !important;
-    }
-    .card-number {
-        font-size: 10rem;
-    }
-    .banner-card-text {
-        font-size: 4rem;
-    }
-    .navigation {
-        height: 220px !important;
-        background: var(--primary);
-        opacity: 0.9;
-    }
-    .banner-cards {
-        transform: translateY(5vh);
-    }
-    .banner-btn button {
-        height: calc(200% + 15px);
-        font-size: 32px;
-        font-weight: 300;
-        background: transparent;
-        color: var(--secondary);
-        border: 2px solid var(--secondary);
-    }
-    .banner-text-container .banner-text h1 {
-        min-width: 100%;
-        color: var(--white);
-        font-size: 56px;
-        text-transform: uppercase;
-        font-style: italic;
-        font-weight: bolder;
-    }
-    .banner-text-container .banner-text p {
-        min-width: 100%;
-        color: var(--white);
-        font-size: 30px;
-        font-weight: 500;
-        margin-bottom: 4rem !important;
-    }
-    .card-custom:hover {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        height: 33vh !important;
-        color: var(--secondary) !important;
-    }
-}
-
-
 /* ## LA CARRERA */
 
 body section .race {
@@ -602,6 +339,10 @@ body section .categories {
     min-height: 100vh;
     background: transparent;
     transform: translateY(110vh);
+}
+
+.cat-title {
+    display: none;
 }
 
 .cat-card {
@@ -778,6 +519,759 @@ body section .categories {
 }
 
 
+/* formulario */
+
+body section .register {
+    transform: translatey(250vh);
+    min-width: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.register-wrapper {
+    transform: translatey(5vh);
+    z-index: 1050 !important;
+    padding-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: absolute;
+}
+
+.contenedor {
+    transform: translateY(240vh);
+    position: relative;
+    width: 100%;
+    background-color: var(--primary);
+    min-height: 110vh;
+    overflow: hidden;
+    z-index: 980 !important;
+}
+
+.contenedor:before {
+    content: "";
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #00FABA 0%, #04befe 100%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 1030 !important;
+}
+
+.form-container {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+    text-align: start;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 2% 3%;
+    max-height: 80vh;
+}
+
+.form-container header {
+    font-size: 36px;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.form-container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-outer form {
+    display: flex;
+    width: 300%;
+}
+
+.form-outer form .page {
+    padding: 0 10%;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form-outer form .page .field {
+    width: 530px;
+    height: 50px;
+    margin: 50px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -50px;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 28px;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    background: transparent;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease-in;
+}
+
+form .page .field button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+form .page .btns button {
+    margin-top: -20px!important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.form-container .c-progress-bar {
+    display: flex;
+    margin-left: 10%;
+    user-select: none;
+    max-width: 75%;
+}
+
+.form-container .c-progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .c-progress-bar .step p {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.c-progress-bar .step .bullet {
+    height: 45px;
+    width: 45px;
+    border: 2px solid var(--white);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.c-progress-bar .step .bullet.active {
+    border-color: var(--secondary);
+    background: var(--secondary);
+}
+
+.c-progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--white);
+}
+
+.c-progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.c-progress-bar .step .bullet:before,
+.c-progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 100%;
+    height: 4px;
+    width: 810%;
+    background: var(--white);
+}
+
+.c-progress-bar .step .bullet.active:after {
+    background: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.c-progress-bar .step:last-child .bullet:before,
+.c-progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.c-progress-bar .step p.active {
+    color: var(--secondary);
+    transition: 0.2s linear;
+}
+
+.c-progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.c-progress-bar .step .check.active {
+    display: block;
+    color: var(--primary);
+}
+
+
+/* ANIMATION*/
+
+.contenedor.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.contenedor.sign-up-mode {
+    transform: translateX(-800px);
+}
+
+.contenedor.sign-up-mode .signin-signup {
+    left: 25%;
+}
+
+.contenedor.sign-up-mode {
+    transform: translateX(0%);
+}
+
+
+/* Media queries para definir estilos que se van a aplicar dependiendo de el tamaño de la ventana del navegador */
+
+@media (max-width: 870px) {
+    .contenedor {
+        min-height: 800px;
+        height: 100vh;
+    }
+    .contenedor:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+    .contenedor.sign-up-mode:before {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+    @media (max-width: 570px) {
+        .contenedor {
+            padding: 1.5rem;
+        }
+        .contenedor:before {
+            bottom: 72%;
+            left: 50%;
+        }
+        .contenedor.sign-up-mode:before {
+            bottom: 28%;
+            left: 50%;
+        }
+    }
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/* #### BREAKPOINTS < 1780 PIXELS ##### */
+
+@media (max-width: 1780px) {
+    /* NAV Y BANNER */
+    .banner-text-container {
+        transform: translateY(-20px);
+    }
+    .nv-logo {
+        transform: scale(0.8) !important;
+    }
+    .nav-sections a {
+        font-size: small;
+    }
+    .banner-text p {
+        margin-bottom: 2rem !important;
+    }
+    .banner-text h1 {
+        margin-bottom: 0.5rem !important;
+        font-size: 36px !important;
+    }
+    .banner-row {
+        transform: translateY(-100px);
+        padding-inline-start: 5rem;
+        padding-inline-end: 5rem;
+    }
+    .card-number {
+        font-size: 60px;
+    }
+    .banner-card-text {
+        font-size: 24px;
+    }
+    .banner-text-container .banner-text p {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 4rem !important;
+    }
+    .banner-btn button {
+        height: calc(110% + 15px);
+        font-size: 24px;
+        transform: translateY(-40px);
+    }
+    /* STICKY NAVBAR */
+    .sticky {
+        padding: 0px 30px;
+    }
+    .sticky .nv-logo img {
+        transform: scale(1.2);
+        height: 80px;
+        max-width: auto;
+        transition: 0.4s;
+    }
+    /* ##### RACE #### */
+    .race-wrapper {
+        margin: 0% !important;
+        padding-top: 0px !important;
+        align-items: flex-start !important;
+    }
+    .race-shape {
+        width: 400px !important;
+        max-height: 85vh !important;
+        top: -10% !important;
+        margin-left: 2% !important;
+    }
+    .race-shape img {
+        margin-top: 20% !important;
+        height: 250px !important;
+        width: auto;
+    }
+    .race-wrapper p {
+        font-size: 16px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    .race-wrapper h1 {
+        font-size: 35px !important;
+    }
+    .race-wrapper h3 {
+        color: var(--grey);
+        z-index: 1000;
+        margin: 0;
+        padding: 5px;
+        font-size: 22px !important;
+        min-width: 100%;
+        font-weight: 500;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    .race-wrapper .race-icon-location {
+        margin-inline-end: 1rem;
+        padding-top: 5px;
+    }
+    .categories-wrapper {
+        margin-top: 0% !important;
+        padding-top: 9% !important;
+    }
+    .cat-card {
+        padding: 0 !important;
+        height: 35vh !important;
+    }
+    .cat-card-row {
+        padding-inline-start: 10rem;
+        padding-inline-end: 10rem;
+    }
+    .cat-col-card {
+        padding: 0% !important;
+    }
+    .cat-card .card-inner-content h1 {
+        font-size: 4em !important;
+    }
+    .cat-card .card-inner-content ul {
+        font-size: 1em !important;
+    }
+    .cat-card .card-btn,
+    .cat-card .card-btn2 {
+        z-index: 1025;
+        position: absolute;
+        margin-top: 2rem;
+        right: -30%;
+        bottom: 30%;
+        transition: 0.6s;
+    }
+    .cat-card .card-btn2 {
+        bottom: 10%;
+    }
+    .cat-card .card-btn button,
+    .cat-card .card-btn2 button {
+        font-weight: 600 !important;
+        padding: 2% !important;
+        max-width: 180px !important;
+        font-size: 0.8em !important;
+        transition: 0.2s;
+    }
+    .cat-card .card-btn button:hover,
+    .cat-card .card-btn2 button:hover {
+        color: var(--secondary);
+        background: var(--primary);
+    }
+    .cat-card .card-btn button .card-time-btn,
+    .cat-card .card-btn2 button .card-time-btn {
+        padding-right: 0.3rem !important;
+    }
+}
+
+
+/* #### BREAKPOINTS < MOBILE SCREEN ##### */
+
+@media only screen and (max-device-width: 480px) {
+    html {
+        overflow-x: hidden;
+    }
+    .banner {
+        border-bottom-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+    }
+    .banner .background-video {
+        width: auto;
+        height: 100%;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
+    }
+    .banner-row {
+        padding: 0;
+        transform: translateY(2%);
+    }
+    .navigation ul {
+        display: none;
+    }
+    .nv-logo img {
+        transform: scale(1.8);
+        height: 180px;
+        max-width: auto;
+        transition: all 0.4s ease-in;
+        margin-bottom: 10px;
+    }
+    .menu-btn {
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        margin-inline-end: 5%;
+        border-radius: 15%;
+        text-align: center;
+        display: flex;
+        padding: 0;
+        width: 180px;
+        height: 80%;
+        background-color: transparent;
+        color: var(--white);
+        border: 1px solid var(--grey);
+    }
+    .menu-btn .menu-icon {
+        color: var(--white);
+        font-size: 10rem;
+        width: 100%;
+        text-decoration: none;
+    }
+    .menu-btn:hover .menu-icon {
+        color: var(--secondary);
+    }
+    .banner-card-text {
+        font-size: 48px !important;
+    }
+    .card-custom {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        margin-bottom: 2rem;
+    }
+    .banner-card-inner {
+        max-height: 15rem !important;
+    }
+    .card-number {
+        font-size: 10rem;
+    }
+    .navigation {
+        height: 220px !important;
+        background: var(--primary);
+        opacity: 0.9;
+    }
+    /* STICKY NAVBAR */
+    .sticky .nv-logo img {
+        transform: scale(1.8) !important;
+        height: 120px;
+        max-width: auto;
+        transition: 0.4s;
+    }
+    .banner-cards {
+        transform: translateY(5vh);
+    }
+    .banner-text-container {
+        margin: 0% !important;
+        min-width: 100%;
+        padding: 2% 5%;
+    }
+    .banner-btn button {
+        height: calc(200% + 15px);
+        transform: translateY(2rem);
+        font-size: 40px;
+        font-weight: 300;
+        background: transparent;
+        color: var(--secondary);
+        border: 2px solid var(--secondary);
+    }
+    .banner-text-container .banner-text h1 {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 56px !important;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .banner-text-container .banner-text p {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 2rem !important;
+    }
+    .card-custom:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        height: 33vh !important;
+        color: var(--secondary) !important;
+    }
+    /* ## LA CARRERA */
+    .race-wrapper {
+        position: relative;
+        z-index: 900 !important;
+        transform: translateY(40%);
+        padding-left: 0% !important;
+        padding-bottom: 5rem;
+        text-align: center !important;
+        background-image: linear-gradient(to top, #411d5a, #421d5d, #431d60, #441d64, #451d67, #4b236d, #512972, #572f78, #633d81, #704b8a, #7c5993, #88679c) !important;
+        border-radius: 5%;
+        height: 120% !important;
+    }
+    .race-wrapper h1 {
+        margin-top: 35% !important;
+        font-size: 60px !important;
+    }
+    .race-wrapper h3 {
+        text-align: start !important;
+        font-size: 50px !important;
+        margin-inline-start: 4rem !important;
+    }
+    .race-wrapper p {
+        font-size: 38px !important;
+        padding: 2% 10% !important;
+        text-align: justify !important;
+        margin-bottom: 5rem !important;
+    }
+    .race-shape {
+        display: none !important;
+    }
+    .race-shape img {
+        display: none;
+    }
+    /* ## categorias */
+    body section .categories {
+        z-index: 980;
+    }
+    .categories-wrapper {
+        transform: translateY(45vh);
+        max-width: 100vh !important;
+        align-items: start !important;
+        justify-content: start !important;
+    }
+    .cat-card-container {
+        min-width: 100%;
+        margin: 0% !important;
+        padding: 5% !important;
+    }
+    .cat-title {
+        display: block;
+        text-transform: uppercase;
+        font-size: 80px;
+        font-weight: 600;
+        font-style: italic;
+        margin-bottom: 5%;
+        margin-top: 10%;
+    }
+    .cat-card-row {
+        padding: 0% !important;
+        min-width: 100% !important;
+    }
+    .cat-card {
+        height: 50vh !important;
+    }
+    .cat-card:hover {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+    .cat-card:hover .card-inner-sape {
+        transform: scale(5);
+        transition: 0.6s linear;
+        background: var(--secondary);
+    }
+    .cat-card:hover .card-inner-content h1 {
+        color: var(--primary);
+    }
+    .cat-card:hover .card-inner-content ul li p {
+        color: var(--primary);
+        transition: 0.6s;
+    }
+    .cat-card:hover .card-btn2 button {
+        background: transparent !important;
+        opacity: 1.0 !important;
+    }
+    .categories-wrapper .cat-shape1 {
+        display: none;
+    }
+    .categories-wrapper .cat-shape2 {
+        display: none;
+    }
+    .cat-card {
+        margin-bottom: 5% !important;
+    }
+    .cat-card img {
+        margin-top: 60%;
+        opacity: 0.05;
+    }
+    .cat-card .card-inner-content {
+        min-width: 100% !important;
+    }
+    .cat-card .card-inner-sape {
+        width: 50%;
+    }
+    .cat-card .card-inner-content h1 {
+        font-size: 18em !important;
+    }
+    .cat-card .card-inner-content ul {
+        position: absolute;
+        top: 35%;
+        z-index: 1025;
+        text-align: start;
+        min-width: 100%;
+        max-height: 20% !important;
+        font-weight: 500;
+        font-size: 4em !important;
+        transition: 0.6s;
+        color: var(--white);
+        line-height: 5%;
+    }
+    .cat-card .card-inner-content li {
+        margin-bottom: 7% !important;
+    }
+    .cat-card .card-btn,
+    .cat-card .card-btn2 {
+        z-index: 1040 !important;
+        position: absolute;
+        margin-top: 2rem;
+        right: -25%;
+        bottom: 10%;
+        transition: 0.6s;
+    }
+    .cat-card .card-btn2 {
+        left: -25%;
+    }
+    .cat-card .card-btn button,
+    .cat-card .card-btn2 button {
+        font-weight: 600 !important;
+        min-width: 48% !important;
+        font-size: 2.5rem !important;
+        color: var(--primary) !important;
+        border: 2px solid var(--primary);
+    }
+    .cat-card .card-btn2 button {
+        background: var(--secondary) !important;
+        border: 2px solid var(--primary);
+        opacity: 0.7 !important;
+    }
+    .cat-card .card-btn button:hover,
+    .cat-card .card-btn2 button:hover {
+        color: var(--secondary);
+    }
+    .cat-card .card-btn button .card-time-btn,
+    .cat-card .card-btn2 button .card-time-btn {
+        padding-right: 0.5rem;
+        transform: translateY(10%);
+    }
+}
+
+
 /* 
 
 
@@ -944,221 +1438,7 @@ body section .categories {
     grid-area: 1 / 2 / 6 / 6;
 }
 
-.form-container {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 2rem;
-    overflow: hidden;
-    position: relative;
-    text-align: start;
-    padding: 2% 3%;
-}
 
-.form-container header {
-    font-family: 'Raleway', sans-serif;
-    font-size: 36px;
-    font-weight: bolder;
-    font-style: italic;
-    margin: 0 0 30px 0;
-    text-transform: capitalize;
-    color: var(--white);
-}
-
-.form-container .form-outer {
-    width: 100%;
-    overflow: hidden;
-}
-
-.form-container .form-outer form {
-    display: flex;
-    width: 300%;
-}
-
-.form-outer form .page {
-    padding: 0 10%;
-    width: 100%;
-    transition: margin-left 0.3s ease-in-in-out;
-}
-
-.form-outer form .page .title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.form-outer form .page .field {
-    width: 530px;
-    height: 50px;
-    margin: 50px 0;
-    display: flex;
-    position: relative;
-}
-
-form .page .field .label {
-    position: absolute;
-    top: -50px;
-    font-weight: 600;
-    color: var(--white);
-    font-size: 28px;
-}
-
-form .page .field input {
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--white);
-    background: transparent;
-}
-
-form .page .field select {
-    width: 100%;
-    padding-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
-}
-
-form .page .field button {
-    width: 100%;
-    height: calc(100% + 5px);
-    border: none;
-    background: var(--secondary);
-    margin-top: -20px;
-    border-radius: 5px;
-    color: var(--primary);
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: 0.5s ease-in;
-}
-
-form .page .field button:hover {
-    background: var(--primary);
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
-}
-
-form .page .btns button {
-    margin-top: -20px!important;
-}
-
-form .page .btns button.prev {
-    margin-right: 3px;
-    font-size: 17px;
-}
-
-form .page .btns button.next {
-    margin-left: 3px;
-}
-
-.form-container .c-progress-bar {
-    display: flex;
-    margin: 40px 0;
-    user-select: none;
-}
-
-.form-container .c-progress-bar .step {
-    text-align: center;
-    width: 100%;
-    position: relative;
-}
-
-.form-container .c-progress-bar .step p {
-    font-weight: 600;
-    font-size: 24px;
-    color: var(--white);
-    margin-bottom: 8px;
-    text-transform: capitalize;
-}
-
-.c-progress-bar .step .bullet {
-    height: 45px;
-    width: 45px;
-    border: 2px solid var(--white);
-    display: inline-block;
-    border-radius: 50%;
-    position: relative;
-    transition: 0.2s;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 25px;
-}
-
-.c-progress-bar .step .bullet.active {
-    border-color: var(--secondary);
-    background: var(--secondary);
-}
-
-.c-progress-bar .step .bullet span {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    color: var(--white);
-}
-
-.c-progress-bar .step .bullet.active span {
-    display: none;
-}
-
-.c-progress-bar .step .bullet:before,
-.c-progress-bar .step .bullet:after {
-    position: absolute;
-    content: '';
-    bottom: 50%;
-    left: 100%;
-    height: 4px;
-    width: 950%;
-    background: var(--white);
-}
-
-.c-progress-bar .step .bullet.active:after {
-    background: var(--secondary);
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 0.3s linear forwards;
-}
-
-@keyframes animate {
-    100% {
-        transform: scaleX(1);
-    }
-}
-
-.c-progress-bar .step:last-child .bullet:before,
-.c-progress-bar .step:last-child .bullet:after {
-    display: none;
-}
-
-.c-progress-bar .step p.active {
-    color: var(--secondary);
-    transition: 0.2s linear;
-}
-
-.c-progress-bar .step .check {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-.c-progress-bar .step .check.active {
-    display: block;
-    color: var(--primary);
-}
 
 .div4 {
     padding-top: 2rem;
