@@ -314,9 +314,9 @@ body {
     }
     .race-shape {
         width: 400px !important;
-        max-height: 85vh !important;
-        top: -10% !important;
+        max-height: 75vh !important;
         margin-left: 2% !important;
+        transform: translateY(-10%);
     }
     .race-shape img {
         margin-top: 20% !important;
@@ -346,11 +346,13 @@ body {
         margin-inline-end: 1rem;
         padding-top: 5px;
     }
+
+
+    /* ### CATEGORIAS ### */
     .categories-wrapper {
         margin-top: 0% !important;
-        padding-top: 9% !important;
-        /* padding-inline-end: 20rem !important; */
-        /* padding-inline-start: 20rem !important; */
+        padding-top: 7% !important;
+
     }
     .cat-card {
         padding: 0 !important;
