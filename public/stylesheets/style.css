@@ -795,12 +795,12 @@ body section .register {
 }
 
 .register-wrapper {
-    transform: translatey(5vh);
     z-index: 1050 !important;
     padding-top: 7%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     position: absolute;
+    min-width: 100%;
 }
 
 .contenedor {
@@ -821,7 +821,7 @@ body section .register {
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
-    background-image: linear-gradient(-45deg, #00FABA 0%, #04befe 100%);
+    background: var(--secondary);
     transition: 1.8s ease-in-out;
     border-radius: 50%;
     z-index: 1030 !important;
@@ -842,7 +842,8 @@ body section .register {
     font-style: italic;
     text-transform: uppercase;
     padding: 2% 3%;
-    max-height: 80vh;
+    max-height: 85vh;
+    min-width: 100% !important;
 }
 
 .form-container header {
@@ -854,6 +855,7 @@ body section .register {
     color: var(--primary);
 }
 
+
 .form-container .form-outer {
     width: 100%;
     overflow: hidden;
@@ -861,14 +863,22 @@ body section .register {
 
 .form-container .form-outer form {
     display: flex;
-    width: 300%;
+    max-width: 100%;
 }
 
 .form-outer form .page {
-    padding: 0 10%;
-    width: 100%;
+    padding: 1%;
+    margin-left: 25%;
+    min-width: fit-content;
+    transform: translateX(-20%);
     transition: margin-left 0.3s ease-in-in-out;
 }
+
+/* .form-outer form .page {
+    padding: 1%;
+    width: 100%;
+    transition: margin-left 0.3s ease-in-in-out;
+} */
 
 .form-outer form .page .title {
     text-align: center;
@@ -878,7 +888,7 @@ body section .register {
 }
 
 .form-outer form .page .field {
-    width: 530px;
+    min-width: 120%;
     height: 50px;
     margin: 50px 0;
     display: flex;
@@ -948,10 +958,11 @@ form .page .btns button.next {
 }
 
 .form-container .c-progress-bar {
-    display: flex;
-    margin-left: 10%;
+    display: flex !important;
     user-select: none;
-    max-width: 75%;
+    max-width: 100% !important;
+    justify-content: center;
+    justify-items: center;
 }
 
 .form-container .c-progress-bar .step {
@@ -1006,15 +1017,16 @@ form .page .btns button.next {
     bottom: 50%;
     left: 100%;
     height: 4px;
-    width: 810%;
+    width: 1000%;
     background: var(--white);
+    z-index: 1100 !important;
 }
 
 .c-progress-bar .step .bullet.active:after {
     background: var(--secondary);
     transform: scaleX(0);
     transform-origin: left;
-    animation: animate 0.3s linear forwards;
+    animation: animate 0.4s linear forwards;
 }
 
 @keyframes animate {
@@ -1030,7 +1042,7 @@ form .page .btns button.next {
 
 .c-progress-bar .step p.active {
     color: var(--secondary);
-    transition: 0.2s linear;
+    transition: 0.4s linear;
 }
 
 .c-progress-bar .step .check {
@@ -1261,6 +1273,218 @@ form .page .btns button.next {
     .cat-card .card-btn2 button .card-time-btn {
         padding-right: 0.3rem !important;
     }
+
+    /* formulario */
+
+body section .register {
+    transform: translatey(230vh);
+}
+
+.register-wrapper {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.contenedor {
+    transform: translateY(210vh);
+}
+
+.contenedor:before {
+    transition: 0.6s ease-in-out;
+    transform: scale(1.6);
+}
+
+.form-container {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 1% 3%;
+    max-height: 85vh;
+    max-width: 77% !important;
+}
+
+.form-container header {
+    font-size: 26px;
+    margin-bottom: 1rem;
+}
+
+.form-outer {
+    max-width: 60%;
+}
+
+.form-outer form .page {
+    transition: margin-left 0.3s ease-in-in-out;
+}
+
+
+
+.form-outer form .page .title {
+    font-size: 22px;
+    margin-bottom: 50px !important;
+    color: var(--primary);
+}
+
+.form-outer form .page .field {
+    height: 32px;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+form .page .field .label {
+    top: -30px;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+form .page .field input {
+    border: 1px solid var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+    max-width: 80%;
+}
+
+form .page .field select {
+    width: 80%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex !important;
+    float: center;
+}
+
+form .page .field button {
+    width: 60%;
+    height: calc(100% + 5px);
+    background: transparent;
+    border: 2px solid var(--primary);
+    margin-top: -5px;
+    margin-left: 0%;
+    border-radius: 5px;
+    color: var(--primary);
+    font-size: 22px;
+    letter-spacing: 1px;
+
+}
+
+form .page .field button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: none;
+}
+
+form .page .btns button {
+    margin-top: -20px!important;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.form-container .c-progress-bar {
+    display: flex;
+    margin-left: 10%;
+    user-select: none;
+    max-width: 75%;
+}
+
+.form-container .c-progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .c-progress-bar .step p {
+    font-size: 18px;
+    color: var(--primary);
+
+}
+
+.c-progress-bar .step .bullet {
+    border: 2px solid var(--primary);
+    transition: 0.6s;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--primary);
+}
+
+.c-progress-bar .step .bullet.active {
+    border-color: var(--primary);
+    background: var(--primary);
+}
+
+.c-progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.c-progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.c-progress-bar .step .bullet:before,
+.c-progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 100%;
+    height: 4px;
+    width: 751%;
+    background: var(--primary);
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.c-progress-bar .step .bullet.active:after {
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.c-progress-bar .step:last-child .bullet:before,
+.c-progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.c-progress-bar .step p.active {
+    color: var(--primary);
+    transition: 0.2s linear;
+}
+
+.c-progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 22px;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-weight: 900;
+}
+
+.c-progress-bar .step .check.active {
+    display: block;
+    color: var(--secondary);
+}
 }
 
 
@@ -1492,7 +1716,7 @@ form .page .btns button.next {
         min-width: 100%;
         max-height: 20% !important;
         font-weight: 500;
-        font-size: 4em !important;
+        font-size: 3.2em !important;
         transition: 0.6s;
         color: var(--white);
         line-height: 5%;
@@ -1534,6 +1758,206 @@ form .page .btns button.next {
         padding-right: 0.5rem;
         transform: translateY(10%);
     }
+
+        /* formulario */
+
+    .register-wrapper {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+}
+
+    .contenedor {
+        transform: translateY(280vh);
+    }
+    /* .form-container {
+        padding: 5% 2%;
+        max-height: 200vh ;
+        max-width: 55% !important;
+        text-align: center;
+    } */
+
+    .form-container .ctom {
+        padding-left: 0%;
+    }
+    
+    .form-container header {
+        font-size: 80px;
+
+    }
+
+    
+    .form-outer form .page {
+        padding: 0 0%;
+        width: 100%;
+        transition: margin-left 0.3s ease-in-in-out;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .form-outer form .page .title {
+        font-size: 46px;
+        margin-bottom: 50px !important;
+        color: var(--primary);
+    }
+    
+    
+    .form-outer form .page .field {
+        height: 120px;
+        margin: 70px 0 20px 0;
+        min-width: 100%;
+    }
+    
+    form .page .field .label {
+        top: -60px;
+        font-size: 40px;
+    }
+    
+    form .page .field input {
+        border: 1px solid var(--primary);
+        font-size: 44px;
+        font-weight: 600;
+        color: var(--primary);
+    }
+    
+    form .page .field select {
+        border: 1px solid var(--primary);
+        font-size: 44px;
+        font-weight: 600;
+        color: var(--primary)
+    }
+    
+    form .page .field button {
+        width: 80%;
+        height: calc(100% + 5px);
+        background: transparent;
+        border: 2px solid var(--primary);
+        margin-top: -20px;
+        margin-left: 10%;
+        border-radius: 5px;
+        color: var(--primary);
+        font-size: 40px;
+        letter-spacing: 1px;
+    
+    }
+
+    /*
+    
+    form .page .field button:hover {
+        background: var(--primary);
+        color: var(--secondary);
+        border: none;
+    }
+    
+    form .page .btns button {
+        margin-top: -20px!important;
+    }
+    
+    form .page .btns button.prev {
+        margin-right: 3px;
+        font-size: 17px;
+    }
+    
+    form .page .btns button.next {
+        margin-left: 3px;
+    }
+    
+    .form-container .c-progress-bar {
+        display: flex;
+        margin-left: 10%;
+        user-select: none;
+        max-width: 75%;
+    }
+    
+    .form-container .c-progress-bar .step {
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+    
+    .form-container .c-progress-bar .step p {
+        font-size: 22px;
+        color: var(--primary);
+    
+    }
+    
+    .c-progress-bar .step .bullet {
+        border: 2px solid var(--primary);
+        transition: 0.2s;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 25px;
+        color: var(--primary);
+    }
+    
+    .c-progress-bar .step .bullet.active {
+        border-color: var(--secondary);
+        background: var(--secondary);
+    }
+    
+    .c-progress-bar .step .bullet span {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        font-size: 24px;
+        color: var(--primary);
+    }
+    
+    .c-progress-bar .step .bullet.active span {
+        display: none;
+    }
+    
+    .c-progress-bar .step .bullet:before,
+    .c-progress-bar .step .bullet:after {
+        position: absolute;
+        content: '';
+        bottom: 50%;
+        left: 100%;
+        height: 4px;
+        width: 715%;
+        background: var(--primary);
+    }
+    
+    .c-progress-bar .step .bullet.active:after {
+        background: var(--secondary);
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 0.3s linear forwards;
+    }
+    
+    @keyframes animate {
+        100% {
+            transform: scaleX(1);
+        }
+    }
+    
+    .c-progress-bar .step:last-child .bullet:before,
+    .c-progress-bar .step:last-child .bullet:after {
+        display: none;
+    }
+    
+    .c-progress-bar .step p.active {
+        color: var(--secondary);
+        transition: 0.2s linear;
+    }
+    
+    .c-progress-bar .step .check {
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        font-size: 15px;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    
+    .c-progress-bar .step .check.active {
+        display: block;
+        color: var(--primary);
+    } */
+
+    
 }
 
 
