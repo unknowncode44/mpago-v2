@@ -1,0 +1,200 @@
+
+/* ## categorias */
+
+body section .categories {
+    min-width: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.categories-wrapper {
+    padding-top: 6%;
+    color: var(--white);
+    overflow: hidden;
+    position: absolute;
+    margin-top: 30vh;
+    z-index: 990;
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    transform: translateY(110vh);
+}
+
+.cat-title {
+    display: none;
+}
+
+.cat-card {
+    z-index: 991;
+    height: 40vh;
+    width: 100%;
+    color: var(--white) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 15px !important;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    overflow: hidden;
+    position: relative;
+    padding: 2% 3%;
+    transition: 0.4s;
+}
+
+.cat-card:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.cat-card:hover .card-inner-sape {
+    transform: scale(5);
+    transition: 0.6s linear;
+    background: var(--secondary);
+}
+
+.cat-card:hover .card-inner-content h1 {
+    color: var(--primary);
+}
+
+.cat-card:hover .card-inner-content ul li p {
+    color: var(--primary);
+    transition: 0.6s;
+}
+
+.categories-wrapper .cat-shape1 {
+    position: absolute;
+    z-index: 990;
+    min-width: 40%;
+    height: 100vh;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 70%;
+    border-top-right-radius: 40%;
+    background: var(--primary);
+    transform: translateX(-10%);
+}
+
+.categories-wrapper .cat-shape2 {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: 990;
+    min-width: 56%;
+    height: 98vh;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    border-top-right-radius: 70%;
+    background: var(--primary);
+    transform: translateX(50%) translateY(25vh) scale(1.2);
+}
+
+.cat-card img {
+    margin-top: 15%;
+    margin-right: 33%;
+    max-width: 90%;
+    opacity: 0.01;
+}
+
+.cat-card .card-inner-sape {
+    z-index: 1024;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    min-height: 100%;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+    background: var(--secondary);
+    opacity: 0.7;
+    transition: 0.6s;
+}
+
+.cat-card .card-inner-content {
+    z-index: 1025;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    min-height: 100%;
+    background: transparent;
+    transition: 0.6s;
+}
+
+.cat-card .card-inner-content h1 {
+    padding-left: 5%;
+    z-index: 1025;
+    position: absolute;
+    text-align: start;
+    min-width: 100%;
+    min-height: 30%;
+    font-weight: 600;
+    font-size: 8em;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+
+.cat-card .card-inner-content ul {
+    padding-left: 5%;
+    z-index: 1025;
+    position: absolute;
+    bottom: 0%;
+    text-align: start;
+    min-width: 70%;
+    min-height: 50%;
+    font-weight: 500;
+    font-size: 1.8em;
+    transition: 0.6s;
+    color: var(--white);
+    line-height: 0%;
+}
+
+.cat-card .card-inner-content li {
+    list-style: none;
+    padding: 0%;
+}
+
+.cat-card .card-inner-content .card-time {
+    padding-left: 0.5rem;
+}
+
+.cat-card .card-inner-content .card-time-icon {
+    padding-right: 0.5rem;
+    transform: translateY(10%);
+}
+
+.cat-card .card-btn,
+.cat-card .card-btn2 {
+    z-index: 1025;
+    position: absolute;
+    margin-top: 2rem;
+    right: -30%;
+    bottom: 30%;
+    transition: 0.6s;
+}
+
+.cat-card .card-btn2 {
+    bottom: 10%;
+}
+
+.cat-card .card-btn button,
+.cat-card .card-btn2 button {
+    font-weight: 600;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid var(--primary);
+}
+
+.cat-card .card-btn button:hover,
+.cat-card .card-btn2 button:hover {
+    color: var(--secondary);
+    background: var(--primary);
+}
+
+.cat-card .card-btn button .card-time-btn,
+.cat-card .card-btn2 button .card-time-btn {
+    padding-right: 0.5rem;
+    transform: translateY(10%);
+}
+

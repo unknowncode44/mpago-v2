@@ -98,3 +98,22 @@ for (let i = 0; i < categories.length; i++) {
     el.value = e; // los valores seran los mismos que el texto
     select.appendChild(el) // se los anexamos al select
 }
+
+// ## Crear edades ##
+var ages = []; // creamos una lista de edades
+var ageCounter = 7;
+while (ageCounter <= 90) {
+    ages.push(ageCounter.toString())
+    ageCounter++
+}
+var agesSelect = document.getElementById('ageSelect') // identificamos el elemento select del html
+
+
+// corremos un bucle para todos los items de la lista y los agregamos al select
+for (let i = 0; i < ages.length; i++) {
+    const e = ages[i];
+    var el = document.createElement('option'); // creamos un elemento option
+    el.textContent = e; // el contenido del texto sera el texto del item
+    el.value = e; // los valores seran los mismos que el texto
+    agesSelect.appendChild(el) // se los anexamos al select
+}

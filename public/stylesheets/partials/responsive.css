@@ -1,0 +1,343 @@
+/* #### BREAKPOINTS < 1780 PIXELS ##### */
+
+@media (max-width: 1780px) {
+    /* NAV Y BANNER */
+    .banner-text-container {
+        transform: translateY(-20px);
+    }
+    .nv-logo {
+        transform: scale(0.8) !important;
+    }
+    .nav-sections a {
+        font-size: small;
+    }
+    .banner-text p {
+        margin-bottom: 2rem !important;
+    }
+    .banner-text h1 {
+        margin-bottom: 0.5rem !important;
+        font-size: 36px !important;
+    }
+    .banner-row {
+        transform: translateY(-100px);
+        padding-inline-start: 5rem;
+        padding-inline-end: 5rem;
+    }
+    .card-number {
+        font-size: 60px;
+    }
+    .banner-card-text {
+        font-size: 24px;
+    }
+    .banner-text-container .banner-text p {
+        min-width: 100%;
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 4rem !important;
+    }
+    .banner-btn button {
+        height: calc(110% + 15px);
+        font-size: 24px;
+        transform: translateY(-40px);
+    }
+
+
+
+    /* STICKY NAVBAR */
+    .sticky {
+        padding: 0px 30px;
+    }
+    .sticky .nv-logo img {
+        transform: scale(1.2);
+        height: 80px;
+        max-width: auto;
+        transition: 0.4s;
+    }
+
+
+
+
+
+    /* ##### RACE #### */
+    .race-wrapper {
+        margin: 0% !important;
+        padding-top: 0px !important;
+        align-items: flex-start !important;
+    }
+    .race-shape {
+        width: 400px !important;
+        max-height: 75vh !important;
+        margin-left: 2% !important;
+        transform: translateY(-10%);
+    }
+    .race-shape img {
+        margin-top: 20% !important;
+        height: 250px !important;
+        width: auto;
+    }
+    .race-wrapper p {
+        font-size: 16px !important;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+    }
+    .race-wrapper h1 {
+        font-size: 35px !important;
+    }
+    .race-wrapper h3 {
+        color: var(--grey);
+        z-index: 1000;
+        margin: 0;
+        padding: 5px;
+        font-size: 22px !important;
+        min-width: 100%;
+        font-weight: 500;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    .race-wrapper .race-icon-location {
+        margin-inline-end: 1rem;
+        padding-top: 5px;
+    }
+
+
+
+
+
+
+    /* ### CATEGORIAS ### */
+    .categories-wrapper {
+        margin-top: 0% !important;
+        padding-top: 7% !important;
+    }
+    .cat-card {
+        padding: 0 !important;
+        height: 35vh !important;
+    }
+    .cat-card-row {
+        padding-inline-start: 10rem;
+        padding-inline-end: 10rem;
+    }
+    .cat-col-card {
+        padding: 0% !important;
+    }
+    .cat-card .card-inner-content h1 {
+        font-size: 4em !important;
+    }
+    .cat-card .card-inner-content ul {
+        font-size: 1em !important;
+    }
+    .cat-card .card-btn,
+    .cat-card .card-btn2 {
+        z-index: 1025;
+        position: absolute;
+        margin-top: 2rem;
+        right: -30%;
+        bottom: 30%;
+        transition: 0.6s;
+    }
+    .cat-card .card-btn2 {
+        bottom: 10%;
+    }
+    .cat-card .card-btn button,
+    .cat-card .card-btn2 button {
+        font-weight: 600 !important;
+        padding: 2% !important;
+        max-width: 180px !important;
+        font-size: 0.8em !important;
+        transition: 0.2s;
+    }
+    .cat-card .card-btn button:hover,
+    .cat-card .card-btn2 button:hover {
+        color: var(--secondary);
+        background: var(--primary);
+    }
+    .cat-card .card-btn button .card-time-btn,
+    .cat-card .card-btn2 button .card-time-btn {
+        padding-right: 0.3rem !important;
+    }
+
+     /* formulario */
+     body section .register {
+        transform: translatey(230vh);
+    }
+    .register-wrapper {
+        padding-top: 6%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .contenedor {
+        transform: translateY(210vh);
+    }
+    .contenedor:before {
+        bottom: -10% !important;
+        background: var(--black1);
+    }
+    .header-bg {
+        margin-bottom: 0% !important;
+    }
+
+    .sliding-form-container {
+        min-width: 100% !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding: 0% 0%;
+        max-height: 85vh;
+        max-width: 77% !important;
+    }
+    .form-container header {
+        font-size: 26px;
+        margin-bottom: 1rem;
+    }
+    .form-outer {
+        max-width: 100%;
+    }
+    .form-outer form .page .title {
+        font-size: 22px;
+        margin-bottom: 20px !important;
+        color: var(--white);
+    }
+    .form-outer form .page .field {
+        height: 35px;
+        margin-bottom: 2%;
+        margin-top: 4%;
+    }
+
+    .form-outer form .page .container .register-row-custom {
+        padding-inline-start: 10% !important;
+        padding-inline-end: 10% !important;
+    }
+
+    .form-outer form .page .container .register-row-custom .field {
+        height: 35px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .form-outer form .page .container .register-row-custom .field .label {
+        padding-left: 0%;
+    }
+
+    .form-outer form .page .container .register-row-custom .field select {
+        font-size: 17px;
+    }
+    .form-outer form .page .container .register-row-custom .field option {
+        font-size: 17px;
+    }
+
+    .form-outer form .page .container .register-row-custom2 {
+        padding-inline-start: 10% !important;
+        padding-inline-end: 10% !important;
+    }
+
+    .form-outer form .page .container .register-row-custom2 .field {
+        height: 35px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .form-outer form .page .container .register-row-custom2 .field .label {
+        font-size: 14px !important; 
+        padding: 0%;
+        margin: 5px;
+    }
+
+
+
+    .form-outer form .page .container .register-row-custom2 .field input {
+        min-width: 100%;
+    }
+
+    .form-outer form .page .container .register-row-custom2 .field select {
+        font-size: 17px;
+        margin-right: 5% !important;
+    }
+    .form-outer form .page .container .register-row-custom2 .field option {
+        font-size: 17px;
+    }
+
+    
+
+    form .page .field .label {
+        top: -25px;
+        font-size: 18px;
+        padding-left: 10%;
+    }
+    form .page .field input {
+        border: 1px solid var(--white);
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--white);
+        max-width: 80%;
+    }
+    form .page .field select {
+        width: 100%;
+    }
+    
+    form .page .field select option {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--black1);
+    }
+    form .page .field button {
+        width: 40%;
+        font-size: 18px;
+    }
+    form .page .field button:hover {
+        background: var(--primary);
+        color: var(--secondary);
+        border: 2px solid var(--secondary);
+    }
+    form .page .btns button {
+        max-width: 49%;
+    }
+    .form-container .c-progress-bar {
+        display: flex;
+        user-select: none;
+        max-width: 72% !important;
+        margin: 0;
+    }
+    .form-container .c-progress-bar .step {
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+    .form-container .c-progress-bar .step p {
+        font-size: 18px;
+        color: var(--white);
+    }
+    .c-progress-bar .step .bullet:before,
+    .c-progress-bar .step .bullet:after {
+        width: 532%;
+    }
+    .c-progress-bar .step .bullet-last:before,
+    .c-progress-bar .step .bullet-last:after {
+        width: 0%;
+    }
+    .c-progress-bar .step .bullet.active {
+        border-color: var(--secondary);
+        background: var(--secondary);
+    }
+    .c-progress-bar .step p.active {
+        color: var(--secondary);
+        transition: 0.6s linear;
+    }
+    .c-progress-bar .step .check {
+        position: absolute;
+        left: 50%;
+        top: 65%;
+        font-size: 22px;
+        transform: translate(-50%, -50%);
+        display: none;
+        font-weight: 900;
+    }
+    .c-progress-bar .step .check.active {
+        display: block;
+        color: var(--primary);
+    }
+}

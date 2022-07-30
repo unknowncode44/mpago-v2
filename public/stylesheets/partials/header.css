@@ -1,0 +1,218 @@
+/* NAVEGACION */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 5px 25px;
+    z-index: 999;
+}
+
+.sticky {
+    padding: 5px 50px;
+    background-color: var(--primary);
+    opacity: 0.7;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+.sticky .nv-logo {
+    padding: 0;
+}
+
+.sticky .nv-logo img {
+    transform: scale(1.2);
+    height: 100px;
+    max-width: auto;
+    transition: 0.6s;
+}
+
+.navigation ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nv-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-inline-start: 20px;
+}
+
+.nv-logo img {
+    transform: scale(1.8);
+    height: 150px;
+    max-width: auto;
+    transition: all 0.4s ease-in;
+}
+
+.nav-sections {
+    position: relative;
+    list-style: none;
+}
+
+.nav-sections a {
+    margin: 0 15px;
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.nav-sections a:hover {
+    color: var(--secondary);
+}
+
+
+/* BANNER */
+
+.banner {
+    z-index: 995;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(to bottom, #411d5a, #421d5d, #431d60, #441d64, #451d67, #4b236d, #512972, #572f78, #633d81, #704b8a, #7c5993, #88679c);
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    margin-bottom: 10rem;
+}
+
+.banner-cards {
+    position: absolute;
+    top: 12em;
+}
+
+.banner-text-container {
+    z-index: 4 !important;
+    position: relative !important;
+    justify-content: center !important;
+    align-items: center!important;
+    text-align: center!important;
+    min-height: 30vh !important;
+    width: 100%;
+    transition: 0.4s ease-in;
+}
+
+.banner-text-container .banner-text h1 {
+    min-width: 100%;
+    color: var(--white);
+    font-size: 46px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.banner-text-container .banner-text p {
+    min-width: 80%;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.banner .background-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    opacity: 0.05;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.banner-cards {
+    z-index: 996;
+    width: 100%;
+    position: absolute;
+    bottom: 15vh;
+    left: 0;
+    height: auto;
+}
+
+.banner-row {
+    min-height: 35vh;
+}
+
+.card-custom {
+    color: var(--white) !important;
+    height: 30vh !important;
+    min-width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 15px !important;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    overflow: hidden;
+    position: relative;
+    padding: 2% 3%;
+    transition: 0.4s;
+}
+
+.card-number {
+    font-size: 6rem;
+    margin: 0;
+    margin-top: 1rem;
+    height: 100% !important;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-card-text {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.card-custom:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    height: 35vh !important;
+    color: var(--secondary) !important;
+}
+
+.banner-btn button {
+    padding: 10px 25px;
+    height: calc(120% + 15px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.4s ease-in;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.banner-btn button:hover {
+    background: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--secondary);
+}
+

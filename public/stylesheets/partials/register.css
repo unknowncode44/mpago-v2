@@ -1,0 +1,354 @@
+/* formulario */
+
+body section .register {
+    transform: translatey(250vh);
+    min-width: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.register-wrapper {
+    z-index: 1050 !important;
+    padding-top: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    min-width: 100%;
+}
+
+.contenedor {
+    transform: translateY(240vh);
+    position: relative;
+    width: 100%;
+    background-color: var(--primary);
+    min-height: 110vh;
+    overflow: hidden;
+    z-index: 980 !important;
+}
+
+.contenedor:before {
+    content: "";
+    position: absolute;
+    height: 400px;
+    width: 2000px;
+    bottom: -6%;
+    transform: translateY(40%) scaleX(1.5);
+    background: var(--black1);
+    transition: 1.8s ease-in-out;
+    border-radius: 30%;
+    z-index: 1030 !important;
+}
+
+.form-container {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+    overflow: hidden;
+    position: relative;
+    text-align: start;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 0% 0%;
+    max-height: 85vh;
+    min-width: 100% !important;
+}
+
+.form-container .header-bg {
+    min-width: 100%;
+    padding: 1% 10%;
+    min-height: 8vh;
+    background: var(--secondary);
+    position: relative;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    margin-bottom: 2%;
+}
+
+.form-container header {
+    font-size: 36px;
+    font-weight: bolder;
+    font-style: italic;
+    margin: 0 0 0px 0;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.form-container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-outer form {
+    display: flex;
+    max-width: 100%;
+}
+
+.form-outer form .page {
+    padding: 1% 10%;
+    margin-left: 0%;
+    min-width: 100%;
+    transform: translateX(0%);
+    transition: margin-left 0.6s ease-in-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form-outer form .page .field {
+    min-width: 100%;
+    height: 40px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-outer form .page .container .register-row-custom .field {
+    height: 40px;
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+
+form .page .field .label {
+    position: absolute;
+    top: -40px;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 26px;
+    min-width: 100%;
+    text-align: start;
+    padding-left: 1rem;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 95%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    background: transparent;
+}
+
+form .page .field select {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--white);
+    background: transparent;
+}
+
+form .page .field select option {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black1);
+}
+
+form .page .field button {
+    width: 80%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease-in;
+}
+
+form .page .field button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+form .page .btns button {
+    max-width: 49%;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.form-container .c-progress-bar {
+    display: flex !important;
+    user-select: none;
+    max-width: 100% !important;
+    justify-content: center;
+    justify-items: center;
+}
+
+.form-container .c-progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.form-container .c-progress-bar .step p {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--white);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.c-progress-bar .step .bullet {
+    height: 45px;
+    width: 45px;
+    border: 2px solid var(--white);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.c-progress-bar .step .bullet.active {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    transition: 0.6s;
+}
+
+.c-progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: var(--white);
+}
+
+.c-progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.c-progress-bar .step .bullet:before,
+.c-progress-bar .step .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 100%;
+    height: 4px;
+    width: 900%;
+    background: var(--white);
+    z-index: 1100 !important;
+}
+
+.c-progress-bar .step .bullet-last:before,
+.c-progress-bar .step .bullet-last:after {
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    left: 100%;
+    height: 4px;
+    width: 5%;
+    background: var(--white);
+    z-index: 1100 !important;
+}
+
+.c-progress-bar .step .bullet.active:after {
+    background: var(--secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.6s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.c-progress-bar .step:last-child .bullet:before,
+.c-progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.c-progress-bar .step p.active {
+    color: var(--secondary);
+    transition: 0.4s linear;
+}
+
+.c-progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.c-progress-bar .step .check.active {
+    display: block;
+    color: var(--primary);
+}
+
+
+/* ANIMATION*/
+
+.contenedor.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.contenedor.sign-up-mode {
+    transform: translateX(-800px);
+}
+
+.contenedor.sign-up-mode .signin-signup {
+    left: 25%;
+}
+
+.contenedor.sign-up-mode {
+    transform: translateX(0%);
+}
+
+.container-mp {
+    height: 18px;
+    min-width: 80%;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 5%;
+    padding: 1px 2px;
+}
+
+#form-checkout {
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 600px !important;
+}
+
+#form-checkout .field {
+    margin: 0;
+    font-size: 12px;
+}
+
+
