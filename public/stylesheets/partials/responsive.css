@@ -160,6 +160,7 @@
     }
     .header-bg {
         margin-bottom: 0% !important;
+        max-height: 7vh;
     }
     .sliding-form-container {
         min-width: 100% !important;
@@ -184,92 +185,124 @@
     .form-outer {
         max-width: 100%;
     }
-    .form-outer form .page .title {
+
+    .form-container .form-outer form {
+        min-width: 100% !important;
+    }
+
+    .form-outer .r-form .page {
+        transform: translateY(-3%);
+    }
+
+    .form-outer .r-form .page .title {
         font-size: 22px;
         margin-bottom: 20px !important;
         color: var(--white);
     }
-    .form-outer form .page .field {
+    .form-outer .r-form .page .field {
         height: 35px;
-        margin-bottom: 2%;
-        margin-top: 4%;
+        margin-bottom: 3% !important;
+        margin-top: 4% !important;
     }
-    .form-outer form .page .container .register-row-custom {
+    .form-outer .r-form .page .container .register-row-custom {
         padding-inline-start: 10% !important;
         padding-inline-end: 10% !important;
     }
-    .form-outer form .page .container .register-row-custom .field {
-        height: 35px;
+    .form-outer .r-form .page .container .register-row-custom .field {
+        height: 35px !important;
         margin: 0;
-        margin-bottom: 5px;
-    }
-    .form-outer form .page .container .register-row-custom .field .label {
+        margin-bottom: 0px !important;
+     }
+    .form-outer .r-form .page .container .register-row-custom .field .label {
         padding-left: 0%;
     }
-    .form-outer form .page .container .register-row-custom .field select {
+    .form-outer .r-form .page .container .register-row-custom .field select {
         font-size: 17px;
     }
-    .form-outer form .page .container .register-row-custom .field option {
+    .form-outer .r-form .page .container .register-row-custom .field option {
         font-size: 17px;
     }
-    .form-outer form .page .container .register-row-custom2 {
+    .form-outer .r-form .page .container .register-row-custom2 {
         padding-inline-start: 10% !important;
         padding-inline-end: 10% !important;
     }
-    .form-outer form .page .container .register-row-custom2 .field {
-        height: 35px;
+    .form-outer .r-form .page .container .register-row-custom2 .field {
+        height: 30px !important;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
     }
-    .form-outer form .page .container .register-row-custom2 .field .label {
+    .form-outer .r-form .page .container .register-row-custom2 .field .label {
         font-size: 14px !important;
         padding: 0%;
         margin: 5px;
         transform: translateY(-2%) !important;
     }
-    .form-outer form .page .container .register-row-custom2 .field input {
+    .form-outer .r-form .page .container .register-row-custom2 .field input {
         min-width: 100%;
     }
-    .form-outer form .page .container .register-row-custom2 .field select {
+    .form-outer .r-form .page .container .register-row-custom2 .field select {
         font-size: 17px;
         margin-right: 5% !important;
     }
-    .form-outer form .page .container .register-row-custom2 .field option {
+    .form-outer .r-form .page .container .register-row-custom2 .field option {
         font-size: 17px;
     }
-    form .page .field .label {
+    .r-form .page .field .label {
         top: -25px;
         font-size: 18px;
         padding-left: 10%;
     }
-    form .page .field input {
+    .r-form .page .field input {
         border: 1px solid var(--white);
         font-size: 20px;
         font-weight: 600;
         color: var(--white);
         max-width: 80%;
     }
-    form .page .field select {
+    .r-form .page .field select {
         width: 100%;
     }
-    form .page .field select option {
+    .r-form .page .field select option {
         font-size: 20px;
         font-weight: 500;
         color: var(--black1);
     }
-    form .page .field button {
+    .r-form .page .field button {
         width: 40%;
+        
         font-size: 18px;
     }
-    form .page .field button:hover {
+    .r-form .page .field button:hover {
         background: var(--primary);
         color: var(--secondary);
         border: 2px solid var(--secondary);
     }
-    form .page .btns button {
+    .r-form .page .btns button {
         max-width: 49%;
-        transform: translateY(-10%);
+        transform: translateY(-80%);
     }
+    .r-form .page .mp-field-con {
+        transform: translateY(-50%) !important;
+    }
+
+    .r-form .page .mp-field {
+        max-width: 100%;
+        min-height: 40px;
+        text-align: center;
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 0%;
+        background: transparent;
+        border-radius: 2%;
+    }
+    
+    .r-form .page .mp-field img {
+        max-width: 30%;
+        margin-left: 5%;
+    }
+
+
     .form-container .c-progress-bar {
         display: flex;
         user-select: none;

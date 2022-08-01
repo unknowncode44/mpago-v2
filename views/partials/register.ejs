@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-8 text-center justify-content-center">
                             <div class="form-outer">
-                                <form id="form-checkout">
+                                <form id="form-checkout" action="/process_payment" method="POST">
                                     <div class="r-form">
                                         <div class="page slide-page">
                                             <div class="title">
@@ -80,8 +80,6 @@
                                         <div class="page">
                                             <div class="title">
                                                 Datos de tarjeta:</div>
-
-
                                             <div class="container">
                                                 <div class="row register-row-custom2">
                                                     <div class="col-lg-12 col-sm-12">
@@ -151,7 +149,7 @@
                                                             <input id="form-checkout__cardholderEmail" type="email" maxlength="16" name="runner-email">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 px-5 col-sm-12 px-5">
+                                                    <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con">
                                                         <div class="mp-field">
                                                             <div class="label">Usamos <img src="/images/mercadopago.svg" alt=""></div>
                                                         </div>
