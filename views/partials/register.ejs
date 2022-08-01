@@ -7,7 +7,7 @@
                         <header>FORMULARIO DE INSCRIPCION</header>
                     </div>
                 </div>
-                <div class="container p-2 sliding-form-container">
+                <div class="container f-con p-2 pt-0 sliding-form-container">
                     <div class="row text-center justify-content-center">
                         <div class="row px-5 m-0 text-center justify-content-center c-progress-bar">
                             <div class="col step">
@@ -34,127 +34,161 @@
                         </div>
                         <div class="col-md-8 text-center justify-content-center">
                             <div class="form-outer">
-                                <form action="#">
-                                    <div class="page slide-page">
-                                        <div class="title">
-                                            Datos Personales:</div>
-                                        <div class="container p-0 m-w-full">
-                                            <div class="row pe-0 ps-3 register-row-custom">
-                                                <div class="col-lg-8 col-sm-8">
-                                                    <div class="field">
-                                                        <div class="label">
-                                                            Categoria</div>
-                                                        <select name="categoriesSelect" id="categoriesSelect"></select>
+                                <form id="form-checkout">
+                                    <div class="r-form">
+                                        <div class="page slide-page">
+                                            <div class="title">
+                                                Datos Personales:</div>
+                                            <div class="container p-0 m-w-full">
+                                                <div class="row pe-0 ps-3 register-row-custom">
+                                                    <div class="col-lg-8 col-sm-8">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Categoria</div>
+                                                            <select name="categoriesSelect" id="categoriesSelect"></select>
+                                                        </div>
                                                     </div>
-                                                </div>
 
-                                                <div class="col-lg-3 pe-2 col-sm-3">
-                                                    <div class="field">
-                                                        <div class="label">
-                                                            Edad</div>
-                                                        <select name="ageSelect" id="ageSelect"></select>
+                                                    <div class="col-lg-3 pe-2 col-sm-3">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Edad</div>
+                                                            <select name="ageSelect" id="ageSelect"></select>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    Nombre y Apellido</div>
+                                                <input id="r-name" type="text">
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    DNI</div>
+                                                <input id="r-id" type="text">
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    Email</div>
+                                                <input id="r-email" type="text">
+                                            </div>
+                                            <div class="field">
+                                                <button id="home_btn" class="firstNext mt-3 next">Siguiente</button>
+                                            </div>
                                         </div>
-                                        <div class="field">
-                                            <div class="label">
-                                                Nombre y Apellido</div>
-                                            <input type="text" name="runner-name">
-                                        </div>
-                                        <div class="field">
-                                            <div class="label">
-                                                DNI</div>
-                                            <input type="text">
-                                        </div>
-                                        <div class="field">
-                                            <div class="label">
-                                                Email</div>
-                                            <input type="text">
-                                        </div>
-                                        <div class="field">
-                                            <button id="home_btn" class="firstNext mt-3 next">Siguiente</button>
-                                        </div>
-                                    </div>
-                                    <div class="page">
-                                        <div class="title">
-                                            Datos de tarjeta:</div>
-                                        <form id="form-checkout">
-                                                <div class="container">
-                                                    <div class="row register-row-custom2">
-                                                        <div class="col-lg-12 col-sm-12">
-                                                            <div class="field">
-                                                                <div class="label">
-                                                                    Numero de tarjeta</div>
-                                                                <input type="number" maxlength="16" name="runner-name">
-                                                            </div>
+                                        <div class="page">
+                                            <div class="title">
+                                                Datos de tarjeta:</div>
+
+
+                                            <div class="container">
+                                                <div class="row register-row-custom2">
+                                                    <div class="col-lg-12 col-sm-12">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Numero de tarjeta</div>
+                                                            <input type="number" id="form-checkout__cardNumber" maxlength="16" name="card-number">
                                                         </div>
-                                                        <div class="col-lg-8 col-sm-8">
-                                                            <div class="field">
-                                                                <div class="label">
-                                                                    Fecha expiracion (MM/AAAA)</div>
-                                                                <select name="cc-month" id=""></select>
-                                                                <select name="cc-year" id=""></select>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-8">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Fecha expiracion (MM/AAAA)</div>
+                                                            <select name="cc-month" id="form-checkout__cardExpirationMonth"></select>
+                                                            <select name="cc-year" id="form-checkout__cardExpirationYear"></select>
                                                         </div>
-                                                        <div class="col-lg-4 col-sm-4">
-                                                            <div class="field">
-                                                                <div class="label">
-                                                                    Cod. Seguridad</div>
-                                                                <input type="number" maxlength="4" name="runner-name">
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-sm-3">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                CVV</div>
+                                                            <input type="password" id="form-checkout__securityCode" maxlength="4" name="sec-code">
                                                         </div>
-                                                        <div class="col-lg-12 col-sm-12">
-                                                            <div class="field">
-                                                                <div class="label">
-                                                                    Nombre del Titular</div>
-                                                                <input type="text" maxlength="16" name="runner-name">
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-lg-1 col-sm-1">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                ver</div>
+                                                            <span class="cvv-eye" id="eye-span" onclick="showPass()">
+                                                                <ion-icon id="eye-icon" name="eye-outline"></ion-icon>
+                                                            </span>
                                                         </div>
-                                                        <div class="col-lg-4 col-sm-4">
-                                                            <div class="field">
-                                                                <div class="label">
-                                                                    Tipo DNI</div>
-                                                                <select name="cc-month" id=""></select>
+                                                    </div>
+                                                    <div class="col-lg-12 col-sm-12">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 col-sm-6">
+                                                                        Nombre del Titular
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-sm-6 text-end">
+                                                                        <p class="same-info" id="same-info"><a href="javascript:void(0)">Usar los mismos datos</a></p>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
+                                                            <input id="form-checkout__cardholderName" type="text" maxlength="16" name="runner-name">
                                                         </div>
-                                                        <div class="col-lg-8 col-sm-8">
-                                                            <div class="field">
-                                                                <div class="label">DNI del titular</div>
-                                                                <input type="number" maxlength="8" name="runner-name">
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Tipo DNI</div>
+                                                            <select id="form-checkout__identificationType" name="cc-id-type" id="cc-id-type"></select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-8">
+                                                        <div class="field">
+                                                            <div class="label">DNI del titular</div>
+                                                            <input id="form-checkout__identificationNumber" type="text" maxlength="8" name="runner-id-number">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-sm-12">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                email del titular</div>
+                                                            <input id="form-checkout__cardholderEmail" type="email" maxlength="16" name="runner-email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 px-5 col-sm-12 px-5">
+                                                        <div class="mp-field">
+                                                            <div class="label">Usamos <img src="/images/mercadopago.svg" alt=""></div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row field btns">
-                                                    <button class="prev-1 prev">Anterior</button>
-                                                    <button class="next-1 next">Pagar</button>
-                                                </div>
-                                        
+                                            </div>
+                                            <div class="row field btns">
+                                                <button class="prev-1 prev">Anterior</button>
+                                                <button class="next-1 next">Siguiente</button>
+                                            </div>
+
                                         </div>
-                                    <div class="page">
-                                        <div class="title">
-                                            Date of Birth:</div>
-                                        <div class="field">
-                                            <div class="label">
-                                                Date</div>
-                                            <input type="text">
-                                        </div>
-                                        <div class="field">
-                                            <div class="label">
-                                                Gender</div>
-                                            <select>
-                                                <option>Male</option>
-                                                <option>Female</option>
-                                                <option>Other</option>
-                                              </select>
-                                        </div>
-                                        <div class="field btns">
-                                            <button class="prev-2 mt-3 prev">Anterior</button>
-                                            <button class="submit mt-3">Finalizar</button>
+                                        <div class="page">
+                                            <div class="title">
+                                                Date of Birth:</div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    Date</div>
+                                                <input type="text">
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    Issuer</div>
+                                                <select id="form-checkout__issuer" name="issuer"></select>
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">
+                                                    Installments</div>
+                                                <select id="form-checkout__installments" name="installments" type="text"></select>
+                                            </div>
+                                            <div class="field btns">
+                                                <button class="prev-2 mt-3 prev">Anterior</button>
+                                                <button id="form-checkout__submit" type="submit" class="submit mt-3">Finalizar</button>
+
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
                                 </form>
                             </div>
                         </div>
@@ -164,12 +198,27 @@
         </div>
     </div>
 </section>
+<script>
+    function showPass() {
+        let eyeSpan = document.getElementById('eye-span')
+        let eyeIcon = document.getElementById('eye-icon')
+        eyeIcon.setAttribute('name', 'eye-off-outline')
+
+        var x = document.getElementById('form-checkout__securityCode')
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            eyeIcon.setAttribute('name', 'eye-outline');
+            x.type = "password";
+        }
+    }
+</script>
 
 
 
 
 
-    <!-- <form action="add-runner" method="post">
+<!-- <form action="add-runner" method="post">
         <input type="text" name="runnerName">
         <input type="number" name="runnerAge">
         <input type="text" name="runnerEmail">

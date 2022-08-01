@@ -1,7 +1,5 @@
 // ## DETECTAR EL TAMANO DE SCREEN
 
-
-
 var windowHeight = screen.height
 var windowWidth = screen.width
 
@@ -14,12 +12,37 @@ var r = gdc(windowWidth, windowHeight)
 var aspectRatio = `Aspect Ratio: ${(windowWidth/windowHeight).toFixed()}:${windowHeight/r}`
 console.log(aspectRatio);
 
+
 // ## EFECTO NAVBAR ON SCROLL ##
 
 window.addEventListener("scroll", function() {
     var header = this.document.querySelector('header');
     header.classList.toggle("sticky", this.window.scrollY > 0);
+});
+
+// ## USAR DATOS DE CORREDOR EN DATOS DE PAGO
+var rName = document.getElementById('r-name');
+var rId = document.getElementById('r-id');
+var rEmail = document.getElementById('r-email');
+var sameInfoBtn = document.getElementById('same-info');
+var cHolderName = document.getElementById('form-checkout__cardholderName');
+var cHolderIdNumber = document.getElementById('form-checkout__identificationNumber');
+var cHolderEmail = document.getElementById('form-checkout__cardholderEmail');
+
+sameInfoBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+    cHolderName.value = rName.value
+    cHolderIdNumber.value = rId.value
+    cHolderEmail.value = rEmail.value
 })
+
+// ## VALIDAR EMAIL
+function validateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+        return (true)
+    }
+    return (false)
+}
 
 
 // ## slide page form
@@ -38,11 +61,16 @@ let current = 1;
 
 nextBtnFirst.addEventListener("click", function(event) {
     event.preventDefault();
-    slidePage.style.marginLeft = "-100%";
-    bullet[current - 1].classList.add("active");
-    progressCheck[current - 1].classList.add("active");
-    progressText[current - 1].classList.add("active");
-    current += 1;
+    var validEmail = validateEmail(rEmail.value)
+    if (validEmail) {
+        slidePage.style.marginLeft = "-100%";
+        bullet[current - 1].classList.add("active");
+        progressCheck[current - 1].classList.add("active");
+        progressText[current - 1].classList.add("active");
+        current += 1;
+    } else {
+        alert('El email es invalido!!')
+    }
 });
 nextBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
@@ -99,6 +127,20 @@ for (let i = 0; i < categories.length; i++) {
     select.appendChild(el) // se los anexamos al select
 }
 
+// ## Crear Tipos de DNI ##
+var idTypes = ['DNI', 'LE', 'Pasaporte', 'Otro'] // listamos los tipos
+var idTypeSelect = document.getElementById('form-checkout__identificationType') // identificamos el elemento select del html
+
+// corremos un bucle para todos los items de la lista y los agregamos al select
+for (let i = 0; i < idTypes.length; i++) {
+    const e = idTypes[i];
+    var el = document.createElement('option'); // creamos un elemento option
+    el.textContent = e; // el contenido del texto sera el texto del item
+    el.value = e; // los valores seran los mismos que el texto
+    idTypeSelect.appendChild(el) // se los anexamos al select
+}
+
+
 // ## Crear edades ##
 var ages = []; // creamos una lista de edades
 var ageCounter = 7;
@@ -116,4 +158,43 @@ for (let i = 0; i < ages.length; i++) {
     el.textContent = e; // el contenido del texto sera el texto del item
     el.value = e; // los valores seran los mismos que el texto
     agesSelect.appendChild(el) // se los anexamos al select
+}
+
+// ## Crear meses para CC
+var months = [];
+var monthCounter = 1;
+while (monthCounter <= 12) {
+    if (monthCounter > 9) {
+        months.push(monthCounter.toString())
+    } else {
+        let mstr = `0${monthCounter}`;
+        months.push(mstr)
+    }
+    monthCounter++
+}
+var ccMonthSelect = document.getElementById('form-checkout__cardExpirationMonth')
+    // corremos un bucle para todos los items de la lista y los agregamos al select
+for (let i = 0; i < months.length; i++) {
+    const e = months[i];
+    var el = document.createElement('option'); // creamos un elemento option
+    el.textContent = e; // el contenido del texto sera el texto del item
+    el.value = e; // los valores seran los mismos que el texto
+    ccMonthSelect.appendChild(el) // se los anexamos al select
+}
+
+// ## Crear years para CC
+var ccYears = [];
+var yearCounter = 22;
+while (yearCounter <= 42) {
+    ccYears.push(yearCounter.toString())
+    yearCounter++
+}
+var ccYearSelect = document.getElementById('form-checkout__cardExpirationYear')
+    // corremos un bucle para todos los items de la lista y los agregamos al select
+for (let i = 0; i < ccYears.length; i++) {
+    const e = ccYears[i];
+    var el = document.createElement('option'); // creamos un elemento option
+    el.textContent = e; // el contenido del texto sera el texto del item
+    el.value = e; // los valores seran los mismos que el texto
+    ccYearSelect.appendChild(el) // se los anexamos al select
 }

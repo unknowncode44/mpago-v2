@@ -2,6 +2,9 @@ var express = require('express');
 const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
+var mercadopago = require('mercadopago');
+const { async } = require('rsvp');
+mercadopago.configurations.setAccessToken("TEST-5195066021992733-073114-bc76bf9a1232db75e73471a5602d017b-65060542");
 
 
 
@@ -14,6 +17,20 @@ router.get('/', async function(req, res, next) {
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     res.render('index', { title: 'Mari Menuco Run', runners });
 });
+
+router.post('/process_payment', async function(req, res, next) {
+    mercadopago.payment.save(req.body)
+        .then(function(response) {
+            const { status, status_detail, id } = response.body;
+            res.status(response.status).json({ status, status_detail, id });
+            console.log(response.status);
+        })
+        .catch(function(error) {
+            console.error(error);
+        });
+});
+
+
 
 /*POST ADD RUNNER*/
 //esta ruta se ejecuta cuando hacemos click en el boton del formulario
@@ -30,7 +47,7 @@ router.post('/add-runner', (req, res) => {
 
     db.collection('runners').add(runner); // grabamos datos en firebase
 
-    res.redirect('/') // para dirigirnos nuevamente a '/'
+    // res.redirect('/') // para dirigirnos nuevamente a '/'
 
 })
 
