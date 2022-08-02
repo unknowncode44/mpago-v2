@@ -127,18 +127,18 @@ for (let i = 0; i < categories.length; i++) {
     select.appendChild(el) // se los anexamos al select
 }
 
-// ## Crear Tipos de DNI ##
-var idTypes = ['DNI', 'LE', 'Pasaporte', 'Otro'] // listamos los tipos
-var idTypeSelect = document.getElementById('form-checkout__identificationType') // identificamos el elemento select del html
+// // ## Crear Tipos de DNI ##
+// var idTypes = ['DNI', 'LE', 'Pasaporte', 'Otro'] // listamos los tipos
+// var idTypeSelect = document.getElementById('form-checkout__identificationType') // identificamos el elemento select del html
 
-// corremos un bucle para todos los items de la lista y los agregamos al select
-for (let i = 0; i < idTypes.length; i++) {
-    const e = idTypes[i];
-    var el = document.createElement('option'); // creamos un elemento option
-    el.textContent = e; // el contenido del texto sera el texto del item
-    el.value = e; // los valores seran los mismos que el texto
-    idTypeSelect.appendChild(el) // se los anexamos al select
-}
+// // corremos un bucle para todos los items de la lista y los agregamos al select
+// for (let i = 0; i < idTypes.length; i++) {
+//     const e = idTypes[i];
+//     var el = document.createElement('option'); // creamos un elemento option
+//     el.textContent = e; // el contenido del texto sera el texto del item
+//     el.value = e; // los valores seran los mismos que el texto
+//     idTypeSelect.appendChild(el) // se los anexamos al select
+// }
 
 
 // ## Crear edades ##
@@ -161,40 +161,40 @@ for (let i = 0; i < ages.length; i++) {
 }
 
 // ## Crear meses para CC
-var months = [];
-var monthCounter = 1;
-while (monthCounter <= 12) {
-    if (monthCounter > 9) {
-        months.push(monthCounter.toString())
-    } else {
-        let mstr = `0${monthCounter}`;
-        months.push(mstr)
-    }
-    monthCounter++
-}
-var ccMonthSelect = document.getElementById('form-checkout__cardExpirationMonth')
+// var months = [];
+// var monthCounter = 1;
+// while (monthCounter <= 12) {
+//     if (monthCounter > 9) {
+//         months.push(monthCounter.toString())
+//     } else {
+//         let mstr = `0${monthCounter}`;
+//         months.push(mstr)
+//     }
+//     monthCounter++
+// }
+// var ccMonthSelect = document.getElementById('form-checkout__cardExpirationMonth')
     // corremos un bucle para todos los items de la lista y los agregamos al select
-for (let i = 0; i < months.length; i++) {
-    const e = months[i];
-    var el = document.createElement('option'); // creamos un elemento option
-    el.textContent = e; // el contenido del texto sera el texto del item
-    el.value = e; // los valores seran los mismos que el texto
-    ccMonthSelect.appendChild(el) // se los anexamos al select
-}
+// for (let i = 0; i < months.length; i++) {
+//     const e = months[i];
+//     var el = document.createElement('option'); // creamos un elemento option
+//     el.textContent = e; // el contenido del texto sera el texto del item
+//     el.value = e; // los valores seran los mismos que el texto
+//     ccMonthSelect.appendChild(el) // se los anexamos al select
+// }
 
 // ## Crear years para CC
-var ccYears = [];
-var yearCounter = 22;
-while (yearCounter <= 42) {
-    ccYears.push(yearCounter.toString())
-    yearCounter++
-}
-var ccYearSelect = document.getElementById('form-checkout__cardExpirationYear')
-    // corremos un bucle para todos los items de la lista y los agregamos al select
-for (let i = 0; i < ccYears.length; i++) {
-    const e = ccYears[i];
-    var el = document.createElement('option'); // creamos un elemento option
-    el.textContent = e; // el contenido del texto sera el texto del item
-    el.value = e; // los valores seran los mismos que el texto
-    ccYearSelect.appendChild(el) // se los anexamos al select
-}
+// var ccYears = [];
+// var yearCounter = 22;
+// while (yearCounter <= 42) {
+//     ccYears.push(yearCounter.toString())
+//     yearCounter++
+// }
+// var ccYearSelect = document.getElementById('form-checkout__cardExpirationYear')
+//     // corremos un bucle para todos los items de la lista y los agregamos al select
+// for (let i = 0; i < ccYears.length; i++) {
+//     const e = ccYears[i];
+//     var el = document.createElement('option'); // creamos un elemento option
+//     el.textContent = e; // el contenido del texto sera el texto del item
+//     el.value = e; // los valores seran los mismos que el texto
+//     ccYearSelect.appendChild(el) // se los anexamos al select
+// }

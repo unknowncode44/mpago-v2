@@ -178,6 +178,13 @@ body section .register {
     text-transform: capitalize;
 }
 
+.form-outer .r-form .page .container .register-row-custom2 .field .cus-container {
+    min-width: 100%;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
 .form-outer .r-form .page .container .register-row-custom2 .field select {
     font-size: 17px;
     margin-right: 5% !important;
@@ -209,6 +216,21 @@ body section .register {
     color: var(--white);
     background: transparent;
 }
+
+.r-form .page .field .cus-container {
+    font-family: 'Montserrat', sans-serif !important;
+    height: 100%;
+    width: 95%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white) !important;
+    background: var(--white);
+}
+
+
 
 .r-form .page .mp-field {
     padding-top: 1%;
