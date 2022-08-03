@@ -63,10 +63,21 @@
                                                     Nombre y Apellido</div>
                                                 <input id="r-name" type="text">
                                             </div>
-                                            <div class="field">
-                                                <div class="label">
-                                                    DNI</div>
-                                                <input id="r-id" type="text">
+                                            <div class="row px-4">
+                                                <div class="col-lg-6 col-sm-6">
+                                                    <div class="field">
+                                                        <div class="label">
+                                                            DNI</div>
+                                                        <input id="r-id" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-6">
+                                                    <div class="field">
+                                                        <div class="label">
+                                                            Soy Socio del Club</div>
+                                                        <input id="r-id" type="text">
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="field">
                                                 <div class="label">
@@ -82,18 +93,36 @@
                                                 Datos de tarjeta:</div>
                                             <div class="container">
                                                 <div class="row register-row-custom2">
-                                                    <div class="col-lg-12 col-sm-12">
+                                                    <div class="col-lg-8 col-sm-8">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Numero de tarjeta</div>
                                                             <div id="form-checkout__cardNumber" class="cus-container"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-8 col-sm-8">
+                                                    <div class="col-lg-4 col-sm-4">
                                                         <div class="field">
                                                             <div class="label">
-                                                                Fecha expiracion (MM/AAAA)</div>
+                                                                Emisor</div>
+                                                                <select id="form-checkout__issuer" name="issuer">
+                                                                    <option value="" disabled selected>Emisor</option>
+                                                                </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Exp. (MM/AA)</div>
                                                             <div id="form-checkout__expirationDate" class="cus-container"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-4">
+                                                        <div class="field">
+                                                            <div class="label">
+                                                                Cuotas</div>
+                                                                <select id="form-checkout__installments" name="installments">
+                                                                    <option value="" disabled selected>Cuotas</option>
+                                                                </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3 col-sm-3">
@@ -176,9 +205,7 @@
                                             <div class="field">
                                                 <div class="label">
                                                     Installments</div>
-                                                <select id="form-checkout__installments" name="installments">
-                                                        <option value="" disabled selected>Plots</option>
-                                                    </select>
+                                                
                                             </div>
                                             <div>
                                                 <input id="token" name="token" type="hidden">
