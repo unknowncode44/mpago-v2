@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-8 text-center justify-content-center">
                             <div class="form-outer">
-                                <form id="form-checkout" action="/process_payment" method="POST">
+                                <form id="form-checkout" onsubmit="return false">
                                     <div class="r-form">
                                         <div class="page slide-page">
                                             <div class="title">
@@ -45,7 +45,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Categoria</div>
-                                                            <select  id="categoriesSelect"></select>
+                                                            <select id="categoriesSelect"></select>
                                                         </div>
                                                     </div>
 
@@ -132,7 +132,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Tipo DNI</div>
-                                                            <select id="form-checkout__identificationType" >
+                                                            <select id="form-checkout__identificationType">
                                                                 <option value="" disabled selected>Document type</option>
                                                             </select>
                                                         </div>
@@ -140,14 +140,14 @@
                                                     <div class="col-lg-8 col-sm-8">
                                                         <div class="field">
                                                             <div class="label">DNI del titular</div>
-                                                            <input type="text" id="form-checkout__identificationNumber"  placeholder="Document number" />
+                                                            <input type="text" id="form-checkout__identificationNumber" placeholder="Document number" />
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 col-sm-12">
                                                         <div class="field">
                                                             <div class="label">
                                                                 email del titular</div>
-                                                                <input type="email" id="form-checkout__cardholderEmail"  placeholder="Email"/>
+                                                            <input type="email" id="form-checkout__cardholderEmail" placeholder="Email" />
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con">
@@ -169,22 +169,23 @@
                                             <div class="field">
                                                 <div class="label">
                                                     Issuer</div>
-                                                    <select id="form-checkout__issuer" name="issuer">
+                                                <select id="form-checkout__issuer" name="issuer">
                                                         <option value="" disabled selected>Issuing Bank</option>
-                                                    </select>        
+                                                    </select>
                                             </div>
                                             <div class="field">
                                                 <div class="label">
                                                     Installments</div>
-                                                    <select id="form-checkout__installments" name="installments">
+                                                <select id="form-checkout__installments" name="installments">
                                                         <option value="" disabled selected>Plots</option>
                                                     </select>
                                             </div>
                                             <div>
                                                 <input id="token" name="token" type="hidden">
-                                                <input id="paymentMethodId"  type="hidden">
+                                                <input id="paymentMethodId" type="hidden">
                                                 <input id="transactionAmount" type="hidden" value="100.50">
                                                 <input id="description" name="description" type="hidden" value="Product Name">
+                                                <p id="payment-status">Waiting Payment</p>
                                             </div>
                                             <div class="field btns">
                                                 <button class="prev-2 mt-3 prev">Anterior</button>

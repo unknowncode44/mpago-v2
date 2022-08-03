@@ -1,19 +1,19 @@
 const mp = new MercadoPago('TEST-6a941031-1068-447c-a42f-fef05ae965a3');
 
-var btn = document.getElementById('form-checkout__submit')
+var mpAmount = "1500"
 
 const cardNumberElement = mp.fields.create('cardNumber', {
     placeholder: "Número de la tarjeta"
-  }).mount('form-checkout__cardNumber');
-  const expirationDateElement = mp.fields.create('expirationDate', {
+}).mount('form-checkout__cardNumber');
+const expirationDateElement = mp.fields.create('expirationDate', {
     placeholder: "MM/YY",
-  }).mount('form-checkout__expirationDate');
-  const securityCodeElement = mp.fields.create('securityCode', {
+}).mount('form-checkout__expirationDate');
+const securityCodeElement = mp.fields.create('securityCode', {
     placeholder: "Código de seguridad"
-  }).mount('form-checkout__securityCode');
+}).mount('form-checkout__securityCode');
 
 const cardForm = mp.cardForm({
-    amount: "1500",
+    amount: mpAmount,
     iframe: true,
     form: {
         id: "form-checkout",
@@ -59,7 +59,7 @@ const cardForm = mp.cardForm({
             if (error) return console.warn("Form Mounted handling error: ", error);
             console.log("Form mounted");
         },
-        onSubmit: event => {
+        onSubmit: (event) => {
             event.preventDefault();
 
             const {
@@ -82,7 +82,7 @@ const cardForm = mp.cardForm({
                     token,
                     issuer_id,
                     payment_method_id,
-                    transaction_amount: 1500,
+                    transaction_amount: Number(amount),
                     installments: Number(installments),
                     description: "Descripción del producto",
                     payer: {
@@ -93,12 +93,26 @@ const cardForm = mp.cardForm({
                         },
                     },
                 }),
-            }).then(()=> {console.log('enviada');})
+            }).then((response, event) => {
+                event.preventDefault()
+                console.log(response);
+            }).then(
+                (result, event) => {
+                    event.preventDefault();
+                    if (!result.hasOwnProperty('error_message')) {
+                        document.getElementById("payment-status").innerText = result.status;
+                    }
+                }
+            )
+            console.log(response.json());
+            event.preventDefault();
+            return response.json()
+
         },
         onFetching: (resource) => {
             console.log("Fetching resource: ", resource);
             return () => {
-                console.log('termine');
+
             };
         }
     },

@@ -17,44 +17,42 @@ router.get('/', async function(req, res, next) {
     res.render('index', { title: 'Mari Menuco Run', runners });
 });
 
-router.get('/mpexample', (req,res) =>{
-    res.render('mpexample');
-});
 
 
 
 router.post('/process_payment', async function(req, res, next) {
-    
-    const {body} = req;
-    const {payer} = body;
-    console.log(`estoy en la solicitud ${body.transactionAmount}`);
-    
+
+    const { body } = req;
+    const { payer } = body;
+
     var payment_data = {
-            transaction_amount: Number(body.transactionAmount),
-            token: body.token,
-            description: body.description,
-            installments: Number(body.installments),
-            payment_method_id: body.paymentMethodId,
-            issuer_id: body.issuer,
-            payer: {
-                email: payer.email,
-                identification: {
-                    type: payer.identificationType,
-                    number: payer.identificationNumber
-                }
+        transaction_amount: Number(body.transaction_amount),
+        token: body.token,
+        description: body.description,
+        installments: Number(body.installments),
+        payment_method_id: body.payment_method_id,
+        issuer_id: body.issuer_id,
+        payer: {
+            email: payer.email,
+            identification: {
+                type: payer.identification.type,
+                number: payer.identification.number
             }
-        };
-        
-        mercadopago.payment.save(payment_data)
+        }
+    };
+
+    mercadopago.payment.save(payment_data)
         .then(function(response) {
-            res.status(response.status).json({
-                status: response.body.status,
-                status_detail: response.body.status_detail,
-                id: response.body.id
+            const { response: data } = response;
+            res.status(201).json({
+                status: data.status,
+                status_detail: data.status_detail,
+                id: data.id
             });
-            console.log(response.body);
-            
-        })
+
+        }).then(() =>
+            console.log(req.body)
+        )
         .catch(function(error) {
             console.error(error)
         });
