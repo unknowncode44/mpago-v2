@@ -110,11 +110,10 @@ body section .register {
     font-size: 32px;
     font-weight: 600;
     color: var(--white);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .form-outer .r-form .page .field {
-    min-width: 100%;
     height: 45px;
     margin: 40px 0 !important;
     display: flex;
@@ -123,19 +122,50 @@ body section .register {
     justify-content: center;
 }
 
+.form-outer .r-form .page .field-half {
+    max-width: 100% !important;
+    height: 45px !important;
+    margin: 40px 0 !important;
+    display: flex !important;
+    position: relative !important;
+    align-items: start !important;
+    justify-content: start !important;
+    padding-inline-start: 2.5%;
+}
+
+.form-outer .r-form .page .field-half input {
+    max-width: 50% !important;
+    margin: 0;
+    margin-inline-end: 2%;
+}
+
+.form-outer .r-form .page .field-half small {
+    color: var(--white);
+}
+
+.form-outer .r-form .page .field-half .label {
+    transform: translateX(-1%);
+}
+
+.form-outer .r-form .page .field-half .label2 {
+    transform: translateX(39%);
+}
+
 .form-outer .r-form .page .container .register-row-custom {
     padding-inline-start: 3% !important;
     padding-inline-end: 0% !important;
+    transform: translateY(-25%);
 }
 
 .form-outer .r-form .page .container .register-row-custom3 {
     padding-inline-start: 5% !important;
     padding-inline-end: 5% !important;
-    max-width: 50% !important;
 }
 
-.form-outer .r-form .page .container .register-row-custom3 .r-id {
-    min-width: 100% !important;
+.form-outer #form-checkout .r-form .page .container .register-row-custom3 .field {
+    height: 45px;
+    margin: 0% 0% !important;
+    margin-bottom: 0px !important;
 }
 
 .form-outer .r-form .page .container .register-row-custom .field {
@@ -191,9 +221,9 @@ body section .register {
 .form-outer .r-form .page .container .register-row-custom2 .field .cus-container {
     min-width: 100%;
     text-transform: capitalize;
+    color: brown !important;
     font-family: 'Montserrat', sans-serif !important;
 }
-
 
 .form-outer .r-form .page .container .register-row-custom2 .field select {
     font-size: 17px;
@@ -239,8 +269,6 @@ body section .register {
     color: var(--white) !important;
     background: var(--white);
 }
-
-
 
 .r-form .page .mp-field {
     padding-top: 1%;

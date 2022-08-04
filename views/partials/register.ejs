@@ -63,26 +63,18 @@
                                                     Nombre y Apellido</div>
                                                 <input id="r-name" type="text">
                                             </div>
-                                            <div class="row px-4 register-row-custom3">
-                                                <div class="col-lg-6 col-sm-6 ">
-                                                    <div class="field">
-                                                        <div class="label">
-                                                            DNI</div>
-                                                        <input id="r-id" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-sm-6">
-                                                    <div class="field">
-                                                        <div class="label">Numero de socio</div>
-                                                        <small>Solo para Socios del club Mari Menuco</small>
-                                                        <input id="r-id" type="text">
-                                                    </div>
-                                                </div>
+                                            <div class="field field-half">
+                                                <div class="label">
+                                                    DNI</div>
+                                                <input id="r-id" type="text" placeholder="DNI">
+                                                <div class="label label2">Numero de socio</div>
+                                                <input id="partner-id" type="text" placeholder="Numero de Socio">
+                                                <small>*Solo Socios del club Mari Menuco</small>
                                             </div>
                                             <div class="field">
                                                 <div class="label">
                                                     Email</div>
-                                                <input id="r-email" type="text">
+                                                <input id="r-email" type="text" placeholder="email@email.com">
                                             </div>
                                             <div class="field">
                                                 <button id="home_btn" class="firstNext mt-3 next">Siguiente</button>
@@ -104,7 +96,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Emisor</div>
-                                                                <select id="form-checkout__issuer" name="issuer">
+                                                            <select id="form-checkout__issuer" name="issuer">
                                                                     <option value="" disabled selected>Emisor</option>
                                                                 </select>
                                                         </div>
@@ -120,19 +112,19 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Cuotas</div>
-                                                                <select id="form-checkout__installments" name="installments">
+                                                            <select id="form-checkout__installments" name="installments">
                                                                     <option value="" disabled selected>Cuotas</option>
                                                                 </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-sm-3">
+                                                    <div class="col-lg-4 col-sm-4">
                                                         <div class="field">
                                                             <div class="label">
                                                                 CVV</div>
                                                             <div id="form-checkout__securityCode" class="cus-container"></div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-1 col-sm-1">
+                                                    <!-- <div class="col-lg-1 col-sm-1">
                                                         <div class="field">
                                                             <div class="label">
                                                                 ver</div>
@@ -140,7 +132,7 @@
                                                                 <ion-icon id="eye-icon" name="eye-outline"></ion-icon>
                                                             </span>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                     <div class="col-lg-12 col-sm-12">
                                                         <div class="field">
                                                             <div class="label">
@@ -205,7 +197,7 @@
                                             <div class="field">
                                                 <div class="label">
                                                     Installments</div>
-                                                
+
                                             </div>
                                             <div>
                                                 <input id="token" name="token" type="hidden">

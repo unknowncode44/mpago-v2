@@ -1,19 +1,42 @@
 const mp = new MercadoPago('TEST-6a941031-1068-447c-a42f-fef05ae965a3');
 
-var mpAmount = "1500"
+const cat = document.getElementById('categoriesSelect')
+const catValue = cat.value
+
+function getAmount(_cat) {
+    switch (_cat) {
+        case 'Kids':
+            return '10000';
+        case '5k':
+            return '12000';
+        case '10k':
+            return '15000';
+        case '21k':
+            return '17000';
+    }
+}
+
+var mpAmount = getAmount(catValue);
+
+cat.addEventListener('change', (event) => {
+    mpAmount = getAmount(event.target.value);
+    console.log(catValue);
+    console.log(mpAmount);
+})
+
 
 const cardNumberElement = mp.fields.create('cardNumber', {
     placeholder: "Número de la tarjeta"
 }).mount('form-checkout__cardNumber');
 const expirationDateElement = mp.fields.create('expirationDate', {
-    placeholder: "MM/YY",
+    placeholder: "MM/AA",
 }).mount('form-checkout__expirationDate');
 const securityCodeElement = mp.fields.create('securityCode', {
-    placeholder: "Código de seguridad"
+    placeholder: "Cód. Seguridad"
 }).mount('form-checkout__securityCode');
 
 const cardForm = mp.cardForm({
-    amount: mpAmount,
+    amount: getAmount(catValue),
     iframe: true,
     form: {
         id: "form-checkout",
@@ -23,11 +46,11 @@ const cardForm = mp.cardForm({
         },
         expirationDate: {
             id: "form-checkout__expirationDate",
-            placeholder: "MM/YY",
+            placeholder: "MM/AA",
         },
         securityCode: {
             id: "form-checkout__securityCode",
-            placeholder: "Código de seguridad",
+            placeholder: "Cód. Seguridad",
         },
         cardholderName: {
             id: "form-checkout__cardholderName",
@@ -35,7 +58,7 @@ const cardForm = mp.cardForm({
         },
         issuer: {
             id: "form-checkout__issuer",
-            placeholder: "Banco emisor",
+            placeholder: "Emisor",
         },
         installments: {
             id: "form-checkout__installments",

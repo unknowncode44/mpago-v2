@@ -12,7 +12,6 @@ var r = gdc(windowWidth, windowHeight)
 var aspectRatio = `Aspect Ratio: ${(windowWidth/windowHeight).toFixed()}:${windowHeight/r}`
 console.log(aspectRatio);
 
-
 // ## EFECTO NAVBAR ON SCROLL ##
 
 window.addEventListener("scroll", function() {
@@ -173,7 +172,7 @@ for (let i = 0; i < ages.length; i++) {
 //     monthCounter++
 // }
 // var ccMonthSelect = document.getElementById('form-checkout__cardExpirationMonth')
-    // corremos un bucle para todos los items de la lista y los agregamos al select
+// corremos un bucle para todos los items de la lista y los agregamos al select
 // for (let i = 0; i < months.length; i++) {
 //     const e = months[i];
 //     var el = document.createElement('option'); // creamos un elemento option
