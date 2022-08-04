@@ -128,6 +128,16 @@ body section .register {
     padding-inline-end: 0% !important;
 }
 
+.form-outer .r-form .page .container .register-row-custom3 {
+    padding-inline-start: 5% !important;
+    padding-inline-end: 5% !important;
+    max-width: 50% !important;
+}
+
+.form-outer .r-form .page .container .register-row-custom3 .r-id {
+    min-width: 100% !important;
+}
+
 .form-outer .r-form .page .container .register-row-custom .field {
     height: 45px;
     margin: 0% 0% !important;
