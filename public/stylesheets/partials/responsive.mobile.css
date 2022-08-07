@@ -4,6 +4,9 @@
     html {
         overflow-x: hidden;
     }
+    body {
+        max-height: 400vh;
+    }
     .banner {
         border-bottom-right-radius: 5%;
         border-bottom-left-radius: 5%;
@@ -279,168 +282,158 @@
     }
     .form-container {
         padding: 0% 0% !important;
+        min-height: 100vh !important;
     }
-    .form-container header {
-        font-size: 80px;
-    }
-    .form-outer form .page {
-        padding: 0 0%;
-        width: 100%;
-        transition: margin-left 0.3s ease-in-in-out;
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-    }
-    .form-outer form .page .title {
-        font-size: 46px;
-        margin-bottom: 50px !important;
-        color: var(--primary);
-    }
-    .form-outer form .page .field {
-        height: 120px;
-        margin: 70px 0 20px 0;
-        min-width: 100%;
-    }
-    form .page .field .label {
-        top: -60px;
-        font-size: 40px;
-    }
-    form .page .field input {
-        border: 1px solid var(--primary);
-        font-size: 44px;
-        font-weight: 600;
-        color: var(--primary);
-    }
-    form .page .field select {
-        border: 1px solid var(--primary);
-        font-size: 44px;
-        font-weight: 600;
-        color: var(--primary)
-    }
-    form .page .field button {
-        width: 80%;
-        height: calc(100% + 5px);
-        background: transparent;
-        border: 2px solid var(--primary);
-        margin-top: -20px;
-        margin-left: 10%;
-        border-radius: 5px;
-        color: var(--primary);
-        font-size: 40px;
-        letter-spacing: 1px;
-    }
-    /*
-    
-    form .page .field button:hover {
-        background: var(--primary);
-        color: var(--secondary);
-        border: none;
-    }
-    
-    form .page .btns button {
-        margin-top: -20px!important;
-    }
-    
-    form .page .btns button.prev {
-        margin-right: 3px;
-        font-size: 17px;
-    }
-    
-    form .page .btns button.next {
-        margin-left: 3px;
-    }
-    
-    .form-container .c-progress-bar {
-        display: flex;
-        margin-left: 10%;
-        user-select: none;
-        max-width: 75%;
-    }
-    
-    .form-container .c-progress-bar .step {
+    .form-container .header-bg {
         text-align: center;
-        width: 100%;
-        position: relative;
     }
-    
-    .form-container .c-progress-bar .step p {
-        font-size: 22px;
-        color: var(--primary);
-    
+    .c-progress-bar {
+        min-width: 100% !important;
+        max-height: 290px !important;
+        justify-items: start !important;
+        transform: translateX(-0%);
     }
-    
-    .c-progress-bar .step .bullet {
-        border: 2px solid var(--primary);
-        transition: 0.2s;
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 25px;
-        color: var(--primary);
-    }
-    
-    .c-progress-bar .step .bullet.active {
-        border-color: var(--secondary);
-        background: var(--secondary);
-    }
-    
-    .c-progress-bar .step .bullet span {
-        position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translateX(-50%);
-        font-size: 24px;
-        color: var(--primary);
-    }
-    
-    .c-progress-bar .step .bullet.active span {
+    .c-progress-bar .step .active {
         display: none;
     }
-    
+    .c-progress-bar .step2 {
+        display: none !important;
+    }
+    .c-progress-bar .step2 .active {
+        display: block !important;
+    }
+    .c-progress-bar .step3 {
+        display: none !important;
+    }
+    .c-progress-bar .step3 .active {
+        display: block !important;
+    }
+    .c-progress-bar .step:first-child {
+        min-width: 100% !important;
+    }
     .c-progress-bar .step .bullet:before,
     .c-progress-bar .step .bullet:after {
-        position: absolute;
-        content: '';
-        bottom: 50%;
-        left: 100%;
-        height: 4px;
-        width: 715%;
-        background: var(--primary);
+        height: 0px;
     }
-    
-    .c-progress-bar .step .bullet.active:after {
-        background: var(--secondary);
-        transform: scaleX(0);
-        transform-origin: left;
-        animation: animate 0.3s linear forwards;
+    .c-progress-bar .step p {
+        font-size: 48px !important;
     }
-    
-    @keyframes animate {
-        100% {
-            transform: scaleX(1);
-        }
+    .c-progress-bar .step .bullet span {
+        transform: translateX(-50%) translateY(180%);
+        font-size: 100px;
+        font-weight: 500;
     }
-    
-    .c-progress-bar .step:last-child .bullet:before,
-    .c-progress-bar .step:last-child .bullet:after {
+    .c-progress-bar .step .bullet {
+        height: 200px;
+        width: 200px;
+        border: 4px solid var(--white);
+    }
+    .form-container header {
+        font-size: 50px;
+    }
+    .form-outer form .page {
+        padding: 15% 5% !important;
+    }
+    .form-outer form .page .title {
+        font-size: 48px !important;
+    }
+    .form-outer .r-form .page .container .register-row-custom {
+        padding-inline-start: 0% !important;
+        padding-inline-end: 0% !important;
+        height: 150px;
+        transform: translateY(10%);
+    }
+    .form-outer .r-form .page .container .register-row-custom select {
+        transform: translateY(75%) !important;
+        font-size: 60px !important;
+    }
+    .form-outer .r-form .page .container .register-row-custom input {
+        transform: translateY(75%) !important;
+        font-size: 50px !important;
+        font-weight: 500;
+    }
+    .form-outer .r-form .page .field {
+        height: 160px !important;
+        justify-items: start;
+    }
+    .r-form .page .field .label {
+        top: -20px;
+        font-size: 40px !important;
+        padding-left: 5% !important;
+    }
+    form .page .field input {
+        height: 90px !important;
+        margin-left: 0 !important;
+        font-size: 50px !important;
+        font-weight: 500;
+    }
+    form .page .field input#r-name {
+        min-width: 70% !important;
+        font-size: 60px !important;
+        font-weight: 500;
+    }
+    form .page .field input#r-email {
+        min-width: 90%;
+        font-size: 60px !important;
+        font-weight: 500;
+    }
+    form .page .field select {
+        height: 90px !important;
+        transform: translateY(-5%);
+        font-size: 50px !important;
+        font-weight: 500;
+    }
+    form .page .field button {
+        width: 80% !important;
+        height: calc(80% + 0px) !important;
+        background: transparent;
+        font-size: 50px !important;
+        margin: 0 !important;
+    }
+    .form-outer .r-form .page .field-half {
+        padding-left: 4% !important;
+    }
+    .form-outer .r-form .page .field-half .label {
+        padding-left: 2% !important;
+    }
+    .form-outer .r-form .page .field-half input {
+        transform: translateY(45%);
+        font-size: 50px !important;
+        font-weight: 500;
+    }
+    .form-outer .r-form .page .field-half small {
         display: none;
     }
-    
-    .c-progress-bar .step p.active {
-        color: var(--secondary);
-        transition: 0.2s linear;
+    .form-outer .r-form .page .container .register-row-custom2 {
+        padding-inline-start: 0% !important;
+        padding-inline-end: 0% !important;
+        margin-bottom: 20% !important;
+        min-height: 100px;
     }
-    
-    .c-progress-bar .step .check {
-        position: absolute;
-        left: 50%;
-        top: 70%;
-        font-size: 15px;
-        transform: translate(-50%, -50%);
-        display: none;
+    .form-outer .r-form .page .container .register-row-custom2 .field .label {
+        font-size: 32px !important;
+        padding: 0%;
+        margin: 5px;
+        transform: translateY(-120%) !important;
     }
-    
-    .c-progress-bar .step .check.active {
-        display: block;
-        color: var(--primary);
-    } */
+    .form-outer .r-form .page .container .register-row-custom2 .field p {
+        font-size: 22px !important;
+        padding: 0%;
+        margin: 5px;
+        transform: translateY(0%) !important;
+    }
+    .form-outer .r-form .page .container .register-row-custom2 .field input {
+        font-size: 50px !important;
+        font-weight: 500;
+    }
+    .container-sm {
+        max-width: 110% !important;
+    }
+    .cont-mobile {
+        transform: translateY(20%) !important;
+    }
+    /* footer */
+    .footer {
+        transform: translateY(530vh);
+    }
 }

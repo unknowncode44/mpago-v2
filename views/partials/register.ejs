@@ -8,8 +8,8 @@
                     </div>
                 </div>
                 <div class="container f-con p-2 pt-0 sliding-form-container">
-                    <div class="row text-center justify-content-center">
-                        <div class="row px-5 m-0 text-center justify-content-center c-progress-bar">
+                    <div class="row text-center justify-content-center c-progress-bar-container">
+                        <div id="c-progress" class="row px-5 m-0 text-center justify-content-center c-progress-bar">
                             <div class="col step">
                                 <p>Datos Personales</p>
                                 <div class="bullet">
@@ -17,14 +17,14 @@
                                 </div>
                                 <ion-icon class="check" name="checkmark-outline"></ion-icon>
                             </div>
-                            <div class="col step">
+                            <div class="col step step2">
                                 <p>Pago</p>
                                 <div class="bullet">
                                     <span>2</span>
                                 </div>
                                 <ion-icon class="check" name="checkmark-outline"></ion-icon>
                             </div>
-                            <div class="col step">
+                            <div class="col step step3">
                                 <p>Confirmacion</p>
                                 <div class="bullet bullet-last">
                                     <span>3</span>
@@ -32,7 +32,7 @@
                                 <ion-icon class="check" name="checkmark-outline"></ion-icon>
                             </div>
                         </div>
-                        <div class="col-md-8 text-center justify-content-center">
+                        <div class="col-lg-8 text-center justify-content-center col-sm-12">
                             <div class="form-outer">
                                 <form id="form-checkout">
                                     <div class="r-form">
@@ -40,20 +40,28 @@
                                             <div class="title">
                                                 Datos Personales:</div>
                                             <div class="container p-0 m-w-full">
+
                                                 <div class="row pe-0 ps-3 register-row-custom">
                                                     <div class="col-lg-8 col-sm-8">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Categoria</div>
                                                             <select id="categoriesSelect"></select>
+                                                            <input id="runnerUID" type="hidden">
+                                                            <% if (runnersLenght) { %>
+                                                                <script>
+                                                                    document.getElementById('runnerUID').value = '<%= runnersLenght %>'
+                                                                </script>
+                                                                <% } %>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-3 pe-2 col-sm-3">
+                                                    <div class="col-lg-3 pe-2 col-sm-4">
                                                         <div class="field">
                                                             <div class="label">
-                                                                Edad</div>
-                                                            <select id="ageSelect"></select>
+                                                                Precio</div>
+                                                            <input id="transactionAmount" disabled style="color: var(--secondary)" value="10000">
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -61,8 +69,13 @@
                                             <div class="field">
                                                 <div class="label">
                                                     Nombre y Apellido</div>
-                                                <input id="r-name" type="text">
-                                                <input id="transactionAmount" value="100.50">
+                                                <input id="r-name" type="text" style="margin: 0 2.5%;">
+
+                                                <div class="field" style="align-items: center;">
+                                                    <div class="label">
+                                                        Edad</div>
+                                                    <select id="ageSelect"></select>
+                                                </div>
                                             </div>
                                             <div class="field field-half">
                                                 <div class="label">
@@ -84,16 +97,16 @@
                                         <div class="page">
                                             <div class="title">
                                                 Datos de tarjeta:</div>
-                                            <div class="container">
+                                            <div class="container container-sm cont-mobile">
                                                 <div class="row register-row-custom2">
-                                                    <div class="col-lg-8 col-sm-8">
+                                                    <div class="col-lg-8 col-sm-12 my-4">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Numero de tarjeta</div>
                                                             <input id="form-checkout__cardNumber">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4">
+                                                    <div class="col-lg-4 col-sm-6 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Emisor</div>
@@ -102,14 +115,14 @@
                                                                 </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4">
+                                                    <div class="col-lg-4 col-sm-6 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Exp. (MM/AA)</div>
                                                             <input id="form-checkout__expirationDate">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4">
+                                                    <div class="col-lg-4 col-sm-6 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Cuotas</div>
@@ -118,28 +131,20 @@
                                                                 </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4">
+                                                    <div class="col-lg-4 col-sm-4 my-4">
                                                         <div class="field">
                                                             <div class="label">
                                                                 CVV</div>
                                                             <input id="form-checkout__securityCode">
                                                         </div>
                                                     </div>
-                                                    <!-- <div class="col-lg-1 col-sm-1">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                ver</div>
-                                                            <span class="cvv-eye" id="eye-span" onclick="showPass()">
-                                                                <ion-icon id="eye-icon" name="eye-outline"></ion-icon>
-                                                            </span>
-                                                        </div>
-                                                    </div> -->
-                                                    <div class="col-lg-12 col-sm-12">
+
+                                                    <div class="col-lg-12 col-sm-12 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 <div class="row">
                                                                     <div class="col-lg-6 col-sm-6">
-                                                                        Nombre del Titular
+                                                                        Titular
                                                                     </div>
                                                                     <div class="col-lg-6 col-sm-6 text-end">
                                                                         <p class="same-info" id="same-info"><a href="javascript:void(0)">Usar los mismos datos</a></p>
@@ -150,7 +155,7 @@
                                                             <input type="text" id="form-checkout__cardholderName" placeholder="Cardholder" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4">
+                                                    <div class="col-lg-4 col-sm-4 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Tipo DNI</div>
@@ -159,20 +164,20 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-8 col-sm-8">
+                                                    <div class="col-lg-8 col-sm-8 my-5">
                                                         <div class="field">
                                                             <div class="label">DNI del titular</div>
                                                             <input type="text" id="form-checkout__identificationNumber" placeholder="Document number" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 col-sm-12">
+                                                    <div class="col-lg-12 col-sm-12 my-5">
                                                         <div class="field">
                                                             <div class="label">
                                                                 email del titular</div>
                                                             <input type="email" id="form-checkout__cardholderEmail" placeholder="Email" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con">
+                                                    <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con my-5">
                                                         <div class="mp-field">
                                                             <div class="label">Usamos <img src="/images/mercadopago.svg" alt=""></div>
                                                         </div>
@@ -223,40 +228,3 @@
         </div>
     </div>
 </section>
-<script>
-    function showPass() {
-        let eyeSpan = document.getElementById('eye-span')
-        let eyeIcon = document.getElementById('eye-icon')
-        eyeIcon.setAttribute('name', 'eye-off-outline')
-
-        var x = document.getElementById('form-checkout__securityCode')
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            eyeIcon.setAttribute('name', 'eye-outline');
-            x.type = "password";
-        }
-    }
-</script>
-
-
-
-
-
-<!-- <form action="add-runner" method="post">
-        <input type="text" name="runnerName">
-        <input type="number" name="runnerAge">
-        <input type="text" name="runnerEmail">
-        <select name="categories" id="categoriesSelect">
-            <option>Elije una Categoria</option>
-        </select>
-        <button type="submit">Agregar</button>
-        <hr>
-        <% runners.map(item => { %>
-            <a href="runner/<%= item.id %>">
-                <%= item.data.name %>
-            </a>
-            <a href="borrar/<%= item.id %>">Borra</a>
-            <% })%>
-
-    </form> -->

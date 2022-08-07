@@ -18,5 +18,5 @@
 
 body {
     background: var(--black2) !important;
-    min-height: 500vh;
+    max-height: 400vh;
 }

@@ -54,6 +54,9 @@ const nextBtnThird = document.querySelector(".next-2");
 const prevBtnFourth = document.querySelector(".prev-3");
 const submitBtn = document.querySelector(".submit");
 const progressText = document.querySelectorAll(".step p");
+const progressBar = document.querySelectorAll(".step");
+const progressBar2 = document.querySelectorAll("step2");
+const progressBar3 = document.querySelectorAll(".step3");
 const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
@@ -63,6 +66,7 @@ nextBtnFirst.addEventListener("click", function(event) {
     var validEmail = validateEmail(rEmail.value)
     if (validEmail) {
         slidePage.style.marginLeft = "-100%";
+        progressBar[current - 1].classList.add("active");
         bullet[current - 1].classList.add("active");
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
@@ -74,6 +78,7 @@ nextBtnFirst.addEventListener("click", function(event) {
 nextBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
     slidePage.style.marginLeft = "-200%";
+    progressBar[current - 1].classList.add("active");
     bullet[current - 1].classList.add("active");
     progressCheck[current - 1].classList.add("active");
     progressText[current - 1].classList.add("active");
@@ -158,6 +163,20 @@ for (let i = 0; i < ages.length; i++) {
     el.value = e; // los valores seran los mismos que el texto
     agesSelect.appendChild(el) // se los anexamos al select
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ## Crear meses para CC
 // var months = [];

@@ -6,6 +6,8 @@ var amount = document.getElementById('transactionAmount') // precio
 
 
 
+
+
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
@@ -30,6 +32,7 @@ cat.addEventListener('change', () => {
 let hBtn = document.getElementById('home_btn')
 
 hBtn.addEventListener('click', async() => {
+    catValue
     await getAmount().then(() => {
         savePayment(amount.value);
     })
@@ -47,6 +50,12 @@ const securityCodeElement = mp.fields.create('securityCode', {
 }).mount('form-checkout__securityCode');
 
 function savePayment(_amount) {
+    const runnerName = document.getElementById('r-name').value.toString();
+    const runnerID = document.getElementById('r-id').value.toString();
+    const runnerAgeSelect = document.getElementById('ageSelect');
+    const runnerAge = runnerAgeSelect.value;
+    const partnerID = document.getElementById('partner-id').value.toString();
+    const runnerEmail = document.getElementById('r-email').value.toString();
     const cardForm = mp.cardForm({
         amount: _amount,
         form: {
@@ -107,7 +116,38 @@ function savePayment(_amount) {
                     identificationType,
                 } = cardForm.getCardFormData();
 
+                const catVal = document.getElementById('categoriesSelect').value
+                let runnerUID = Number(document.getElementById('runnerUID').value);
+                let runnerUIDStr;
+
+
+                if (runnerUID < 10) {
+                    runnerUIDStr = `00${runnerUID}`;
+                } else {
+                    if (runnerUID < 100) {
+                        runnerUIDStr = `0${runnerUID}`;
+                    } else {
+                        runnerUIDStr = `${runnerUID}`
+                    }
+
+                }
+
+                const runnerInfo = {
+                    runnerUID: runnerUIDStr,
+                    catValue: catVal,
+                    runnerName: runnerName,
+                    runnerID: runnerID,
+                    runnerAge: runnerAge,
+                    partnerID: partnerID,
+                    runnerEmail: runnerEmail,
+                }
+
+
+
+
+
                 fetch("/process_payment", {
+
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -126,22 +166,19 @@ function savePayment(_amount) {
                                 number: identificationNumber,
                             },
                         },
+                        runnerInfo,
                     }),
-                }).then((response, event) => {
-                    event.preventDefault()
-                    console.log(response);
                 }).then(
-                    (result, event) => {
+                    (result) => {
                         event.preventDefault();
                         if (!result.hasOwnProperty('error_message')) {
+                            setTimeout(() => {
+                                console.log(result.body.status_detail);
+                            }, 5000);
                             document.getElementById("payment-status").innerText = result.status;
                         }
                     }
                 )
-                console.log(response.json());
-                event.preventDefault();
-                return response.json()
-
             },
             onFetching: (resource) => {
                 console.log("Fetching resource: ", resource);

@@ -14,7 +14,8 @@ router.get('/', async function(req, res, next) {
     const request = await db.collection('runners').get();
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
-    res.render('index', { title: 'Mari Menuco Run', runners });
+    var runnersLenght = runners.length;
+    res.render('index', { title: 'Mari Menuco Run', runners, runnersLenght });
 });
 
 
@@ -24,6 +25,7 @@ router.post('/process_payment', async function(req, res, next) {
 
     const { body } = req;
     const { payer } = body;
+
 
     var payment_data = {
         transaction_amount: Number(body.transaction_amount),
@@ -41,18 +43,33 @@ router.post('/process_payment', async function(req, res, next) {
         }
     };
 
-    mercadopago.payment.save(payment_data)
+    await mercadopago.payment.save(payment_data)
         .then(function(response) {
+
             const { response: data } = response;
             res.status(201).json({
                 status: data.status,
                 status_detail: data.status_detail,
                 id: data.id
             });
+            console.log(data.status);
+            let runner = {
+                runnerInfo: req.body.runnerInfo,
+                payment_data: {
+                    payment_id: data.id,
+                    date_approved: data.date_approved,
+                    status: data.status,
+                    status_detail: data.status_detail,
+                    net_received: data.transaction_details.net_received_amount,
+                    amount: data.transaction_details.total_paid_amount,
+                }
+            }
+            db.collection('runners').add(runner);
 
-        }).then(() =>
-            console.log(req.body)
-        )
+        }).then(() => {
+
+            console.log('funcionando');
+        })
         .catch(function(error) {
             console.error(error)
         });
@@ -96,6 +113,15 @@ router.get('/runner/:id', async(req, res) => {
 
     res.render('runner', { runner })
 })
+
+/*render dashboard*/
+router.get('/dashboard', async function(req, res, next) {
+    const request = await db.collection('runners').get();
+    const { docs } = request;
+    const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+    console.log(runners[0].data.runnerInfo.runnerID);
+    res.render('dashboard', { title: 'Panel de Control', runners });
+});
 
 
 
