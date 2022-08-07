@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-md-8 text-center justify-content-center">
                             <div class="form-outer">
-                                <form id="form-checkout" onsubmit="return false">
+                                <form id="form-checkout">
                                     <div class="r-form">
                                         <div class="page slide-page">
                                             <div class="title">
@@ -62,6 +62,7 @@
                                                 <div class="label">
                                                     Nombre y Apellido</div>
                                                 <input id="r-name" type="text">
+                                                <input id="transactionAmount" value="100.50">
                                             </div>
                                             <div class="field field-half">
                                                 <div class="label">
@@ -89,7 +90,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Numero de tarjeta</div>
-                                                            <div id="form-checkout__cardNumber" class="cus-container"></div>
+                                                            <input id="form-checkout__cardNumber">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-4 col-sm-4">
@@ -97,7 +98,7 @@
                                                             <div class="label">
                                                                 Emisor</div>
                                                             <select id="form-checkout__issuer" name="issuer">
-                                                                    <option value="" disabled selected>Emisor</option>
+                                                                    <option value="" disabled>Emisor</option>
                                                                 </select>
                                                         </div>
                                                     </div>
@@ -105,7 +106,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Exp. (MM/AA)</div>
-                                                            <div id="form-checkout__expirationDate" class="cus-container"></div>
+                                                            <input id="form-checkout__expirationDate">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-4 col-sm-4">
@@ -121,7 +122,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 CVV</div>
-                                                            <div id="form-checkout__securityCode" class="cus-container"></div>
+                                                            <input id="form-checkout__securityCode">
                                                         </div>
                                                     </div>
                                                     <!-- <div class="col-lg-1 col-sm-1">
@@ -202,7 +203,7 @@
                                             <div>
                                                 <input id="token" name="token" type="hidden">
                                                 <input id="paymentMethodId" type="hidden">
-                                                <input id="transactionAmount" type="hidden" value="100.50">
+
                                                 <input id="description" name="description" type="hidden" value="Product Name">
                                                 <p id="payment-status">Waiting Payment</p>
                                             </div>

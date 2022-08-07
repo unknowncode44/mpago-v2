@@ -1,27 +1,38 @@
 const mp = new MercadoPago('TEST-6a941031-1068-447c-a42f-fef05ae965a3');
 
-const cat = document.getElementById('categoriesSelect')
-const catValue = cat.value
+const cat = document.getElementById('categoriesSelect') // categoria
+const catValue = cat.value // valor
+var amount = document.getElementById('transactionAmount') // precio
 
-function getAmount(_cat) {
+
+
+async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            return '10000';
+            amount.value = '1000';
+            break
         case '5k':
-            return '12000';
+            amount.value = '2000';
+            break
         case '10k':
-            return '15000';
+            amount.value = '15000';
+            break
         case '21k':
-            return '17000';
+            amount.value = '17000';
+            break
     }
 }
 
-var mpAmount = getAmount(catValue);
+cat.addEventListener('change', () => {
+    getAmount(cat.value)
+})
 
-cat.addEventListener('change', (event) => {
-    mpAmount = getAmount(event.target.value);
-    console.log(catValue);
-    console.log(mpAmount);
+let hBtn = document.getElementById('home_btn')
+
+hBtn.addEventListener('click', async() => {
+    await getAmount().then(() => {
+        savePayment(amount.value);
+    })
 })
 
 
@@ -35,109 +46,110 @@ const securityCodeElement = mp.fields.create('securityCode', {
     placeholder: "Cód. Seguridad"
 }).mount('form-checkout__securityCode');
 
-const cardForm = mp.cardForm({
-    amount: getAmount(catValue),
-    iframe: true,
-    form: {
-        id: "form-checkout",
-        cardNumber: {
-            id: "form-checkout__cardNumber",
-            placeholder: "Numero de tarjeta",
+function savePayment(_amount) {
+    const cardForm = mp.cardForm({
+        amount: _amount,
+        form: {
+            id: "form-checkout",
+            cardNumber: {
+                id: "form-checkout__cardNumber",
+                placeholder: "Numero de tarjeta",
+            },
+            expirationDate: {
+                id: "form-checkout__expirationDate",
+                placeholder: "MM/AA",
+            },
+            securityCode: {
+                id: "form-checkout__securityCode",
+                placeholder: "Cód. Seguridad",
+            },
+            cardholderName: {
+                id: "form-checkout__cardholderName",
+                placeholder: "Titular de la tarjeta",
+            },
+            issuer: {
+                id: "form-checkout__issuer",
+                placeholder: "Emisor",
+            },
+            installments: {
+                id: "form-checkout__installments",
+                placeholder: "Cuotas",
+            },
+            identificationType: {
+                id: "form-checkout__identificationType",
+                placeholder: "Tipo de documento",
+            },
+            identificationNumber: {
+                id: "form-checkout__identificationNumber",
+                placeholder: "Número del documento",
+            },
+            cardholderEmail: {
+                id: "form-checkout__cardholderEmail",
+                placeholder: "E-mail",
+            },
         },
-        expirationDate: {
-            id: "form-checkout__expirationDate",
-            placeholder: "MM/AA",
-        },
-        securityCode: {
-            id: "form-checkout__securityCode",
-            placeholder: "Cód. Seguridad",
-        },
-        cardholderName: {
-            id: "form-checkout__cardholderName",
-            placeholder: "Titular de la tarjeta",
-        },
-        issuer: {
-            id: "form-checkout__issuer",
-            placeholder: "Emisor",
-        },
-        installments: {
-            id: "form-checkout__installments",
-            placeholder: "Cuotas",
-        },
-        identificationType: {
-            id: "form-checkout__identificationType",
-            placeholder: "Tipo de documento",
-        },
-        identificationNumber: {
-            id: "form-checkout__identificationNumber",
-            placeholder: "Número del documento",
-        },
-        cardholderEmail: {
-            id: "form-checkout__cardholderEmail",
-            placeholder: "E-mail",
-        },
-    },
-    callbacks: {
-        onFormMounted: error => {
-            if (error) return console.warn("Form Mounted handling error: ", error);
-            console.log("Form mounted");
-        },
-        onSubmit: (event) => {
-            event.preventDefault();
+        callbacks: {
+            onFormMounted: error => {
+                if (error) return console.warn("Form Mounted handling error: ", error);
+                console.log("Form mounted");
+            },
+            onSubmit: (event) => {
+                event.preventDefault();
 
-            const {
-                paymentMethodId: payment_method_id,
-                issuerId: issuer_id,
-                cardholderEmail: email,
-                amount,
-                token,
-                installments,
-                identificationNumber,
-                identificationType,
-            } = cardForm.getCardFormData();
-
-            fetch("/process_payment", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
+                const {
+                    paymentMethodId: payment_method_id,
+                    issuerId: issuer_id,
+                    cardholderEmail: email,
+                    amount,
                     token,
-                    issuer_id,
-                    payment_method_id,
-                    transaction_amount: Number(amount),
-                    installments: Number(installments),
-                    description: "Descripción del producto",
-                    payer: {
-                        email,
-                        identification: {
-                            type: identificationType,
-                            number: identificationNumber,
-                        },
+                    installments,
+                    identificationNumber,
+                    identificationType,
+                } = cardForm.getCardFormData();
+
+                fetch("/process_payment", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
                     },
-                }),
-            }).then((response, event) => {
-                event.preventDefault()
-                console.log(response);
-            }).then(
-                (result, event) => {
-                    event.preventDefault();
-                    if (!result.hasOwnProperty('error_message')) {
-                        document.getElementById("payment-status").innerText = result.status;
+                    body: JSON.stringify({
+                        token,
+                        issuer_id,
+                        payment_method_id,
+                        transaction_amount: Number(amount),
+                        installments: Number(installments),
+                        description: "Descripción del producto",
+                        payer: {
+                            email,
+                            identification: {
+                                type: identificationType,
+                                number: identificationNumber,
+                            },
+                        },
+                    }),
+                }).then((response, event) => {
+                    event.preventDefault()
+                    console.log(response);
+                }).then(
+                    (result, event) => {
+                        event.preventDefault();
+                        if (!result.hasOwnProperty('error_message')) {
+                            document.getElementById("payment-status").innerText = result.status;
+                        }
                     }
-                }
-            )
-            console.log(response.json());
-            event.preventDefault();
-            return response.json()
+                )
+                console.log(response.json());
+                event.preventDefault();
+                return response.json()
 
+            },
+            onFetching: (resource) => {
+                console.log("Fetching resource: ", resource);
+                return () => {
+
+                };
+            }
         },
-        onFetching: (resource) => {
-            console.log("Fetching resource: ", resource);
-            return () => {
-
-            };
-        }
-    },
-});
+    });
+}
 console.log('funciono');

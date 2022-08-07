@@ -252,7 +252,7 @@ body section .register {
     border-radius: 5px;
     padding-left: 15px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--white);
     background: transparent;
 }
