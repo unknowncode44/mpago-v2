@@ -185,15 +185,12 @@
     .form-outer {
         max-width: 100%;
     }
-
     .form-container .form-outer form {
         min-width: 100% !important;
     }
-
     .form-outer .r-form .page {
         transform: translateY(-3%);
     }
-
     .form-outer .r-form .page .title {
         font-size: 22px;
         margin-bottom: 20px !important;
@@ -212,7 +209,7 @@
         height: 35px !important;
         margin: 0;
         margin-bottom: 0px !important;
-     }
+    }
     .form-outer .r-form .page .container .register-row-custom .field .label {
         padding-left: 0%;
     }
@@ -269,7 +266,6 @@
     }
     .r-form .page .field button {
         width: 40%;
-        
         font-size: 18px;
     }
     .r-form .page .field button:hover {
@@ -284,7 +280,6 @@
     .r-form .page .mp-field-con {
         transform: translateY(-50%) !important;
     }
-
     .r-form .page .mp-field {
         max-width: 100%;
         min-height: 40px;
@@ -296,13 +291,10 @@
         background: transparent;
         border-radius: 2%;
     }
-    
     .r-form .page .mp-field img {
         max-width: 30%;
         margin-left: 5%;
     }
-
-
     .form-container .c-progress-bar {
         display: flex;
         user-select: none;
@@ -346,5 +338,8 @@
     .c-progress-bar .step .check.active {
         display: block;
         color: var(--primary);
+    }
+    .footer-wrapper .footer-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
