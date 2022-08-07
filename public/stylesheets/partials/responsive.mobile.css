@@ -10,7 +10,7 @@
         .banner {
             border-bottom-right-radius: 5%;
             border-bottom-left-radius: 5%;
-            height: 48vh;
+            height: 52vh;
         }
         .banner .background-video {
             width: auto;
@@ -165,7 +165,7 @@
             min-width: 100%;
             margin: 0% !important;
             padding: 5% !important;
-            transform: translateY(16%);
+            transform: translateY(18%);
         }
         .cat-title {
             display: block;
@@ -465,7 +465,7 @@
         }
         /* footer */
         .footer {
-            transform: translateY(510vh);
+            transform: translateY(530vh);
         }
         .footer-wrapper {
             height: 90vh;
