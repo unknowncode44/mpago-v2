@@ -40,14 +40,13 @@
                                             <div class="title">
                                                 Datos Personales:</div>
                                             <div class="container p-0 m-w-full mx-0 me-0">
-
                                                 <div class="row pe-0 ps-3 register-row-custom">
                                                     <div class="col-lg-8 col-sm-8">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Categoria</div>
                                                             <select id="categoriesSelect"></select>
-                                                            <input id="runnerUID" type="hidden">
+                                                            <input id="runnerUID" type="hidden"> 
                                                             <% if (runnersLenght) { %>
                                                                 <script>
                                                                     document.getElementById('runnerUID').value = '<%= runnersLenght %>'
@@ -66,12 +65,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="field">
+                                            <div id="field-rname" class="field">
                                                 <div class="label">
                                                     Nombre y Apellido</div>
-                                                <input id="r-name" type="text" style="margin: 0 2.5%;">
+                                                <input id="r-name" type="text">
 
-                                                <div class="field mx-1" style="align-items: center;">
+                                                <div id="field-rage" class="field mx-1" style="align-items: center;">
                                                     <div class="label">
                                                         Edad</div>
                                                     <select id="ageSelect"></select>
@@ -99,14 +98,14 @@
                                                 Datos de tarjeta:</div>
                                             <div class="container container-sm cont-mobile">
                                                 <div class="row register-row-custom2">
-                                                    <div class="col-lg-8 col-sm-12 my-4 payment-row">
+                                                    <div class="col-lg-6 pe-0 ms-2 col-sm-12 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Numero de tarjeta</div>
                                                             <input id="form-checkout__cardNumber">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-6 my-5 payment-row">
+                                                    <div class="col-lg-4 my-0 mx-0 col-sm-4 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Emisor</div>
@@ -115,14 +114,14 @@
                                                                 </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-6 my-5 payment-row">
+                                                    <div class="col-lg-4 mx-0 ms-2 my-0 my-0 col-sm-6 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Exp. (MM/AA)</div>
                                                             <input id="form-checkout__expirationDate">
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-6 my-5 payment-row">
+                                                    <div class="col-lg-3 mx-0 my-0 col-sm-6 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Cuotas</div>
@@ -131,7 +130,7 @@
                                                                 </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-6 my-5 payment-row">
+                                                    <div class="col-lg-4 mx-0 col-sm-6 my-0 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 CVV</div>
@@ -139,7 +138,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-12 col-sm-12 my-5 payment-row">
+                                                    <div class="col-lg-12 my-2 col-sm-12 my-0 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 <div class="row">
@@ -155,7 +154,7 @@
                                                             <input type="text" id="form-checkout__cardholderName" placeholder="Cardholder" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-sm-4 my-5 payment-row">
+                                                    <div class="col-lg-3 mx-0 ms-2 my-0 col-sm-4 my-0 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 Tipo DNI</div>
@@ -164,27 +163,27 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-8 col-sm-8 my-5 payment-row">
+                                                    <div class="col-lg-8 mx-0 my-0  col-sm-8 my-0 payment-row">
                                                         <div class="field">
                                                             <div class="label">DNI del titular</div>
                                                             <input type="text" id="form-checkout__identificationNumber" placeholder="Document number" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 col-sm-12 my-5 payment-row">
+                                                    <div class="col-lg-12 mt-2 col-sm-12 my-0 payment-row">
                                                         <div class="field">
                                                             <div class="label">
                                                                 email del titular</div>
                                                             <input type="email" id="form-checkout__cardholderEmail" placeholder="Email" />
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con mt-5 payment-row">
+                                                    <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con mt-2 payment-row">
                                                         <div class="mp-field">
                                                             <div class="label">Usamos <img src="/images/mercadopago.svg" alt=""></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="row field btns">
+                                            <div class="row field btns btns-1">
                                                 <button class="prev-1 prev">Anterior</button>
                                                 <button id="next-1" class="next-1 next">Siguiente</button>
                                             </div>
@@ -192,17 +191,30 @@
                                         </div>
                                         <div class="page">
                                             <div class="title">
-                                                Date of Birth:</div>
-                                            <div class="field">
-                                                <div class="label">
-                                                    Issuer</div>
-                                                <select id="form-checkout__issuer" name="issuer">
-                                                        <option value="" disabled selected>Issuing Bank</option>
-                                                    </select>
+                                                Confirmacion:</div>
+                                            <div class="container">
+                                                <div class="row row-custom3">
+                                                    <div class="col-6 text-end">Categoria</div>
+                                                    <div class="col-6 text-start"><input type="text" disabled value="21k"></div>
+                                                    <div class="col-6 text-end">Nombre</div>
+                                                    <div class="col-6 text-start"><input type="text" disabled value="Nombre Nombre"></div>
+                                                    <div class="col-6 text-end">DNI</div>
+                                                    <div class="col-6 text-start"><input type="text" disabled value="12121212"></div>
+                                                    <div class="col-6 text-end">Precio</div>
+                                                    <div class="col-6 text-start"><input type="text" disabled value="12,000.00"></div>
+                                                    <div class="col-6 text-end">Costo Plataforma</div>
+                                                    <div class="col-6 text-start"><input type="text" disabled value="120.00"></div>
+                                                    <div class="col-6 mb-4 text-end"><Strong>Total</Strong></div>
+                                                    <div class="col-6 mb-4 text-start total"><input type="text" disabled value="120.00"></div>
+                                                    
+
+                                                    <div class="field btns">
+                                                        <button class="prev-2 mt-3 prev">Anterior</button>
+                                                        <button id="form-checkout__submit" type="submit" class="submit mt-3">confirmar</button>
+        
+                                                    </div>  
+                                                </div>
                                             </div>
-                                            <div class="field">
-                                                <div class="label">
-                                                    Installments</div>
 
                                             </div>
                                             <div>
@@ -212,11 +224,7 @@
                                                 <input id="description" name="description" type="hidden" value="Product Name">
                                                 <p id="payment-status">Waiting Payment</p>
                                             </div>
-                                            <div class="field btns">
-                                                <button class="prev-2 mt-3 prev">Anterior</button>
-                                                <button id="form-checkout__submit" type="submit" class="submit mt-3">Finalizar</button>
-
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </form>

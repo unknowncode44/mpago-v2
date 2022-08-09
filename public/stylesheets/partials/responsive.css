@@ -152,7 +152,7 @@
         padding-right: 5%;
     }
     .contenedor {
-        transform: translateY(210vh);
+        transform: translateY(210vh) !important;
     }
     .contenedor:before {
         bottom: -10% !important;
@@ -170,6 +170,29 @@
     .f-con {
         transform: translateY(2%);
     }
+
+    #form-checkout #field-rname{
+        margin: 3% 3% !important;
+        max-width: fit-content;
+        transform: translateX(9%);
+    }
+
+    #form-checkout #field-rname .label{
+        padding-left: 3% !important;
+    }
+
+    #form-checkout #field-rname input{
+        max-width: 70% !important;
+        margin: 0 2.5% 0 0;
+        align-self: flex-start;
+    }
+
+    #form-checkout #field-rname .field {
+        transform: translateX(15%) translateY(-8%) !important;
+        width: 20%;
+    }
+
+
     .form-container {
         font-family: 'Montserrat', sans-serif !important;
         font-size: 1rem;
@@ -189,11 +212,11 @@
         min-width: 100% !important;
     }
     .form-outer .r-form .page {
-        transform: translateY(-3%);
+        transform: translateY(-4%);
     }
     .form-outer .r-form .page .title {
         font-size: 22px;
-        margin-bottom: 20px !important;
+        margin-bottom: 25px !important;
         color: var(--white);
     }
     .form-outer .r-form .page .field {
@@ -222,6 +245,7 @@
     .form-outer .r-form .page .container .register-row-custom2 {
         padding-inline-start: 10% !important;
         padding-inline-end: 10% !important;
+        max-height: 25px !important;
     }
     .form-outer .r-form .page .container .register-row-custom2 .field {
         height: 30px !important;
@@ -252,7 +276,7 @@
     .r-form .page .field input {
         border: 1px solid var(--white);
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         color: var(--white);
         max-width: 80%;
     }
@@ -273,6 +297,11 @@
         color: var(--secondary);
         border: 2px solid var(--secondary);
     }
+
+    .r-form .page .btns-1 {
+        transform: translateY(750%) !important;
+    }
+
     .r-form .page .btns button {
         max-width: 49%;
         transform: translateY(-80%);
@@ -280,6 +309,22 @@
     .r-form .page .mp-field-con {
         transform: translateY(-50%) !important;
     }
+
+    .form-outer .r-form .page .field-half input {
+        height: 35px;
+        max-width: 50% !important;
+        margin: 0;
+        margin-inline-end: 2%;
+    }
+
+    .form-outer .r-form .page .field-half  {
+        transform: translateX(7.5%);
+    }
+
+    .form-outer .r-form .page .field-half .label  {
+        padding-left: 1% !important;
+    }
+
     .r-form .page .mp-field {
         max-width: 100%;
         min-height: 40px;
@@ -339,6 +384,12 @@
         display: block;
         color: var(--primary);
     }
+
+    .payment-row {
+        max-height: 40px !important;
+        margin: 2% 2%;
+    }
+
     .footer-wrapper .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }

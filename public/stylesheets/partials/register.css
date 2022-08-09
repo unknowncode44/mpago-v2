@@ -157,6 +157,24 @@ body section .register {
     transform: translateY(-25%);
 }
 
+.row-custom3 {
+    color: var(--white);
+    font-weight: 500;
+}
+
+.row-custom3 input {
+    color: var(--white);
+    background-color: transparent;
+    font-weight: 500;
+    padding-inline-start: 1rem;
+    box-shadow: none;
+    border: none;
+}
+
+.row-custom3 .total input {
+    font-weight: 600 !important;
+}
+
 .form-outer .r-form .page .container .register-row-custom3 {
     padding-inline-start: 5% !important;
     padding-inline-end: 5% !important;
