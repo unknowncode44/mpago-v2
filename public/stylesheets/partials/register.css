@@ -304,6 +304,7 @@ body section .register {
 .r-form .page .mp-field img {
     max-width: 35%;
     margin-left: 5%;
+    transform: translateY(-10%);
 }
 
 .r-form .page .field .cvv-eye {
@@ -353,9 +354,36 @@ body section .register {
     border: 2px solid var(--secondary);
 }
 
+.btns-1 {
+    height: 60% !important;
+}
+
+.btns-1 button {
+    width: 49%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--secondary);
+    margin-top: -20px;
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease-in;
+    transform: translateY(-30%);
+}
+
+.btns-1 button:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
 .r-form .page .btns button {
     max-width: 40%;
-    transform: translateY(-35%);
+    transform: translateY(0%);
 }
 
 .r-form .page .btns button.prev {

@@ -54,6 +54,23 @@
         .menu-btn:hover .menu-icon {
             color: var(--secondary);
         }
+        .r-form .page .mp-field {
+            display: none !important;
+        }
+        .r-form .page .mp-field img {
+            min-height: 100px;
+        }
+        .r-form .page .mp-field .label {
+            font-size: 32px;
+        }
+        .r-form .page .field button {
+            min-width: 60% !important;
+            font-size: 44px !important;
+            margin: 1% 1% !important;
+        }
+        .row-custom3 {
+            font-size: 32px;
+        }
         .banner-card-text {
             font-size: 48px !important;
         }
@@ -286,7 +303,7 @@
         }
         .form-container {
             padding: 0% 0% !important;
-            min-height: 70vh !important;
+            min-height: 90vh !important;
         }
         .form-container .header-bg {
             text-align: center;
@@ -335,6 +352,9 @@
         .form-container header {
             font-size: 50px;
         }
+        .form-outer {
+            min-height: 90vh;
+        }
         .form-outer form .page {
             padding: 0% 5% 15% 5% !important;
         }
@@ -363,6 +383,10 @@
             height: 160px !important;
             justify-items: start;
         }
+        .form-outer .r-form .page .btns-1 {
+            height: 160px !important;
+            justify-items: start;
+        }
         .r-form .page .field .label {
             top: -20px;
             font-size: 40px !important;
@@ -378,7 +402,16 @@
             min-width: 65%;
             font-size: 40px !important;
             font-weight: 500;
-            transform: translateX(-15px);
+            transform: translateX(-15px) translateY(25%);
+        }
+        #form-checkout #field-rname {
+            transform: translateX(-5%) translateY(5%) !important;
+        }
+        #form-checkout #field-rname .name-label {
+            transform: translateY(-15%) !important;
+        }
+        .sliding-form-container {
+            min-height: 80vh !important;
         }
         form .page .field input#r-email {
             min-width: 100%;
@@ -395,15 +428,39 @@
             width: 80% !important;
             height: calc(80% + 0px) !important;
             background: transparent;
-            font-size: 50px !important;
+            font-size: 44px !important;
             margin: 0 !important;
+        }
+        .btns-1 {
+            height: 40% !important;
+        }
+        .btns-1 button {
+            transform: translateY(10%) !important;
+            width: 49%;
+            height: calc(80% + 5px);
+            border: none;
+            background: var(--secondary);
+            margin-top: -20px;
+            border-radius: 5px;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 44px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.5s ease-in;
+        }
+        .btns-1 button:hover {
+            background: var(--primary);
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
         }
         .form-outer .r-form .page .email-field {
             transform: translateY(-65px);
         }
         .form-outer .r-form .page .field-half {
             padding-left: 0% !important;
-            transform: translateY(-25px);
+            transform: translateY(-45px);
         }
         .form-outer .r-form .page .field-half .label {
             padding-left: 2% !important;
@@ -456,12 +513,11 @@
         }
         .payment-row {
             min-height: 80px;
+            margin-bottom: 4rem !important;
+            margin-top: 1rem !important;
         }
         .payment-row .field {
             transform: translateY(10%) !important;
-        }
-        .btns {
-            transform: translateY(-100%);
         }
         /* footer */
         .footer {
