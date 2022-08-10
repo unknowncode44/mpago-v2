@@ -358,6 +358,10 @@ body section .register {
     height: 60% !important;
 }
 
+.menu {
+    display: none;
+}
+
 .btns-1 button {
     width: 49%;
     height: calc(100% + 5px);

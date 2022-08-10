@@ -12,11 +12,33 @@ var r = gdc(windowWidth, windowHeight)
 var aspectRatio = `Aspect Ratio: ${(windowWidth/windowHeight).toFixed()}:${windowHeight/r}`
 console.log(aspectRatio);
 
+
+// ## DROPDOWN MENU ##
+let mButton = document.getElementById('m-button')
+let menu = document.getElementById('mmenu')
+let menuItem = document.getElementById('menu-item-1')
+
+mButton.addEventListener('click', () => {
+    if (!menu.classList.contains('m-active')) {
+        menu.classList.add('m-active')
+    } else {
+        menu.classList.remove('m-active')
+    }
+})
+
+menuItem.addEventListener('click', () => {
+    if (menu.classList.contains('m-active')) {
+        menu.classList.remove('m-active')
+    }
+})
+
+
 // ## EFECTO NAVBAR ON SCROLL ##
 
 window.addEventListener("scroll", function() {
     var header = this.document.querySelector('header');
-    header.classList.toggle("sticky", this.window.scrollY > 0);
+    header.classList.toggle("sticky", this.window.scrollY > 50);
+    menu.classList.remove('m-active')
 });
 
 // ## USAR DATOS DE CORREDOR EN DATOS DE PAGO

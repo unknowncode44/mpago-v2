@@ -1,85 +1,110 @@
-    <!-- ##NAVEGACION -->
-    <header href="" class="navigation logo">
-        <a class="nv-logo" href="#">
-            <img src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
-        </a>
-        <a href="#" class="menu-btn">
-            <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
-        </a>
-        <ul>
-            <li class="nav-sections"><a href="#race">La carrera</a></li>
-            <li class="nav-sections"><a href="#categories">Categorias</a></li>
-            <li class="nav-sections"><a href="#register-wrapper">Inscripcion</a></li>
-            <li class="nav-sections"><a href="#">Novedades</a></li>
-            <li class="nav-sections"><a href="#">Descargas</a></li>
-            <li class="nav-sections"><a href="#">Ingreso</a></li>
-        </ul>
-    </header>
+<!-- ##NAVEGACION -->
+<header href="" class="navigation logo">
+    <a class="nv-logo" href="#">
+        <img src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
+    </a>
+    <a href="#" id="m-button" class="menu-btn">
+        <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+    </a>
+    <ul>
+        <li class="nav-sections"><a href="#race">La carrera</a></li>
+        <li class="nav-sections"><a href="#categories">Categorias</a></li>
+        <li class="nav-sections"><a href="#register-wrapper">Inscripcion</a></li>
+        <li class="nav-sections"><a href="#footer">Descargas</a></li>
+        <li class="nav-sections"><a href="/dashboard">Ingreso</a></li>
+    </ul>
+</header>
 
-    <!-- ##VIDEO BANNER -->
-    <section class="banner">
+<div id="mmenu" class="menu">
+    <h3>MM Run</h3>
+    <ul>
+        <li id="menu-item-1">
+            <ion-icon class="menu-icon-2" name="home-outline"></ion-icon>
+            <a href="#race">La carrera</a>
+        </li>
+        <li id="menu-item-1">
+            <ion-icon class="menu-icon-2" name="copy-outline"></ion-icon>
+            <a href="#categories">Categorias</a>
+        </li>
+        <li id="menu-item-1">
+            <ion-icon class="menu-icon-2" name="information-circle-outline"></ion-icon>
+            <a href="#register-wrapper">Inscripcion</a>
+        </li>
+        <li id="menu-item-1">
+            <ion-icon class="menu-icon-2" name="download-outline"></ion-icon>
+            <a href="#footer">Descargas</a>
+        </li>
+        <li id="menu-item-1">
+            <ion-icon class="menu-icon-2" name="log-in-outline"></ion-icon>
+            <a href="/dashboard">Ingreso</a>
+        </li>
 
-        <video autoplay loop muted plays-inline class="background-video">
-            <source src="/images/video/video.mp4">
+</div>
+
+<!-- ##VIDEO BANNER -->
+<section class="banner ">
+
+    <video autoplay loop muted plays-inline class="background-video ">
+            <source src="/images/video/video.mp4 ">
         </video>
 
 
-        <div class="banner-cards">
-            <div class="container banner-text-container">
-                <div class="row text-center">
-                    <div class="banner-text col-sm-12 d-flex text-center align-items-center">
-                        <h1>Estas listo para Correr?</h1>
-                    </div>
-                    <div class="banner-text col-sm-12 px-2 d-flex text-center align-items-center">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dicta sint fugit, quos, beatae facere natus officiis optio cum nemo at cumque. Sint, officiis velit minima odit obcaecati rerum repudiandae?Lorem ipsum dolor sit, amet
-                            o molestiae accusantium? Id, suscipit!</p>
-                    </div>
-                    <div class="banner-btn col-sm-12 px-4 mt-3 d-flex text-center align-items-center justify-content-center">
-                        <button>Inscribirme</button>
-                    </div>
+    <div class="banner-cards ">
+        <div class="container banner-text-container ">
+            <div class="row text-center ">
+                <div class="banner-text col-sm-12 d-flex text-center align-items-center ">
+                    <h1>Estas listo para Correr?</h1>
+                </div>
+                <div class="banner-text col-sm-12 px-2 d-flex text-center align-items-center ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dicta sint fugit, quos, beatae facere natus officiis optio cum nemo at cumque. Sint, officiis velit minima odit obcaecati rerum repudiandae?Lorem ipsum dolor sit, amet
+                        o molestiae accusantium? Id, suscipit!</p>
+                </div>
+                <div class="banner-btn col-sm-12 px-4 mt-3 d-flex text-center align-items-center justify-content-center ">
+                    <button><a style="text-decoration: none; color: var(--primary) " href="#register-wrapper ">Inscribirse</a></button>
                 </div>
             </div>
-            <div class="container pt-4 mt-4">
-                <div class="row banner-row text-center d-flex gx-2 justify-content-center">
+        </div>
+        <div class="container pt-4 mt-4 ">
+            <div class="row banner-row text-center d-flex gx-2 justify-content-center ">
 
-                    <div class="col-lg-3 col-sm-12 d-flex align-items-center">
-                        <div class="card card-custom d-flex card-middle align-items-center justify-content-center">
-                            <div class="col text-center p-2 banner-card-inner">
-                                <p class="card-number">300</p>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center col-number">
-                                    <p class="banner-card-text">Corredores</p>
-                                </div>
+                <div class="col-lg-3 col-sm-12 d-flex align-items-center ">
+                    <div class="card card-custom d-flex card-middle align-items-center justify-content-center ">
+                        <div class="col text-center p-2 banner-card-inner ">
+                            <p class="card-number ">300</p>
+                        </div>
+                        <div class="row ">
+                            <div class="col text-center col-number ">
+                                <p class="banner-card-text ">Corredores</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-12 d-flex align-items-center">
-                        <div class="card card-custom d-flex card-middle align-items-center justify-content-center">
-                            <div class="col text-center p-2 banner-card-inner">
-                                <p class="card-number">4</p>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center col-number">
-                                    <p class="banner-card-text">Categorias</p>
-                                </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 d-flex align-items-center ">
+                    <div class="card card-custom d-flex card-middle align-items-center justify-content-center ">
+                        <div class="col text-center p-2 banner-card-inner ">
+                            <p class="card-number ">4</p>
+                        </div>
+                        <div class="row ">
+                            <div class="col text-center col-number ">
+                                <p class="banner-card-text ">Categorias</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-12 d-flex align-items-center">
-                        <div class="card card-custom d-flex card-middle align-items-center justify-content-center">
-                            <div class="col text-center p-2 banner-card-inner">
-                                <p class="card-number">289</p>
-                            </div>
-                            <div class="row">
-                                <div class="col text-center col-number">
-                                    <p class="banner-card-text">Inscriptos</p>
-                                </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 d-flex align-items-center ">
+                    <div class="card card-custom d-flex card-middle align-items-center justify-content-center ">
+                        <div class="col text-center p-2 banner-card-inner ">
+                            <p class="card-number ">289</p>
+                        </div>
+                        <div class="row ">
+                            <div class="col text-center col-number ">
+                                <p class="banner-card-text ">Inscriptos</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
+</section>
