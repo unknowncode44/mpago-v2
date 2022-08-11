@@ -1,4 +1,4 @@
-const mp = new MercadoPago('TEST-6a941031-1068-447c-a42f-fef05ae965a3');
+const mp = new MercadoPago('APP_USR-29383ab6-e5df-48fb-8ba4-d2037bcfcfda');
 
 const cat = document.getElementById('categoriesSelect') // categoria
 const catValue = cat.value // valor
@@ -11,16 +11,16 @@ var amount = document.getElementById('transactionAmount') // precio
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            amount.value = '1000';
+            amount.value = '10';
             break
         case '5k':
-            amount.value = '2000';
+            amount.value = '12';
             break
         case '10k':
-            amount.value = '15000';
+            amount.value = '15';
             break
         case '21k':
-            amount.value = '17000';
+            amount.value = '17';
             break
     }
 }

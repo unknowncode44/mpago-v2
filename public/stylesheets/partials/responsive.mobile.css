@@ -1,4 +1,17 @@
     /* #### BREAKPOINTS < MOBILE SCREEN ##### */
+
+    @media only screen and (max-device-width: 376px){
+        .banner {
+            min-height: 60vh !important;
+        }
+        .race-wrapper {
+            transform: translateY(70%) !important;
+        }
+
+        .cat-card-container {
+            transform: translateY(15%) !important;
+        }
+    }
     
     @media only screen and (max-device-width: 480px) {
         html {
@@ -108,10 +121,13 @@
             height: calc(200% + 15px);
             transform: translateY(2rem);
             font-size: 40px;
-            font-weight: 300;
             background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
+            color: var(--secondary) !important;
+            border: 4px solid var(--secondary) !important;
+        }
+        .banner-btn button a { 
+            color: var(--secondary) !important;
+            font-weight: 500;
         }
         .banner-text-container .banner-text h1 {
             min-width: 100%;
@@ -521,7 +537,7 @@
         }
         /* footer */
         .footer {
-            transform: translateY(550vh);
+            transform: translateY(610vh) !important;
         }
         .footer-wrapper {
             height: 85vh;

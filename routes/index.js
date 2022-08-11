@@ -3,7 +3,7 @@ const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken("TEST-5195066021992733-073114-bc76bf9a1232db75e73471a5602d017b-65060542");
+mercadopago.configurations.setAccessToken("8adaee02e62be639b6ff0e2f14318b93-178177205");
 
 
 
