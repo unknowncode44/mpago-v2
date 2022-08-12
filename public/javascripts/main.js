@@ -42,20 +42,22 @@ window.addEventListener("scroll", function() {
 });
 
 // ## USAR DATOS DE CORREDOR EN DATOS DE PAGO
-var rName = document.getElementById('r-name');
-var rId = document.getElementById('r-id');
-var rEmail = document.getElementById('r-email');
-var sameInfoBtn = document.getElementById('same-info');
-var cHolderName = document.getElementById('form-checkout__cardholderName');
-var cHolderIdNumber = document.getElementById('form-checkout__identificationNumber');
-var cHolderEmail = document.getElementById('form-checkout__cardholderEmail');
+// var rName = document.getElementById('r-name');
+// var rId = document.getElementById('r-id');
+// var rEmail = document.getElementById('r-email');
 
-sameInfoBtn.addEventListener("click", function(event) {
-    event.preventDefault();
-    cHolderName.value = rName.value
-    cHolderIdNumber.value = rId.value
-    cHolderEmail.value = rEmail.value
-})
+
+// var sameInfoBtn = document.getElementById('same-info');
+// var cHolderName = document.getElementById('form-checkout__cardholderName');
+// var cHolderIdNumber = document.getElementById('form-checkout__identificationNumber');
+// var cHolderEmail = document.getElementById('form-checkout__cardholderEmail');
+
+// sameInfoBtn.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     cHolderName.value = rName.value
+//     cHolderIdNumber.value = rId.value
+//     cHolderEmail.value = rEmail.value
+// })
 
 // ## VALIDAR EMAIL
 function validateEmail(mail) {
@@ -65,10 +67,62 @@ function validateEmail(mail) {
     return (false)
 }
 
+const cat = document.getElementById('categoriesSelect') // categoria
+const catValue = cat.value // valor
+var amount = document.getElementById('transactionAmount') // precio
+
+
+
+
+
+async function getAmount(_cat) {
+    switch (_cat) {
+        case 'Kids':
+            amount.value = '10';
+            break
+        case '5k':
+            amount.value = '12';
+            break
+        case '10k':
+            amount.value = '15';
+            break
+        case '21k':
+            amount.value = '17';
+            break
+    }
+}
+
+cat.addEventListener('change', () => {
+    getAmount(cat.value)
+})
+
+
+// function fillRunnerData() {
+//     // let rName = document.getElementById('r-name').value;
+//     let rEmail = document.getElementById('r-email').value;
+//     let rId = document.getElementById('r-id').value;
+//     let rCat = document.getElementById('categoriesSelect').value;
+//     let rUID = document.getElementById('runnerUID').value;
+//     let rPrice = document.getElementById('transactionAmount').value;
+//     let rAge = document.getElementById('ageSelect').value;
+//     let club_id = document.getElementById('partner-id').value;
+
+//     // console.log(`##### ${rName}`);
+
+//     document.getElementsByName('cat').value = rCat;
+//     document.getElementsByName('runnerName').value = rName;
+//     document.getElementsByName('runnerID').value = rCat;
+//     document.getElementsByName('price').value = rPrice;
+//     document.getElementsByName('platform_cost').value = (Number(rPrice) * 0.01).toString();
+//     document.getElementsByName('total_cost').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
+//     document.getElementsByName('subtotal').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
+
+// }
+
 
 // ## slide page form
 const slidePage = document.querySelector(".slide-page");
-const nextBtnFirst = document.querySelector(".firstNext");
+const nextBtnFirst = document.getElementById('home_btn');
 const prevBtnSec = document.querySelector(".prev-1");
 const nextBtnSec = document.querySelector(".next-1");
 const prevBtnThird = document.querySelector(".prev-2");
@@ -82,11 +136,29 @@ const progressBar3 = document.querySelectorAll(".step3");
 const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
 let current = 1;
+let rName = document.getElementById('r-name');
+let rEmail = document.getElementById('r-email')
+let rId = document.getElementById('r-id');
+let rCat = document.getElementById('categoriesSelect').value;
+let rUID = document.getElementById('runnerUID');
+let rPrice = document.getElementById('transactionAmount');
+let rAge = document.getElementById('ageSelect').value;
+let club_id = document.getElementById('partner-id');
 
-nextBtnFirst.addEventListener("click", function(event) {
-    event.preventDefault();
+
+
+nextBtnFirst.addEventListener("click", () => {
     var validEmail = validateEmail(rEmail.value)
     if (validEmail) {
+        console.log(`##### ${rName.value}`);
+
+        document.getElementsByName('cat').value = rCat.value;
+        document.getElementsByName('runnerName').value = rName.value;
+        document.getElementsByName('runnerID').value = rId.value;
+        document.getElementsByName('price').value = rPrice.value;
+        document.getElementsByName('platform_cost').value = (Number(rPrice.value) * 0.01).toString();
+        document.getElementsByName('total_cost').value = ((Number(rPrice.value) * 0.01) + Number(rPrice)).toString();
+        document.getElementsByName('subtotal').value = ((Number(rPrice.value) * 0.01) + Number(rPrice)).toString();
         slidePage.style.marginLeft = "-100%";
         progressBar[current - 1].classList.add("active");
         bullet[current - 1].classList.add("active");
@@ -97,43 +169,55 @@ nextBtnFirst.addEventListener("click", function(event) {
         alert('El email es invalido!!')
     }
 });
-nextBtnSec.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-200%";
-    progressBar[current - 1].classList.add("active");
-    bullet[current - 1].classList.add("active");
-    progressCheck[current - 1].classList.add("active");
-    progressText[current - 1].classList.add("active");
-    current += 1;
-});
+// nextBtnSec.addEventListener("click", () => {
 
-submitBtn.addEventListener("click", function() {
-    bullet[current - 1].classList.add("active");
-    progressCheck[current - 1].classList.add("active");
-    progressText[current - 1].classList.add("active");
-    current += 1;
-    setTimeout(function() {
-        alert("Your Form Successfully Signed up");
-        location.reload();
-    }, 800);
-});
+//     let price = '10'
+//     let cat = '21k'
+//     fetch('/pmt', {
+//         method: "get",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//             price: price,
+//             cat: cat
+//         })
+//     });
+//     // slidePage.style.marginLeft = "-200%";
+//     // progressBar[current - 1].classList.add("active");
+//     // bullet[current - 1].classList.add("active");
+//     // progressCheck[current - 1].classList.add("active");
+//     // progressText[current - 1].classList.add("active");
+//     // current += 1;
+// });
 
-prevBtnSec.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "0%";
-    bullet[current - 2].classList.remove("active");
-    progressCheck[current - 2].classList.remove("active");
-    progressText[current - 2].classList.remove("active");
-    current -= 1;
-});
-prevBtnThird.addEventListener("click", function(event) {
-    event.preventDefault();
-    slidePage.style.marginLeft = "-100%";
-    bullet[current - 2].classList.remove("active");
-    progressCheck[current - 2].classList.remove("active");
-    progressText[current - 2].classList.remove("active");
-    current -= 1;
-});
+// submitBtn.addEventListener("click", function() {
+//     bullet[current - 1].classList.add("active");
+//     progressCheck[current - 1].classList.add("active");
+//     progressText[current - 1].classList.add("active");
+//     current += 1;
+//     // setTimeout(function() {
+//     //     alert("Your Form Successfully Signed up");
+//     //     location.reload();
+//     // }, 800);
+// });
+
+// prevBtnSec.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     slidePage.style.marginLeft = "0%";
+//     bullet[current - 2].classList.remove("active");
+//     progressCheck[current - 2].classList.remove("active");
+//     progressText[current - 2].classList.remove("active");
+//     current -= 1;
+// });
+// prevBtnThird.addEventListener("click", function(event) {
+//     event.preventDefault();
+//     slidePage.style.marginLeft = "-100%";
+//     bullet[current - 2].classList.remove("active");
+//     progressCheck[current - 2].classList.remove("active");
+//     progressText[current - 2].classList.remove("active");
+//     current -= 1;
+// });
 
 
 
@@ -186,8 +270,57 @@ for (let i = 0; i < ages.length; i++) {
     agesSelect.appendChild(el) // se los anexamos al select
 }
 
+// const cat = document.getElementById('categoriesSelect') // categoria
+// const catValue = cat.value // valor
+// var amount = document.getElementById('transactionAmount') // precio
 
 
+
+
+
+// async function getAmount(_cat) {
+//     switch (_cat) {
+//         case 'Kids':
+//             amount.value = '10';
+//             break
+//         case '5k':
+//             amount.value = '12';
+//             break
+//         case '10k':
+//             amount.value = '15';
+//             break
+//         case '21k':
+//             amount.value = '17';
+//             break
+//     }
+// }
+
+// cat.addEventListener('change', () => {
+//     getAmount(cat.value)
+// })
+
+
+// function fillRunnerData() {
+//     let rName = document.getElementById('r-name').value;
+//     let rEmail = document.getElementById('r-email').value;
+//     let rId = document.getElementById('r-id').value;
+//     let rCat = document.getElementById('categoriesSelect').value;
+//     let rUID = document.getElementById('runnerUID').value;
+//     let rPrice = document.getElementById('transactionAmount').value;
+//     let rAge = document.getElementById('ageSelect').value;
+//     let club_id = document.getElementById('partner-id').value;
+
+//     console.log(`##### ${rName}`);
+
+//     document.getElementsByName('cat').value = rCat;
+//     document.getElementsByName('runnerName').value = rName;
+//     document.getElementsByName('runnerID').value = rCat;
+//     document.getElementsByName('price').value = rPrice;
+//     document.getElementsByName('platform_cost').value = (Number(rPrice) * 0.01).toString();
+//     document.getElementsByName('total_cost').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
+//     document.getElementsByName('subtotal').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
+
+// }
 
 
 

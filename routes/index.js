@@ -3,7 +3,7 @@ const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken("8adaee02e62be639b6ff0e2f14318b93-178177205");
+mercadopago.configurations.setAccessToken("APP_USR-5195066021992733-073114-08b54514069ebb6401a70a2ac982212f-65060542");
 
 
 
@@ -18,62 +18,68 @@ router.get('/', async function(req, res, next) {
     res.render('index', { title: 'Mari Menuco Run', runners, runnersLenght });
 });
 
+router.get('/pmt', (req, res) => {
+    console.log('fetch');
+    // const price = req.body.price
+    // const platformPrice = Number(price) * 0.01
+    // const cat = req.body.cat
+    // const publicKey = ''
+    res.render('payment_page');
+})
 
 
 
-router.post('/process_payment', async function(req, res, next) {
 
+router.post("/process_payment", (req, res) => {
     const { body } = req;
     const { payer } = body;
-
-
-    var payment_data = {
-        transaction_amount: Number(body.transaction_amount),
+    const paymentData = {
+        transaction_amount: Number(body.transactionAmount),
         token: body.token,
         description: body.description,
         installments: Number(body.installments),
-        payment_method_id: body.payment_method_id,
-        issuer_id: body.issuer_id,
+        payment_method_id: body.paymentMethodId,
+        issuer_id: body.issuerId,
         payer: {
             email: payer.email,
             identification: {
-                type: payer.identification.type,
-                number: payer.identification.number
+                type: payer.identification.docType,
+                number: payer.identification.docNumber
             }
         }
     };
 
-    await mercadopago.payment.save(payment_data)
+    mercadopago.payment.save(paymentData)
         .then(function(response) {
-
             const { response: data } = response;
+
             res.status(201).json({
+                detail: data.status_detail,
                 status: data.status,
-                status_detail: data.status_detail,
                 id: data.id
             });
-            console.log(data.status);
-            let runner = {
-                runnerInfo: req.body.runnerInfo,
-                payment_data: {
-                    payment_id: data.id,
-                    date_approved: data.date_approved,
-                    status: data.status,
-                    status_detail: data.status_detail,
-                    net_received: data.transaction_details.net_received_amount,
-                    amount: data.transaction_details.total_paid_amount,
-                }
-            }
-            db.collection('runners').add(runner);
-
-        }).then(() => {
-
-            console.log('funcionando');
         })
         .catch(function(error) {
-            console.error(error)
+            console.log(error);
+            const { errorMessage, errorStatus } = validateError(error);
+            res.status(errorStatus).json({ error_message: errorMessage });
         });
 });
+
+function validateError(error) {
+    let errorMessage = 'Unknown error cause';
+    let errorStatus = 400;
+
+    if (error.cause) {
+        const sdkErrorMessage = error.cause[0].description;
+        errorMessage = sdkErrorMessage || errorMessage;
+
+        const sdkErrorStatus = error.status;
+        errorStatus = sdkErrorStatus || errorStatus;
+    }
+
+    return { errorMessage, errorStatus };
+}
 
 
 
@@ -82,17 +88,22 @@ router.post('/process_payment', async function(req, res, next) {
 // en la etiqueta form del html debemos incluirla en action asi:
 // <form action="add-runner" method="post"> (no olvidar method post)
 router.post('/add-runner', (req, res) => {
+    console.log(req.body);
     // creamos objeto runner 
-    const runner = {
-        name: req.body.runnerName,
-        age: req.body.runnerAge,
-        email: req.body.runnerEmail,
-        category: req.body.categories
-    }
+    // const runner = {
+    //     name: req.body.runnerName,
+    //     age: req.body.runnerAge,
+    //     email: req.body.runnerEmail,
+    //     category: req.body.cat,
+    //     runner_id: req.body.runnerID,
+    //     platform_cost: req.body.platform_cost,
+    //     price: req.body.price,
+    //     total_cost: req.body.total_cost,
+    // }
 
-    db.collection('runners').add(runner); // grabamos datos en firebase
+    // db.collection('runners').add(runner); // grabamos datos en firebase
 
-    // res.redirect('/') // para dirigirnos nuevamente a '/'
+    res.redirect('pmt') // para dirigirnos nuevamente a '/'
 
 })
 

@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-lg-8 text-center justify-content-center col-sm-12">
                             <div class="form-outer">
-                                <form id="form-checkout">
+                                <form action="add-runner" method="post">
                                     <div class="r-form">
                                         <div class="page slide-page">
                                             <div class="title">
@@ -46,10 +46,10 @@
                                                             <div class="label">
                                                                 Categoria</div>
                                                             <select id="categoriesSelect"></select>
-                                                            <input id="runnerUID" type="hidden">
+                                                            <input id="runnerUID" name="runnerUID" type="hidden">
                                                             <% if (runnersLenght) { %>
                                                                 <script>
-                                                                    document.getElementById('runnerUID').value = '<%= runnersLenght %>'
+                                                                    document.getElementById('runnerUID').value = '<%= runnersLenght++ %>'
                                                                 </script>
                                                                 <% } %>
                                                         </div>
@@ -59,7 +59,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Precio</div>
-                                                            <input id="transactionAmount" disabled style="color: var(--secondary)" value="10000">
+                                                            <input id="transactionAmount" disabled style="color: var(--secondary)" value="10">
 
                                                         </div>
                                                     </div>
@@ -87,112 +87,46 @@
                                             <div class="field email-field">
                                                 <div class="label">
                                                     Email</div>
-                                                <input id="r-email" type="text" placeholder="email@email.com">
+                                                <input id="r-email" name="runnerEmail" type="text" placeholder="email@email.com">
                                             </div>
                                             <div class="field">
-                                                <button id="home_btn" class="firstNext mt-3 next">Siguiente</button>
+                                                <button id="home_btn" type="button" class="firstNext mt-3 next">Siguiente</button>
                                             </div>
                                         </div>
                                         <div class="page">
                                             <div class="title">
                                                 Datos de tarjeta:</div>
-                                            <div class="container container-sm cont-mobile">
-                                                <div class="row register-row-custom2">
-                                                    <div class="col-lg-6 pe-0 ms-2 col-sm-12 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                Numero de tarjeta</div>
-                                                            <input id="form-checkout__cardNumber">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 mx-0 ms-2 col-sm-4 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                Emisor</div>
-                                                            <select id="form-checkout__issuer" name="issuer">
-                                                                    <option value="" disabled>Emisor</option>
-                                                                </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 mx-0 ms-2 col-sm-6 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                Exp. (MM/AA)</div>
-                                                            <input id="form-checkout__expirationDate">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-3 mx-0 ms-1 col-sm-5 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                Cuotas</div>
-                                                            <select id="form-checkout__installments" name="installments">
-                                                                    <option value="" disabled selected>Cuotas</option>
-                                                                </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 mx-0 col-sm-6 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                CVV</div>
-                                                            <input id="form-checkout__securityCode">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="col-lg-12 mx-0 ms-2 col-sm-12 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                <div class="row">
-                                                                    <div class="col-lg-6 col-sm-6">
-                                                                        Titular
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-sm-6 text-end">
-                                                                        <p class="same-info" id="same-info"><a href="javascript:void(0)">Usar los mismos datos</a></p>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                            <input type="text" id="form-checkout__cardholderName" placeholder="Cardholder" />
-                                                        </div>
+                                            <div class="container">
+                                                <div class="row row-custom3">
+                                                    <div class="col-6 text-end">Categoria</div>
+                                                    <div class="col-6 text-start"><input type="text" name="cat" disabled value="21k"></div>
+                                                    <div class="col-6 text-end">Nombre</div>
+                                                    <div class="col-6 text-start"><input type="text" name="runnerName" disabled value="Nombre Nombre"></div>
+                                                    <div class="col-6 text-end">DNI</div>
+                                                    <div class="col-6 text-start"><input type="text" name="runnerID" disabled value="12121212"></div>
+                                                    <div class="col-6 text-end">Precio</div>
+                                                    <div class="col-6 text-start"><input type="text" name="price" disabled value="12,000.00"></div>
+                                                    <div class="col-6 text-end">Costo Plataforma</div>
+                                                    <div class="col-6 text-start"><input type="text" name="platform_cost" disabled value="120.00"></div>
+                                                    <div class="col-6 mb-4 text-end">
+                                                        <Strong>Total</Strong>
+                                                        <div class="col-6 text-start"><input type="text" name="subtotal" disabled value="120.00"></div>
                                                     </div>
-                                                    <div class="col-lg-3 mx-0 ms-2 col-sm-3 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                Tipo DNI</div>
-                                                            <select id="form-checkout__identificationType">
-                                                                <option value="" disabled selected>Document type</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-8 col-sm-8 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">DNI del titular</div>
-                                                            <input type="text" id="form-checkout__identificationNumber" placeholder="Document number" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-12 mx-0 ms-2 my-2 col-sm-12 payment-row">
-                                                        <div class="field">
-                                                            <div class="label">
-                                                                email del titular</div>
-                                                            <input type="email" id="form-checkout__cardholderEmail" placeholder="Email" />
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="btns-1">
-                                                        <button class="prev-1 prev">Anterior</button>
-                                                        <button id="next-1" class="next-1 next">Siguiente</button>
-                                                    </div>
+                                                    <div class="col-6 mb-4 text-start total"><input type="text" name="total_cost" disabled value="120.00"></div>
 
 
+                                                    <div class="field mb-2 btns">
+                                                        <button type="button" class="prev-2 mt-3 prev">Anterior</button>
+                                                        <button id="form-checkout__submit" type="submit" class="submit mt-3">confirmar</button>
 
-                                                </div>
-                                                <div class="col-lg-12 px-5 col-sm-12 px-5 mp-field-con payment-row">
-                                                    <div class="mp-field">
-                                                        <div class="label">Usamos <img src="/images/mercadopago.svg" alt=""></div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
+                                            <!-- <div class="btns-1">
+                                                <button class="prev-1 prev">Anterior</button>
+                                                <button id="next-1" href="../payment_page.ejs" class="next-1 next">Siguiente</button>
+                                            </div> -->
                                         </div>
                                         <div class="page">
                                             <div class="title">
@@ -217,7 +151,7 @@
 
                                                     <div class="field mb-2 btns">
                                                         <button class="prev-2 mt-3 prev">Anterior</button>
-                                                        <button id="form-checkout__submit" type="submit" class="submit mt-3">confirmar</button>
+                                                        <button type="submit" class="submit mt-3">confirmar</button>
 
                                                     </div>
                                                 </div>
@@ -233,8 +167,9 @@
                                         </div>
 
                                     </div>
+                                </form>
                             </div>
-                            </form>
+
                         </div>
                     </div>
                 </div>
