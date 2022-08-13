@@ -48,8 +48,6 @@ router.post("/process_payment", (req, res) => {
         .then(function(response) {
             const { response: data } = response;
 
-            db.collection('runners').path(`${id}/payment_data`).set("status", data.status)
-
             res.status(201).json({
                 detail: data.status_detail,
                 status: data.status,
