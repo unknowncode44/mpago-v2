@@ -45,19 +45,19 @@
                 <% if (item.data.payment_data.status === 'approved'){ %>
                     <tr class="table-success p-0">
                         <th scope="row">
-                            <%= item.data.runnerInfo.runnerUID %>
+                            <%= item.data.runnerUID %>
                         </th>
                         <td>
-                            <%= item.data.runnerInfo.catValue %>
+                            <%= item.data.catValue %>
                         </td>
                         <td>
-                            <%= item.data.runnerInfo.runnerName %>
+                            <%= item.data.runnerName %>
                         </td>
                         <td>
-                            <%= item.data.runnerInfo.runnerID %>
+                            <%= item.data.runnerID %>
                         </td>
                         <td>
-                            <%= item.data.runnerInfo.runnerEmail %>
+                            <%= item.data.runnerEmail %>
                         </td>
                         <td>Aprobado</td>
                         <% if (item.data.payment_data.status_detail === 'accredited'){ %>
@@ -86,19 +86,19 @@
                     <% } else { %>
                         <tr class="table-danger">
                             <th scope="row">
-                                <%= item.data.runnerInfo.runnerID %>
+                                <%= item.data.runnerUID %>
                             </th>
                             <td>
-                                <%= item.data.runnerInfo.catValue %>
+                                <%= item.data.catValue %>
                             </td>
                             <td>
-                                <%= item.data.runnerInfo.runnerName %>
+                                <%= item.data.name%>
                             </td>
                             <td>
-                                <%= item.data.runnerInfo.runnerID %>
+                                <%= item.data.runnerID %>
                             </td>
                             <td>
-                                <%= item.data.runnerInfo.runnerEmail %>
+                                <%= item.data.runnerEmail %>
                             </td>
                             <td>Rechazado</td>
                             <% if (item.data.payment_data.status_detail === 'accredited'){ %>

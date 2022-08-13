@@ -5,7 +5,7 @@ var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
 mercadopago.configurations.setAccessToken("APP_USR-5195066021992733-073114-08b54514069ebb6401a70a2ac982212f-65060542");
 
-
+var id = ''
 
 /* GET home page. */
 // ruta inicial, es asyncrona por que recoge datos de la base de datos
@@ -19,11 +19,6 @@ router.get('/', async function(req, res, next) {
 });
 
 router.get('/pmt', (req, res) => {
-    console.log('fetch');
-    // const price = req.body.price
-    // const platformPrice = Number(price) * 0.01
-    // const cat = req.body.cat
-    // const publicKey = ''
     res.render('payment_page');
 })
 
@@ -52,6 +47,8 @@ router.post("/process_payment", (req, res) => {
     mercadopago.payment.save(paymentData)
         .then(function(response) {
             const { response: data } = response;
+
+            db.collection('runners').path(`${id}/payment_data`).set("status", data.status)
 
             res.status(201).json({
                 detail: data.status_detail,
@@ -87,23 +84,46 @@ function validateError(error) {
 //esta ruta se ejecuta cuando hacemos click en el boton del formulario
 // en la etiqueta form del html debemos incluirla en action asi:
 // <form action="add-runner" method="post"> (no olvidar method post)
-router.post('/add-runner', (req, res) => {
+router.post('/add-runner', async function(req, res) {
     console.log(req.body);
-    // creamos objeto runner 
-    // const runner = {
-    //     name: req.body.runnerName,
-    //     age: req.body.runnerAge,
-    //     email: req.body.runnerEmail,
-    //     category: req.body.cat,
-    //     runner_id: req.body.runnerID,
-    //     platform_cost: req.body.platform_cost,
-    //     price: req.body.price,
-    //     total_cost: req.body.total_cost,
-    // }
+    const { body } = req;
+    const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount } = body;
 
-    // db.collection('runners').add(runner); // grabamos datos en firebase
+    const request = await db.collection('runners').get();
+    const { docs } = request;
+    const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+    var runnersLenght = runners.length;
 
-    res.redirect('pmt') // para dirigirnos nuevamente a '/'
+
+
+    let runnerNbr = (runnersLenght++) + 1;
+
+    let payment_data = {
+        amount: transactionAmount,
+    };
+
+
+    let newRunner = {
+
+        name: runnerName,
+        email: runnerEmail,
+        catValue: cat,
+        runnerAge: ageSelect,
+        partnerID: partner_id,
+        runnerUID: `00${runnerNbr}`,
+        runnerID: runnerID,
+        payment_data: payment_data,
+
+    }
+
+
+
+
+    db.collection('runners').add(newRunner).then((doc) => {
+        id = doc.id
+    }); // grabamos datos en firebase
+
+    res.render('payment_page', { runnerNbr, cat, transactionAmount, description, runnerName }); // para dirigirnos nuevamente a '/'
 
 })
 
@@ -130,7 +150,6 @@ router.get('/dashboard', async function(req, res, next) {
     const request = await db.collection('runners').get();
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
-    console.log(runners[0].data.runnerInfo.runnerID);
     res.render('dashboard', { title: 'Panel de Control', runners });
 });
 

@@ -45,7 +45,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Categoria</div>
-                                                            <select id="categoriesSelect"></select>
+                                                            <select id="categoriesSelect" name="cat"></select>
                                                             <input id="runnerUID" name="runnerUID" type="hidden">
                                                             <% if (runnersLenght) { %>
                                                                 <script>
@@ -59,7 +59,7 @@
                                                         <div class="field">
                                                             <div class="label">
                                                                 Precio</div>
-                                                            <input id="transactionAmount" disabled style="color: var(--secondary)" value="10">
+                                                            <input id="transactionAmount" name="transactionAmount" style="color: var(--secondary)" value="10">
 
                                                         </div>
                                                     </div>
@@ -68,20 +68,20 @@
                                             <div id="field-rname" class="field">
                                                 <div class="label name-label">
                                                     Nombre y Apellido</div>
-                                                <input id="r-name" type="text">
+                                                <input id="r-name" name="runnerName" type="text">
 
                                                 <div id="field-rage" class="field mx-1" style="align-items: center;">
                                                     <div class="label">
                                                         Edad</div>
-                                                    <select id="ageSelect"></select>
+                                                    <select id="ageSelect" name="ageSelect"></select>
                                                 </div>
                                             </div>
                                             <div class="field field-half">
                                                 <div class="label">
                                                     DNI</div>
-                                                <input id="r-id" type="text" placeholder="DNI">
+                                                <input id="r-id" name="runnerID" type="text" placeholder="DNI">
                                                 <div class="label label2">Numero de socio</div>
-                                                <input id="partner-id" type="text" placeholder="Numero de Socio">
+                                                <input id="partner-id" name="partner_id" type="text" placeholder="Numero de Socio">
                                                 <small>*Solo Socios del club Mari Menuco</small>
                                             </div>
                                             <div class="field email-field">
@@ -95,64 +95,47 @@
                                         </div>
                                         <div class="page">
                                             <div class="title">
-                                                Datos de tarjeta:</div>
+                                                Resumen</div>
 
                                             <div class="container">
                                                 <div class="row row-custom3">
-                                                    <div class="col-6 text-end">Categoria</div>
-                                                    <div class="col-6 text-start"><input type="text" name="cat" disabled value="21k"></div>
-                                                    <div class="col-6 text-end">Nombre</div>
-                                                    <div class="col-6 text-start"><input type="text" name="runnerName" disabled value="Nombre Nombre"></div>
-                                                    <div class="col-6 text-end">DNI</div>
-                                                    <div class="col-6 text-start"><input type="text" name="runnerID" disabled value="12121212"></div>
-                                                    <div class="col-6 text-end">Precio</div>
-                                                    <div class="col-6 text-start"><input type="text" name="price" disabled value="12,000.00"></div>
-                                                    <div class="col-6 text-end">Costo Plataforma</div>
-                                                    <div class="col-6 text-start"><input type="text" name="platform_cost" disabled value="120.00"></div>
-                                                    <div class="col-6 mb-4 text-end">
-                                                        <Strong>Total</Strong>
-                                                        <div class="col-6 text-start"><input type="text" name="subtotal" disabled value="120.00"></div>
-                                                    </div>
-                                                    <div class="col-6 mb-4 text-start total"><input type="text" name="total_cost" disabled value="120.00"></div>
 
+                                                    <div class="col-6 text-end">Categoria</div>
+                                                    <div class="col-6 text-start"><input type="text" id="cat" disabled></div>
+                                                    <div class="col-6 text-end">Nombre</div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerName" name="runnerName" disabled></div>
+                                                    <div class="col-6 text-end">DNI</div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerID" name="runnerID" disabled></div>
+                                                    <div class="col-6 text-end">Precio $</div>
+                                                    <div class="col-6 text-start"><input type="text" id="price" name="price" disabled></div>
+                                                    <div class="col-6 text-end">Plataforma $</div>
+                                                    <div class="col-6 text-start"><input type="text" id="platform_cost" name="platform_cost" disabled></div>
+                                                    <div class="col-6 mb-4 text-end">
+                                                        <strong>Total $</strong>
+                                                    </div>
+                                                    <div class="col-6 mb-4 text-start total"><input type="text" id="total_cost" name="total_cost" disabled></div>
+                                                    </strong>
 
                                                     <div class="field mb-2 btns">
-                                                        <button type="button" class="prev-2 mt-3 prev">Anterior</button>
-                                                        <button id="form-checkout__submit" type="submit" class="submit mt-3">confirmar</button>
 
+                                                        <button type="button" class="prev-2 mt-3 prev">Volver</button>
+                                                        <button type="submit" class="submit mt-3">Pagar</button>
                                                     </div>
+
                                                 </div>
+
                                             </div>
-                                            <!-- <div class="btns-1">
-                                                <button class="prev-1 prev">Anterior</button>
-                                                <button id="next-1" href="../payment_page.ejs" class="next-1 next">Siguiente</button>
-                                            </div> -->
+
+
                                         </div>
                                         <div class="page">
                                             <div class="title">
                                                 Confirmacion:</div>
                                             <div class="container">
                                                 <div class="row row-custom3">
-                                                    <div class="col-6 text-end">Categoria</div>
-                                                    <div class="col-6 text-start"><input type="text" disabled value="21k"></div>
-                                                    <div class="col-6 text-end">Nombre</div>
-                                                    <div class="col-6 text-start"><input type="text" disabled value="Nombre Nombre"></div>
-                                                    <div class="col-6 text-end">DNI</div>
-                                                    <div class="col-6 text-start"><input type="text" disabled value="12121212"></div>
-                                                    <div class="col-6 text-end">Precio</div>
-                                                    <div class="col-6 text-start"><input type="text" disabled value="12,000.00"></div>
-                                                    <div class="col-6 text-end">Costo Plataforma</div>
-                                                    <div class="col-6 text-start"><input type="text" disabled value="120.00"></div>
-                                                    <div class="col-6 mb-4 text-end">
-                                                        <Strong>Total</Strong>
-                                                    </div>
-                                                    <div class="col-6 mb-4 text-start total"><input type="text" disabled value="120.00"></div>
-
 
                                                     <div class="field mb-2 btns">
                                                         <button class="prev-2 mt-3 prev">Anterior</button>
-                                                        <button type="submit" class="submit mt-3">confirmar</button>
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,14 +145,14 @@
                                             <input id="token" name="token" type="hidden">
                                             <input id="paymentMethodId" type="hidden">
 
-                                            <input id="description" name="description" type="hidden" value="Product Name">
+                                            <input id="description" name="description" type="hidden" value="Carrera MM Run">
                                             <p id="payment-status">Waiting Payment</p>
                                         </div>
 
                                     </div>
-                                </form>
-                            </div>
 
+                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -123,7 +123,7 @@ cat.addEventListener('change', () => {
 // ## slide page form
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.getElementById('home_btn');
-const prevBtnSec = document.querySelector(".prev-1");
+const prevBtnSec = document.querySelector(".prev-2");
 const nextBtnSec = document.querySelector(".next-1");
 const prevBtnThird = document.querySelector(".prev-2");
 const nextBtnThird = document.querySelector(".next-2");
@@ -135,15 +135,15 @@ const progressBar2 = document.querySelectorAll("step2");
 const progressBar3 = document.querySelectorAll(".step3");
 const progressCheck = document.querySelectorAll(".step .check");
 const bullet = document.querySelectorAll(".step .bullet");
-let current = 1;
-let rName = document.getElementById('r-name');
-let rEmail = document.getElementById('r-email')
-let rId = document.getElementById('r-id');
-let rCat = document.getElementById('categoriesSelect').value;
-let rUID = document.getElementById('runnerUID');
-let rPrice = document.getElementById('transactionAmount');
-let rAge = document.getElementById('ageSelect').value;
-let club_id = document.getElementById('partner-id');
+var current = 1;
+var rName = document.getElementById('r-name');
+var rEmail = document.getElementById('r-email')
+var rId = document.getElementById('r-id');
+var rCat = document.getElementById('categoriesSelect');
+var rUID = document.getElementById('runnerUID');
+var rPrice = document.getElementById('transactionAmount');
+var rAge = document.getElementById('ageSelect').value;
+var club_id = document.getElementById('partner-id');
 
 
 
@@ -152,23 +152,48 @@ nextBtnFirst.addEventListener("click", () => {
     if (validEmail) {
         console.log(`##### ${rName.value}`);
 
-        document.getElementsByName('cat').value = rCat.value;
-        document.getElementsByName('runnerName').value = rName.value;
-        document.getElementsByName('runnerID').value = rId.value;
-        document.getElementsByName('price').value = rPrice.value;
-        document.getElementsByName('platform_cost').value = (Number(rPrice.value) * 0.01).toString();
-        document.getElementsByName('total_cost').value = ((Number(rPrice.value) * 0.01) + Number(rPrice)).toString();
-        document.getElementsByName('subtotal').value = ((Number(rPrice.value) * 0.01) + Number(rPrice)).toString();
+        document.getElementById('cat').value = rCat.value;
+        document.getElementById('runnerName').value = rName.value;
+        document.getElementById('runnerID').value = rId.value;
+        document.getElementById('price').value = rPrice.value;
+        document.getElementById('platform_cost').value = (Number(rPrice.value) * 0.01).toString();
+        document.getElementById('total_cost').value = ((Number(rPrice.value) * 0.01) + (Number(rPrice.value))).toString();
+
+
         slidePage.style.marginLeft = "-100%";
         progressBar[current - 1].classList.add("active");
         bullet[current - 1].classList.add("active");
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
         current += 1;
+
     } else {
         alert('El email es invalido!!')
     }
 });
+const url = '/add-runner'
+const newRunner = {
+    cat: document.getElementById('cat').value,
+    runnerName: document.getElementById('runnerName').value,
+    runnerID: document.getElementById('runnerID').value,
+    price: document.getElementById('price').value,
+    platform_cost: document.getElementById('platform_cost').value,
+    total_cost: document.getElementById('total_cost').value,
+}
+const params = {
+    body: newRunner,
+    method: "POST"
+
+};
+
+// submitBtn.addEventListener('click',
+//     (event) => {
+//         event.preventDefault();
+//         fetch(url, params)
+//     })
+
+
+
 // nextBtnSec.addEventListener("click", () => {
 
 //     let price = '10'
@@ -202,14 +227,14 @@ nextBtnFirst.addEventListener("click", () => {
 //     // }, 800);
 // });
 
-// prevBtnSec.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     slidePage.style.marginLeft = "0%";
-//     bullet[current - 2].classList.remove("active");
-//     progressCheck[current - 2].classList.remove("active");
-//     progressText[current - 2].classList.remove("active");
-//     current -= 1;
-// });
+prevBtnSec.addEventListener("click", function(event) {
+    event.preventDefault();
+    slidePage.style.marginLeft = "0%";
+    bullet[current - 2].classList.remove("active");
+    progressCheck[current - 2].classList.remove("active");
+    progressText[current - 2].classList.remove("active");
+    current -= 1;
+});
 // prevBtnThird.addEventListener("click", function(event) {
 //     event.preventDefault();
 //     slidePage.style.marginLeft = "-100%";

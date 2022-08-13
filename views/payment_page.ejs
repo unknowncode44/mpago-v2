@@ -33,9 +33,14 @@
                                                 <div class="col-md-12 product-detail">
                                                     <h5>Estas Pagando:</h5>
                                                     <div class="product-info">
-                                                        <p><b>Categoria: </b><span id="product-description">##Aqui Categoria##</span><br>
-                                                            <b>Fecha: </b>11/11/2022<br>
-                                                            <b>Price:</b> $ <span id="unit-price">10</span></p>
+                                                        <p><b>Descripcion: </b>
+                                                            <%= description %><br>
+                                                                <b>Categoria: </b><span id="product-description"><%= cat %></span><br>
+                                                                <b>Corredor: </b>
+                                                                <%= `00${runnerNbr}` %><br>
+                                                                    <b>Nombre: </b>
+                                                                    <%= runnerName %><br>
+                                                                        <b>Precio:</b> $ <span id="unit-price"><%= transactionAmount %></span></p>
                                                     </div>
                                                     <input type="hidden" id="quantity" value="1" min="1" class="form-control">
                                                 </div>
@@ -48,9 +53,9 @@
                         <div class="col-md-12 col-lg-12">
                             <div class="summary">
                                 <h3>Pagar</h3>
-                                <div class="summary-item"><span class="text">Costo de inscripcion</span><span class="price" id="cart-main-price"></span></div>
-                                <div class="summary-item"><span class="text">Costo de la plataforma</span><span class="price" id="cart-platform-cost"></span></div>
-                                <div class="summary-item"><span class="text"><strong>Total</strong></span><span class="price" id="cart-total"></span></div>
+                                <div class="summary-item"><span class="text">Costo de inscripcion</span><span class="price" id="cart-main-price"><%= transactionAmount %></span></div>
+                                <div class="summary-item"><span class="text">Costo de la plataforma</span><span class="price" id="cart-platform-cost">0</span></div>
+                                <div class="summary-item"><span class="text"><strong>Total</strong></span><span class="price" id="cart-total"><%= transactionAmount %></span></div>
                                 <button class="btn btn-primary btn-lg btn-block" id="checkout-btn">Pagar</button>
                             </div>
                         </div>
