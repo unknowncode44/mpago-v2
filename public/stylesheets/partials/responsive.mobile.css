@@ -474,9 +474,21 @@
         .form-outer .r-form .page .email-field {
             transform: translateY(-65px);
         }
+
+        .r-form .page .field-rname {
+        
+            padding-left: 0% !important;
+            padding-right: 0% !important;
+        }
+    
+        .r-form .page .field-rage {
+            top: 25px;
+            padding-left: 0% !important;
+            padding-right: 0% !important;
+        }
         .form-outer .r-form .page .field-half {
             padding-left: 0% !important;
-            transform: translateY(-45px);
+            transform: translateY(-25px);
         }
         .form-outer .r-form .page .field-half .label {
             padding-left: 2% !important;

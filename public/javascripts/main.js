@@ -61,7 +61,8 @@ window.addEventListener("scroll", function() {
 
 // ## VALIDAR EMAIL
 function validateEmail(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+    let val = mail.replace(/\s/g, "")
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val)) {
         return (true)
     }
     return (false)

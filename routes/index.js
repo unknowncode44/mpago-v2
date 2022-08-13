@@ -3,7 +3,7 @@ const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken("APP_USR-5195066021992733-073114-08b54514069ebb6401a70a2ac982212f-65060542");
+mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
 
 var id = ''
 
@@ -28,6 +28,7 @@ router.get('/pmt', (req, res) => {
 router.post("/process_payment", (req, res) => {
     const { body } = req;
     const { payer } = body;
+    const runnerDBI = body.runnerDBI;
     const paymentData = {
         transaction_amount: Number(body.transactionAmount),
         token: body.token,
@@ -48,12 +49,22 @@ router.post("/process_payment", (req, res) => {
         .then(function(response) {
             const { response: data } = response;
 
+            var paymentData = {
+                status: data.status,
+                status_detail: data.status_detail,
+                id: data.id
+            }
+            db.collection('runners').doc(runnerDBI).update(paymentData)
+           
             res.status(201).json({
                 detail: data.status_detail,
                 status: data.status,
                 id: data.id
             });
+            
+            
         })
+
         .catch(function(error) {
             console.log(error);
             const { errorMessage, errorStatus } = validateError(error);
@@ -115,13 +126,15 @@ router.post('/add-runner', async function(req, res) {
     }
 
 
+    var runnerDBI;
+    // grabamos datos en firebase
+    await db.collection('runners').add(newRunner).then((doc) => {
+        runnerDBI = doc.id
+    }).then(() => {
+        res.render('payment_page', { runnerNbr, cat, transactionAmount, description, runnerName, runnerDBI }); // para dirigirnos nuevamente a '/'
+    })
 
-
-    db.collection('runners').add(newRunner).then((doc) => {
-        id = doc.id
-    }); // grabamos datos en firebase
-
-    res.render('payment_page', { runnerNbr, cat, transactionAmount, description, runnerName }); // para dirigirnos nuevamente a '/'
+    
 
 })
 

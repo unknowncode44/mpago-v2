@@ -42,7 +42,7 @@
         </thead>
         <tbody>
             <% runners.map(item => { %>
-                <% if (item.data.payment_data.status === 'approved'){ %>
+                <% if (item.data.status === 'approved'){ %>
                     <tr class="table-success p-0">
                         <th scope="row">
                             <%= item.data.runnerUID %>
@@ -60,7 +60,7 @@
                             <%= item.data.runnerEmail %>
                         </td>
                         <td>Aprobado</td>
-                        <% if (item.data.payment_data.status_detail === 'accredited'){ %>
+                        <% if (item.data.status_detail === 'accredited'){ %>
                             <td>Acreditados</td>
                             <% } %>
                                 <td class="py-1">
@@ -84,7 +84,7 @@
                                 </td>
                     </tr>
                     <% } else { %>
-                        <tr class="table-danger">
+                        <tr class="table-warning">
                             <th scope="row">
                                 <%= item.data.runnerUID %>
                             </th>
@@ -100,12 +100,33 @@
                             <td>
                                 <%= item.data.runnerEmail %>
                             </td>
-                            <td>Rechazado</td>
-                            <% if (item.data.payment_data.status_detail === 'accredited'){ %>
+                            <% if (item.data.status === 'in_process'){ %>
+                                <td>En proceso</td>
+                                <% } %>
+                            <% if (item.data.status_detail === 'accredited'){ %>
                                 <td>Acreditados</td>
                                 <% } else { %>
                                     <td>Pendientes</td>
                                     <% } %>
+                                    <td class="py-1">
+                                        <div class="row p-0 m-0">
+                                            <div class="col p-0 m-0">
+                                                <div class="btn btn-primary">
+                                                    <ion-icon name="settings-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                            <div class="col p-0 m-0">
+                                                <div class="btn btn-success">
+                                                    <ion-icon name="mail-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                            <div class="col p-0 m-0">
+                                                <div class="btn btn-danger">
+                                                    <ion-icon name="trash-outline"></ion-icon>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                         </tr>
                         <% } %>
 

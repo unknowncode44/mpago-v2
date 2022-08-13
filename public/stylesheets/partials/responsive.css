@@ -263,6 +263,18 @@
     .form-outer .r-form .page .container .register-row-custom2 .field option {
         font-size: 17px;
     }
+
+    .r-form .page .field-rname {
+        
+        padding-left: 9% !important;
+        padding-right: 10% !important;
+    }
+
+    .r-form .page .field-rage {
+        top: -3px;
+        padding-left: 2% !important;
+        padding-right: 2% !important;
+    }
     .r-form .page .field .label {
         top: -25px;
         font-size: 18px;
