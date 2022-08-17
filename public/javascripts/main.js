@@ -145,31 +145,81 @@ var rUID = document.getElementById('runnerUID');
 var rPrice = document.getElementById('transactionAmount');
 var rAge = document.getElementById('ageSelect').value;
 var club_id = document.getElementById('partner-id');
+var genre = document.getElementById('genre');
+var birth = document.getElementById('birth');
 
 
-
-nextBtnFirst.addEventListener("click", () => {
-    var validEmail = validateEmail(rEmail.value)
-    if (validEmail) {
-        console.log(`##### ${rName.value}`);
-
-        document.getElementById('cat').value = rCat.value;
-        document.getElementById('runnerName').value = rName.value;
-        document.getElementById('runnerID').value = rId.value;
-        document.getElementById('price').value = rPrice.value;
-        document.getElementById('platform_cost').value = (Number(rPrice.value) * 0.01).toString();
-        document.getElementById('total_cost').value = ((Number(rPrice.value) * 0.01) + (Number(rPrice.value))).toString();
+var originalPrice = amount.value;
 
 
-        slidePage.style.marginLeft = "-100%";
-        progressBar[current - 1].classList.add("active");
-        bullet[current - 1].classList.add("active");
-        progressCheck[current - 1].classList.add("active");
-        progressText[current - 1].classList.add("active");
-        current += 1;
-
-    } else {
-        alert('El email es invalido!!')
+nextBtnFirst.addEventListener("click", async () => {
+    if(rName.value === ''){
+        alert('Campo Nombre es obligatorio')
+    }
+    else {
+        if(club_id.value === ''){
+            alert('Campo Numero de Socio es obligatorio')
+        }
+        else {
+            if(rEmail.value === ''){
+                alert('Campo Email es obligatorio')
+            }
+            else {
+                if (birth.value == '') {
+                    alert('Fecha de nacimiento es obligatoria!')
+                } else {
+                    if (genre.value == '') {
+                        alert('Debes indicar un genero!')
+                    } else {
+                        if(rCat.value == 'Kids' && Number(rAge.value) > 12){
+                            alert('Categoria Kids es hasta 12 años')
+                        } else {
+                            var validEmail = validateEmail(rEmail.value)
+                            if (validEmail) {
+                                var partnerName = '';
+                                var discount = 0;
+                                
+                                var partners = await readPartnersJson()
+                                
+                                    partners.map(partner => {
+                                        if(partner.socio == club_id.value) {
+                                            partnerName = 'SI'
+                                            document.getElementById('partnerID').value = partnerName.toString();
+                                            discount = Number(rPrice.value)*0.2
+                                            originalPrice = `${(rPrice.value).toString()}.00`;
+                                            rPrice.value = (Number(rPrice.value)*0.8).toString();
+                                            
+                                        }
+                                        else {
+                                            document.getElementById('partnerID').value = 'NO'; 
+                                        }
+                                        
+                                    })
+                                document.getElementById('cat').value = rCat.value;
+                                document.getElementById('runnerName').value = rName.value;
+                                document.getElementById('runnerID').value = rId.value;
+                                document.getElementById('price').value = originalPrice;
+                                document.getElementById('platform_cost').value = `-${(discount.toFixed(2)).toString()}`;
+                                document.getElementById('total_cost').value = ` ${(Number(rPrice.value).toFixed(2)).toString()}`;
+                    
+                    
+                    
+                                slidePage.style.marginLeft = "-100%";
+                                progressBar[current - 1].classList.add("active");
+                                bullet[current - 1].classList.add("active");
+                                progressCheck[current - 1].classList.add("active");
+                                progressText[current - 1].classList.add("active");
+                                current += 1;
+                    
+                            } else {
+                                alert('El email es invalido!!')
+                            }
+                        }
+                    }
+                }
+            } 
+            
+        }
     }
 });
 const url = '/add-runner'
@@ -186,6 +236,21 @@ const params = {
     method: "POST"
 
 };
+
+
+async function readPartnersJson(){
+    var list = [] 
+    await fetch('/javascripts/docs/socios2.json').then(
+        response => {
+            return response.json();
+        }
+    ).then(jsondata => {
+        list = jsondata
+    })
+    return list
+}
+
+
 
 // submitBtn.addEventListener('click',
 //     (event) => {
@@ -230,6 +295,8 @@ const params = {
 
 prevBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
+    rPrice.value = originalPrice;
+    document.getElementById('partnerID').value = ''; 
     slidePage.style.marginLeft = "0%";
     bullet[current - 2].classList.remove("active");
     progressCheck[current - 2].classList.remove("active");

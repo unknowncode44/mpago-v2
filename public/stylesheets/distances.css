@@ -1,0 +1,306 @@
+html {
+    background-color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primary: #461D6C;
+    --lighter25: #582487;
+    --secondary: #00FABA;
+    --opposite: #b9e293;
+    --black1: #222;
+    --black2: #262626;
+    --grey: #ccc;
+    --white: #fff;
+}
+
+body {
+    max-height: 100vh;
+}
+
+@media only screen and (min-device-width: 421px){
+
+  .section-wrapper {
+    background-color: #461D6C;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: flex-start;
+    align-content: space-around;
+    transition: all 0.2s linear;
+    padding-left: 5%; 
+  }
+
+  .flex-items-2:nth-child(1) {
+    display: block;
+    padding: 00% 0%; /* aca modificar on click */
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: start;
+    color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 60px;
+    transition: all 0.2s linear;
+  }
+  .flex-items-2:nth-child(1) p {
+    margin: 10% 0% 0% 0%;
+    padding: 0%;
+  }
+
+  .flex-items-2:nth-child(1) a.return {
+    margin: 0% 0% 20% 0% !important;
+    padding: 0%;
+    text-decoration: none;
+    color: var(--secondary);
+    position: relative;
+    left: 0;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 28px;
+  }
+
+  .flex-items-2:nth-child(1) p.time {
+    margin-top: 5%;
+    font-size: 36px;
+    background-color: var(--secondary);
+    color: var(--primary);
+  
+
+  }
+  
+  .flex-items-2:nth-child(2) {
+    display: none;
+  }
+
+  .flex-items-2:nth-child(3) {
+    display: block;
+    padding: 0% 10%;
+    order: 0;
+    background: var(--primary);
+    margin: 5% 2% 2% 2%;
+    border-radius: 5%;
+  }
+
+  .accordion-1 {
+    max-width: 100%;
+    padding: 0% 0%; 
+    border-radius: 5px;
+    border: 0.01rem solid var(--secondary);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+    overflow: hidden;
+   }
+
+   .accordion-content header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 2% 2%;
+    font-weight: 600;
+    align-items: center;
+    min-height: 30px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    text-transform: uppercase;
+    font-size: 28px;
+    transition: all 0.2s linear;
+  
+  }
+
+  .accordion-content p.description {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    padding: 0% 5% 0% 5%;
+    font-weight: 200;
+    color: var(--secondary);
+    font-size: 18px;
+    transition: all 0.2s linear;
+    text-align: center;
+  }
+
+  .accordion-content p.description a {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    padding: 0% 5% 0% 5%;
+    font-weight: 500;
+    color: var(--secondary);
+    text-align: center;
+    font-size: 22px;
+    transition: all 0.2s linear;
+  }
+
+  .accordion-content #map {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.2s linear;
+  }
+
+  .accordion-content #map img {
+    min-width: 100%;
+  }
+
+
+  
+    
+  
+}
+
+@media only screen and (max-device-width: 420px){
+
+
+.section {
+  padding: 0% 2%;
+}
+    
+.section-wrapper {
+    background-color: #461D6C;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    transition: all 0.2s linear;
+    
+}
+
+.content {
+    padding: 2% 10%;
+    height: auto;
+}
+
+.flex-items-2:nth-child(1) {
+    display: block;
+    padding: 20% 10%; /* aca modificar on click */
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    text-align: center;
+    color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 60px;
+    transition: all 0.2s linear;
+    min-width: 30%;
+  }  
+
+  .flex-items-2:nth-child(1) p {
+    margin: 0% 0%;
+  }
+
+  .flex-items-2:nth-child(1) p.time {
+    display: none;
+
+  }
+  
+  .flex-items-2:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    padding: 10% 10% 10% 10%;
+    background: #00FABA;
+    text-align: center;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  
+  .flex-items-2:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    background: var(--primary);
+    padding: 2% 2%;
+    margin: 10% 2% 2% 2%;
+    border-radius: 5%;
+  }
+
+  .accordion-1 {
+   max-width: 100%;
+   padding: 0% 0%; 
+   border-radius: 5px;
+   border: 0.01rem solid var(--secondary);
+   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+   margin-bottom: 5px;
+   overflow: hidden;
+
+  }
+  .accordion-content header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 4% 2% 2%;
+    font-weight: 600;
+    align-items: center;
+    min-height: 30px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    text-transform: uppercase;
+    font-size: 28px;
+    transition: all 0.2s linear;
+  }
+
+  .accordion-content p.description {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    padding: 0% 5% 0% 5%;
+    font-weight: 200;
+    color: var(--secondary);
+    font-size: 18px;
+    transition: all 0.2s linear;
+    text-align: center;
+  }
+
+  .accordion-content p.description a {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    padding: 0% 5% 0% 5%;
+    font-weight: 500;
+    color: var(--secondary);
+    text-align: center;
+    font-size: 22px;
+    transition: all 0.2s linear;
+  }
+
+  .accordion-content #map {
+    height: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.2s linear;
+  }
+
+  .flex-items-2:nth-child(1) a.return {
+    margin: 0% 0% 20% 0% !important;
+    padding: 0%;
+    text-decoration: none;
+    color: var(--secondary);
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 28px;
+  }
+
+}

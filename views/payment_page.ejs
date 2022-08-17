@@ -35,12 +35,13 @@
                                                     <div class="product-info">
                                                         <p><b>Descripcion: </b>
                                                             <%= description %><br>
-                                                                <b>Categoria: </b><span id="product-description"><%= cat %></span><br>
+                                                                <b>Distancia: </b><span id="product-description"><%= cat %></span><br>
+                                                                <b>Categoria: </b><span id="product-description"><%= genre %> - <%= ageSelect %></span><br>
                                                                 <b>Corredor: </b>
                                                                 <%= `00${runnerNbr}` %><br>
                                                                     <b>Nombre: </b>
                                                                     <%= runnerName %><br>
-                                                                        <b>Precio:</b> $ <span id="unit-price"><%= transactionAmount %></span></p>
+                                                                        <b>Precio:</b> $ <span id="unit-price"><%= _transaction_amount %></span></p>
                                                     </div>
                                                     <input type="hidden" id="quantity" value="1" min="1" class="form-control">
                                                 </div>
@@ -53,9 +54,9 @@
                         <div class="col-md-12 col-lg-12">
                             <div class="summary">
                                 <h3>Pagar</h3>
-                                <div class="summary-item"><span class="text">Costo de inscripcion</span><span class="price" id="cart-main-price"><%= transactionAmount %></span></div>
+                                <div class="summary-item"><span class="text">Costo de inscripcion</span><span class="price" id="cart-main-price"><%= _transaction_amount %></span></div>
                                 <div class="summary-item"><span class="text">Costo de la plataforma</span><span class="price" id="cart-platform-cost">0</span></div>
-                                <div class="summary-item"><span class="text"><strong>Total</strong></span><span class="price" id="cart-total"><%= transactionAmount %></span></div>
+                                <div class="summary-item"><span class="text"><strong>Total</strong></span><span class="price" id="cart-total"><%= _transaction_amount %></span></div>
                                 <button class="btn btn-primary btn-lg btn-block" id="checkout-btn">Pagar</button>
                             </div>
                         </div>

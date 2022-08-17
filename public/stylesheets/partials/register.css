@@ -22,7 +22,7 @@ body section .register {
     position: relative;
     width: 100%;
     background-color: var(--primary);
-    min-height: 110vh;
+    min-height: 140vh;
     overflow: hidden;
     z-index: 980 !important;
 }
@@ -66,7 +66,7 @@ body section .register {
 .form-container .header-bg {
     min-width: 100%;
     padding: 1% 10%;
-    min-height: 8vh;
+    min-height: 13vh;
     background: var(--secondary);
     position: relative;
     border-bottom-left-radius: 15%;
@@ -98,7 +98,7 @@ body section .register {
 }
 
 .form-outer .r-form .page {
-    padding: 1% 10%;
+    padding: 0% 15%;
     margin-left: 0%;
     min-width: 100%;
     transform: translateX(0%) translateY(-2%);
@@ -110,7 +110,7 @@ body section .register {
     font-size: 32px;
     font-weight: 600;
     color: var(--white);
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
 .form-outer .r-form .page .field {

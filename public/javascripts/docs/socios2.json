@@ -1,0 +1,3928 @@
+[
+  {
+    "socio": "100",
+    "nombre": "ABARZUA ISABEL ROSA"
+  },
+  {
+    "socio": "905",
+    "nombre": "ACUÑA ROBERTO DANIEL"
+  },
+  {
+    "socio": "689",
+    "nombre": "AGUERIA ALEX GUSTAVO"
+  },
+  {
+    "socio": "750",
+    "nombre": "ALFARO CESAR DAVID"
+  },
+  {
+    "socio": "103",
+    "nombre": "ALFIERI DANIEL OSVALDO"
+  },
+  {
+    "socio": "559",
+    "nombre": "ALFIERI DIONISIO MARIA"
+  },
+  {
+    "socio": "639",
+    "nombre": "ALFIERI FEDERICO DANIEL"
+  },
+  {
+    "socio": "105",
+    "nombre": "ALFIERI JOSE"
+  },
+  {
+    "socio": "703",
+    "nombre": "ALLARIA ALBERTO MIGUEL"
+  },
+  {
+    "socio": "106",
+    "nombre": "ALLEMANNI RAUL ALBERTO"
+  },
+  {
+    "socio": "579",
+    "nombre": "ALLENDE OSCAR RUBÉN"
+  },
+  {
+    "socio": "893",
+    "nombre": "ALMARZA CRISTIAN HECTOR"
+  },
+  {
+    "socio": "803",
+    "nombre": "ALONSO LUIS ADRIAN"
+  },
+  {
+    "socio": "847",
+    "nombre": "ALVAREZ GUILLERMO FERNANDO"
+  },
+  {
+    "socio": "734",
+    "nombre": "ANDRES AMANDA MARINA"
+  },
+  {
+    "socio": "115",
+    "nombre": "ARACAMA MARIA ISABEL"
+  },
+  {
+    "socio": "421",
+    "nombre": "ARGAT JORGE MARIO"
+  },
+  {
+    "socio": "453",
+    "nombre": "ARGUELLO ANDREA SILVIA"
+  },
+  {
+    "socio": "570",
+    "nombre": "ARRUÑADA NICOLAS"
+  },
+  {
+    "socio": "800",
+    "nombre": "ASPRA VICTOR MANUEL"
+  },
+  {
+    "socio": "668",
+    "nombre": "ASQUINAZI REBECA YUDITH"
+  },
+  {
+    "socio": "393",
+    "nombre": "AVILA MARCELO ADRIAN"
+  },
+  {
+    "socio": "391",
+    "nombre": "AVILES RAUL ALBERTO"
+  },
+  {
+    "socio": "392",
+    "nombre": "AVILES SANTIAGO RAÚL"
+  },
+  {
+    "socio": "626",
+    "nombre": "BACCI MARIA VICTORIA"
+  },
+  {
+    "socio": "625",
+    "nombre": "BACCI VIVIANA ESTHER"
+  },
+  {
+    "socio": "420",
+    "nombre": "BAGLIONI OSVALDO OMAR"
+  },
+  {
+    "socio": "885",
+    "nombre": "BALCO MARCELO ADRIAN"
+  },
+  {
+    "socio": "886",
+    "nombre": "BALCO MARIANO ARIEL"
+  },
+  {
+    "socio": "369",
+    "nombre": "BARROS NESTOR FABIAN"
+  },
+  {
+    "socio": "562",
+    "nombre": "BERARDO CLAUDIO ALEJANDRO"
+  },
+  {
+    "socio": "492",
+    "nombre": "BLANCO PABLO MIGUEL"
+  },
+  {
+    "socio": "447",
+    "nombre": "BOSSETTO LILIANA DEL VALLE"
+  },
+  {
+    "socio": "608",
+    "nombre": "BOYANO JORGE ALEJANDRO"
+  },
+  {
+    "socio": "916",
+    "nombre": "BRITOS JULIO CESAR"
+  },
+  {
+    "socio": "868",
+    "nombre": "BRUNSKOLE DANIEL OMAR"
+  },
+  {
+    "socio": "399",
+    "nombre": "CABANAY JOSE JAVIER"
+  },
+  {
+    "socio": "605",
+    "nombre": "CABEZAS VALENZUELA MANUEL ANTO"
+  },
+  {
+    "socio": "597",
+    "nombre": "CALDENTEY JUAN ALBERTO"
+  },
+  {
+    "socio": "139",
+    "nombre": "CALOGERO MIGUEL ANGEL"
+  },
+  {
+    "socio": "861",
+    "nombre": "CALOGERO RODOLFO ALBERTO"
+  },
+  {
+    "socio": "140",
+    "nombre": "CALVI MARINA CECILIA DEL CARME"
+  },
+  {
+    "socio": "890",
+    "nombre": "CAMPI JUAN IGNACIO"
+  },
+  {
+    "socio": "791",
+    "nombre": "CAMPI JUAN MARIO CESAR"
+  },
+  {
+    "socio": "887",
+    "nombre": "CAMPI MARIA NOELIA LAURA"
+  },
+  {
+    "socio": "382",
+    "nombre": "CAPARROS FRANCISCO JUAN"
+  },
+  {
+    "socio": "762",
+    "nombre": "CARABALLO MARIA GENOVEVA"
+  },
+  {
+    "socio": "537",
+    "nombre": "CAROZZA OMAR ALEJANDRO"
+  },
+  {
+    "socio": "145",
+    "nombre": "CARPINELLO JUAN CARLOS"
+  },
+  {
+    "socio": "903",
+    "nombre": "CASTRO NELSON MATIAS"
+  },
+  {
+    "socio": "897",
+    "nombre": "CAVANNA MARTIN SEBASTIAN"
+  },
+  {
+    "socio": "555",
+    "nombre": "CAZAUX BOLOGNINI JUAN CARLOS"
+  },
+  {
+    "socio": "809",
+    "nombre": "CECCHI GERMAN RODOLFO"
+  },
+  {
+    "socio": "873",
+    "nombre": "CEPEDA ANDREA PAOLA"
+  },
+  {
+    "socio": "909",
+    "nombre": "CHAPARRO MARTIN ANDRES"
+  },
+  {
+    "socio": "610",
+    "nombre": "COLAVITA GRACIELA MARIA"
+  },
+  {
+    "socio": "869",
+    "nombre": "CORRADI ENRIQUE EDUARDO"
+  },
+  {
+    "socio": "802",
+    "nombre": "DALMAU MARCELO"
+  },
+  {
+    "socio": "552",
+    "nombre": "DALMAU PABLO EDUARDO"
+  },
+  {
+    "socio": "606",
+    "nombre": "DE DIEGO MARIA CRISTINA"
+  },
+  {
+    "socio": "926",
+    "nombre": "DE MONTE KARINA ELSA"
+  },
+  {
+    "socio": "913",
+    "nombre": "DE MONTE SERGIO FABIAN"
+  },
+  {
+    "socio": "387",
+    "nombre": "DE ZAVALETA MARIA CRISTINA"
+  },
+  {
+    "socio": "422",
+    "nombre": "DEBIAGGI RAUL ENRIQUE"
+  },
+  {
+    "socio": "322",
+    "nombre": "DEBIAGGI RUBEN ANGEL"
+  },
+  {
+    "socio": "711",
+    "nombre": "DIAZ GABRIELA ALEJANDRA"
+  },
+  {
+    "socio": "309",
+    "nombre": "DIRIÉ LUIS ALBERTO"
+  },
+  {
+    "socio": "384",
+    "nombre": "DORCAZBERRO MARTA SUSANA"
+  },
+  {
+    "socio": "160",
+    "nombre": "ETCHEGORRY MARCELO EDUARDO"
+  },
+  {
+    "socio": "548",
+    "nombre": "FANELLO ALFREDO"
+  },
+  {
+    "socio": "717",
+    "nombre": "FERNANDEZ DANIEL GUSTAVO"
+  },
+  {
+    "socio": "344",
+    "nombre": "FERNANDEZ JORGE ALBERTO"
+  },
+  {
+    "socio": "313",
+    "nombre": "FERNANDEZ MARCOS ANDRES"
+  },
+  {
+    "socio": "788",
+    "nombre": "FERNANDEZ MARIA VERONICA"
+  },
+  {
+    "socio": "164",
+    "nombre": "FERNANDEZ RAUL HECTOR"
+  },
+  {
+    "socio": "856",
+    "nombre": "FERRECCIO JORGE LUIS"
+  },
+  {
+    "socio": "783",
+    "nombre": "FERREYRA DANIEL ALFREDO"
+  },
+  {
+    "socio": "166",
+    "nombre": "FERRONI ARIEL RICARDO"
+  },
+  {
+    "socio": "904",
+    "nombre": "FODARO FRANCISCO JAVIER"
+  },
+  {
+    "socio": "508",
+    "nombre": "FRANCISCO FABIANA INES"
+  },
+  {
+    "socio": "877",
+    "nombre": "GALLEGO WALTER ULISES"
+  },
+  {
+    "socio": "596",
+    "nombre": "GARCIA RODOLFO LUIS"
+  },
+  {
+    "socio": "646",
+    "nombre": "GARRITANO PABLO DANIEL"
+  },
+  {
+    "socio": "507",
+    "nombre": "GIL GUSTAVO CARLOS"
+  },
+  {
+    "socio": "177",
+    "nombre": "GIMENEZ CARLOS EDUARDO"
+  },
+  {
+    "socio": "634",
+    "nombre": "GOMEZ  JUAN MANUEL"
+  },
+  {
+    "socio": "915",
+    "nombre": "GOMEZ FERNANDO ROBERTO"
+  },
+  {
+    "socio": "729",
+    "nombre": "GONZALEZ GILDA NOEMI"
+  },
+  {
+    "socio": "120",
+    "nombre": "GONZALEZ GRACIELA ESTHER"
+  },
+  {
+    "socio": "530",
+    "nombre": "GORDO FERNANDO SEBASTIAN"
+  },
+  {
+    "socio": "860",
+    "nombre": "GOSENDE PEDRO"
+  },
+  {
+    "socio": "912",
+    "nombre": "GRANADOS GARCIA DOMINGO"
+  },
+  {
+    "socio": "472",
+    "nombre": "GROSVALD GUILLERMO"
+  },
+  {
+    "socio": "876",
+    "nombre": "GUTIERREZ LAURA CORINA"
+  },
+  {
+    "socio": "415",
+    "nombre": "HARASIMIUK SERGIO IVAN"
+  },
+  {
+    "socio": "702",
+    "nombre": "HETHERINGTON RAMON"
+  },
+  {
+    "socio": "832",
+    "nombre": "HOLTZ GLORIA MARINA"
+  },
+  {
+    "socio": "857",
+    "nombre": "IBAÑEZ BRUNILDA"
+  },
+  {
+    "socio": "580",
+    "nombre": "IGLESIAS EVELYN NANCY"
+  },
+  {
+    "socio": "859",
+    "nombre": "IRAIRA CARLOS DANIEL"
+  },
+  {
+    "socio": "545",
+    "nombre": "ITAUE ANA MARIA"
+  },
+  {
+    "socio": "736",
+    "nombre": "IZQUIERDO NELSON DANIEL"
+  },
+  {
+    "socio": "785",
+    "nombre": "JARA JORGE OMAR"
+  },
+  {
+    "socio": "769",
+    "nombre": "JORGEVICH JORGE LUIS"
+  },
+  {
+    "socio": "917",
+    "nombre": "JUAN MARIA CELIA"
+  },
+  {
+    "socio": "920",
+    "nombre": "JUAN MARIANO DIEGO ANDRES"
+  },
+  {
+    "socio": "493",
+    "nombre": "JUAN MARTIN LUIS OSCAR"
+  },
+  {
+    "socio": "919",
+    "nombre": "JUAN MATIAS IGNACIO RAFAEL"
+  },
+  {
+    "socio": "190",
+    "nombre": "KAHALE KOUZO GABRIEL TUFIK"
+  },
+  {
+    "socio": "341",
+    "nombre": "KLOBERDANZ ABELARDO AURELIO"
+  },
+  {
+    "socio": "286",
+    "nombre": "KOUKHARSKY NICOLÁS ANTONIO"
+  },
+  {
+    "socio": "842",
+    "nombre": "KUBLI CAROLINA MARÍA"
+  },
+  {
+    "socio": "192",
+    "nombre": "LABOLLITA HECTOR AMADEO"
+  },
+  {
+    "socio": "784",
+    "nombre": "LABRIN RAUL SANDRO"
+  },
+  {
+    "socio": "753",
+    "nombre": "LIZAMA FIGUEROA RAUL ALBERTO"
+  },
+  {
+    "socio": "792",
+    "nombre": "LIZASO MARÍA  ALEJANDRA"
+  },
+  {
+    "socio": "899",
+    "nombre": "LIZASO ROSMARI"
+  },
+  {
+    "socio": "491",
+    "nombre": "LOPEZ MARIA DEL CARMEN"
+  },
+  {
+    "socio": "440",
+    "nombre": "MAINO LILIANA ROSA"
+  },
+  {
+    "socio": "490",
+    "nombre": "MANDALARI CLAUDIO JUAN JOSE"
+  },
+  {
+    "socio": "807",
+    "nombre": "MANSO MARIA EUGENIA"
+  },
+  {
+    "socio": "864",
+    "nombre": "MANSO MARIA LAURA"
+  },
+  {
+    "socio": "845",
+    "nombre": "MARINO HORACIO EDUARDO"
+  },
+  {
+    "socio": "370",
+    "nombre": "MARTINEZ SERGIO DANIEL"
+  },
+  {
+    "socio": "484",
+    "nombre": "MARZOCCHI MARIO ENRIQUE"
+  },
+  {
+    "socio": "356",
+    "nombre": "MATO EDGARDO ARIEL"
+  },
+  {
+    "socio": "643",
+    "nombre": "MEDER MILTON MAURO"
+  },
+  {
+    "socio": "204",
+    "nombre": "MEDINA MARIO MIGUEL"
+  },
+  {
+    "socio": "806",
+    "nombre": "MEDINA PABLO SEBASTIAN"
+  },
+  {
+    "socio": "429",
+    "nombre": "MENA JORGE ERNESTO"
+  },
+  {
+    "socio": "205",
+    "nombre": "MENA JOSE RICARDO"
+  },
+  {
+    "socio": "499",
+    "nombre": "MERCADO JUAN EMILIO"
+  },
+  {
+    "socio": "713",
+    "nombre": "METZGER CRISTIAN CARLOS"
+  },
+  {
+    "socio": "539",
+    "nombre": "MOLL ROSARIO"
+  },
+  {
+    "socio": "652",
+    "nombre": "MONTESINO LUCIANO MARCIAL"
+  },
+  {
+    "socio": "214",
+    "nombre": "MUÑOZ CARLOS ALBERTO"
+  },
+  {
+    "socio": "505",
+    "nombre": "MUÑOZ JOSE LUIS"
+  },
+  {
+    "socio": "333",
+    "nombre": "MUÑOZ LUIS ANGEL"
+  },
+  {
+    "socio": "780",
+    "nombre": "NASIF EZEQUIEL"
+  },
+  {
+    "socio": "728",
+    "nombre": "OLIVA NORBERTO ARIEL"
+  },
+  {
+    "socio": "385",
+    "nombre": "OLIVERO JORGE ALBERTO"
+  },
+  {
+    "socio": "882",
+    "nombre": "ORTUÑO BLAS SANTIAGO"
+  },
+  {
+    "socio": "601",
+    "nombre": "ORTUÑO LOPEZ BLAS"
+  },
+  {
+    "socio": "910",
+    "nombre": "OSTERTAG ANDREA LAURA"
+  },
+  {
+    "socio": "223",
+    "nombre": "OTTONE RUBEN ANTONIO"
+  },
+  {
+    "socio": "901",
+    "nombre": "PAEZ GUILLERMO ADRIAN"
+  },
+  {
+    "socio": "774",
+    "nombre": "PAPARINI LIDIA ADA"
+  },
+  {
+    "socio": "923",
+    "nombre": "PASCUAL JUAN IGNACIO"
+  },
+  {
+    "socio": "485",
+    "nombre": "PASO JORGE MANUEL"
+  },
+  {
+    "socio": "822",
+    "nombre": "PENSADO OSVALDO JESUS"
+  },
+  {
+    "socio": "229",
+    "nombre": "PEREZ ALBERTO"
+  },
+  {
+    "socio": "230",
+    "nombre": "PEREZ MIGUEL ANGEL"
+  },
+  {
+    "socio": "844",
+    "nombre": "PERINO LUCIANA FERNANDA"
+  },
+  {
+    "socio": "906",
+    "nombre": "PETRIS EDUARDO FEDERICO"
+  },
+  {
+    "socio": "840",
+    "nombre": "PEÑATE ALEJANDRO"
+  },
+  {
+    "socio": "889",
+    "nombre": "PEÑATE YURCIC MARIA LAURA"
+  },
+  {
+    "socio": "752",
+    "nombre": "PILI EDUARDO DANIEL"
+  },
+  {
+    "socio": "486",
+    "nombre": "PLANAS JUAN PABLO"
+  },
+  {
+    "socio": "235",
+    "nombre": "PLANISCIG ANGEL RAMON"
+  },
+  {
+    "socio": "858",
+    "nombre": "PLASTINA HERNAN SERGIO"
+  },
+  {
+    "socio": "571",
+    "nombre": "POJMAEVICH DANILO ALBERTO"
+  },
+  {
+    "socio": "237",
+    "nombre": "POSCA LUIS ALBERTO"
+  },
+  {
+    "socio": "866",
+    "nombre": "PUENTES JUAN JOSE"
+  },
+  {
+    "socio": "851",
+    "nombre": "PUJOL ALEJANDRO OSCAR"
+  },
+  {
+    "socio": "153",
+    "nombre": "QUINTERNO NORA VIVIANA"
+  },
+  {
+    "socio": "475",
+    "nombre": "REDES ZORAIDA BERNARDA"
+  },
+  {
+    "socio": "894",
+    "nombre": "RETAMAL MIGUEL ANGEL"
+  },
+  {
+    "socio": "825",
+    "nombre": "RIMADA SEBASTIAN ADOLFO"
+  },
+  {
+    "socio": "865",
+    "nombre": "RIMMELE MARTIN HUGO LUIS"
+  },
+  {
+    "socio": "773",
+    "nombre": "RINALDI PATRICIA ROXANA"
+  },
+  {
+    "socio": "794",
+    "nombre": "RIOS HORACIO PABLO"
+  },
+  {
+    "socio": "793",
+    "nombre": "RIOS JOSE DANIEL"
+  },
+  {
+    "socio": "751",
+    "nombre": "RIOS MARIA NATALIA"
+  },
+  {
+    "socio": "731",
+    "nombre": "RODRIGUEZ ALFREDO"
+  },
+  {
+    "socio": "880",
+    "nombre": "RODRIGUEZ GUILLERMO EDUARDO"
+  },
+  {
+    "socio": "789",
+    "nombre": "RODRIGUEZ JORGE CESAR"
+  },
+  {
+    "socio": "547",
+    "nombre": "RODRIGUEZ MASCHIO EDUARDO"
+  },
+  {
+    "socio": "246",
+    "nombre": "ROOS SERAFIN AGUSTIN"
+  },
+  {
+    "socio": "613",
+    "nombre": "ROSANIGO OSVALDO HECTOR"
+  },
+  {
+    "socio": "850",
+    "nombre": "ROSETTI PABLO DANIEL"
+  },
+  {
+    "socio": "756",
+    "nombre": "RUBIO PEREZ MIGUEL"
+  },
+  {
+    "socio": "914",
+    "nombre": "RUIZ FABIO DAMIAN"
+  },
+  {
+    "socio": "577",
+    "nombre": "RUSJAN MARIO RICARDO"
+  },
+  {
+    "socio": "900",
+    "nombre": "RUSJAN SILVANO DARIO"
+  },
+  {
+    "socio": "388",
+    "nombre": "RUSSO PAULO CARLOS"
+  },
+  {
+    "socio": "744",
+    "nombre": "SABAS OTTA OSCAR EDUARDO"
+  },
+  {
+    "socio": "902",
+    "nombre": "SAGREDO JORGELINA"
+  },
+  {
+    "socio": "922",
+    "nombre": "SALVATIERRA MATIAS"
+  },
+  {
+    "socio": "730",
+    "nombre": "SALVATIERRA MAXIMILIANO"
+  },
+  {
+    "socio": "824",
+    "nombre": "SAN MARTIN DIOGENES"
+  },
+  {
+    "socio": "812",
+    "nombre": "SAN MARTIN LORENA ELIZABETH"
+  },
+  {
+    "socio": "433",
+    "nombre": "SANCHEZ DIEGO ROBERTO ANDRES"
+  },
+  {
+    "socio": "250",
+    "nombre": "SANFILIPPO GUSTAVO ADRIÁN"
+  },
+  {
+    "socio": "251",
+    "nombre": "SANFILIPPO RUBÉN OSVALDO"
+  },
+  {
+    "socio": "797",
+    "nombre": "SANTUCHO MIGUEL ANGEL"
+  },
+  {
+    "socio": "255",
+    "nombre": "SCETTA MIGUEL ANGEL"
+  },
+  {
+    "socio": "302",
+    "nombre": "SCETTA NÉSTOR RUBÉN"
+  },
+  {
+    "socio": "835",
+    "nombre": "SCHLAPFFER HORACIO DANIEL"
+  },
+  {
+    "socio": "834",
+    "nombre": "SCHLAPFFER MARIA ALICIA"
+  },
+  {
+    "socio": "494",
+    "nombre": "SCHMIT MARCELO EDGARDO"
+  },
+  {
+    "socio": "323",
+    "nombre": "SCIANCA RODRIGO ESTEBAN"
+  },
+  {
+    "socio": "782",
+    "nombre": "SEBESTA JORGE HORACIO"
+  },
+  {
+    "socio": "843",
+    "nombre": "SEGURA PATRICIA VIVIANA"
+  },
+  {
+    "socio": "883",
+    "nombre": "SILVERO GILBERTO OSCAR"
+  },
+  {
+    "socio": "790",
+    "nombre": "SKRUTA PEDRO EDUARDO JAVIER"
+  },
+  {
+    "socio": "838",
+    "nombre": "SOSA ALEJANDRO DOMINGO"
+  },
+  {
+    "socio": "828",
+    "nombre": "SOTO JORGE ALBERTO"
+  },
+  {
+    "socio": "604",
+    "nombre": "SUKAREVICIUS NORBERTO FEDERICO"
+  },
+  {
+    "socio": "924",
+    "nombre": "SURIANI RICARDO VICENTE"
+  },
+  {
+    "socio": "265",
+    "nombre": "TOLEDO RUBÉN OSCAR"
+  },
+  {
+    "socio": "551",
+    "nombre": "TORRES RUBEN ALEJANDRO"
+  },
+  {
+    "socio": "911",
+    "nombre": "TORRESAN BRUNO JOSE LUIS"
+  },
+  {
+    "socio": "395",
+    "nombre": "URDIALES FABIANA"
+  },
+  {
+    "socio": "925",
+    "nombre": "URIBE MARIA SOLEDAD"
+  },
+  {
+    "socio": "811",
+    "nombre": "URQUIZU CELINA BEATRIZ"
+  },
+  {
+    "socio": "346",
+    "nombre": "VARELA ALICIA BEATRIZ"
+  },
+  {
+    "socio": "907",
+    "nombre": "VARELA GLADYS ALICIA"
+  },
+  {
+    "socio": "432",
+    "nombre": "VEGA RUBÉN DARIO"
+  },
+  {
+    "socio": "697",
+    "nombre": "VELAZQUEZ OSCAR ENRIQUE"
+  },
+  {
+    "socio": "921",
+    "nombre": "VERDUGO DIAZ RODRIGO ALEJANDRO"
+  },
+  {
+    "socio": "854",
+    "nombre": "VIALE GUSTAVO RICARDO"
+  },
+  {
+    "socio": "896",
+    "nombre": "VILCHEZ BARROS PAULA"
+  },
+  {
+    "socio": "609",
+    "nombre": "VILCHEZ HECTOR LUIS"
+  },
+  {
+    "socio": "520",
+    "nombre": "VILCHEZ WALTER ANTONIO"
+  },
+  {
+    "socio": "273",
+    "nombre": "VILLEMUR HÉCTOR HUGO"
+  },
+  {
+    "socio": "389",
+    "nombre": "VIVAS IGNACIO LUIS"
+  },
+  {
+    "socio": "664",
+    "nombre": "VOLONTÉ ESTER EMILIA"
+  },
+  {
+    "socio": "743",
+    "nombre": "WAHLER HUMBERTO TEODORO"
+  },
+  {
+    "socio": "848",
+    "nombre": "ZURITA VICTOR RICARDO"
+  },
+ {
+   "socio": 17,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 20,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 22,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 29,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 30,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 32,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 33,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 38,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 39,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 42,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 45,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 48,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 56,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 57,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 59,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 61,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 63,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 65,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 69,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 70,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 72,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 73,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 74,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 76,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 80,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 82,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 89,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 98,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 101,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 103,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 104,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 121,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 124,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 125,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 127,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 129,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 133,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 137,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 138,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 141,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 143,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 144,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 146,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 152,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 157,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 159,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 160,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 164,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 168,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 169,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 171,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 172,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 179,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 181,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 182,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 184,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 187,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 188,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 197,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 202,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 203,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 208,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 210,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 213,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 215,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 223,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 229,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 230,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 233,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 234,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 235,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 241,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 242,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 243,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 249,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 257,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 259,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 270,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 272,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 279,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 296,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 298,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 300,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 302,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 300,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 313,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 317,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 318,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 324,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 326,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 335,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 341,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 342,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 348,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 350,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 354,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 357,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 359,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 364,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 367,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 369,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 373,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 374,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 378,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 382,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 396,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 405,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 408,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 418,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 422,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 431,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 433,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 438,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 439,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 444,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 448,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 449,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 452,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 453,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 455,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 460,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 470,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 481,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 485,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 491,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 505,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 507,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 511,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 514,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 515,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 516,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 531,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 532,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 537,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 538,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 544,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 547,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 549,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 553,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 557,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 558,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 562,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 567,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 568,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 570,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 578,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 583,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 584,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 603,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 609,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 610,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 611,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 613,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 614,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 615,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 618,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 621,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 627,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 630,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 636,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 649,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 651,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 653,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 657,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 661,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 663,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 664,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 668,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 669,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 670,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 674,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 675,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 677,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 678,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 680,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 681,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 682,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 690,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 692,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 694,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 696,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 699,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 701,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 711,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 713,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 715,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 717,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 720,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 723,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 728,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 735,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 736,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 757,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 773,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 774,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 776,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 778,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 780,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 781,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 789,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 791,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 794,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 795,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 796,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 797,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 799,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 803,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 806,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 808,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 810,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 811,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 813,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 814,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 820,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 823,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 826,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 831,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 835,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 844,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 846,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 848,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 849,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 850,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 853,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 855,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 856,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 859,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 861,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 868,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 869,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 870,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 873,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 874,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 875,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 876,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 877,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 878,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 883,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 885,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 890,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 891,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 895,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 896,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 898,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 902,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 903,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 906,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 908,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 912,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 914,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 915,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 917,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 920,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 921,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 922,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 923,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 927,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 930,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 934,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 934,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 934,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 935,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 942,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 943,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 946,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 950,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 951,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 952,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 953,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 954,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 956,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 957,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 965,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 966,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 967,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 968,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 970,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 971,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 972,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 974,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 977,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 979,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 982,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 983,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 984,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 987,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 988,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 989,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 991,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 995,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 996,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 997,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 998,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1000,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1003,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1004,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1012,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1014,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1012,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1018,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1019,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1020,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1021,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1022,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1023,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1025,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1026,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1028,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1032,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1033,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1034,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1036,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1039,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1040,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1041,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1043,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1045,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1047,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1050,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1051,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1054,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1055,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1061,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1063,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1068,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1069,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1070,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1071,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1075,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1076,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1078,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1079,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1081,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1082,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1083,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1084,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1086,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1087,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1092,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1093,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1094,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1095,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1096,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1097,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1098,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1100,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1102,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1103,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1104,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1107,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1108,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1109,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1110,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1111,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1112,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1116,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1117,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1119,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1121,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1124,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1125,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1126,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1127,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1128,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1131,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1133,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1136,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1138,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1141,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1144,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1145,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1146,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1147,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1148,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1149,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1151,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1153,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1154,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1156,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1158,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1159,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1160,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1161,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1163,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1164,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1165,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1167,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1170,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1171,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1173,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1174,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1175,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1176,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1178,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1179,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1180,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1181,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1182,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1183,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1187,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1188,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1190,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1191,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1192,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1194,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1195,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1196,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1197,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1198,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1199,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1200,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1201,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1202,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1203,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1204,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1205,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1208,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1209,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1211,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1212,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1215,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1216,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1217,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1220,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1223,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1224,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1225,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1226,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1227,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1228,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1230,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1231,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1232,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1237,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1238,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1239,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1240,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1241,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1243,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1244,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1245,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1246,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1248,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1249,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1250,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1251,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1254,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1255,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1256,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1257,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1258,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1259,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1260,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1261,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1262,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1263,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1266,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1267,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1268,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1269,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1270,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1271,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1273,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1275,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1277,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1279,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1280,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1281,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1282,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1284,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1286,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1287,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1288,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1289,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1290,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1291,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1292,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1295,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1296,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1297,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1298,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1299,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1301,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1302,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1304,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1305,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1306,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1307,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1308,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1309,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1310,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1311,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1312,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1313,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1314,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1315,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1316,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1317,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1318,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1319,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1320,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1323,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1324,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1325,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1327,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1328,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1329,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1330,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1331,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1332,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1334,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1336,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1337,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1338,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1339,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1340,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1341,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1343,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1344,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1345,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1346,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1347,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1348,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1350,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1351,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1352,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1353,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1354,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1355,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1357,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1358,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1359,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1360,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1361,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1362,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1363,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1364,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1365,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1366,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1367,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1368,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1369,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1370,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1371,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1372,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1373,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1374,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1376,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1377,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1378,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1379,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1380,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1381,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1382,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1383,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1384,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1385,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1386,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1387,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1388,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1389,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1390,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1391,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1392,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1393,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1395,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1396,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1397,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1398,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1399,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1400,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1401,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1402,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1403,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1404,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1405,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1406,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1407,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1408,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1409,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1410,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1411,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1412,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1413,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1414,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1415,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1416,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1417,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1418,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1419,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1420,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1421,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1423,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1424,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1425,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1426,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1427,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1428,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1429,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1430,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1431,
+   "FIELD2": "",
+   "FIELD3": ""
+ },
+ {
+   "socio": 1432,
+   "FIELD2": "",
+   "FIELD3": ""
+ }
+]

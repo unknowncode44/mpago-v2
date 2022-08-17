@@ -1,0 +1,3334 @@
+[
+ {
+   "socio": "100",
+   "nombre": "ABARZUA ISABEL ROSA"
+ },
+ {
+   "socio": "905",
+   "nombre": "ACUÑA ROBERTO DANIEL"
+ },
+ {
+   "socio": "689",
+   "nombre": "AGUERIA ALEX GUSTAVO"
+ },
+ {
+   "socio": "750",
+   "nombre": "ALFARO CESAR DAVID"
+ },
+ {
+   "socio": "103",
+   "nombre": "ALFIERI DANIEL OSVALDO"
+ },
+ {
+   "socio": "559",
+   "nombre": "ALFIERI DIONISIO MARIA"
+ },
+ {
+   "socio": "639",
+   "nombre": "ALFIERI FEDERICO DANIEL"
+ },
+ {
+   "socio": "105",
+   "nombre": "ALFIERI JOSE"
+ },
+ {
+   "socio": "703",
+   "nombre": "ALLARIA ALBERTO MIGUEL"
+ },
+ {
+   "socio": "106",
+   "nombre": "ALLEMANNI RAUL ALBERTO"
+ },
+ {
+   "socio": "579",
+   "nombre": "ALLENDE OSCAR RUBÉN"
+ },
+ {
+   "socio": "893",
+   "nombre": "ALMARZA CRISTIAN HECTOR"
+ },
+ {
+   "socio": "803",
+   "nombre": "ALONSO LUIS ADRIAN"
+ },
+ {
+   "socio": "847",
+   "nombre": "ALVAREZ GUILLERMO FERNANDO"
+ },
+ {
+   "socio": "734",
+   "nombre": "ANDRES AMANDA MARINA"
+ },
+ {
+   "socio": "115",
+   "nombre": "ARACAMA MARIA ISABEL"
+ },
+ {
+   "socio": "421",
+   "nombre": "ARGAT JORGE MARIO"
+ },
+ {
+   "socio": "453",
+   "nombre": "ARGUELLO ANDREA SILVIA"
+ },
+ {
+   "socio": "570",
+   "nombre": "ARRUÑADA NICOLAS"
+ },
+ {
+   "socio": "800",
+   "nombre": "ASPRA VICTOR MANUEL"
+ },
+ {
+   "socio": "668",
+   "nombre": "ASQUINAZI REBECA YUDITH"
+ },
+ {
+   "socio": "393",
+   "nombre": "AVILA MARCELO ADRIAN"
+ },
+ {
+   "socio": "391",
+   "nombre": "AVILES RAUL ALBERTO"
+ },
+ {
+   "socio": "392",
+   "nombre": "AVILES SANTIAGO RAÚL"
+ },
+ {
+   "socio": "626",
+   "nombre": "BACCI MARIA VICTORIA"
+ },
+ {
+   "socio": "625",
+   "nombre": "BACCI VIVIANA ESTHER"
+ },
+ {
+   "socio": "420",
+   "nombre": "BAGLIONI OSVALDO OMAR"
+ },
+ {
+   "socio": "885",
+   "nombre": "BALCO MARCELO ADRIAN"
+ },
+ {
+   "socio": "886",
+   "nombre": "BALCO MARIANO ARIEL"
+ },
+ {
+   "socio": "369",
+   "nombre": "BARROS NESTOR FABIAN"
+ },
+ {
+   "socio": "562",
+   "nombre": "BERARDO CLAUDIO ALEJANDRO"
+ },
+ {
+   "socio": "492",
+   "nombre": "BLANCO PABLO MIGUEL"
+ },
+ {
+   "socio": "447",
+   "nombre": "BOSSETTO LILIANA DEL VALLE"
+ },
+ {
+   "socio": "608",
+   "nombre": "BOYANO JORGE ALEJANDRO"
+ },
+ {
+   "socio": "916",
+   "nombre": "BRITOS JULIO CESAR"
+ },
+ {
+   "socio": "868",
+   "nombre": "BRUNSKOLE DANIEL OMAR"
+ },
+ {
+   "socio": "399",
+   "nombre": "CABANAY JOSE JAVIER"
+ },
+ {
+   "socio": "605",
+   "nombre": "CABEZAS VALENZUELA MANUEL ANTO"
+ },
+ {
+   "socio": "597",
+   "nombre": "CALDENTEY JUAN ALBERTO"
+ },
+ {
+   "socio": "139",
+   "nombre": "CALOGERO MIGUEL ANGEL"
+ },
+ {
+   "socio": "861",
+   "nombre": "CALOGERO RODOLFO ALBERTO"
+ },
+ {
+   "socio": "140",
+   "nombre": "CALVI MARINA CECILIA DEL CARME"
+ },
+ {
+   "socio": "890",
+   "nombre": "CAMPI JUAN IGNACIO"
+ },
+ {
+   "socio": "791",
+   "nombre": "CAMPI JUAN MARIO CESAR"
+ },
+ {
+   "socio": "887",
+   "nombre": "CAMPI MARIA NOELIA LAURA"
+ },
+ {
+   "socio": "382",
+   "nombre": "CAPARROS FRANCISCO JUAN"
+ },
+ {
+   "socio": "762",
+   "nombre": "CARABALLO MARIA GENOVEVA"
+ },
+ {
+   "socio": "537",
+   "nombre": "CAROZZA OMAR ALEJANDRO"
+ },
+ {
+   "socio": "145",
+   "nombre": "CARPINELLO JUAN CARLOS"
+ },
+ {
+   "socio": "903",
+   "nombre": "CASTRO NELSON MATIAS"
+ },
+ {
+   "socio": "897",
+   "nombre": "CAVANNA MARTIN SEBASTIAN"
+ },
+ {
+   "socio": "555",
+   "nombre": "CAZAUX BOLOGNINI JUAN CARLOS"
+ },
+ {
+   "socio": "809",
+   "nombre": "CECCHI GERMAN RODOLFO"
+ },
+ {
+   "socio": "873",
+   "nombre": "CEPEDA ANDREA PAOLA"
+ },
+ {
+   "socio": "909",
+   "nombre": "CHAPARRO MARTIN ANDRES"
+ },
+ {
+   "socio": "610",
+   "nombre": "COLAVITA GRACIELA MARIA"
+ },
+ {
+   "socio": "869",
+   "nombre": "CORRADI ENRIQUE EDUARDO"
+ },
+ {
+   "socio": "802",
+   "nombre": "DALMAU MARCELO"
+ },
+ {
+   "socio": "552",
+   "nombre": "DALMAU PABLO EDUARDO"
+ },
+ {
+   "socio": "606",
+   "nombre": "DE DIEGO MARIA CRISTINA"
+ },
+ {
+   "socio": "926",
+   "nombre": "DE MONTE KARINA ELSA"
+ },
+ {
+   "socio": "913",
+   "nombre": "DE MONTE SERGIO FABIAN"
+ },
+ {
+   "socio": "387",
+   "nombre": "DE ZAVALETA MARIA CRISTINA"
+ },
+ {
+   "socio": "422",
+   "nombre": "DEBIAGGI RAUL ENRIQUE"
+ },
+ {
+   "socio": "322",
+   "nombre": "DEBIAGGI RUBEN ANGEL"
+ },
+ {
+   "socio": "711",
+   "nombre": "DIAZ GABRIELA ALEJANDRA"
+ },
+ {
+   "socio": "309",
+   "nombre": "DIRIÉ LUIS ALBERTO"
+ },
+ {
+   "socio": "384",
+   "nombre": "DORCAZBERRO MARTA SUSANA"
+ },
+ {
+   "socio": "160",
+   "nombre": "ETCHEGORRY MARCELO EDUARDO"
+ },
+ {
+   "socio": "548",
+   "nombre": "FANELLO ALFREDO"
+ },
+ {
+   "socio": "717",
+   "nombre": "FERNANDEZ DANIEL GUSTAVO"
+ },
+ {
+   "socio": "344",
+   "nombre": "FERNANDEZ JORGE ALBERTO"
+ },
+ {
+   "socio": "313",
+   "nombre": "FERNANDEZ MARCOS ANDRES"
+ },
+ {
+   "socio": "788",
+   "nombre": "FERNANDEZ MARIA VERONICA"
+ },
+ {
+   "socio": "164",
+   "nombre": "FERNANDEZ RAUL HECTOR"
+ },
+ {
+   "socio": "856",
+   "nombre": "FERRECCIO JORGE LUIS"
+ },
+ {
+   "socio": "783",
+   "nombre": "FERREYRA DANIEL ALFREDO"
+ },
+ {
+   "socio": "166",
+   "nombre": "FERRONI ARIEL RICARDO"
+ },
+ {
+   "socio": "904",
+   "nombre": "FODARO FRANCISCO JAVIER"
+ },
+ {
+   "socio": "508",
+   "nombre": "FRANCISCO FABIANA INES"
+ },
+ {
+   "socio": "877",
+   "nombre": "GALLEGO WALTER ULISES"
+ },
+ {
+   "socio": "596",
+   "nombre": "GARCIA RODOLFO LUIS"
+ },
+ {
+   "socio": "646",
+   "nombre": "GARRITANO PABLO DANIEL"
+ },
+ {
+   "socio": "507",
+   "nombre": "GIL GUSTAVO CARLOS"
+ },
+ {
+   "socio": "177",
+   "nombre": "GIMENEZ CARLOS EDUARDO"
+ },
+ {
+   "socio": "634",
+   "nombre": "GOMEZ  JUAN MANUEL"
+ },
+ {
+   "socio": "915",
+   "nombre": "GOMEZ FERNANDO ROBERTO"
+ },
+ {
+   "socio": "729",
+   "nombre": "GONZALEZ GILDA NOEMI"
+ },
+ {
+   "socio": "120",
+   "nombre": "GONZALEZ GRACIELA ESTHER"
+ },
+ {
+   "socio": "530",
+   "nombre": "GORDO FERNANDO SEBASTIAN"
+ },
+ {
+   "socio": "860",
+   "nombre": "GOSENDE PEDRO"
+ },
+ {
+   "socio": "912",
+   "nombre": "GRANADOS GARCIA DOMINGO"
+ },
+ {
+   "socio": "472",
+   "nombre": "GROSVALD GUILLERMO"
+ },
+ {
+   "socio": "876",
+   "nombre": "GUTIERREZ LAURA CORINA"
+ },
+ {
+   "socio": "415",
+   "nombre": "HARASIMIUK SERGIO IVAN"
+ },
+ {
+   "socio": "702",
+   "nombre": "HETHERINGTON RAMON"
+ },
+ {
+   "socio": "832",
+   "nombre": "HOLTZ GLORIA MARINA"
+ },
+ {
+   "socio": "857",
+   "nombre": "IBAÑEZ BRUNILDA"
+ },
+ {
+   "socio": "580",
+   "nombre": "IGLESIAS EVELYN NANCY"
+ },
+ {
+   "socio": "859",
+   "nombre": "IRAIRA CARLOS DANIEL"
+ },
+ {
+   "socio": "545",
+   "nombre": "ITAUE ANA MARIA"
+ },
+ {
+   "socio": "736",
+   "nombre": "IZQUIERDO NELSON DANIEL"
+ },
+ {
+   "socio": "785",
+   "nombre": "JARA JORGE OMAR"
+ },
+ {
+   "socio": "769",
+   "nombre": "JORGEVICH JORGE LUIS"
+ },
+ {
+   "socio": "917",
+   "nombre": "JUAN MARIA CELIA"
+ },
+ {
+   "socio": "920",
+   "nombre": "JUAN MARIANO DIEGO ANDRES"
+ },
+ {
+   "socio": "493",
+   "nombre": "JUAN MARTIN LUIS OSCAR"
+ },
+ {
+   "socio": "919",
+   "nombre": "JUAN MATIAS IGNACIO RAFAEL"
+ },
+ {
+   "socio": "190",
+   "nombre": "KAHALE KOUZO GABRIEL TUFIK"
+ },
+ {
+   "socio": "341",
+   "nombre": "KLOBERDANZ ABELARDO AURELIO"
+ },
+ {
+   "socio": "286",
+   "nombre": "KOUKHARSKY NICOLÁS ANTONIO"
+ },
+ {
+   "socio": "842",
+   "nombre": "KUBLI CAROLINA MARÍA"
+ },
+ {
+   "socio": "192",
+   "nombre": "LABOLLITA HECTOR AMADEO"
+ },
+ {
+   "socio": "784",
+   "nombre": "LABRIN RAUL SANDRO"
+ },
+ {
+   "socio": "753",
+   "nombre": "LIZAMA FIGUEROA RAUL ALBERTO"
+ },
+ {
+   "socio": "792",
+   "nombre": "LIZASO MARÍA  ALEJANDRA"
+ },
+ {
+   "socio": "899",
+   "nombre": "LIZASO ROSMARI"
+ },
+ {
+   "socio": "491",
+   "nombre": "LOPEZ MARIA DEL CARMEN"
+ },
+ {
+   "socio": "440",
+   "nombre": "MAINO LILIANA ROSA"
+ },
+ {
+   "socio": "490",
+   "nombre": "MANDALARI CLAUDIO JUAN JOSE"
+ },
+ {
+   "socio": "807",
+   "nombre": "MANSO MARIA EUGENIA"
+ },
+ {
+   "socio": "864",
+   "nombre": "MANSO MARIA LAURA"
+ },
+ {
+   "socio": "845",
+   "nombre": "MARINO HORACIO EDUARDO"
+ },
+ {
+   "socio": "370",
+   "nombre": "MARTINEZ SERGIO DANIEL"
+ },
+ {
+   "socio": "484",
+   "nombre": "MARZOCCHI MARIO ENRIQUE"
+ },
+ {
+   "socio": "356",
+   "nombre": "MATO EDGARDO ARIEL"
+ },
+ {
+   "socio": "643",
+   "nombre": "MEDER MILTON MAURO"
+ },
+ {
+   "socio": "204",
+   "nombre": "MEDINA MARIO MIGUEL"
+ },
+ {
+   "socio": "806",
+   "nombre": "MEDINA PABLO SEBASTIAN"
+ },
+ {
+   "socio": "429",
+   "nombre": "MENA JORGE ERNESTO"
+ },
+ {
+   "socio": "205",
+   "nombre": "MENA JOSE RICARDO"
+ },
+ {
+   "socio": "499",
+   "nombre": "MERCADO JUAN EMILIO"
+ },
+ {
+   "socio": "713",
+   "nombre": "METZGER CRISTIAN CARLOS"
+ },
+ {
+   "socio": "539",
+   "nombre": "MOLL ROSARIO"
+ },
+ {
+   "socio": "652",
+   "nombre": "MONTESINO LUCIANO MARCIAL"
+ },
+ {
+   "socio": "214",
+   "nombre": "MUÑOZ CARLOS ALBERTO"
+ },
+ {
+   "socio": "505",
+   "nombre": "MUÑOZ JOSE LUIS"
+ },
+ {
+   "socio": "333",
+   "nombre": "MUÑOZ LUIS ANGEL"
+ },
+ {
+   "socio": "780",
+   "nombre": "NASIF EZEQUIEL"
+ },
+ {
+   "socio": "728",
+   "nombre": "OLIVA NORBERTO ARIEL"
+ },
+ {
+   "socio": "385",
+   "nombre": "OLIVERO JORGE ALBERTO"
+ },
+ {
+   "socio": "882",
+   "nombre": "ORTUÑO BLAS SANTIAGO"
+ },
+ {
+   "socio": "601",
+   "nombre": "ORTUÑO LOPEZ BLAS"
+ },
+ {
+   "socio": "910",
+   "nombre": "OSTERTAG ANDREA LAURA"
+ },
+ {
+   "socio": "223",
+   "nombre": "OTTONE RUBEN ANTONIO"
+ },
+ {
+   "socio": "901",
+   "nombre": "PAEZ GUILLERMO ADRIAN"
+ },
+ {
+   "socio": "774",
+   "nombre": "PAPARINI LIDIA ADA"
+ },
+ {
+   "socio": "923",
+   "nombre": "PASCUAL JUAN IGNACIO"
+ },
+ {
+   "socio": "485",
+   "nombre": "PASO JORGE MANUEL"
+ },
+ {
+   "socio": "822",
+   "nombre": "PENSADO OSVALDO JESUS"
+ },
+ {
+   "socio": "229",
+   "nombre": "PEREZ ALBERTO"
+ },
+ {
+   "socio": "230",
+   "nombre": "PEREZ MIGUEL ANGEL"
+ },
+ {
+   "socio": "844",
+   "nombre": "PERINO LUCIANA FERNANDA"
+ },
+ {
+   "socio": "906",
+   "nombre": "PETRIS EDUARDO FEDERICO"
+ },
+ {
+   "socio": "840",
+   "nombre": "PEÑATE ALEJANDRO"
+ },
+ {
+   "socio": "889",
+   "nombre": "PEÑATE YURCIC MARIA LAURA"
+ },
+ {
+   "socio": "752",
+   "nombre": "PILI EDUARDO DANIEL"
+ },
+ {
+   "socio": "486",
+   "nombre": "PLANAS JUAN PABLO"
+ },
+ {
+   "socio": "235",
+   "nombre": "PLANISCIG ANGEL RAMON"
+ },
+ {
+   "socio": "858",
+   "nombre": "PLASTINA HERNAN SERGIO"
+ },
+ {
+   "socio": "571",
+   "nombre": "POJMAEVICH DANILO ALBERTO"
+ },
+ {
+   "socio": "237",
+   "nombre": "POSCA LUIS ALBERTO"
+ },
+ {
+   "socio": "866",
+   "nombre": "PUENTES JUAN JOSE"
+ },
+ {
+   "socio": "851",
+   "nombre": "PUJOL ALEJANDRO OSCAR"
+ },
+ {
+   "socio": "153",
+   "nombre": "QUINTERNO NORA VIVIANA"
+ },
+ {
+   "socio": "475",
+   "nombre": "REDES ZORAIDA BERNARDA"
+ },
+ {
+   "socio": "894",
+   "nombre": "RETAMAL MIGUEL ANGEL"
+ },
+ {
+   "socio": "825",
+   "nombre": "RIMADA SEBASTIAN ADOLFO"
+ },
+ {
+   "socio": "865",
+   "nombre": "RIMMELE MARTIN HUGO LUIS"
+ },
+ {
+   "socio": "773",
+   "nombre": "RINALDI PATRICIA ROXANA"
+ },
+ {
+   "socio": "794",
+   "nombre": "RIOS HORACIO PABLO"
+ },
+ {
+   "socio": "793",
+   "nombre": "RIOS JOSE DANIEL"
+ },
+ {
+   "socio": "751",
+   "nombre": "RIOS MARIA NATALIA"
+ },
+ {
+   "socio": "731",
+   "nombre": "RODRIGUEZ ALFREDO"
+ },
+ {
+   "socio": "880",
+   "nombre": "RODRIGUEZ GUILLERMO EDUARDO"
+ },
+ {
+   "socio": "789",
+   "nombre": "RODRIGUEZ JORGE CESAR"
+ },
+ {
+   "socio": "547",
+   "nombre": "RODRIGUEZ MASCHIO EDUARDO"
+ },
+ {
+   "socio": "246",
+   "nombre": "ROOS SERAFIN AGUSTIN"
+ },
+ {
+   "socio": "613",
+   "nombre": "ROSANIGO OSVALDO HECTOR"
+ },
+ {
+   "socio": "850",
+   "nombre": "ROSETTI PABLO DANIEL"
+ },
+ {
+   "socio": "756",
+   "nombre": "RUBIO PEREZ MIGUEL"
+ },
+ {
+   "socio": "914",
+   "nombre": "RUIZ FABIO DAMIAN"
+ },
+ {
+   "socio": "577",
+   "nombre": "RUSJAN MARIO RICARDO"
+ },
+ {
+   "socio": "900",
+   "nombre": "RUSJAN SILVANO DARIO"
+ },
+ {
+   "socio": "388",
+   "nombre": "RUSSO PAULO CARLOS"
+ },
+ {
+   "socio": "744",
+   "nombre": "SABAS OTTA OSCAR EDUARDO"
+ },
+ {
+   "socio": "902",
+   "nombre": "SAGREDO JORGELINA"
+ },
+ {
+   "socio": "922",
+   "nombre": "SALVATIERRA MATIAS"
+ },
+ {
+   "socio": "730",
+   "nombre": "SALVATIERRA MAXIMILIANO"
+ },
+ {
+   "socio": "824",
+   "nombre": "SAN MARTIN DIOGENES"
+ },
+ {
+   "socio": "812",
+   "nombre": "SAN MARTIN LORENA ELIZABETH"
+ },
+ {
+   "socio": "433",
+   "nombre": "SANCHEZ DIEGO ROBERTO ANDRES"
+ },
+ {
+   "socio": "250",
+   "nombre": "SANFILIPPO GUSTAVO ADRIÁN"
+ },
+ {
+   "socio": "251",
+   "nombre": "SANFILIPPO RUBÉN OSVALDO"
+ },
+ {
+   "socio": "797",
+   "nombre": "SANTUCHO MIGUEL ANGEL"
+ },
+ {
+   "socio": "255",
+   "nombre": "SCETTA MIGUEL ANGEL"
+ },
+ {
+   "socio": "302",
+   "nombre": "SCETTA NÉSTOR RUBÉN"
+ },
+ {
+   "socio": "835",
+   "nombre": "SCHLAPFFER HORACIO DANIEL"
+ },
+ {
+   "socio": "834",
+   "nombre": "SCHLAPFFER MARIA ALICIA"
+ },
+ {
+   "socio": "494",
+   "nombre": "SCHMIT MARCELO EDGARDO"
+ },
+ {
+   "socio": "323",
+   "nombre": "SCIANCA RODRIGO ESTEBAN"
+ },
+ {
+   "socio": "782",
+   "nombre": "SEBESTA JORGE HORACIO"
+ },
+ {
+   "socio": "843",
+   "nombre": "SEGURA PATRICIA VIVIANA"
+ },
+ {
+   "socio": "883",
+   "nombre": "SILVERO GILBERTO OSCAR"
+ },
+ {
+   "socio": "790",
+   "nombre": "SKRUTA PEDRO EDUARDO JAVIER"
+ },
+ {
+   "socio": "838",
+   "nombre": "SOSA ALEJANDRO DOMINGO"
+ },
+ {
+   "socio": "828",
+   "nombre": "SOTO JORGE ALBERTO"
+ },
+ {
+   "socio": "604",
+   "nombre": "SUKAREVICIUS NORBERTO FEDERICO"
+ },
+ {
+   "socio": "924",
+   "nombre": "SURIANI RICARDO VICENTE"
+ },
+ {
+   "socio": "265",
+   "nombre": "TOLEDO RUBÉN OSCAR"
+ },
+ {
+   "socio": "551",
+   "nombre": "TORRES RUBEN ALEJANDRO"
+ },
+ {
+   "socio": "911",
+   "nombre": "TORRESAN BRUNO JOSE LUIS"
+ },
+ {
+   "socio": "395",
+   "nombre": "URDIALES FABIANA"
+ },
+ {
+   "socio": "925",
+   "nombre": "URIBE MARIA SOLEDAD"
+ },
+ {
+   "socio": "811",
+   "nombre": "URQUIZU CELINA BEATRIZ"
+ },
+ {
+   "socio": "346",
+   "nombre": "VARELA ALICIA BEATRIZ"
+ },
+ {
+   "socio": "907",
+   "nombre": "VARELA GLADYS ALICIA"
+ },
+ {
+   "socio": "432",
+   "nombre": "VEGA RUBÉN DARIO"
+ },
+ {
+   "socio": "697",
+   "nombre": "VELAZQUEZ OSCAR ENRIQUE"
+ },
+ {
+   "socio": "921",
+   "nombre": "VERDUGO DIAZ RODRIGO ALEJANDRO"
+ },
+ {
+   "socio": "854",
+   "nombre": "VIALE GUSTAVO RICARDO"
+ },
+ {
+   "socio": "896",
+   "nombre": "VILCHEZ BARROS PAULA"
+ },
+ {
+   "socio": "609",
+   "nombre": "VILCHEZ HECTOR LUIS"
+ },
+ {
+   "socio": "520",
+   "nombre": "VILCHEZ WALTER ANTONIO"
+ },
+ {
+   "socio": "273",
+   "nombre": "VILLEMUR HÉCTOR HUGO"
+ },
+ {
+   "socio": "389",
+   "nombre": "VIVAS IGNACIO LUIS"
+ },
+ {
+   "socio": "664",
+   "nombre": "VOLONTÉ ESTER EMILIA"
+ },
+ {
+   "socio": "743",
+   "nombre": "WAHLER HUMBERTO TEODORO"
+ },
+ {
+   "socio": "848",
+   "nombre": "ZURITA VICTOR RICARDO"
+ },
+ {
+   "socio": "00010-00",
+   "nombre": "DELLA GASPERA JORGE"
+ },
+ {
+   "socio": "00011-00",
+   "nombre": "DELLA GASPERA ERNESTO"
+ },
+ {
+   "socio": "00017-00",
+   "nombre": "SANCHEZ CARLOS ALBERTO"
+ },
+ {
+   "socio": "00020-03",
+   "nombre": "LOBRECICH FRANCISCA BEATRIZ"
+ },
+ {
+   "socio": "00022-00",
+   "nombre": "DELLA GASPERA EDUARDO"
+ },
+ {
+   "socio": "00029-00",
+   "nombre": "MIGUEL  OMAR ANTONIO"
+ },
+ {
+   "socio": "00030-00",
+   "nombre": "MENAVIDE EDUARDO HORACIO"
+ },
+ {
+   "socio": "00032-00",
+   "nombre": "DI PAOLO RICARDO / NORMA FERNANDEZ"
+ },
+ {
+   "socio": "00033-00",
+   "nombre": "MORALES JOSE ALBERTO"
+ },
+ {
+   "socio": "00038-00",
+   "nombre": "LOZANO EDUARDO"
+ },
+ {
+   "socio": "00039-00",
+   "nombre": "ANTON DORA DE KEES"
+ },
+ {
+   "socio": "00042-00",
+   "nombre": "BASSO SERGIO"
+ },
+ {
+   "socio": "00045-00",
+   "nombre": "LOZANO ADOLFO"
+ },
+ {
+   "socio": "00048-00",
+   "nombre": "ANACLETO DOMINGO"
+ },
+ {
+   "socio": "00056-00",
+   "nombre": "ELIAS AMADO ALEJANDRO"
+ },
+ {
+   "socio": "00057-00",
+   "nombre": "ELIAS ROBERTO"
+ },
+ {
+   "socio": "00059-00",
+   "nombre": "GALATI RANDO SANTO JOSE"
+ },
+ {
+   "socio": "00061-00",
+   "nombre": "GUTIERREZ RICARDO"
+ },
+ {
+   "socio": "00063-00",
+   "nombre": "MANRIQUEZ JOSE"
+ },
+ {
+   "socio": "00065-00",
+   "nombre": "MARTINEZ OMAR"
+ },
+ {
+   "socio": "00069-01",
+   "nombre": "CERVERA MIRTA HEBE"
+ },
+ {
+   "socio": "00070-00",
+   "nombre": "PUJO OSVALDO"
+ },
+ {
+   "socio": "00072-00",
+   "nombre": "PUJO JUAN CARLOS"
+ },
+ {
+   "socio": "00073-00",
+   "nombre": "PODGORNIK LUIS"
+ },
+ {
+   "socio": "00074-00",
+   "nombre": "QUINTANA NESTOR L."
+ },
+ {
+   "socio": "00076-00",
+   "nombre": "SREBERNIC JUAN"
+ },
+ {
+   "socio": "00080-00",
+   "nombre": "VARGAS VICTOR RAFAEL"
+ },
+ {
+   "socio": "00082-00",
+   "nombre": "JULIAN JORGE"
+ },
+ {
+   "socio": "00089-00",
+   "nombre": "RODRIGUEZ CARLOS RAUL"
+ },
+ {
+   "socio": "00098-00",
+   "nombre": "FERNANDEZ GALVEZ JOSE"
+ },
+ {
+   "socio": "00101-00",
+   "nombre": "PASCUARELLI RAUL VICENTE"
+ },
+ {
+   "socio": "00103-00",
+   "nombre": "CHIACCHIARINI JULIO"
+ },
+ {
+   "socio": "00104-00",
+   "nombre": "GENOVESE RICARDO JOSE"
+ },
+ {
+   "socio": "00121-00",
+   "nombre": "LOPEZ JOSE LUIS"
+ },
+ {
+   "socio": "00124-00",
+   "nombre": "SANCHEZ NELIDA HAYDEE"
+ },
+ {
+   "socio": "00125-00",
+   "nombre": "SANCHEZ GUILLERMO PEDRO"
+ },
+ {
+   "socio": "00127-00",
+   "nombre": "DALLA VILLA ENRIQUE JOSE"
+ },
+ {
+   "socio": "00129-00",
+   "nombre": "CID DE ENRIQUEZ, GLORIA"
+ },
+ {
+   "socio": "00133-00",
+   "nombre": "MASELLI MIGUEL"
+ },
+ {
+   "socio": "00137-00",
+   "nombre": "BIGOLIN ALFREDO"
+ },
+ {
+   "socio": "00138-00",
+   "nombre": "BIGOLIN EDUARDO"
+ },
+ {
+   "socio": "00141-00",
+   "nombre": "REYES JORGE HORACIO"
+ },
+ {
+   "socio": "00143-00",
+   "nombre": "VIÑUELA MARIATERESA VDA.SCHODL"
+ },
+ {
+   "socio": "00144-00",
+   "nombre": "GONZALEZ ALDO DONATO"
+ },
+ {
+   "socio": "00146-00",
+   "nombre": "COCO ANIBAL"
+ },
+ {
+   "socio": "00152-00",
+   "nombre": "VAI BEATRIZ ESMERALDA"
+ },
+ {
+   "socio": "00157-00",
+   "nombre": "PINTOS JORGE"
+ },
+ {
+   "socio": "00159-00",
+   "nombre": "CATERINO OSVALDO"
+ },
+ {
+   "socio": "00160-00",
+   "nombre": "BOSCHI MIGUEL"
+ },
+ {
+   "socio": "00164-00",
+   "nombre": "MARTELLI NORMA EDIT"
+ },
+ {
+   "socio": "00168-00",
+   "nombre": "ZUCCHINI ROBERTO MARCOS"
+ },
+ {
+   "socio": "00169-00",
+   "nombre": "PEREZ HUGO RAUL"
+ },
+ {
+   "socio": "00171-00",
+   "nombre": "VIÑUELA RODOLFO ALFREDO"
+ },
+ {
+   "socio": "00172-00",
+   "nombre": "HARTEL SIGFREDO"
+ },
+ {
+   "socio": "00179-02",
+   "nombre": "JULIAN VICTOR HUGO"
+ },
+ {
+   "socio": "00181-00",
+   "nombre": "HERNANDEZ AGUSTIN"
+ },
+ {
+   "socio": "00182-00",
+   "nombre": "DELLA GASPERA JUAN CARLOS"
+ },
+ {
+   "socio": "00184-00",
+   "nombre": "VILLALBA BELINDO"
+ },
+ {
+   "socio": "00187-00",
+   "nombre": "SANTARELLI DANIEL HUMBERTO"
+ },
+ {
+   "socio": "00188-00",
+   "nombre": "ROMANO ANGEL"
+ },
+ {
+   "socio": "00197-00",
+   "nombre": "COLIPE VIVIANA"
+ },
+ {
+   "socio": "00202-00",
+   "nombre": "LEONE JUAN CARLOS"
+ },
+ {
+   "socio": "00203-00",
+   "nombre": "SPECHT LITWINA EUGENIA"
+ },
+ {
+   "socio": "00208-00",
+   "nombre": "TRONCOSO SAMUEL"
+ },
+ {
+   "socio": "00210-00",
+   "nombre": "KINTER AURELIO FERNANDO"
+ },
+ {
+   "socio": "00213-00",
+   "nombre": "SANTANA SEGUNDO JOSE EMILIO"
+ },
+ {
+   "socio": "00215-00",
+   "nombre": "GUTIERREZ HECTOR RAUL"
+ },
+ {
+   "socio": "00223-00",
+   "nombre": "LASSIG JORGE LUIS"
+ },
+ {
+   "socio": "00229-00",
+   "nombre": "GUILLERMINA BALBUENA"
+ },
+ {
+   "socio": "00230-00",
+   "nombre": "SOLA JOSE MARIA"
+ },
+ {
+   "socio": "00233-00",
+   "nombre": "COSTANZI OSVALDO"
+ },
+ {
+   "socio": "00234-00",
+   "nombre": "SGALLA JORGE OSVALDO"
+ },
+ {
+   "socio": "00235-00",
+   "nombre": "DUMPS ROBERTO"
+ },
+ {
+   "socio": "00241-00",
+   "nombre": "MAIONCHI ROBERTO"
+ },
+ {
+   "socio": "00242-00",
+   "nombre": "MARTINEZ MIGUEL"
+ },
+ {
+   "socio": "00243-04",
+   "nombre": "MORIENA MARCELA ALEJANDRA"
+ },
+ {
+   "socio": "00249-03",
+   "nombre": "POMA MARIA BETTINA"
+ },
+ {
+   "socio": "00257-00",
+   "nombre": "BUSTAMANTE NORMA MABEL"
+ },
+ {
+   "socio": "00259-00",
+   "nombre": "CARRERAS HECTOR FRUCTUOSO"
+ },
+ {
+   "socio": "00270-00",
+   "nombre": "ALEGRANZA MARCOS CESAR"
+ },
+ {
+   "socio": "00272-00",
+   "nombre": "FONSECA LUIS DURVAL"
+ },
+ {
+   "socio": "00279-00",
+   "nombre": "MARTINEZ MIGUEL ANGEL"
+ },
+ {
+   "socio": "00296-00",
+   "nombre": "MARASCHINI ANGEL AMADOR"
+ },
+ {
+   "socio": "00298-00",
+   "nombre": "BUGNEST OSCAR RODOLFO"
+ },
+ {
+   "socio": "00300-00",
+   "nombre": "SALAS OSCAR"
+ },
+ {
+   "socio": "00302-00",
+   "nombre": "SANTANA ELIZABETH ADA"
+ },
+ {
+   "socio": "00308-00",
+   "nombre": "SAVRON JUAN OSCAR"
+ },
+ {
+   "socio": "00313-00",
+   "nombre": "GONZALEZ HORACIO ALBERTO"
+ },
+ {
+   "socio": "00317-00",
+   "nombre": "SALVATORI PEDRO"
+ },
+ {
+   "socio": "00318-00",
+   "nombre": "DEL CAMPO NESTOR RUBEN"
+ },
+ {
+   "socio": "00324-00",
+   "nombre": "FERNANDEZ ADRIAN AGAPITO"
+ },
+ {
+   "socio": "00326-00",
+   "nombre": "FULCINITI MARIO ANTONIO"
+ },
+ {
+   "socio": "00335-00",
+   "nombre": "GUGLIELMETTI ANGEL"
+ },
+ {
+   "socio": "00341-00",
+   "nombre": "STORTINI RUBEN SANTOS"
+ },
+ {
+   "socio": "00342-00",
+   "nombre": "FERRAGUT JUAN JOSE"
+ },
+ {
+   "socio": "00348-02",
+   "nombre": "GARZONI IVANNA"
+ },
+ {
+   "socio": "00350-00",
+   "nombre": "CIANCIA SALVADOR ANTONIO"
+ },
+ {
+   "socio": "00354-00",
+   "nombre": "ALLENDE LILIAN ANABEL"
+ },
+ {
+   "socio": "00357-00",
+   "nombre": "LOPEZ CARLOS EFRAIN"
+ },
+ {
+   "socio": "00359-00",
+   "nombre": "MENA MARTIN EMILIO"
+ },
+ {
+   "socio": "00364-00",
+   "nombre": "SILKA LUIS DANIEL"
+ },
+ {
+   "socio": "00367-00",
+   "nombre": "ELLIKER NESTOR"
+ },
+ {
+   "socio": "00369-00",
+   "nombre": "CALALESINA CARLOS"
+ },
+ {
+   "socio": "00373-00",
+   "nombre": "CID HECTOR MARIO"
+ },
+ {
+   "socio": "00374-00",
+   "nombre": "MIGLIAVACA JULIO OSCAR"
+ },
+ {
+   "socio": "00378-00",
+   "nombre": "ANDRIANI NESTOR ARMANDO"
+ },
+ {
+   "socio": "00382-00",
+   "nombre": "ZUCCHINI MILTON EDGARDO"
+ },
+ {
+   "socio": "00396-00",
+   "nombre": "NICHELA MIGUEL ERNESTO"
+ },
+ {
+   "socio": "00405-00",
+   "nombre": "COISSON GUILLERMO LUIS"
+ },
+ {
+   "socio": "00408-00",
+   "nombre": "FLORES JUAN BAUTISTA"
+ },
+ {
+   "socio": "00418-00",
+   "nombre": "ROAT VDA.DE TOMINI IDA ZULEMA"
+ },
+ {
+   "socio": "00422-00",
+   "nombre": "GAISER ALDO ONILDO"
+ },
+ {
+   "socio": "00431-00",
+   "nombre": "ANGIORAMA JUAN HORACIO"
+ },
+ {
+   "socio": "00433-00",
+   "nombre": "MESTRE EMILIO ROBERTO"
+ },
+ {
+   "socio": "00438-00",
+   "nombre": "SOBISCH JORGE OMAR"
+ },
+ {
+   "socio": "00439-00",
+   "nombre": "BOSCHI CARLOS BAUTISTA"
+ },
+ {
+   "socio": "00444-00",
+   "nombre": "HERRERA GABRIELA"
+ },
+ {
+   "socio": "00448-00",
+   "nombre": "TRUTANIC P/MILLET ALEJANDRINA"
+ },
+ {
+   "socio": "00449-00",
+   "nombre": "BUSCHIAZZO CLELIA ESTER"
+ },
+ {
+   "socio": "00452-02",
+   "nombre": "GIGENA FACUNDO MARTIN"
+ },
+ {
+   "socio": "00453-00",
+   "nombre": "CAZAUX JUAN JOSE"
+ },
+ {
+   "socio": "00455-00",
+   "nombre": "GARCIA ROBERTO OSCAR"
+ },
+ {
+   "socio": "00460-00",
+   "nombre": "VALVERDE ESTELA"
+ },
+ {
+   "socio": "00470-01",
+   "nombre": "LIBRALATO MIRNA"
+ },
+ {
+   "socio": "00481-00",
+   "nombre": "DUCKWEN LIDIA"
+ },
+ {
+   "socio": "00485-00",
+   "nombre": "VIÑUELA GRACIELA DE VAISMAN"
+ },
+ {
+   "socio": "00491-00",
+   "nombre": "ALESSANDRINI HECTOR IVO"
+ },
+ {
+   "socio": "00505-00",
+   "nombre": "MATZKIN ARON"
+ },
+ {
+   "socio": "00507-00",
+   "nombre": "DYKSTRA PABLO RICARDO"
+ },
+ {
+   "socio": "00511-00",
+   "nombre": "CAFFER ALDO JUAN"
+ },
+ {
+   "socio": "00514-00",
+   "nombre": "ACOSTA HILDA"
+ },
+ {
+   "socio": "00515-00",
+   "nombre": "SINIGOJ FACUNDO"
+ },
+ {
+   "socio": "00516-00",
+   "nombre": "RITOSSA PEDRO CARLOS"
+ },
+ {
+   "socio": "00531-00",
+   "nombre": "ARINGOLI HORACIO JOSE"
+ },
+ {
+   "socio": "00532-03",
+   "nombre": "FULCINITI CRISTIAN NELSON"
+ },
+ {
+   "socio": "00537-00",
+   "nombre": "LOHRMANN HECTOR OSCAR"
+ },
+ {
+   "socio": "00538-00",
+   "nombre": "SUSTE MIRCOS FRANCISCO"
+ },
+ {
+   "socio": "00544-00",
+   "nombre": "GARCIA ANTONIO"
+ },
+ {
+   "socio": "00547-00",
+   "nombre": "NUñEZ EUSEBIO JULIAN"
+ },
+ {
+   "socio": "00549-00",
+   "nombre": "FERNANDEZ JUAN"
+ },
+ {
+   "socio": "00553-00",
+   "nombre": "CORTEZ ANTONIO PASCASIO"
+ },
+ {
+   "socio": "00557-00",
+   "nombre": "LORENTE FRANCISCO"
+ },
+ {
+   "socio": "00558-00",
+   "nombre": "MOURELLE CARLOS RAUL"
+ },
+ {
+   "socio": "00562-00",
+   "nombre": "ROSAS HUGO ADAN"
+ },
+ {
+   "socio": "00567-00",
+   "nombre": "GONCALVEZ ALDA DE T."
+ },
+ {
+   "socio": "00568-00",
+   "nombre": "ALFONSO HECTOR ARMANDO"
+ },
+ {
+   "socio": "00570-00",
+   "nombre": "FERRARI SILVIO JUAN"
+ },
+ {
+   "socio": "00578-00",
+   "nombre": "MARTIN HECTOR RAUL"
+ },
+ {
+   "socio": "00583-00",
+   "nombre": "LOPEZ NESTOR"
+ },
+ {
+   "socio": "00584-00",
+   "nombre": "TANUZ ADELA ANGELA"
+ },
+ {
+   "socio": "00603-00",
+   "nombre": "ROSATI MARIO SERGIO"
+ },
+ {
+   "socio": "00609-00",
+   "nombre": "GARCIA ISABEL"
+ },
+ {
+   "socio": "00610-00",
+   "nombre": "BUSTAMANTE ANGEL ERNESTO"
+ },
+ {
+   "socio": "00611-00",
+   "nombre": "IBAñEZ LEAL MARCELINO"
+ },
+ {
+   "socio": "00613-00",
+   "nombre": "MERLO JULIO CESAR"
+ },
+ {
+   "socio": "00614-00",
+   "nombre": "RAUSCH MARIA AURELIA"
+ },
+ {
+   "socio": "00615-00",
+   "nombre": "MENDEZ OMAR OCTAVIO"
+ },
+ {
+   "socio": "00618-00",
+   "nombre": "RAPI ANSELMO"
+ },
+ {
+   "socio": "00621-00",
+   "nombre": "SANCHEZ AIECH RUBEN ALFREDO"
+ },
+ {
+   "socio": "00627-00",
+   "nombre": "ZANELLATO SILVIO HUGO"
+ },
+ {
+   "socio": "00630-00",
+   "nombre": "RAPAZ ROBERTO HONORIO"
+ },
+ {
+   "socio": "00636-00",
+   "nombre": "BERNARDO HORACIO RAUL"
+ },
+ {
+   "socio": "00649-00",
+   "nombre": "ROMERO ROBERTO JORGE"
+ },
+ {
+   "socio": "00651-00",
+   "nombre": "FERNANDEZ  NEMESIO"
+ },
+ {
+   "socio": "00653-00",
+   "nombre": "QUIROGA HECTOR ANIBAL"
+ },
+ {
+   "socio": "00657-00",
+   "nombre": "MOLINARI ALBERTO"
+ },
+ {
+   "socio": "00661-00",
+   "nombre": "VICINI JULIO ANTONIO"
+ },
+ {
+   "socio": "00663-00",
+   "nombre": "VEGA ULISES"
+ },
+ {
+   "socio": "00664-00",
+   "nombre": "SAGRIPANTI ELIO"
+ },
+ {
+   "socio": "00668-00",
+   "nombre": "PEZZUTTI OSCAR RUBEN"
+ },
+ {
+   "socio": "00669-00",
+   "nombre": "VARNI JUAN CARLOS"
+ },
+ {
+   "socio": "00670-00",
+   "nombre": "JAUREGUI JUAN CARLOS"
+ },
+ {
+   "socio": "00674-00",
+   "nombre": "PEREYRA DE GIMENEZ ELIDA"
+ },
+ {
+   "socio": "00675-00",
+   "nombre": "GARCIA JUANA"
+ },
+ {
+   "socio": "00677-00",
+   "nombre": "YANZON CESAR ARTURO"
+ },
+ {
+   "socio": "00678-00",
+   "nombre": "OSES ALFREDO ROBERTO"
+ },
+ {
+   "socio": "00680-00",
+   "nombre": "BADANO DIEGO JAVIER"
+ },
+ {
+   "socio": "00681-00",
+   "nombre": "LARRACHARTE HILARIO EUGENIO"
+ },
+ {
+   "socio": "00682-00",
+   "nombre": "GABETTI EUGENIO HERMINIO"
+ },
+ {
+   "socio": "00690-00",
+   "nombre": "GISMONTI OSVALDO VICENTE"
+ },
+ {
+   "socio": "00692-00",
+   "nombre": "VELASCO IRIS"
+ },
+ {
+   "socio": "00694-00",
+   "nombre": "GARIBOLDI FERNANDO CARLOS"
+ },
+ {
+   "socio": "00696-00",
+   "nombre": "BASSO RITA"
+ },
+ {
+   "socio": "00699-00",
+   "nombre": "SANCHES GOMES DULCINIA"
+ },
+ {
+   "socio": "00701-00",
+   "nombre": "GAMBINI ALBERTO"
+ },
+ {
+   "socio": "00711-00",
+   "nombre": "BUSTOS AURELIA MOLINA VDA.DE"
+ },
+ {
+   "socio": "00713-00",
+   "nombre": "DIAZ NESTOR JULIO"
+ },
+ {
+   "socio": "00715-02",
+   "nombre": "ZUCCHINI MICAELA"
+ },
+ {
+   "socio": "00717-00",
+   "nombre": "AVALIS LUCIANO ANTONIO"
+ },
+ {
+   "socio": "00720-00",
+   "nombre": "VITALE RUBEN ALBERTO"
+ },
+ {
+   "socio": "00723-03",
+   "nombre": "TORRES MARCELO AUGUSTO"
+ },
+ {
+   "socio": "00728-00",
+   "nombre": "MARQUEZ JUAN ALBERTO"
+ },
+ {
+   "socio": "00735-00",
+   "nombre": "DE LA IGLESIA RUBEN ELOY"
+ },
+ {
+   "socio": "00736-00",
+   "nombre": "PERELLO HECTOR EDUARDO"
+ },
+ {
+   "socio": "00757-00",
+   "nombre": "CIUCCI JULIA MARIA"
+ },
+ {
+   "socio": "00773-00",
+   "nombre": "RIMMELE FRANCISCO HUGO"
+ },
+ {
+   "socio": "00774-00",
+   "nombre": "MORENO NELLY G.VDA.LARRAVIDE"
+ },
+ {
+   "socio": "00776-00",
+   "nombre": "GARCIA CRESPO OSVALDO CARLOS"
+ },
+ {
+   "socio": "00778-00",
+   "nombre": "SAMPIRISI ROLANDO"
+ },
+ {
+   "socio": "00780-00",
+   "nombre": "RUSCONI LORENZO ANTONIO"
+ },
+ {
+   "socio": "00781-00",
+   "nombre": "SALVATORI NICOLAS E."
+ },
+ {
+   "socio": "00789-00",
+   "nombre": "RODRIGUEZ EDUARDO OSVALDO"
+ },
+ {
+   "socio": "00791-02",
+   "nombre": "ALEÑA JUAN IGNACIO"
+ },
+ {
+   "socio": "00794-00",
+   "nombre": "DELLA NEGRA JOSE ROBERTO"
+ },
+ {
+   "socio": "00795-00",
+   "nombre": "PIETRA ETEL CLAUDIA"
+ },
+ {
+   "socio": "00796-00",
+   "nombre": "GACEN HECTOR"
+ },
+ {
+   "socio": "00797-00",
+   "nombre": "MARTICORENA OMAR ALCIDE"
+ },
+ {
+   "socio": "00799-00",
+   "nombre": "RIMMELE ANTONIO JUAN"
+ },
+ {
+   "socio": "00803-00",
+   "nombre": "BENVENUTTI MARCELINO"
+ },
+ {
+   "socio": "00806-00",
+   "nombre": "PLUCHINO NORA C. DE MARTINEZ"
+ },
+ {
+   "socio": "00808-01",
+   "nombre": "ROMERO GRICELDA"
+ },
+ {
+   "socio": "00810-00",
+   "nombre": "BONFANTI MARTA"
+ },
+ {
+   "socio": "00811-00",
+   "nombre": "RODRIGUEZ RICARDO DANIEL"
+ },
+ {
+   "socio": "00813-02",
+   "nombre": "SIFLETO MARIA NATALIA"
+ },
+ {
+   "socio": "00814-00",
+   "nombre": "SALVATORI JULIO C."
+ },
+ {
+   "socio": "00820-00",
+   "nombre": "SALUZZI GUILLERMO ALDO"
+ },
+ {
+   "socio": "00823-00",
+   "nombre": "RAMASCO CARLOS"
+ },
+ {
+   "socio": "00826-00",
+   "nombre": "URTADO GRACIELA SUSANA"
+ },
+ {
+   "socio": "00831-00",
+   "nombre": "VILCHEZ ADORACION  HAYDEE"
+ },
+ {
+   "socio": "00835-00",
+   "nombre": "OHANIAN DE SERVIDE RUTH"
+ },
+ {
+   "socio": "00844-00",
+   "nombre": "MARTINEZ HERNANDEZ ESPAÑA"
+ },
+ {
+   "socio": "00846-00",
+   "nombre": "RUIZ RAUL ALFREDO"
+ },
+ {
+   "socio": "00848-00",
+   "nombre": "MOLINAROLI EDGARDO ALBERTO"
+ },
+ {
+   "socio": "00849-00",
+   "nombre": "GINGINS CARLOS RUBEN"
+ },
+ {
+   "socio": "00850-00",
+   "nombre": "MOLINA JOSE A."
+ },
+ {
+   "socio": "00853-00",
+   "nombre": "CORIA EDUARDO JORGE"
+ },
+ {
+   "socio": "00855-00",
+   "nombre": "SANMARTINO GUILLERMO DANIEL"
+ },
+ {
+   "socio": "00856-00",
+   "nombre": "SCOVASSO NORMA AMALIA"
+ },
+ {
+   "socio": "00859-00",
+   "nombre": "MARRO HERMINIA FERMINA"
+ },
+ {
+   "socio": "00861-00",
+   "nombre": "HERNANDEZ JULIO"
+ },
+ {
+   "socio": "00868-00",
+   "nombre": "MEROI MARIA DEL CARMEN G."
+ },
+ {
+   "socio": "00869-00",
+   "nombre": "GRISPINO GUILLERMO ARIEL"
+ },
+ {
+   "socio": "00870-01",
+   "nombre": "COMBA GLADIS E."
+ },
+ {
+   "socio": "00873-00",
+   "nombre": "LAJE CESAR ELISEO"
+ },
+ {
+   "socio": "00874-00",
+   "nombre": "GONZALEZ HUGO ALBERTO"
+ },
+ {
+   "socio": "00875-00",
+   "nombre": "AGUILAR ESTEBAN"
+ },
+ {
+   "socio": "00876-01",
+   "nombre": "CAMPORESI JORGE PABLO"
+ },
+ {
+   "socio": "00877-00",
+   "nombre": "PEREZ LUIS ALBERTO"
+ },
+ {
+   "socio": "00878-00",
+   "nombre": "PEREZ SILVIA EDITH"
+ },
+ {
+   "socio": "00883-00",
+   "nombre": "VITULLO AMELIA ANA"
+ },
+ {
+   "socio": "00885-00",
+   "nombre": "PARAMIO JOSE A."
+ },
+ {
+   "socio": "00890-00",
+   "nombre": "SANTOS JOSE LUIS"
+ },
+ {
+   "socio": "00891-00",
+   "nombre": "GRISPINO JUAN CARLOS"
+ },
+ {
+   "socio": "00895-00",
+   "nombre": "FERNANDEZ RUBEN NESTOR"
+ },
+ {
+   "socio": "00896-00",
+   "nombre": "AGUILAR ABAD MARIA JOSEFA"
+ },
+ {
+   "socio": "00898-03",
+   "nombre": "ANDINO, EMILIANO HUMBERTO"
+ },
+ {
+   "socio": "00902-00",
+   "nombre": "DERICIA RAUL FERNANDO"
+ },
+ {
+   "socio": "00903-00",
+   "nombre": "SILFENI CARLOS ROQUE"
+ },
+ {
+   "socio": "00906-00",
+   "nombre": "SALVADO GERARDO LUIS"
+ },
+ {
+   "socio": "00908-00",
+   "nombre": "COLOBIG MARIA DEL CARMEN"
+ },
+ {
+   "socio": "00912-00",
+   "nombre": "ZABOLOTNY CORNELIO"
+ },
+ {
+   "socio": "00914-00",
+   "nombre": "DEL CAMPO MARIA ESTHER"
+ },
+ {
+   "socio": "00915-00",
+   "nombre": "DVOSKIN HORACIO WALTER"
+ },
+ {
+   "socio": "00917-00",
+   "nombre": "MOLINA ARTURO"
+ },
+ {
+   "socio": "00920-00",
+   "nombre": "PEREYRA WERFIL"
+ },
+ {
+   "socio": "00921-00",
+   "nombre": "DURAN JORGE"
+ },
+ {
+   "socio": "00922-00",
+   "nombre": "ILLUMINATI CARLOS ALBERTO"
+ },
+ {
+   "socio": "00923-00",
+   "nombre": "SANTANGELO ALFREDO"
+ },
+ {
+   "socio": "00927-00",
+   "nombre": "LUCERO VICTOR MANUEL"
+ },
+ {
+   "socio": "00930-00",
+   "nombre": "GINNOBILI ARNALDO SERAFIN"
+ },
+ {
+   "socio": "00934-00",
+   "nombre": "FUENTEALBA RUDECINDO"
+ },
+ {
+   "socio": "00934-28",
+   "nombre": "ESPINOZA FRANCO JULIAN"
+ },
+ {
+   "socio": "00934-29",
+   "nombre": "FUENTEALBA DIEGO LAUTARO"
+ },
+ {
+   "socio": "00935-00",
+   "nombre": "KRAUSE CARLOS C."
+ },
+ {
+   "socio": "00942-00",
+   "nombre": "PEREZ FLORENCIO HECTOR"
+ },
+ {
+   "socio": "00943-00",
+   "nombre": "TURONE CARLOS AGUSTIN"
+ },
+ {
+   "socio": "00946-00",
+   "nombre": "DI BELLA GUILLERMO"
+ },
+ {
+   "socio": "00950-00",
+   "nombre": "CRISTIANI ADRIAN E."
+ },
+ {
+   "socio": "00951-00",
+   "nombre": "BERG JUAN CARLOS"
+ },
+ {
+   "socio": "00952-00",
+   "nombre": "SAN MIGUEL VANESSA GABRIELA"
+ },
+ {
+   "socio": "00953-00",
+   "nombre": "SAN MIGUEL CLAUDIA"
+ },
+ {
+   "socio": "00954-00",
+   "nombre": "CANALES SILVIA ADRIANA"
+ },
+ {
+   "socio": "00956-00",
+   "nombre": "ZOCCHI ANA MARIA"
+ },
+ {
+   "socio": "00957-00",
+   "nombre": "PEDROZA ANGEL"
+ },
+ {
+   "socio": "00965-00",
+   "nombre": "MAFRICI LUCIANA MARIA"
+ },
+ {
+   "socio": "00966-00",
+   "nombre": "PEREZ MARIO OSCAR"
+ },
+ {
+   "socio": "00967-00",
+   "nombre": "DE LA FUENTE RODOLFO"
+ },
+ {
+   "socio": "00968-00",
+   "nombre": "EGEA JUAN JOSE"
+ },
+ {
+   "socio": "00970-00",
+   "nombre": "FLORES VICENTE LUIS"
+ },
+ {
+   "socio": "00971-00",
+   "nombre": "CATELLANI BOLLA CLYDE MABEL"
+ },
+ {
+   "socio": "00972-00",
+   "nombre": "ZANELLATO CESAR ANGEL"
+ },
+ {
+   "socio": "00974-00",
+   "nombre": "AMBROSIO DAVID EDUARDO"
+ },
+ {
+   "socio": "00977-00",
+   "nombre": "GARAYGORTA HORACIO"
+ },
+ {
+   "socio": "00979-00",
+   "nombre": "CASTRO ORLANDO"
+ },
+ {
+   "socio": "00982-00",
+   "nombre": "PALACIOS CARLOS"
+ },
+ {
+   "socio": "00983-00",
+   "nombre": "TORTORIELLO ANIBAL"
+ },
+ {
+   "socio": "00984-00",
+   "nombre": "OTERO ANGEL ALFREDO"
+ },
+ {
+   "socio": "00987-00",
+   "nombre": "BADIA LUIS ENRIQUE"
+ },
+ {
+   "socio": "00988-00",
+   "nombre": "LEFEVRE EDUARDO"
+ },
+ {
+   "socio": "00989-00",
+   "nombre": "HERNANDEZ JORGE MAXIMO"
+ },
+ {
+   "socio": "00991-00",
+   "nombre": "ABDALA ALFREDO DIONISIO"
+ },
+ {
+   "socio": "00995-00",
+   "nombre": "ALFONSO ISABEL"
+ },
+ {
+   "socio": "00996-00",
+   "nombre": "CIMOLAI TERESA NILDA"
+ },
+ {
+   "socio": "00997-00",
+   "nombre": "CHIAPPERO OSCAR OSVALDO"
+ },
+ {
+   "socio": "00998-00",
+   "nombre": "SCHNEER ALDO ALBINO"
+ },
+ {
+   "socio": "01000-00",
+   "nombre": "CAMPIDOGLIO JOSE OMAR"
+ },
+ {
+   "socio": "01003-00",
+   "nombre": "LUDUEÑA CLARISA MERCEDES"
+ },
+ {
+   "socio": "01004-00",
+   "nombre": "TROBBIANI, SUSANA BEATRIZ"
+ },
+ {
+   "socio": "01012-00",
+   "nombre": "DELLA CHA MARIA ELVIRA"
+ },
+ {
+   "socio": "01014-00",
+   "nombre": "COSTANZI CARLOS"
+ },
+ {
+   "socio": "01015-00",
+   "nombre": "GAETE RICARDO"
+ },
+ {
+   "socio": "01018-00",
+   "nombre": "BRAICOVICH ROSSANA ISABEL"
+ },
+ {
+   "socio": "01019-00",
+   "nombre": "QUINTANA NESTOR R."
+ },
+ {
+   "socio": "01020-00",
+   "nombre": "PEREZ SALGADO JORGE"
+ },
+ {
+   "socio": "01021-00",
+   "nombre": "CANALE ARTURO"
+ },
+ {
+   "socio": "01022-00",
+   "nombre": "DELVO MARIA CRISTINA"
+ },
+ {
+   "socio": "01023-00",
+   "nombre": "ALBERTO MIRTA"
+ },
+ {
+   "socio": "01025-00",
+   "nombre": "ALVAREZ YOFRE FELIPE"
+ },
+ {
+   "socio": "01026-00",
+   "nombre": "CRLJENKO RAUL TITO"
+ },
+ {
+   "socio": "01028-00",
+   "nombre": "MANZINI NICOLAS"
+ },
+ {
+   "socio": "01032-00",
+   "nombre": "CAPARROS ANDRES RAMON"
+ },
+ {
+   "socio": "01033-00",
+   "nombre": "GONZALEZ GASTON HORACIO"
+ },
+ {
+   "socio": "01034-00",
+   "nombre": "DEVE JORGE OSVALDO"
+ },
+ {
+   "socio": "01036-01",
+   "nombre": "POLERI, ELSA BEATRIZ"
+ },
+ {
+   "socio": "01039-00",
+   "nombre": "TELLO NELSON  DANIEL"
+ },
+ {
+   "socio": "01040-00",
+   "nombre": "SOLANA LUIS MIGUEL"
+ },
+ {
+   "socio": "01041-00",
+   "nombre": "FLORES GIMENEZ LUIS MARIA"
+ },
+ {
+   "socio": "01043-00",
+   "nombre": "CASTILLO LUIS HELVECIO"
+ },
+ {
+   "socio": "01045-00",
+   "nombre": "MONTES MARISA SONIA"
+ },
+ {
+   "socio": "01047-00",
+   "nombre": "INFANTE ISABEL"
+ },
+ {
+   "socio": "01050-00",
+   "nombre": "CASTILLO, MARCELA DIANA"
+ },
+ {
+   "socio": "01051-00",
+   "nombre": "SCHUHWERK LUIS ALBERTO"
+ },
+ {
+   "socio": "01054-00",
+   "nombre": "QUINTANA LUIS"
+ },
+ {
+   "socio": "01055-00",
+   "nombre": "LATEULADE ALBERTO"
+ },
+ {
+   "socio": "01061-00",
+   "nombre": "IPPI GABRIELA"
+ },
+ {
+   "socio": "01063-00",
+   "nombre": "FERNANDEZ SIERRA LUCIO R."
+ },
+ {
+   "socio": "01068-00",
+   "nombre": "DOMINGUEZ GENARO"
+ },
+ {
+   "socio": "01069-00",
+   "nombre": "MEEUS JOSE ALBERTO"
+ },
+ {
+   "socio": "01070-00",
+   "nombre": "SALVATORI LUISA MARIA"
+ },
+ {
+   "socio": "01071-00",
+   "nombre": "CAGNOLO VICTOR ALDO"
+ },
+ {
+   "socio": "01075-00",
+   "nombre": "CORONEL HORACIO SANTOS"
+ },
+ {
+   "socio": "01076-00",
+   "nombre": "MATILLA MANUEL IGNACIO"
+ },
+ {
+   "socio": "01078-00",
+   "nombre": "PARADELO VICTOR EDGARDO"
+ },
+ {
+   "socio": "01079-00",
+   "nombre": "MARMO LUCIO E."
+ },
+ {
+   "socio": "01081-00",
+   "nombre": "MARINA CESAR"
+ },
+ {
+   "socio": "01082-00",
+   "nombre": "ARNDT BIANCA"
+ },
+ {
+   "socio": "01083-00",
+   "nombre": "HETTINGER GERARDO HELMUT"
+ },
+ {
+   "socio": "01084-00",
+   "nombre": "CONTI SILVIA MERCEDES"
+ },
+ {
+   "socio": "01086-00",
+   "nombre": "PALACIOS RICARDO"
+ },
+ {
+   "socio": "01087-00",
+   "nombre": "HANUCH MIRYAM LETICIA"
+ },
+ {
+   "socio": "01092-00",
+   "nombre": "GRANOLLERS DANIEL FELIX"
+ },
+ {
+   "socio": "01093-00",
+   "nombre": "VICENTE ALBERTO"
+ },
+ {
+   "socio": "01094-00",
+   "nombre": "FLAMINI NESTOR JORGE"
+ },
+ {
+   "socio": "01095-00",
+   "nombre": "SCHLICHTER HORACIO JORGE"
+ },
+ {
+   "socio": "01096-00",
+   "nombre": "SAGRIPANTI DANTE FLORINDO"
+ },
+ {
+   "socio": "01097-00",
+   "nombre": "BUFFOLO ALDO SERGIO"
+ },
+ {
+   "socio": "01098-00",
+   "nombre": "PIÑEIRO FRANCISCO EDUARDO"
+ },
+ {
+   "socio": "01100-00",
+   "nombre": "GUALTIERI DOMINGO LUIS"
+ },
+ {
+   "socio": "01102-00",
+   "nombre": "SAIFIR GHBARA SILVIA ESTER"
+ },
+ {
+   "socio": "01103-00",
+   "nombre": "GRANDE JUAN A. ELISEO"
+ },
+ {
+   "socio": "01104-00",
+   "nombre": "PANZANI SUSANA MIRTA"
+ },
+ {
+   "socio": "01107-00",
+   "nombre": "KOHON CARLOS ENRIQUE"
+ },
+ {
+   "socio": "01108-00",
+   "nombre": "FOCACCIA MARIA LAURA"
+ },
+ {
+   "socio": "01109-00",
+   "nombre": "FOCACCIA COSTANZA"
+ },
+ {
+   "socio": "01110-00",
+   "nombre": "MONACHESI CARLOS  ALBERTO"
+ },
+ {
+   "socio": "01111-00",
+   "nombre": "OBREQUE MARINA EDITH"
+ },
+ {
+   "socio": "01112-00",
+   "nombre": "SUAREZ JUAN ESTEBAN"
+ },
+ {
+   "socio": "01116-00",
+   "nombre": "D´ABRAMO ARMANDO OMAR"
+ },
+ {
+   "socio": "01117-00",
+   "nombre": "FRACASSO SANTIAGO ENRIQUE"
+ },
+ {
+   "socio": "01119-00",
+   "nombre": "DE CABOTEAU  MARCELO FABIAN"
+ },
+ {
+   "socio": "01121-00",
+   "nombre": "BERBEL EDUARDO ARIEL"
+ },
+ {
+   "socio": "01124-00",
+   "nombre": "GOTTING CECILIA"
+ },
+ {
+   "socio": "01125-00",
+   "nombre": "ROBINO DANIEL HORACIO"
+ },
+ {
+   "socio": "01126-00",
+   "nombre": "RENDA ROBERTO ABEL"
+ },
+ {
+   "socio": "01127-00",
+   "nombre": "GARCIA MARRO EXEQUIEL"
+ },
+ {
+   "socio": "01128-00",
+   "nombre": "VALLES JORGE MANUEL"
+ },
+ {
+   "socio": "01131-00",
+   "nombre": "DELGADO SERGIO FRANCISCO"
+ },
+ {
+   "socio": "01133-00",
+   "nombre": "GIL CARLOS ALBERTO"
+ },
+ {
+   "socio": "01136-00",
+   "nombre": "BALBOA MANUEL DE REYES"
+ },
+ {
+   "socio": "01138-00",
+   "nombre": "TRUJILLO STELLA MARIS"
+ },
+ {
+   "socio": "01141-00",
+   "nombre": "FISCHER ROBERTO ERICO"
+ },
+ {
+   "socio": "01144-00",
+   "nombre": "ZIADE DANIEL YAMIL"
+ },
+ {
+   "socio": "01145-00",
+   "nombre": "ARIAS RICARDO RENE"
+ },
+ {
+   "socio": "01146-00",
+   "nombre": "LOZANO ALEJANDRO MANUEL"
+ },
+ {
+   "socio": "01147-00",
+   "nombre": "GONZALEZ DANIEL OSCAR"
+ },
+ {
+   "socio": "01148-00",
+   "nombre": "FERRACIOLI EDUARDO IVET"
+ },
+ {
+   "socio": "01149-00",
+   "nombre": "WANTUCH ANA ROSA DE FERRACIOLI"
+ },
+ {
+   "socio": "01151-00",
+   "nombre": "CHIEMENTON HILDA C.HIDALGO DE"
+ },
+ {
+   "socio": "01153-00",
+   "nombre": "GRITTINI ADOLFO EMILIO"
+ },
+ {
+   "socio": "01154-00",
+   "nombre": "VIOLA JULIO CESAR"
+ },
+ {
+   "socio": "01156-00",
+   "nombre": "VERDUN SERGIO ERNESTO"
+ },
+ {
+   "socio": "01158-00",
+   "nombre": "MANSILLA LUIS ANGEL"
+ },
+ {
+   "socio": "01159-00",
+   "nombre": "MORENO JORGE ESTEBAN"
+ },
+ {
+   "socio": "01160-00",
+   "nombre": "MACHINEA MANUEL MARIA"
+ },
+ {
+   "socio": "01161-00",
+   "nombre": "GARAYGORTA MARCELA"
+ },
+ {
+   "socio": "01163-00",
+   "nombre": "ROSSI FEDERICO FRANCISCO"
+ },
+ {
+   "socio": "01164-00",
+   "nombre": "HADDAD PATRICIA LAURA"
+ },
+ {
+   "socio": "01165-00",
+   "nombre": "JUAREZ TRUCCONE OSVALDO A."
+ },
+ {
+   "socio": "01167-00",
+   "nombre": "CASADO FRANCISCO RAMON"
+ },
+ {
+   "socio": "01170-00",
+   "nombre": "BOTELLA ELISA LAURA"
+ },
+ {
+   "socio": "01171-00",
+   "nombre": "LOZANO JOSE HERIBERTO"
+ },
+ {
+   "socio": "01173-00",
+   "nombre": "BRUZZECHESSE LUIS ALBERTO"
+ },
+ {
+   "socio": "01174-00",
+   "nombre": "SABELLA SILVIA SUSANA"
+ },
+ {
+   "socio": "01175-00",
+   "nombre": "TAPIA VERGARA LUIS HECTOR G"
+ },
+ {
+   "socio": "01176-00",
+   "nombre": "OLMOS RAMON OSVALDO"
+ },
+ {
+   "socio": "01178-00",
+   "nombre": "RIVERO ALLISON DANIELA YANET"
+ },
+ {
+   "socio": "01179-00",
+   "nombre": "LASALA RUBEN PEDRO"
+ },
+ {
+   "socio": "01180-00",
+   "nombre": "BERMUDEZ MARCELO GABRIEL"
+ },
+ {
+   "socio": "01181-00",
+   "nombre": "MANDALARI ANTONIO FELIPE"
+ },
+ {
+   "socio": "01182-00",
+   "nombre": "ESPIÑEIRA VANESA IANINA"
+ },
+ {
+   "socio": "01183-00",
+   "nombre": "MIRABETE RUBEN OMAR"
+ },
+ {
+   "socio": "01187-00",
+   "nombre": "PARRA JULIO"
+ },
+ {
+   "socio": "01188-00",
+   "nombre": "LACUNZA GUILLERMO"
+ },
+ {
+   "socio": "01190-00",
+   "nombre": "SANCHEZ NANCY ANA MARIA"
+ },
+ {
+   "socio": "01191-00",
+   "nombre": "PAVESE JAVIER ALBERTO"
+ },
+ {
+   "socio": "01192-00",
+   "nombre": "EDDI RICARDO JAIME"
+ },
+ {
+   "socio": "01194-02",
+   "nombre": "MONTERO SUSANA ADELA"
+ },
+ {
+   "socio": "01195-00",
+   "nombre": "SALGUERO ROJAS FLAVIANA"
+ },
+ {
+   "socio": "01196-00",
+   "nombre": "ZOSSI MIGUEL AUGUSTO"
+ },
+ {
+   "socio": "01197-00",
+   "nombre": "ZABALA SERGIO RAUL"
+ },
+ {
+   "socio": "01198-00",
+   "nombre": "KANCYPER ESTEBAN"
+ },
+ {
+   "socio": "01199-00",
+   "nombre": "JANKOWSKI ROBERTO ADAN"
+ },
+ {
+   "socio": "01200-00",
+   "nombre": "LESCANO MANUEL E."
+ },
+ {
+   "socio": "01201-00",
+   "nombre": "MANZANO OSCAR OSVALDO"
+ },
+ {
+   "socio": "01202-00",
+   "nombre": "CARTES MARIA CLAUDIA"
+ },
+ {
+   "socio": "01203-00",
+   "nombre": "GENDELMAN OSCAR ALBERTO"
+ },
+ {
+   "socio": "01204-00",
+   "nombre": "VARELA ALBERTO"
+ },
+ {
+   "socio": "01205-00",
+   "nombre": "FARIAS MARIA MERCEDES"
+ },
+ {
+   "socio": "01208-00",
+   "nombre": "SCIANCA ALICIA GRACIELA"
+ },
+ {
+   "socio": "01209-00",
+   "nombre": "BARRIA JOSE ANTONIO"
+ },
+ {
+   "socio": "01211-00",
+   "nombre": "GIANELLA GUSTAVO CARLOS"
+ },
+ {
+   "socio": "01212-00",
+   "nombre": "MASTROMAURO MARCELO ALDO"
+ },
+ {
+   "socio": "01215-00",
+   "nombre": "INDAVER ARTURO HORACIO"
+ },
+ {
+   "socio": "01216-00",
+   "nombre": "ITURRIETA MIRTA ALICIA"
+ },
+ {
+   "socio": "01217-00",
+   "nombre": "ALONSO HECTOR MARIO"
+ },
+ {
+   "socio": "01220-00",
+   "nombre": "PEREZ MIRTA  BEATRIZ"
+ },
+ {
+   "socio": "01223-00",
+   "nombre": "ILUNDAIN OSCAR BERNARDO"
+ },
+ {
+   "socio": "01224-00",
+   "nombre": "CARRO JOSE ANGEL"
+ },
+ {
+   "socio": "01225-00",
+   "nombre": "NAPAL AIDA MARCELA"
+ },
+ {
+   "socio": "01226-00",
+   "nombre": "FERRACIOLI  ROBERTO ANIBAL"
+ },
+ {
+   "socio": "01227-00",
+   "nombre": "GROPPO CARLOS HORACIO"
+ },
+ {
+   "socio": "01228-00",
+   "nombre": "COLLOCA ALFREDO LUIS"
+ },
+ {
+   "socio": "01230-00",
+   "nombre": "PERALTA HECTOR ALFREDO"
+ },
+ {
+   "socio": "01231-00",
+   "nombre": "GRILL WALTER RUBEN"
+ },
+ {
+   "socio": "01232-00",
+   "nombre": "OSTUNI INGRID EVE"
+ },
+ {
+   "socio": "01237-00",
+   "nombre": "FERREYRA ALBERTO JORGE"
+ },
+ {
+   "socio": "01238-00",
+   "nombre": "PLANAS OLGA CRISTINA"
+ },
+ {
+   "socio": "01239-00",
+   "nombre": "MARTIN ROSENDO DOMINGO"
+ },
+ {
+   "socio": "01240-00",
+   "nombre": "CAPOSSIO  VICTORIA ISABEL"
+ },
+ {
+   "socio": "01241-00",
+   "nombre": "SCHROEDER HERMAN H.TEODORO"
+ },
+ {
+   "socio": "01243-00",
+   "nombre": "ANTONINO NICOLAS"
+ },
+ {
+   "socio": "01244-00",
+   "nombre": "SCABECE SUSANA HAYDEE"
+ },
+ {
+   "socio": "01245-00",
+   "nombre": "OTTONELLO ALFREDO"
+ },
+ {
+   "socio": "01246-00",
+   "nombre": "LEICHNER CARLOS ALEJANDRO"
+ },
+ {
+   "socio": "01248-00",
+   "nombre": "QUADRINI GRACIELA MARTA"
+ },
+ {
+   "socio": "01249-00",
+   "nombre": "BRAVO JUAN CARLOS"
+ },
+ {
+   "socio": "01250-00",
+   "nombre": "RAMASCO CARLOS MARCELO"
+ },
+ {
+   "socio": "01251-00",
+   "nombre": "BRARDA MARIO ALEJANDRO"
+ },
+ {
+   "socio": "01254-00",
+   "nombre": "CASTAÑO HEBE SILVANA"
+ },
+ {
+   "socio": "01255-00",
+   "nombre": "SCAGLIOTTI GUSTAVO JAVIER"
+ },
+ {
+   "socio": "01256-00",
+   "nombre": "EYHERAGUIBEL ROBERTO"
+ },
+ {
+   "socio": "01257-00",
+   "nombre": "RODRIGUEZ  GUSTAVO JAVIER"
+ },
+ {
+   "socio": "01258-00",
+   "nombre": "CARBONETTI DANIEL"
+ },
+ {
+   "socio": "01259-00",
+   "nombre": "VAZQUEZ CLAUDIA GABRIELA"
+ },
+ {
+   "socio": "01260-00",
+   "nombre": "ALBISU MONICA LILIANA"
+ },
+ {
+   "socio": "01261-00",
+   "nombre": "DELLA GASPERA ANABELLA"
+ },
+ {
+   "socio": "01262-00",
+   "nombre": "LAMPE ALFREDO BERNARDO"
+ },
+ {
+   "socio": "01263-00",
+   "nombre": "ALFIERI GABRIEL"
+ },
+ {
+   "socio": "01266-00",
+   "nombre": "MARTINEZ OSVALDO"
+ },
+ {
+   "socio": "01267-00",
+   "nombre": "SUKAREVICIUS NORBERTO JOSE"
+ },
+ {
+   "socio": "01268-00",
+   "nombre": "CHIACCHIARINI FABIO  HERALDO"
+ },
+ {
+   "socio": "01269-00",
+   "nombre": "JUAN MARIANO DIEGO A."
+ },
+ {
+   "socio": "01270-03",
+   "nombre": "SARTORI GONZALO ERNESTO"
+ },
+ {
+   "socio": "01271-00",
+   "nombre": "MARTINEZ  ALICIA BEATRIZ"
+ },
+ {
+   "socio": "01273-00",
+   "nombre": "SALVADO RODRIGO CARLOS"
+ },
+ {
+   "socio": "01275-00",
+   "nombre": "STULLER CINTIA JUDITH"
+ },
+ {
+   "socio": "01277-00",
+   "nombre": "PEREZ OMAR"
+ },
+ {
+   "socio": "01279-00",
+   "nombre": "ALLEMANNI MONICA BEATRIZ"
+ },
+ {
+   "socio": "01280-00",
+   "nombre": "GARZA JORGE HORACIO"
+ },
+ {
+   "socio": "01281-00",
+   "nombre": "BARSTUSCH  MARIANE  ANGELICA"
+ },
+ {
+   "socio": "01282-00",
+   "nombre": "ROCHE DANIEL OVIDIO"
+ },
+ {
+   "socio": "01284-00",
+   "nombre": "BOYÉ HORACIO ALEJANDRO"
+ },
+ {
+   "socio": "01286-00",
+   "nombre": "ZARZUR MIGUEL ANGEL"
+ },
+ {
+   "socio": "01287-00",
+   "nombre": "AKRICH CLELIA MABEL"
+ },
+ {
+   "socio": "01288-00",
+   "nombre": "STAICOS CLAUDE CHRISTIAN"
+ },
+ {
+   "socio": "01289-00",
+   "nombre": "ZOPPI JUAN CARLOS"
+ },
+ {
+   "socio": "01290-00",
+   "nombre": "GODOY SILVIA  MARINA"
+ },
+ {
+   "socio": "01291-00",
+   "nombre": "TORTORIELLO DANIEL PASCUAL"
+ },
+ {
+   "socio": "01292-00",
+   "nombre": "D´ALLEVA SANDRA CRISTINA"
+ },
+ {
+   "socio": "01295-00",
+   "nombre": "URBANO  MARIO ALBERTO"
+ },
+ {
+   "socio": "01296-00",
+   "nombre": "POGGI GABRIEL ANTONIO"
+ },
+ {
+   "socio": "01297-00",
+   "nombre": "DEL CAMPO DARIO"
+ },
+ {
+   "socio": "01298-00",
+   "nombre": "PARISI DE GROPPO CRISTINA"
+ },
+ {
+   "socio": "01299-00",
+   "nombre": "GAZZOLA LUIS ADOLFO"
+ },
+ {
+   "socio": "01301-00",
+   "nombre": "ORBANICH ANA INES"
+ },
+ {
+   "socio": "01302-00",
+   "nombre": "PREBOSTE ORLANDO JOSE"
+ },
+ {
+   "socio": "01304-00",
+   "nombre": "SCARFI CARLOS GUILLERMO"
+ },
+ {
+   "socio": "01305-00",
+   "nombre": "SALEM SOEL FELIPE"
+ },
+ {
+   "socio": "01306-00",
+   "nombre": "CRAVERO ORBANICH FABIO"
+ },
+ {
+   "socio": "01307-00",
+   "nombre": "GINGINS CARLA"
+ },
+ {
+   "socio": "01308-00",
+   "nombre": "MALCOTTI PEDRO ROBERTO"
+ },
+ {
+   "socio": "01309-00",
+   "nombre": "RABOVICH ANA"
+ },
+ {
+   "socio": "01310-00",
+   "nombre": "DIPP JULIO CARIM"
+ },
+ {
+   "socio": "01311-00",
+   "nombre": "VITALE  EDUARDO CESAR"
+ },
+ {
+   "socio": "01312-00",
+   "nombre": "SALEM GERARDO GIBRAN"
+ },
+ {
+   "socio": "01313-00",
+   "nombre": "SEGOVIA IGNACIO"
+ },
+ {
+   "socio": "01314-00",
+   "nombre": "CARBAJAL MARTA SUSANA"
+ },
+ {
+   "socio": "01315-00",
+   "nombre": "LONGSTAFF LEANDRO LUIS"
+ },
+ {
+   "socio": "01316-00",
+   "nombre": "ESANDI DIEGO ALEJANDRO"
+ },
+ {
+   "socio": "01317-00",
+   "nombre": "CASANOVA MARIA CECILIA"
+ },
+ {
+   "socio": "01318-00",
+   "nombre": "FRIGUGLIETTI  FERNANDO OSVALDO"
+ },
+ {
+   "socio": "01319-00",
+   "nombre": "RODRIGUEZ BLANCO MARIA IGNACIA"
+ },
+ {
+   "socio": "01320-00",
+   "nombre": "NAVARRO ALBERTO"
+ },
+ {
+   "socio": "01323-00",
+   "nombre": "SEMENOV DARDO MARIO"
+ },
+ {
+   "socio": "01324-00",
+   "nombre": "ALESSI ALESANDRO CLAUDIO"
+ },
+ {
+   "socio": "01325-00",
+   "nombre": "PAN MARIA IDELGONDA"
+ },
+ {
+   "socio": "01327-00",
+   "nombre": "ZARATE ROLANDO MARTIN"
+ },
+ {
+   "socio": "01328-00",
+   "nombre": "GONZALEZ SUSANA BEATRIZ"
+ },
+ {
+   "socio": "01329-00",
+   "nombre": "CORIA DIEGO RAUL"
+ },
+ {
+   "socio": "01330-00",
+   "nombre": "NIEMBRO ANDREA ALEJANDRA"
+ },
+ {
+   "socio": "01331-00",
+   "nombre": "MARTINEZ CORREA JORGE ALFREDO"
+ },
+ {
+   "socio": "01332-00",
+   "nombre": "STEKAR SILVIA SUSANA"
+ },
+ {
+   "socio": "01334-00",
+   "nombre": "GROSSI FABIANA"
+ },
+ {
+   "socio": "01336-00",
+   "nombre": "RODRIGUEZ SERGIO CARLOS"
+ },
+ {
+   "socio": "01337-00",
+   "nombre": "BONAMINO JORGE VICTOR"
+ },
+ {
+   "socio": "01338-00",
+   "nombre": "ABELLI LUIS DARIO"
+ },
+ {
+   "socio": "01339-00",
+   "nombre": "GARINO OSVALDO PEDRO"
+ },
+ {
+   "socio": "01340-00",
+   "nombre": "NOVELLI CLAUDINA"
+ },
+ {
+   "socio": "01341-00",
+   "nombre": "LOPEZ DANIEL ALEJANDRO"
+ },
+ {
+   "socio": "01343-00",
+   "nombre": "BRIONGOS MARINA EDITH"
+ },
+ {
+   "socio": "01344-00",
+   "nombre": "ALLAN MARIA CLAUDIA"
+ },
+ {
+   "socio": "01345-00",
+   "nombre": "FRENCIA JOSE SANTIAGO"
+ },
+ {
+   "socio": "01346-00",
+   "nombre": "ALVAREZ MIGUEL ANGEL"
+ },
+ {
+   "socio": "01347-00",
+   "nombre": "STANGAFERRO SERGIO RAFAEL"
+ },
+ {
+   "socio": "01348-00",
+   "nombre": "URCERA CLAUDIO ERNESTO"
+ },
+ {
+   "socio": "01350-00",
+   "nombre": "RAIMONDO OMAR ORLANDO"
+ },
+ {
+   "socio": "01351-00",
+   "nombre": "SORENSON HUGO CARLOS"
+ },
+ {
+   "socio": "01352-00",
+   "nombre": "DIBONA ENY María Soledad"
+ },
+ {
+   "socio": "01353-00",
+   "nombre": "MONACHESI FERNANDO JAVIER"
+ },
+ {
+   "socio": "01354-00",
+   "nombre": "STEFANELLI LAURO ADRIAN"
+ },
+ {
+   "socio": "01355-00",
+   "nombre": "ALFIE LILIANA BEATRIZ"
+ },
+ {
+   "socio": "01357-00",
+   "nombre": "MINOTTO TRIMIÑO NICOLAS ANTONIO"
+ },
+ {
+   "socio": "01358-00",
+   "nombre": "KNUDSEN LILIANA MARCELA"
+ },
+ {
+   "socio": "01359-00",
+   "nombre": "ABRAMCHIK MONICA SUSANA"
+ },
+ {
+   "socio": "01360-00",
+   "nombre": "AKERMAN RUBEN"
+ },
+ {
+   "socio": "01361-00",
+   "nombre": "BACCI  JORGE OSVALDO"
+ },
+ {
+   "socio": "01362-00",
+   "nombre": "CASSANO MARGARITA ROSA"
+ },
+ {
+   "socio": "01363-00",
+   "nombre": "SIVERA LINO"
+ },
+ {
+   "socio": "01364-00",
+   "nombre": "PIROLA RAFAEL HORACIO"
+ },
+ {
+   "socio": "01365-00",
+   "nombre": "SILIQUINI EDUARDO"
+ },
+ {
+   "socio": "01366-00",
+   "nombre": "TAGLIAPIETRA MIGUEL ANGEL"
+ },
+ {
+   "socio": "01367-00",
+   "nombre": "MAMBERTI Dardo Alberto"
+ },
+ {
+   "socio": "01368-00",
+   "nombre": "FERNANDEZ EMA SUSANA"
+ },
+ {
+   "socio": "01369-00",
+   "nombre": "KLOSTER JUAN IGNACIO"
+ },
+ {
+   "socio": "01370-00",
+   "nombre": "LOPEZ NESTOR OMAR"
+ },
+ {
+   "socio": "01371-00",
+   "nombre": "GARAYO FERNANDO JORGE"
+ },
+ {
+   "socio": "01372-00",
+   "nombre": "BIGOLIN MAURICIO JAVIER"
+ },
+ {
+   "socio": "01373-00",
+   "nombre": "HOMANN SERGIO"
+ },
+ {
+   "socio": "01374-00",
+   "nombre": "CALVO FRANCISCO IGNACIO"
+ },
+ {
+   "socio": "01376-00",
+   "nombre": "WISNER FABIANA MARCELA"
+ },
+ {
+   "socio": "01377-00",
+   "nombre": "IGEA RODRIGO HORACIO"
+ },
+ {
+   "socio": "01378-00",
+   "nombre": "MILLAR BREVE RUFINO ELADIO"
+ },
+ {
+   "socio": "01379-00",
+   "nombre": "BERTALOT MARIO FERNANDO"
+ },
+ {
+   "socio": "01380-00",
+   "nombre": "GARCIA LETICIA CRISTINA"
+ },
+ {
+   "socio": "01381-00",
+   "nombre": "VASALLO WALTER VALENTIN"
+ },
+ {
+   "socio": "01382-00",
+   "nombre": "ALVAREZ VANINA SOLEDAD"
+ },
+ {
+   "socio": "01383-00",
+   "nombre": "PERALTA VANINA INES"
+ },
+ {
+   "socio": "01384-00",
+   "nombre": "FERRACIOLI SILVIO LUIS"
+ },
+ {
+   "socio": "01385-00",
+   "nombre": "QUIROGA HORACIO RODOLFO"
+ },
+ {
+   "socio": "01386-00",
+   "nombre": "OLIVIERO ADRIANA"
+ },
+ {
+   "socio": "01387-00",
+   "nombre": "CAPUTO MAURICIO ALFREDO"
+ },
+ {
+   "socio": "01388-00",
+   "nombre": "FABI MIGUEL ALEJANDRO"
+ },
+ {
+   "socio": "01389-00",
+   "nombre": "AMBROS MARIA FLORENCIA"
+ },
+ {
+   "socio": "01390-00",
+   "nombre": "PROSPITTI ARIEL JORGE"
+ },
+ {
+   "socio": "01391-00",
+   "nombre": "DE BONA GIACOMA"
+ },
+ {
+   "socio": "01392-00",
+   "nombre": "AQUINO MUÑOZ TEOFILO"
+ },
+ {
+   "socio": "01393-00",
+   "nombre": "ILLANES RAUL ALFONSO E."
+ },
+ {
+   "socio": "01395-00",
+   "nombre": "VARESCO ANDRES RICARDO"
+ },
+ {
+   "socio": "01396-00",
+   "nombre": "CAPUTO GABRIEL OSCAR"
+ },
+ {
+   "socio": "01397-00",
+   "nombre": "GULINO VALERIA CAROLA"
+ },
+ {
+   "socio": "01398-00",
+   "nombre": "RENDA, MATIAS A"
+ },
+ {
+   "socio": "01399-01",
+   "nombre": "GALATI RANDO CAROLINA TERESA"
+ },
+ {
+   "socio": "01400-00",
+   "nombre": "ZANET ROMERO VERONICA"
+ },
+ {
+   "socio": "01401-00",
+   "nombre": "DE CABOTEAU VICTOR EMANUEL"
+ },
+ {
+   "socio": "01402-00",
+   "nombre": "GOMEZ PEDRO FERNANDO"
+ },
+ {
+   "socio": "01403-00",
+   "nombre": "AMBORT ALBERTO VICTOR"
+ },
+ {
+   "socio": "01404-00",
+   "nombre": "REGENTE EZEQUIEL UBALDO"
+ },
+ {
+   "socio": "01405-00",
+   "nombre": "RIVEROS MARIA FERNANDA"
+ },
+ {
+   "socio": "01406-00",
+   "nombre": "FERNANDEZ RODRIGO ANTONIO"
+ },
+ {
+   "socio": "01407-00",
+   "nombre": "BARAKAT PEDRO EMILIO"
+ },
+ {
+   "socio": "01408-00",
+   "nombre": "SANCHEZ JOSE MARIO"
+ },
+ {
+   "socio": "01409-00",
+   "nombre": "FORNI FRANCO EDUARDO"
+ },
+ {
+   "socio": "01410-00",
+   "nombre": "BOSAZ OMAR ALEJANDRO"
+ },
+ {
+   "socio": "01411-00",
+   "nombre": "DELMENICO DEMIAN ALBERTO DAVID"
+ },
+ {
+   "socio": "01412-00",
+   "nombre": "LOCKWOOD GABINO MARCOS"
+ },
+ {
+   "socio": "01413-00",
+   "nombre": "PASCUAL MYRIAM RUTH"
+ },
+ {
+   "socio": "01414-00",
+   "nombre": "VERANI  CARLOS ALBERTO"
+ },
+ {
+   "socio": "01415-00",
+   "nombre": "HADAD SUSANA GLADIS"
+ },
+ {
+   "socio": "01416-00",
+   "nombre": "AQUINO MUÑOZ BENIGNO"
+ },
+ {
+   "socio": "01417-00",
+   "nombre": "VASVARI MARIA FABIANA"
+ },
+ {
+   "socio": "01418-00",
+   "nombre": "BUSCARONS ALEJANDRO EMILIO"
+ },
+ {
+   "socio": "01419-00",
+   "nombre": "CARRERAS RODRIGO ARIEL "
+ },
+ {
+   "socio": "01420-00",
+   "nombre": "RECCHIONI MAXIMILIANO"
+ },
+ {
+   "socio": "01421-00",
+   "nombre": "GARRIDO DOBROTINICH VICENTE ROBERTO"
+ },
+ {
+   "socio": "01423-00",
+   "nombre": "TARZIA ANGEL MANUEL"
+ },
+ {
+   "socio": "01424-00",
+   "nombre": "BERGESE ADRIAN GABRIEL "
+ },
+ {
+   "socio": "01425-00",
+   "nombre": "ETSE MYRIAM ESTELA DEL VALLE"
+ },
+ {
+   "socio": "01426-00",
+   "nombre": "ROSAS CARLOS"
+ },
+ {
+   "socio": "01427-00",
+   "nombre": "LUPIAÑEZ ALEJANDRO JAVIER"
+ },
+ {
+   "socio": "01428-00",
+   "nombre": "CABRERA MARTIN ISMAEL"
+ },
+ {
+   "socio": "01429-00",
+   "nombre": "BUSIN PABLO ALEJANDRO"
+ },
+ {
+   "socio": "01430-00",
+   "nombre": "LOPEZ JUAN CRUZ"
+ },
+ {
+   "socio": "01431-00",
+   "nombre": "MANCINI MARINO MARCELO"
+ },
+ {
+   "socio": "01432-00",
+   "nombre": "VILLAVERDE MARIA LORENA"
+ }
+]

@@ -22,6 +22,10 @@ router.get('/pmt', (req, res) => {
     res.render('payment_page');
 })
 
+router.get('/distances', (req, res, next) => {
+    res.render('distances');
+})
+
 
 
 
@@ -96,7 +100,7 @@ function validateError(error) {
 router.post('/add-runner', async function(req, res) {
     console.log(req.body);
     const { body } = req;
-    const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount } = body;
+    const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth } = body;
 
     const request = await db.collection('runners').get();
     const { docs } = request;
@@ -121,9 +125,15 @@ router.post('/add-runner', async function(req, res) {
         partnerID: partner_id,
         runnerUID: `00${runnerNbr}`,
         runnerID: runnerID,
+        runnerGenre: genre,
+        runnerBirthDate: birth,
         payment_data: payment_data,
 
     }
+
+    var _transaction_amount = Number(transactionAmount).toFixed(2).toString()
+
+    
 
 
     var runnerDBI;
@@ -131,7 +141,7 @@ router.post('/add-runner', async function(req, res) {
     await db.collection('runners').add(newRunner).then((doc) => {
         runnerDBI = doc.id
     }).then(() => {
-        res.render('payment_page', { runnerNbr, cat, transactionAmount, description, runnerName, runnerDBI }); // para dirigirnos nuevamente a '/'
+        res.render('payment_page', { runnerNbr, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
     })
 
     

@@ -7,7 +7,7 @@
     justify-content: end;
     bottom: 0;
     z-index: 1040;
-    transform: translateY(430vh);
+    transform: translateY(360vh);
 }
 
 .footer-wrapper {

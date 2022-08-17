@@ -57,6 +57,10 @@ body section .categories {
     color: var(--primary);
 }
 
+.cat-card:hover .card-inner-content ul {
+    cursor: pointer;
+}
+
 .cat-card:hover .card-inner-content ul li p {
     color: var(--primary);
     transition: 0.6s;

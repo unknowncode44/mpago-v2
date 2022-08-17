@@ -37,9 +37,166 @@
                                 <form action="add-runner" method="post">
                                     <div class="r-form">
                                         <div class="page slide-page">
-                                            <div class="title">
-                                                Datos Personales:</div>
-                                            <div class="container p-0 m-w-full mx-0 me-0">
+                                            <div class="title">Datos Personales:</div>
+
+                                                <div class="flex-container">
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Elige una distancia</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <select id="categoriesSelect" name="cat"></select>
+                                                                        <input id="runnerUID" name="runnerUID" type="hidden">
+                                                                        <% if (runnersLenght) { %>
+                                                                            <script>
+                                                                                document.getElementById('runnerUID').value = '<%= runnersLenght++ %>'
+                                                                            </script>
+                                                                            <% } %>
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Precio</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="transactionAmount" name="transactionAmount" style="color: var(--secondary)" value="10">
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Nombre</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="r-name" name="runnerName" type="text">    
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Edad</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <select id="ageSelect" name="ageSelect"></select>
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Genero</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <select name="genre" id="genre" class="rGenre" value="">
+                                                                            <option value="Femenino">Femenino</option>
+                                                                            <option value="Masculino">Masculino</option>
+                                                                        </select>
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Fecha Nac</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="birth" name="birth" type="date" placeholder="DD/MM/AAAA">
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>DNI</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="r-id" name="runnerID" type="text" placeholder="DNI">
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p># de Socio</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="partner-id" name="partner_id" type="text" placeholder="Obligatorio">
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>email</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <input id="r-email" name="runnerEmail" type="text" placeholder="email@email.com">
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                        </div>  
+                                                    </div>
+
+                                                    <div class="flex-items">
+                                                        <div class="flex-container-inner">
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <button id="home_btn" type="button" class="firstNext mt-3 next">Siguiente</button>
+                                                                    </div>
+                                                                 </div>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <!-- <div class="container p-0 m-w-full mx-0 me-0">
                                                 <div class="row pe-0 ps-3 register-row-custom">
                                                     <div class="col-lg-8 col-sm-8">
                                                         <div class="field">
@@ -64,14 +221,9 @@
                                                         </div>
                                                     </div>
 
-                                                    
-
-                                                    
-
-
-
                                                 </div>
                                             </div>
+
                                             <div id="field-rname" class="field field-rname">
                                                 <div class="label name-label">
                                                     Nombre y Apellido</div>
@@ -81,8 +233,6 @@
                                                         Edad</div>
                                                     <select id="ageSelect" name="ageSelect"></select>
                                                 </div>
-
-                                                
                                             </div>
                                             
                                             <div class="field field-half">
@@ -90,9 +240,56 @@
                                                     DNI</div>
                                                 <input id="r-id" name="runnerID" type="text" placeholder="DNI">
                                                 <div class="label label2">Numero de socio</div>
-                                                <input id="partner-id" name="partner_id" type="text" placeholder="Numero de Socio">
-                                                <small>*Solo Socios del club Mari Menuco</small>
+                                                <input id="partner-id" name="partner_id" type="text" placeholder="Obligatorio">
+                                                
                                             </div>
+
+                                            <style>
+                                                .flex-cont {
+                                                display: flex;
+                                                flex-direction: row;
+                                                padding-left: 0%;
+                                                justify-content: space-around !important;
+                                                
+                                                flex-wrap: nowrap;
+                                                
+                                                }
+
+                                                .flex-i:nth-child(1) {
+                                                display: block;
+                                                width: 70%;
+                                                flex-grow: 0;
+                                                flex-shrink: 1;
+                                                flex-basis: auto;
+                                                align-self: auto;
+                                                order: 0;
+                                                }
+
+                                                .flex-i:nth-child(2) {
+                                                display: block;
+                                                flex-grow: 0;
+                                                width: 30%;
+                                                flex-shrink: 1;
+                                                
+                                                order: 0;
+                                                }
+                                            </style>
+
+                                            <div class="flex-cont">
+                                                <div class="flex-i field">
+                                                    <div class="label" style="padding-left: 0%">
+                                                        Genero</div>
+                                                    <select name="genre" id="genre" class="rGenre" value="Femenino">
+                                                        <option value="Femenino">Femenino</option>
+                                                        <option value="Masculino">Masculino</option>
+                                                    </select>
+                                                </div>
+                                                <div class="flex-i field">
+                                                    <div class="label">Fecha nac.</div>
+                                                    <input id="birth" name="birth" type="date" placeholder="DD/MM/AAAA">
+                                                </div>
+                                            </div>
+
                                             <div class="field email-field">
                                                 <div class="label">
                                                     Email</div>
@@ -100,7 +297,7 @@
                                             </div>
                                             <div class="field">
                                                 <button id="home_btn" type="button" class="firstNext mt-3 next">Siguiente</button>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="page">
                                             <div class="title">
@@ -115,9 +312,11 @@
                                                     <div class="col-6 text-start"><input type="text" id="runnerName" name="runnerName" disabled></div>
                                                     <div class="col-6 text-end">DNI</div>
                                                     <div class="col-6 text-start"><input type="text" id="runnerID" name="runnerID" disabled></div>
+                                                    <div class="col-6 text-end">Socio</div>
+                                                    <div class="col-6 text-start"><input type="text" id="partnerID" name="partnerID" disabled></div>
                                                     <div class="col-6 text-end">Precio $</div>
                                                     <div class="col-6 text-start"><input type="text" id="price" name="price" disabled></div>
-                                                    <div class="col-6 text-end">Plataforma $</div>
+                                                    <div class="col-6 text-end">Desc. socio $</div>
                                                     <div class="col-6 text-start"><input type="text" id="platform_cost" name="platform_cost" disabled></div>
                                                     <div class="col-6 mb-4 text-end">
                                                         <strong>Total $</strong>

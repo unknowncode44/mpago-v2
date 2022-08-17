@@ -1,19 +1,52 @@
     /* #### BREAKPOINTS < MOBILE SCREEN ##### */
 
-    @media only screen and (max-device-width: 376px){
+    @media only screen and (max-device-width: 375px){
         .banner {
-            min-height: 60vh !important;
+            min-height: 7
+            0vh !important;
         }
         .race-wrapper {
             transform: translateY(70%) !important;
         }
 
         .cat-card-container {
-            transform: translateY(15%) !important;
+            transform: translateY(7%) !important;
+        }
+        .contenedor {
+            transform: translateY(310vh) !important;
+        }
+        .footer {
+            transform: translateY(650vh) !important;
+        }
+
+        .footer-wrapper {
+            height: 100vh !important;
+            
+        }
+
+        .flex-cont {
+            padding-left: 0% !important;
+            justify-content: space-around !important;
         }
     }
     
     @media only screen and (max-device-width: 480px) {
+
+        .flex-cont {
+            padding-left: 0% !important;
+            margin-top: 0% !important;
+            justify-content: space-around !important;
+            transform: translateY(-20%);
+        }
+
+        .flex-i:nth-child(1) {
+            width: 60% !important;
+            }
+
+            .flex-i:nth-child(2) {
+            width: 40% !important;
+            }
+    
         html {
             overflow-x: hidden;
         }
@@ -23,7 +56,6 @@
         .banner {
             border-bottom-right-radius: 5%;
             border-bottom-left-radius: 5%;
-            height: 52vh;
         }
         .banner .background-video {
             width: auto;
@@ -153,7 +185,7 @@
         .race-wrapper {
             position: relative;
             z-index: 900 !important;
-            transform: translateY(91%);
+            transform: translateY(70%) !important;
             padding-left: 0% !important;
             padding-bottom: 5rem;
             text-align: center !important;
@@ -198,7 +230,7 @@
             min-width: 100%;
             margin: 0% !important;
             padding: 5% !important;
-            transform: translateY(18%);
+            transform: translateY(6%);
         }
         .cat-title {
             display: block;
@@ -301,7 +333,7 @@
         }
         .cat-card .card-btn button:hover,
         .cat-card .card-btn2 button:hover {
-            color: var(--secondary);
+            color: var(--secondary) !important;
         }
         .cat-card .card-btn button .card-time-btn,
         .cat-card .card-btn2 button .card-time-btn {
@@ -315,7 +347,7 @@
             padding-right: 5%;
         }
         .contenedor {
-            transform: translateY(310vh) !important;
+            transform: translateY(300vh) !important;
         }
         .form-container {
             padding: 0% 0% !important;
@@ -549,12 +581,11 @@
         }
         /* footer */
         .footer {
-            transform: translateY(610vh) !important;
+            transform: translateY(580vh) !important;
         }
         .footer-wrapper {
-            height: 85vh;
-            border-top-left-radius: 5%;
-            border-top-right-radius: 5%;
+            height: 100vh;
+            
         }
         .footer-wrapper .footer-container {
             grid-template-columns: repeat(1, 1fr);
@@ -648,4 +679,38 @@
             transform: translateY(25%);
             transition: 1.6ms;
         }
-    }
+
+        
+        .flex-items-content p {
+            font-size: 32px;
+        }
+
+        .flex-items-content select {
+            font-size: 40px;
+            padding: 2% 5%;
+        }
+
+        .flex-items-content select option {
+            font-size: 32px;
+        }
+
+        .flex-items-content input {
+            font-size: 40px;
+            padding: 2% 5%;;
+        }
+
+        .flex-items-content button {
+            width: 60%;
+            height: calc(100% + 15px);
+            font-size: 44px;
+            margin-top: 5%;
+        }
+
+        .flex-items:nth-child(6) .flex-items-inner:nth-child(1) {
+            margin-top: 10%;
+        }
+        
+        .flex-items:nth-child(6)  .flex-container-content {
+            padding: 0%;
+          }
+}
