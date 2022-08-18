@@ -193,7 +193,7 @@
         font-size: 1rem;
         text-transform: uppercase;
         padding: 0% 0%;
-        max-height: 95vh;
+        max-height: 100vh;
         max-width: 77% !important;
     }
     .form-container header {
@@ -543,7 +543,7 @@
     .flex-items-content p {
         font-weight: 500;
         color: var(--white);
-        font-size: 12px;
+        font-size: 10px;
         text-align: start;
         margin: 0% 1%;
     
@@ -554,17 +554,18 @@
         height: 150%;
         border: 1px solid lightgrey;
         border-radius: 5px;
+        padding: 1% 2% !important;
         padding-left: 10px;
         padding-right: 15px;
         font-weight: 500;
         color: var(--white);
         background: transparent;
-        font-size: 18px;
+        font-size: 18px !important;
     }
     
     .flex-items-content select option {
         font-size: 17px;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 500;
         color: var(--black1);
     }
@@ -575,7 +576,8 @@
         border: 1px solid lightgrey;
         border-radius: 5px;
         padding-left: 10px;
-        font-size: 19px;
+        padding: 1% 2% !important;
+        font-size: 18px !important;
         font-weight: 500;
         color: var(--white);
         background: transparent;
@@ -590,9 +592,9 @@
         border-radius: 5px;
         color: var(--primary);
         cursor: pointer;
-        font-size: 24px;
+        font-size: 20px !important;
         font-weight: 600;
-        letter-spacing: 1px;
+        letter-spacing: 0px !important;
         text-transform: uppercase;
         transition: 0.5s ease-in;
     }
@@ -608,8 +610,7 @@
     }
     
     .flex-items:nth-child(5)  .flex-container-content {
-        padding: 0%;
-        padding-left: 3%;
+        padding: 0% 3% !important;
       }
       .flex-items:nth-child(6) .flex-items-inner:nth-child(1) {
         width: 100%;

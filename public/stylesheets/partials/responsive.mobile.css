@@ -682,28 +682,28 @@
 
         
         .flex-items-content p {
-            font-size: 32px;
+            font-size: 32px !important;
         }
 
         .flex-items-content select {
-            font-size: 40px;
-            padding: 2% 5%;
+            font-size: 40px !important;
+            padding: 2% 5% !important;
         }
 
         .flex-items-content select option {
-            font-size: 32px;
+            font-size: 32px !important;
         }
 
         .flex-items-content input {
-            font-size: 40px;
-            padding: 2% 5%;;
+            font-size: 40px !important;
+            padding: 2% 5% !important;
         }
 
         .flex-items-content button {
-            width: 60%;
-            height: calc(100% + 15px);
-            font-size: 44px;
-            margin-top: 5%;
+            width: 60% !important;
+            height: calc(100% + 15px) !important;
+            font-size: 44px !important;
+            margin-top: 5% !important;
         }
 
         .flex-items:nth-child(6) .flex-items-inner:nth-child(1) {
