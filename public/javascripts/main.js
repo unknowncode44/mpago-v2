@@ -79,16 +79,16 @@ var amount = document.getElementById('transactionAmount') // precio
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            amount.value = '1000';
+            amount.value = Number('1000').toFixed(2).toString();
             break
         case '5k':
-            amount.value = '4700';
+            amount.value = Number('4700').toFixed(2).toString();
             break
         case '10k':
-            amount.value = '5300';
+            amount.value = Number('5300').toFixed(2).toString();
             break
         case '21k':
-            amount.value = '5800';
+            amount.value = Number('5800').toFixed(2).toString();
             break
     }
 }
