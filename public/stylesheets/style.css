@@ -20,3 +20,8 @@ body {
     background: var(--black2) !important;
     max-height: 400vh;
 }
+
+button a {
+    text-decoration: none !important;
+    color: var(--primary);
+}
