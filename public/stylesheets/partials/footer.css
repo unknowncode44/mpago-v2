@@ -2,12 +2,13 @@
 .footer {
     max-height: 60vh;
     width: 100%;
-    position: absolute;
     align-content: end;
     justify-content: end;
     bottom: 0;
     z-index: 1040;
-    transform: translateY(360vh);
+    scroll-behavior: none;
+    position: relative;
+    transform: translateY(700%);
 }
 
 .footer-wrapper {
@@ -51,6 +52,7 @@
     color: var(--primary);
     font-size: 1.2em;
     font-weight: 500;
+    
 }
 
 .sci {
@@ -105,7 +107,7 @@
 }
 
 .c-info {
-    position: relative;
+    position: absolute;
 }
 
 .c-info li {
@@ -143,6 +145,7 @@
 }
 
 .parent {
+    position: relative;
     min-width: 100%;
     padding: 5%;
     padding-left: 15%;
@@ -217,6 +220,7 @@
 .copyright {
     min-width: 100%;
     background-color: var(--primary);
+    position: relative;
 }
 
 .copyright p {

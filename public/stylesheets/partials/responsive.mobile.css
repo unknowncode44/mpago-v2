@@ -1,9 +1,13 @@
     /* #### BREAKPOINTS < MOBILE SCREEN ##### */
 
     @media only screen and (max-device-width: 375px){
+        body {
+            position: relative !important;
+        }
+
+
         .banner {
-            min-height: 7
-            0vh !important;
+            min-height: 1100px !important;
         }
         .race-wrapper {
             transform: translateY(70%) !important;
@@ -14,13 +18,15 @@
         }
         .contenedor {
             transform: translateY(310vh) !important;
+            min-height: 1900px !important;
         }
         .footer {
-            transform: translateY(650vh) !important;
+            transform: translateY(370vh) !important;
+            height: 2500px !important;
         }
 
         .footer-wrapper {
-            height: 100vh !important;
+            height: 2500px !important;
             
         }
 
@@ -51,11 +57,13 @@
             overflow-x: hidden;
         }
         body {
-            min-height: 645vh;
+            
+            position: relative !important;
         }
         .banner {
             border-bottom-right-radius: 5%;
             border-bottom-left-radius: 5%;
+            height: 1200px !important;
         }
         .banner .background-video {
             width: auto;
@@ -120,6 +128,7 @@
             font-size: 48px !important;
         }
         .card-custom {
+            height: 600px;
             background-color: rgba(255, 255, 255, 0.3) !important;
             margin-bottom: 2rem;
         }
@@ -142,7 +151,7 @@
             transition: 0.4s;
         }
         .banner-cards {
-            transform: translateY(5vh);
+            transform: translateY(5%);
         }
         .banner-text-container {
             margin: 0% !important;
@@ -178,14 +187,14 @@
         }
         .card-custom:hover {
             background-color: rgba(255, 255, 255, 0.2) !important;
-            height: 33vh !important;
+            height: 650px !important;
             color: var(--secondary) !important;
         }
         /* ## LA CARRERA */
         .race-wrapper {
             position: relative;
             z-index: 900 !important;
-            transform: translateY(70%) !important;
+            transform: translateY(1600px) !important;
             padding-left: 0% !important;
             padding-bottom: 5rem;
             text-align: center !important;
@@ -220,23 +229,25 @@
             z-index: 980;
         }
         .categories-wrapper {
-            transform: translateY(45vh);
+            transform: translateY(1200px);
             max-width: 100vh !important;
             align-items: start !important;
             justify-content: start !important;
-            min-height: 270vh;
+            min-height: 5000px;
+            
         }
         .cat-card-container {
             min-width: 100%;
             margin: 0% !important;
             padding: 5% !important;
             transform: translateY(6%);
+            min-height: 100% !important;
         }
         .cat-title {
             display: block;
             text-transform: uppercase;
             font-size: 80px;
-            font-weight: 600;
+           font-weight: 600;
             font-style: italic;
             margin-bottom: 5%;
             margin-top: 10%;
@@ -246,7 +257,7 @@
             min-width: 100% !important;
         }
         .cat-card {
-            height: 50vh !important;
+            height: 1000px !important;
         }
         .cat-card:hover {
             transform: scale(1.02);
@@ -330,10 +341,21 @@
             background: var(--secondary) !important;
             border: 2px solid var(--primary);
             opacity: 0.7 !important;
+            
+        }
+
+        .cat-card .card-btn2 button a {
+            font-weight: 600;
+            color: var(--primary) !important;
+            
         }
         .cat-card .card-btn button:hover,
         .cat-card .card-btn2 button:hover {
-            color: var(--secondary) !important;
+            color: var(--primary) !important;
+        }
+
+        .cat-card .card-btn2 button:hover a {
+            color: var(--primary) !important;
         }
         .cat-card .card-btn button .card-time-btn,
         .cat-card .card-btn2 button .card-time-btn {
@@ -347,11 +369,13 @@
             padding-right: 5%;
         }
         .contenedor {
-            transform: translateY(300vh) !important;
+            transform: translateY(6200px) !important;
+            min-height: 1900px !important;
+
         }
         .form-container {
             padding: 0% 0% !important;
-            min-height: 90vh !important;
+            max-height: 1500px !important;
         }
         .form-container .header-bg {
             text-align: center;
@@ -401,7 +425,7 @@
             font-size: 50px;
         }
         .form-outer {
-            min-height: 90vh;
+            min-height: 1700px;
         }
         .form-outer form .page {
             padding: 0% 5% 15% 5% !important;
@@ -581,10 +605,12 @@
         }
         /* footer */
         .footer {
-            transform: translateY(580vh) !important;
+            transform: translateY(6500px) !important;
+            z-index: 0;
+            min-height: 2500px;
         }
         .footer-wrapper {
-            height: 100vh;
+            height: 2500px;
             
         }
         .footer-wrapper .footer-container {
@@ -595,7 +621,7 @@
             margin-bottom: 5%;
         }
         .footer-wrapper .footer-container .sec p {
-            font-size: 1.8em;
+            font-size: 2.2em;
         }
         .sci li a {
             width: 80px;
@@ -610,10 +636,11 @@
             color: var(--primary);
         }
         .quicklinks li a {
-            font-size: 1.8em;
+            font-size: 2.2em;
         }
         .parent {
-            padding-left: 30%;
+            min-width: 100%;
+            margin-top: 2rem;
         }
         .div1 h1 {
             font-family: 'Rubik', sans-serif;
@@ -697,6 +724,16 @@
         .flex-items-content input {
             font-size: 40px !important;
             padding: 2% 5% !important;
+
+        }
+
+        .flex-items-content input[type="date"] {
+            display:block;
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            min-height: 1.6em;
+            font-size: 24px;
+            
         }
 
         .flex-items-content button {

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: contain;
 }
 
 :root {
@@ -25,3 +26,47 @@ button a {
     text-decoration: none !important;
     color: var(--primary);
 }
+
+.brand-flex-container  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: normal;
+    height: 200px;
+  }
+  
+  .brand-flex-items:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-self: auto;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 2rem;
+  }
+
+  .brand-flex-items:nth-child(1) .inner1-flex-items {
+    display: inline-block;    
+    align-items: flex-end;
+    width: 100% !important;
+    font-weight: 500;
+    font-size: 80px;
+    color: var(--primary);
+    text-align: end;
+    font-family: 'Rubik', sans-serif;
+    padding: 1%;
+  }
+  
+  .brand-flex-items:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  .brand-flex-items:nth-child(2) img {
+    height: 100%;
+  }
