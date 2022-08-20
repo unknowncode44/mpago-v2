@@ -153,7 +153,7 @@ router.get('/borrar/:id', (req, res) => {
     let id = req.params.id;
     db.collection('runners').doc(id).delete();
 
-    res.redirect('/') // para dirigirnos nuevamente a '/'    
+    res.redirect('/dashboard') // para dirigirnos nuevamente a '/'    
 })
 
 /*GET RUNNER*/
