@@ -17,7 +17,7 @@ function loadCardForm() {
         },
         cardholderEmail: {
             id: "form-checkout__cardholderEmail",
-            placeholder: "E-mail del Titular",
+            placeholder: "E-mail del Titular de la tarjeta",
         },
         cardNumber: {
             id: "form-checkout__cardNumber",

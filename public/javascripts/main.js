@@ -188,7 +188,7 @@ nextBtnFirst.addEventListener("click", async () => {
                                             partnerName = 'SI'
                                             
                                             discount = Number(rPrice.value)*0.2
-                                            originalPrice = `${(rPrice.value).toString()}.00`;
+                                            originalPrice = `${(rPrice.value).toString()}`;
                                             rPrice.value = (Number(rPrice.value)*0.8).toString();   
                                         }
                                     })
@@ -239,7 +239,7 @@ const params = {
 
 async function readPartnersJson(){
     var list = [] 
-    await fetch('/javascripts/docs/socios2.json').then(
+    await fetch('/javascripts/docs/socios3.json').then(
         response => {
             return response.json();
         }
