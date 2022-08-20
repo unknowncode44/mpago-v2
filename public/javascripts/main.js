@@ -149,10 +149,11 @@ var genre = document.getElementById('genre');
 var birth = document.getElementById('birth');
 
 
-var originalPrice = amount.value;
+
 
 
 nextBtnFirst.addEventListener("click", async () => {
+    var originalPrice = amount.value;
     if(rName.value === ''){
         alert('Campo Nombre es obligatorio')
     }
@@ -171,8 +172,8 @@ nextBtnFirst.addEventListener("click", async () => {
                     if (genre.value == '') {
                         alert('Debes indicar un genero!')
                     } else {
-                        if(rCat.value == 'Kids' && Number(rAge.value) > 12){
-                            alert('Categoria Kids es hasta 12 años')
+                        if(rCat.value == ''){
+                            alert('Debes Elegir una Distancia!')
                         } else {
                             var validEmail = validateEmail(rEmail.value)
                             if (validEmail) {
@@ -186,7 +187,7 @@ nextBtnFirst.addEventListener("click", async () => {
                                     partners.map(partner => {
                                         if(partner.socio == club_id.value) {
                                             partnerName = 'SI'
-                                            
+                                            rPrice.value = originalPrice
                                             discount = Number(rPrice.value)*0.2
                                             originalPrice = `${(rPrice.value).toString()}`;
                                             rPrice.value = (Number(rPrice.value)*0.8).toString();   
@@ -249,52 +250,9 @@ async function readPartnersJson(){
     return list
 }
 
-
-
-// submitBtn.addEventListener('click',
-//     (event) => {
-//         event.preventDefault();
-//         fetch(url, params)
-//     })
-
-
-
-// nextBtnSec.addEventListener("click", () => {
-
-//     let price = '10'
-//     let cat = '21k'
-//     fetch('/pmt', {
-//         method: "get",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({
-//             price: price,
-//             cat: cat
-//         })
-//     });
-//     // slidePage.style.marginLeft = "-200%";
-//     // progressBar[current - 1].classList.add("active");
-//     // bullet[current - 1].classList.add("active");
-//     // progressCheck[current - 1].classList.add("active");
-//     // progressText[current - 1].classList.add("active");
-//     // current += 1;
-// });
-
-// submitBtn.addEventListener("click", function() {
-//     bullet[current - 1].classList.add("active");
-//     progressCheck[current - 1].classList.add("active");
-//     progressText[current - 1].classList.add("active");
-//     current += 1;
-//     // setTimeout(function() {
-//     //     alert("Your Form Successfully Signed up");
-//     //     location.reload();
-//     // }, 800);
-// });
-
 prevBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
-    rPrice.value = originalPrice;
+    document.getElementById('cat').value = ''; 
     document.getElementById('partnerID').value = ''; 
     slidePage.style.marginLeft = "0%";
     bullet[current - 2].classList.remove("active");
@@ -302,18 +260,6 @@ prevBtnSec.addEventListener("click", function(event) {
     progressText[current - 2].classList.remove("active");
     current -= 1;
 });
-// prevBtnThird.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     slidePage.style.marginLeft = "-100%";
-//     bullet[current - 2].classList.remove("active");
-//     progressCheck[current - 2].classList.remove("active");
-//     progressText[current - 2].classList.remove("active");
-//     current -= 1;
-// });
-
-
-
-
 
 // ## Crear Categorias ##
 var categories = ['Kids', '5k', '10k', '21k'] // listamos las categorias
@@ -328,20 +274,6 @@ for (let i = 0; i < categories.length; i++) {
     el.value = e; // los valores seran los mismos que el texto
     select.appendChild(el) // se los anexamos al select
 }
-
-// // ## Crear Tipos de DNI ##
-// var idTypes = ['DNI', 'LE', 'Pasaporte', 'Otro'] // listamos los tipos
-// var idTypeSelect = document.getElementById('form-checkout__identificationType') // identificamos el elemento select del html
-
-// // corremos un bucle para todos los items de la lista y los agregamos al select
-// for (let i = 0; i < idTypes.length; i++) {
-//     const e = idTypes[i];
-//     var el = document.createElement('option'); // creamos un elemento option
-//     el.textContent = e; // el contenido del texto sera el texto del item
-//     el.value = e; // los valores seran los mismos que el texto
-//     idTypeSelect.appendChild(el) // se los anexamos al select
-// }
-
 
 // ## Crear edades ##
 var ages = []; // creamos una lista de edades

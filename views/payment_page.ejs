@@ -38,7 +38,7 @@
                                                                 <b>Distancia: </b><span id="product-description"><%= cat %></span><br>
                                                                 <b>Categoria: </b><span id="product-description"><%= genre %> - <%= ageSelect %></span><br>
                                                                 <b>Corredor: </b>
-                                                                <%= `00${runnerNbr}` %><br>
+                                                                <%= `${strRunnerNbr}` %><br>
                                                                     <b>Nombre: </b>
                                                                     <%= runnerName %><br>
                                                                         <b>Precio:</b> $ <span id="unit-price"><%= _transaction_amount %></span></p>
@@ -164,7 +164,7 @@
                                             </div>
 
                                             <div id="success-response">
-                                                <h1>Pago Exitoso!</h1>
+                                                <h1>Resultado del pago</h1>
                                                 <br/>
                                                 <p><b>ID: </b><span id="payment-id"></span></p>
                                                 <p><b>Status: </b><span id="payment-status"></span></p>

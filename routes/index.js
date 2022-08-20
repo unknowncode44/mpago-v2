@@ -109,7 +109,27 @@ router.post('/add-runner', async function(req, res) {
 
 
 
-    let runnerNbr = (runnersLenght++) + 1;
+    let runnerNbrs = [];
+
+    for (let i = 0; i < runners.length; i++) {
+        const e = runners[i];
+        runnerNbrs.push(Number(e.data.runnerUID));
+    }
+
+    let runnerNbr = Math.max(...runnerNbrs);
+    console.log(runnerNbr);
+    let strRunnerNbr = '';
+    if(runnerNbr > 100){
+        strRunnerNbr = `${runnerNbr+1}`
+    }
+    else {
+        if (runnerNbr > 10){
+            strRunnerNbr = `0${runnerNbr+1}`
+        }
+        else {
+            strRunnerNbr = `00${runnerNbr+1}`
+        }
+    }
 
     let payment_data = {
         amount: transactionAmount,
@@ -123,7 +143,7 @@ router.post('/add-runner', async function(req, res) {
         catValue: cat,
         runnerAge: ageSelect,
         partnerID: partner_id,
-        runnerUID: `0${runnerNbr}`,
+        runnerUID: strRunnerNbr,
         runnerID: runnerID,
         runnerGenre: genre,
         runnerBirthDate: birth,
@@ -141,7 +161,7 @@ router.post('/add-runner', async function(req, res) {
     await db.collection('runners').add(newRunner).then((doc) => {
         runnerDBI = doc.id
     }).then(() => {
-        res.render('payment_page', { runnerNbr, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
+        res.render('payment_page', { strRunnerNbr, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
     })
 
     
@@ -153,7 +173,7 @@ router.get('/borrar/:id', (req, res) => {
     let id = req.params.id;
     db.collection('runners').doc(id).delete();
 
-    res.redirect(req.originalUrl) // para dirigirnos nuevamente a '/'    
+    res.redirect('/dashboard') // para dirigirnos nuevamente a '/'    
 })
 
 /*GET RUNNER*/
