@@ -123,11 +123,12 @@ router.post('/add-runner', async function(req, res) {
         catValue: cat,
         runnerAge: ageSelect,
         partnerID: partner_id,
-        runnerUID: `00${runnerNbr}`,
+        runnerUID: `0${runnerNbr}`,
         runnerID: runnerID,
         runnerGenre: genre,
         runnerBirthDate: birth,
         payment_data: payment_data,
+        rmail: rEmail,
 
     }
 
@@ -153,7 +154,7 @@ router.get('/borrar/:id', (req, res) => {
     let id = req.params.id;
     db.collection('runners').doc(id).delete();
 
-    res.redirect('/dashboard') // para dirigirnos nuevamente a '/'    
+    res.redirect(req.originalUrl) // para dirigirnos nuevamente a '/'    
 })
 
 /*GET RUNNER*/

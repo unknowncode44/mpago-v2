@@ -31,6 +31,19 @@
         .btn a {
             color: white;
         }
+
+        .table {
+            overflow-x: auto;
+        }
+
+        .table thead th {
+            font-size: 12px;
+        }
+
+        .table tbody td {
+            font-size: 12px;
+        }
+        
     </style>
 
 
@@ -43,6 +56,7 @@
             <th scope="col">Fecha de nacimiento</th>
             <th scope="col">Nombre</th>
             <th scope="col">DNI</th>
+            <th scope="col"># Socio</th>
             <th scope="col">email</th>
             <th scope="col">Pago</th>
             <th scope="col">Fondos</th>
@@ -72,6 +86,9 @@
                         </td>
                         <td>
                             <%= item.data.runnerID %>
+                        </td>
+                        <td>
+                            <%= item.data.partnerID %>
                         </td>
                         <td>
                             <%= item.data.email %>
@@ -122,6 +139,9 @@
                             </td>
                             <td>
                                 <%= item.data.runnerID %>
+                            </td>
+                            <td>
+                                <%= item.data.partnerID %>
                             </td>
                             <td>
                                 <%= item.data.email %>
