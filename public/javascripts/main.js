@@ -176,26 +176,25 @@ nextBtnFirst.addEventListener("click", async () => {
                         } else {
                             var validEmail = validateEmail(rEmail.value)
                             if (validEmail) {
-                                var partnerName = '';
+                                var partnerName = 'No';
                                 var discount = 0;
                                 
                                 var partners = await readPartnersJson()
+
+
                                 
                                     partners.map(partner => {
                                         if(partner.socio == club_id.value) {
                                             partnerName = 'SI'
-                                            document.getElementById('partnerID').value = partnerName.toString();
+                                            
                                             discount = Number(rPrice.value)*0.2
                                             originalPrice = `${(rPrice.value).toString()}.00`;
-                                            rPrice.value = (Number(rPrice.value)*0.8).toString();
-                                            
+                                            rPrice.value = (Number(rPrice.value)*0.8).toString();   
                                         }
-                                        else {
-                                            document.getElementById('partnerID').value = 'NO'; 
-                                        }
-                                        
                                     })
+
                                 document.getElementById('cat').value = rCat.value;
+                                document.getElementById('partnerID').value = partnerName.toString();
                                 document.getElementById('runnerName').value = rName.value;
                                 document.getElementById('runnerID').value = rId.value;
                                 document.getElementById('price').value = originalPrice;
