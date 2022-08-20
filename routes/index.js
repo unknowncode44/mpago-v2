@@ -128,7 +128,6 @@ router.post('/add-runner', async function(req, res) {
         runnerGenre: genre,
         runnerBirthDate: birth,
         payment_data: payment_data,
-        rmail: rEmail,
 
     }
 
