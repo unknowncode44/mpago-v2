@@ -277,7 +277,7 @@ for (let i = 0; i < categories.length; i++) {
 
 // ## Crear edades ##
 var ages = []; // creamos una lista de edades
-var ageCounter = 7;
+var ageCounter = 4;
 while (ageCounter <= 90) {
     ages.push(ageCounter.toString())
     ageCounter++
@@ -294,104 +294,3 @@ for (let i = 0; i < ages.length; i++) {
     agesSelect.appendChild(el) // se los anexamos al select
 }
 
-// const cat = document.getElementById('categoriesSelect') // categoria
-// const catValue = cat.value // valor
-// var amount = document.getElementById('transactionAmount') // precio
-
-
-
-
-
-// async function getAmount(_cat) {
-//     switch (_cat) {
-//         case 'Kids':
-//             amount.value = '10';
-//             break
-//         case '5k':
-//             amount.value = '12';
-//             break
-//         case '10k':
-//             amount.value = '15';
-//             break
-//         case '21k':
-//             amount.value = '17';
-//             break
-//     }
-// }
-
-// cat.addEventListener('change', () => {
-//     getAmount(cat.value)
-// })
-
-
-// function fillRunnerData() {
-//     let rName = document.getElementById('r-name').value;
-//     let rEmail = document.getElementById('r-email').value;
-//     let rId = document.getElementById('r-id').value;
-//     let rCat = document.getElementById('categoriesSelect').value;
-//     let rUID = document.getElementById('runnerUID').value;
-//     let rPrice = document.getElementById('transactionAmount').value;
-//     let rAge = document.getElementById('ageSelect').value;
-//     let club_id = document.getElementById('partner-id').value;
-
-//     console.log(`##### ${rName}`);
-
-//     document.getElementsByName('cat').value = rCat;
-//     document.getElementsByName('runnerName').value = rName;
-//     document.getElementsByName('runnerID').value = rCat;
-//     document.getElementsByName('price').value = rPrice;
-//     document.getElementsByName('platform_cost').value = (Number(rPrice) * 0.01).toString();
-//     document.getElementsByName('total_cost').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
-//     document.getElementsByName('subtotal').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-// ## Crear meses para CC
-// var months = [];
-// var monthCounter = 1;
-// while (monthCounter <= 12) {
-//     if (monthCounter > 9) {
-//         months.push(monthCounter.toString())
-//     } else {
-//         let mstr = `0${monthCounter}`;
-//         months.push(mstr)
-//     }
-//     monthCounter++
-// }
-// var ccMonthSelect = document.getElementById('form-checkout__cardExpirationMonth')
-// corremos un bucle para todos los items de la lista y los agregamos al select
-// for (let i = 0; i < months.length; i++) {
-//     const e = months[i];
-//     var el = document.createElement('option'); // creamos un elemento option
-//     el.textContent = e; // el contenido del texto sera el texto del item
-//     el.value = e; // los valores seran los mismos que el texto
-//     ccMonthSelect.appendChild(el) // se los anexamos al select
-// }
-
-// ## Crear years para CC
-// var ccYears = [];
-// var yearCounter = 22;
-// while (yearCounter <= 42) {
-//     ccYears.push(yearCounter.toString())
-//     yearCounter++
-// }
-// var ccYearSelect = document.getElementById('form-checkout__cardExpirationYear')
-//     // corremos un bucle para todos los items de la lista y los agregamos al select
-// for (let i = 0; i < ccYears.length; i++) {
-//     const e = ccYears[i];
-//     var el = document.createElement('option'); // creamos un elemento option
-//     el.textContent = e; // el contenido del texto sera el texto del item
-//     el.value = e; // los valores seran los mismos que el texto
-//     ccYearSelect.appendChild(el) // se los anexamos al select
-// }
