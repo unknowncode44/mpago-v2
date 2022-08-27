@@ -71,7 +71,35 @@ function validateEmail(mail) {
 const cat = document.getElementById('categoriesSelect') // categoria
 const catValue = cat.value // valor
 var amount = document.getElementById('transactionAmount') // precio
+var amountP = document.getElementById('transactionP')
 
+
+const openEls = document.querySelectorAll("[data-open]");
+var isVisible = "is-visible";
+ 
+for(const el of openEls) {
+  el.addEventListener("click", function() {
+    const modalId = this.dataset.open;
+    document.getElementById(modalId).classList.add(isVisible);
+  });
+}
+
+const closeEls = document.querySelectorAll("[data-close]");
+
+ 
+for (const el of closeEls) {
+  el.addEventListener("click", function() {
+    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+  });
+}
+
+
+ 
+document.addEventListener("click", e => {
+  if (e.target == document.querySelector(".modal.is-visible")) {
+    document.querySelector(".modal.is-visible").classList.remove(isVisible);
+  }
+});
 
 
 
@@ -80,15 +108,19 @@ async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
             amount.value = '1000';
+            amountP.textContent = '1000';
             break
         case '5k':
             amount.value = '4700';
+            amountP.textContent = '4700';
             break
         case '10k':
             amount.value = '5300';
+            amountP.textContent = '5300';
             break
         case '21k':
             amount.value = '5800';
+            amountP.textContent = '5800';
             break
     }
 }
@@ -140,6 +172,7 @@ var current = 1;
 var rName = document.getElementById('r-name');
 var rEmail = document.getElementById('r-email')
 var rId = document.getElementById('r-id');
+var tsize = document.getElementById('t-size');
 var rCat = document.getElementById('categoriesSelect');
 var rUID = document.getElementById('runnerUID');
 var rPrice = document.getElementById('transactionAmount');
@@ -197,7 +230,8 @@ nextBtnFirst.addEventListener("click", async () => {
                                 document.getElementById('cat').value = rCat.value;
                                 document.getElementById('partnerID').value = partnerName.toString();
                                 document.getElementById('runnerName').value = rName.value;
-                                document.getElementById('runnerID').value = rId.value;
+                                document.getElementById('runnerID').value = rId.value.toUpperCase();
+                                document.getElementById('tsize').value = tsize.value;
                                 document.getElementById('price').value = originalPrice;
                                 document.getElementById('platform_cost').value = `-${(discount.toFixed(2)).toString()}`;
                                 document.getElementById('total_cost').value = ` ${(Number(rPrice.value).toFixed(2)).toString()}`;
@@ -252,7 +286,7 @@ async function readPartnersJson(){
 
 prevBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
-    document.getElementById('cat').value = ''; 
+    rCat.value = ''; 
     document.getElementById('partnerID').value = ''; 
     slidePage.style.marginLeft = "0%";
     bullet[current - 2].classList.remove("active");

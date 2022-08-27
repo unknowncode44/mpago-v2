@@ -712,6 +712,15 @@
             font-size: 32px !important;
         }
 
+        .price p {
+            font-size: 48px !important;
+        }
+
+        .see-sizes button {
+            min-width: 100% !important;
+            font-size: 22px !important;
+        }
+
         .flex-items-content select {
             font-size: 40px !important;
             padding: 2% 5% !important;
@@ -750,4 +759,53 @@
         .flex-items:nth-child(6)  .flex-container-content {
             padding: 0%;
           }
+
+          .see-sizes button {
+            justify-items: flex-end!important;
+            font-size: 32px !important;
+            min-width: fit-content !important;
+            width: fit-content !important;
+            margin-top: 0px !important;
+            transition: 100ms;
+        }
+
+        .flex-items:nth-child(4) .flex-container-inner .flex-items-inner:nth-child(2) .flex-container-content input {
+            padding-top: 2.5% !important;
+            padding-bottom: 2.5% !important;
+          }
+
+          .flex-items:nth-child(3) .flex-container-inner .flex-items-inner:nth-child(2) .flex-container-content input {
+            padding-top: 2.5% !important;
+            padding-bottom: 2.5% !important;
+          }
+        
+        .see-sizes button:hover {
+            font-size: 32px !important;
+            border: 1px solid var(--secondary);
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .modal-dialog {
+            min-width: 90%;
+        }
+
+        .modal-dialog .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0% 15% 0% 15% !important;
+
+        }
+
+        .modal-dialog .modal-header p,
+        .modal-dialog .modal-header button {
+            font-size: 32px;
+
+        }
+
+        .modal-dialog .modal-content2 {
+            padding: 0% 0% 0% 0%;
+
+        }
 }

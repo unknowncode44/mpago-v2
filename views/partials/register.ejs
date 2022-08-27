@@ -63,8 +63,9 @@
                                                                     <div class="flex-items-content">
                                                                         <p>Precio</p>
                                                                     </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="transactionAmount" name="transactionAmount" style="color: var(--secondary)" value="1000">
+                                                                    <div class="flex-items-content price">
+                                                                        <input id="transactionAmount" name="transactionAmount" type="hidden" style="color: var(--secondary)" value="1000">
+                                                                        <p id="transactionP">1000</p>
                                                                     </div>
                                                                  </div>
                                                             </div>
@@ -161,8 +162,40 @@
                                                                     </div>
                                                                  </div>
                                                             </div>
-                                                        </div>  
+                                                            <div class="flex-items-inner">
+                                                                <div class="flex-container-content">
+                                                                    <div class="flex-items-content">
+                                                                        <p>Camiseta</p>
+                                                                    </div>
+                                                                    <div class="flex-items-content">
+                                                                        <select name="tShirtSize" id="t-size" class="t-size" value="">
+                                                                            <option value="S">Talle S</option>
+                                                                            <option value="M">Talle M</option>
+                                                                            <option value="L">Talle L</option>
+                                                                            <option value="XL">Talle XL</option>
+                                                                            <option value="XXL">Talle XXL</option>
+                                                                            <option value="XXXL">Talle XXXL</option>
+                                                                            <option value="XXXXL">Talle XXXXL</option>
+                                                                        </select>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                   
+                                                                 </div>
+                                                                 
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="flex-items-content see-sizes">
+                                                            <button type="button" class="open-modal" data-open="modal1">Ver Medidas</button>
+                                                        </div>
+                                                        
                                                     </div>
+
+                                                    
+
+
 
                                                     <div class="flex-items">
                                                         <div class="flex-container-inner">
@@ -192,6 +225,8 @@
                                                     <div class="col-6 text-start"><input type="text" id="runnerID" name="runnerID" disabled></div>
                                                     <div class="col-6 text-end">Socio</div>
                                                     <div class="col-6 text-start"><input type="text" id="partnerID" name="partnerID" disabled></div>
+                                                    <div class="col-6 text-end">Talle</div>
+                                                    <div class="col-6 text-start"><input type="text" id="tsize" name="tsize" disabled></div>
                                                     <div class="col-6 text-end">Precio $</div>
                                                     <div class="col-6 text-start"><input type="text" id="price" name="price" disabled></div>
                                                     <div class="col-6 text-end">Desc. socio $</div>
@@ -245,5 +280,113 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- modal -->
+
+    <style>
+                .modal { 
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: var(--black);
+            cursor: pointer;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.16s ease-in;
+        }
+
+        .modal-dialog {
+            position: relative;
+            min-width: 800px;
+            max-height: 80vh;
+            border-radius: 5px;
+            background: var(--primary);
+            overflow: auto;
+            cursor: default;
+            overflow: hidden;
+        }
+        
+        .modal-header,
+        .modal-footer {
+            background: var(--lightgray);
+        }
+        
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0% 2% 0% 2% !important;
+
+        }
+
+        .modal-header p {
+            margin-top: 0.25rem;
+            font-size: 22px;
+            font-weight: 500;
+            font-style: italic;
+            color:var(--secondary);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            
+        }
+
+        .modal-content2 {
+            display: flex;
+            background-color: var(--primary);
+            align-items: center;
+            justify-content: center;
+            padding: 0.5% 5% 0.5% 5%;
+        }
+
+        .modal-dialog .modal-content2 img {
+            max-width: 100%;
+            border-radius: 3%;
+            
+
+        }
+        
+        .modal-header .close-modal {
+            font-size: 1.5rem;
+            border: none;
+            background-color: transparent;
+            color:var(--secondary);
+        }
+        
+        .modal p + p {
+            margin-top: 1rem;
+        }
+
+        .modal {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.16s ease-in;
+        }
+            
+        .modal.is-visible {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+    
+    
+    <div class="modal" id="modal1" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                <p>Medidas</p>
+                <button class="close-modal" aria-label="modal-close" data-close>
+                    ✕  
+                    </button>
+            </header>
+            <section class="modal-content2">
+                <img src="/images/talles.jpeg" alt="">
+            </section>
+        </div>
     </div>
 </section>

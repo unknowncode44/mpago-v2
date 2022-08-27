@@ -56,6 +56,7 @@
             <th scope="col">Fecha de nacimiento</th>
             <th scope="col">Nombre</th>
             <th scope="col">DNI</th>
+            <th scope="col">Talle</th>
             <th scope="col"># Socio</th>
             <th scope="col">email</th>
             <th scope="col">Pago</th>
@@ -86,6 +87,9 @@
                         </td>
                         <td>
                             <%= item.data.runnerID %>
+                        </td>
+                        <td>
+                            <%= item.data.tshirtSize %>
                         </td>
                         <td>
                             <%= item.data.partnerID %>
@@ -139,6 +143,9 @@
                             </td>
                             <td>
                                 <%= item.data.runnerID %>
+                            </td>
+                            <td>
+                                <%= item.data.tshirtSize %>
                             </td>
                             <td>
                                 <%= item.data.partnerID %>

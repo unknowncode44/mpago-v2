@@ -100,7 +100,7 @@ function validateError(error) {
 router.post('/add-runner', async function(req, res) {
     console.log(req.body);
     const { body } = req;
-    const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth } = body;
+    const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth, tShirtSize } = body;
 
     const request = await db.collection('runners').get();
     const { docs } = request;
@@ -146,6 +146,7 @@ router.post('/add-runner', async function(req, res) {
         runnerUID: strRunnerNbr,
         runnerID: runnerID,
         runnerGenre: genre,
+        tshirtSize: tShirtSize,
         runnerBirthDate: birth,
         payment_data: payment_data,
 
