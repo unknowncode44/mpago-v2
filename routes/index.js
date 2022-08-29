@@ -2,7 +2,6 @@ var express = require('express');
 const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
-var log_file = fs.createWriteStream('./logs/debug.log', {flags : 'w'});
 var mercadopago = require('mercadopago');
 mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
 
