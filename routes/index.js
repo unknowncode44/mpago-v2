@@ -5,6 +5,21 @@ var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
 mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
 
+var fs = require('fs');
+var util = require('util');
+
+var log_file_err=fs.createWriteStream('./logs/error.log',{flags:'a'}); 
+
+process.on('uncaughtException', function(err) {
+    console.log('Caught exception: ' + err);
+    log_file_err.write(util.format('Caught exception: '+err) + '\n');
+});
+
+process.on('ReferenceError', function(err) {
+    console.log('Reference Error: ' + err);
+    log_file_err.write(util.format('Caught exception: '+err) + '\n');
+});
+
 var id = ''
 
 /* GET home page. */
