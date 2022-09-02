@@ -4,10 +4,6 @@ require('dotenv').config()
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-<<<<<<< HEAD
-=======
-mercadopago.configurations.setAccessToken("");
->>>>>>> 160d7763fbc82357fc0e7c0bec4cc6e710a0ccc8
 var nodemailer = require("nodemailer")
 
 mercadopago.configurations.setAccessToken(process.env.TOKEN);
@@ -38,13 +34,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-<<<<<<< HEAD
         user: process.env.EMAIL,
         pass: process.env.PASSWORD,
-=======
-        user: '',
-        pass: ''
->>>>>>> 160d7763fbc82357fc0e7c0bec4cc6e710a0ccc8
     }
 })
 
