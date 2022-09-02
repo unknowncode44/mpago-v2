@@ -62,6 +62,11 @@ router.get('/pmt', (req, res) => {
     res.render('payment_page');
 })
 
+router.get('/test', (req, res) => {
+    res.render('mail')
+})
+
+
 router.get('/distances', (req, res, next) => {
     res.render('distances');
 })

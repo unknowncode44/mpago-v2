@@ -41,23 +41,6 @@ window.addEventListener("scroll", function() {
     menu.classList.remove('m-active')
 });
 
-// ## USAR DATOS DE CORREDOR EN DATOS DE PAGO
-// var rName = document.getElementById('r-name');
-// var rId = document.getElementById('r-id');
-// var rEmail = document.getElementById('r-email');
-
-
-// var sameInfoBtn = document.getElementById('same-info');
-// var cHolderName = document.getElementById('form-checkout__cardholderName');
-// var cHolderIdNumber = document.getElementById('form-checkout__identificationNumber');
-// var cHolderEmail = document.getElementById('form-checkout__cardholderEmail');
-
-// sameInfoBtn.addEventListener("click", function(event) {
-//     event.preventDefault();
-//     cHolderName.value = rName.value
-//     cHolderIdNumber.value = rId.value
-//     cHolderEmail.value = rEmail.value
-// })
 
 // ## VALIDAR EMAIL
 function validateEmail(mail) {
@@ -73,6 +56,7 @@ const catValue = cat.value // valor
 var amount = document.getElementById('transactionAmount') // precio
 var amountP = document.getElementById('transactionP')
 
+// MODAL TALLES
 
 const openEls = document.querySelectorAll("[data-open]");
 var isVisible = "is-visible";
@@ -94,33 +78,34 @@ for (const el of closeEls) {
 }
 
 
- 
 document.addEventListener("click", e => {
   if (e.target == document.querySelector(".modal.is-visible")) {
     document.querySelector(".modal.is-visible").classList.remove(isVisible);
   }
 });
 
+//* MODAL TALLES *//
 
 
+// GET PRICES
 
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            amount.value = '10';
-            amountP.textContent = '10';
+            amount.value = '1000';
+            amountP.textContent = '1000';
             break
         case '5k':
-            amount.value = '10';
-            amountP.textContent = '10';
+            amount.value = '4700';
+            amountP.textContent = '4700';
             break
         case '10k':
-            amount.value = '10';
-            amountP.textContent = '10';
+            amount.value = '5300';
+            amountP.textContent = '5300';
             break
         case '21k':
-            amount.value = '10';
-            amountP.textContent = '10';
+            amount.value = '5800';
+            amountP.textContent = '5800';
             break
     }
 }
@@ -129,29 +114,7 @@ cat.addEventListener('change', () => {
     getAmount(cat.value)
 })
 
-
-// function fillRunnerData() {
-//     // let rName = document.getElementById('r-name').value;
-//     let rEmail = document.getElementById('r-email').value;
-//     let rId = document.getElementById('r-id').value;
-//     let rCat = document.getElementById('categoriesSelect').value;
-//     let rUID = document.getElementById('runnerUID').value;
-//     let rPrice = document.getElementById('transactionAmount').value;
-//     let rAge = document.getElementById('ageSelect').value;
-//     let club_id = document.getElementById('partner-id').value;
-
-//     // console.log(`##### ${rName}`);
-
-//     document.getElementsByName('cat').value = rCat;
-//     document.getElementsByName('runnerName').value = rName;
-//     document.getElementsByName('runnerID').value = rCat;
-//     document.getElementsByName('price').value = rPrice;
-//     document.getElementsByName('platform_cost').value = (Number(rPrice) * 0.01).toString();
-//     document.getElementsByName('total_cost').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
-//     document.getElementsByName('subtotal').value = ((Number(rPrice) * 0.01) + Number(rPrice)).toString();
-
-// }
-
+//* GET PRICES */
 
 // ## slide page form
 const slidePage = document.querySelector(".slide-page");
@@ -296,7 +259,7 @@ prevBtnSec.addEventListener("click", function(event) {
 });
 
 // ## Crear Categorias ##
-var categories = ['Kids', '5k', '10k', '21k'] // listamos las categorias
+var categories = ['', 'Kids', '5k', '10k', '21k'] // listamos las categorias
 var select = document.getElementById('categoriesSelect') // identificamos el elemento select del html
 
 
