@@ -3,7 +3,7 @@ const { app } = require('firebase-admin');
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
+mercadopago.configurations.setAccessToken("");
 var nodemailer = require("nodemailer")
 
 
@@ -33,8 +33,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'marimenucorun@gmail.com',
-        pass: 'pvtxwddilfpwmfaf'
+        user: '',
+        pass: ''
     }
 })
 
