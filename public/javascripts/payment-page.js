@@ -5,6 +5,8 @@ const mercadopago = new MercadoPago(mercadoPagoPublicKey);
 function loadCardForm() {
     const productCost = document.getElementById('amount').value;
     const runnerDBI = document.getElementById('runnerDBI').value;
+    const runnerEmail = document.getElementById('runnerEmail2').value;
+    const strRunnerNbr = document.getElementById('strRunnerNbr').value;
     const productDescription = document.getElementById('product-description').innerText;
     const payButton = document.getElementById("form-checkout__submit");
     const validationErrorMessages = document.getElementById('validation-error-messages');
@@ -88,6 +90,8 @@ function loadCardForm() {
                             "Content-Type": "application/json",
                         },
                         body: JSON.stringify({
+                            runnerEmail,
+                            strRunnerNbr,
                             runnerDBI,
                             token,
                             issuerId,

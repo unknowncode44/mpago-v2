@@ -4,6 +4,10 @@ var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
 mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
+var nodemailer = require("nodemailer")
+
+
+//guardando logs
 
 var fs = require('fs');
 var util = require('util');
@@ -19,6 +23,27 @@ process.on('ReferenceError', function(err) {
     console.log('Reference Error: ' + err);
     log_file_err.write(util.format('Caught exception: '+err) + '\n');
 });
+
+// fin guardando logs
+
+// mailer
+
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+        user: 'marimenucorun@gmail.com',
+        pass: 'pvtxwddilfpwmfaf'
+    }
+})
+
+transporter.verify().then(() => {
+    console.log("Mailer Online");
+})
+
+
+// fin mailer
 
 var id = ''
 
@@ -48,6 +73,8 @@ router.post("/process_payment", (req, res) => {
     const { body } = req;
     const { payer } = body;
     const runnerDBI = body.runnerDBI;
+    const runnerEmail2 = body.runnerEmail;
+    const runnerNumber = body.strRunnerNbr;
     const paymentData = {
         transaction_amount: Number(body.transactionAmount),
         token: body.token,
@@ -73,7 +100,24 @@ router.post("/process_payment", (req, res) => {
                 status_detail: data.status_detail,
                 id: data.id
             }
-            db.collection('runners').doc(runnerDBI).update(paymentData)
+            db.collection('runners').doc(runnerDBI).update(paymentData).then(
+                async function() {
+                    try {
+                        await transporter.sendMail({
+                            from: '"Mari Menuco Run" <marimenucorun@gmail.com>',
+                            to: runnerEmail2,
+                            subject: "Confirmacion de Inscripcion",
+                            text: 'Confirmación',
+                            html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
+                            
+                        })
+                    } catch (error) {
+                        
+                    }
+                }
+            )
+
+
            
             res.status(201).json({
                 detail: data.status_detail,
@@ -177,7 +221,7 @@ router.post('/add-runner', async function(req, res) {
     await db.collection('runners').add(newRunner).then((doc) => {
         runnerDBI = doc.id
     }).then(() => {
-        res.render('payment_page', { strRunnerNbr, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
+        res.render('payment_page', { strRunnerNbr, runnerEmail, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
     })
 
     

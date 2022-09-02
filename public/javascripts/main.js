@@ -107,20 +107,20 @@ document.addEventListener("click", e => {
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            amount.value = '1000';
-            amountP.textContent = '1000';
+            amount.value = '10';
+            amountP.textContent = '10';
             break
         case '5k':
-            amount.value = '4700';
-            amountP.textContent = '4700';
+            amount.value = '10';
+            amountP.textContent = '10';
             break
         case '10k':
-            amount.value = '5300';
-            amountP.textContent = '5300';
+            amount.value = '10';
+            amountP.textContent = '10';
             break
         case '21k':
-            amount.value = '5800';
-            amountP.textContent = '5800';
+            amount.value = '10';
+            amountP.textContent = '10';
             break
     }
 }
@@ -192,68 +192,68 @@ nextBtnFirst.addEventListener("click", async () => {
     }
     else {
         if(club_id.value === ''){
-            alert('Campo Numero de Socio es obligatorio')
+            club_id.value = 0;
+        }
+        
+        if(rEmail.value === ''){
+            alert('Campo Email es obligatorio')
         }
         else {
-            if(rEmail.value === ''){
-                alert('Campo Email es obligatorio')
-            }
-            else {
-                if (birth.value == '') {
-                    alert('Fecha de nacimiento es obligatoria!')
+            if (birth.value == '') {
+                alert('Fecha de nacimiento es obligatoria!')
+            } else {
+                if (genre.value == '') {
+                    alert('Debes indicar un genero!')
                 } else {
-                    if (genre.value == '') {
-                        alert('Debes indicar un genero!')
+                    if(rCat.value == ''){
+                        alert('Debes Elegir una Distancia!')
                     } else {
-                        if(rCat.value == ''){
-                            alert('Debes Elegir una Distancia!')
+                        var validEmail = validateEmail(rEmail.value)
+                        if (validEmail) {
+                            var partnerName = 'No';
+                            var discount = 0;
+                            
+                            var partners = await readPartnersJson()
+
+
+                            
+                                partners.map(partner => {
+                                    if(partner.socio == club_id.value) {
+                                        partnerName = 'SI'
+                                        rPrice.value = originalPrice
+                                        discount = Number(rPrice.value)*0.1
+                                        originalPrice = `${(rPrice.value).toString()}`;
+                                        rPrice.value = (Number(rPrice.value)*0.9).toString();   
+                                    }
+                                })
+
+                            document.getElementById('cat').value = rCat.value;
+                            document.getElementById('partnerID').value = partnerName.toString();
+                            document.getElementById('runnerName').value = rName.value;
+                            document.getElementById('runnerID').value = rId.value.toUpperCase();
+                            document.getElementById('tsize').value = tsize.value;
+                            document.getElementById('price').value = originalPrice;
+                            document.getElementById('platform_cost').value = `-${(discount.toFixed(2)).toString()}`;
+                            document.getElementById('total_cost').value = ` ${(Number(rPrice.value).toFixed(2)).toString()}`;
+                
+                
+                
+                            slidePage.style.marginLeft = "-100%";
+                            progressBar[current - 1].classList.add("active");
+                            bullet[current - 1].classList.add("active");
+                            progressCheck[current - 1].classList.add("active");
+                            progressText[current - 1].classList.add("active");
+                            current += 1;
+                
                         } else {
-                            var validEmail = validateEmail(rEmail.value)
-                            if (validEmail) {
-                                var partnerName = 'No';
-                                var discount = 0;
-                                
-                                var partners = await readPartnersJson()
-
-
-                                
-                                    partners.map(partner => {
-                                        if(partner.socio == club_id.value) {
-                                            partnerName = 'SI'
-                                            rPrice.value = originalPrice
-                                            discount = Number(rPrice.value)*0.1
-                                            originalPrice = `${(rPrice.value).toString()}`;
-                                            rPrice.value = (Number(rPrice.value)*0.9).toString();   
-                                        }
-                                    })
-
-                                document.getElementById('cat').value = rCat.value;
-                                document.getElementById('partnerID').value = partnerName.toString();
-                                document.getElementById('runnerName').value = rName.value;
-                                document.getElementById('runnerID').value = rId.value.toUpperCase();
-                                document.getElementById('tsize').value = tsize.value;
-                                document.getElementById('price').value = originalPrice;
-                                document.getElementById('platform_cost').value = `-${(discount.toFixed(2)).toString()}`;
-                                document.getElementById('total_cost').value = ` ${(Number(rPrice.value).toFixed(2)).toString()}`;
-                    
-                    
-                    
-                                slidePage.style.marginLeft = "-100%";
-                                progressBar[current - 1].classList.add("active");
-                                bullet[current - 1].classList.add("active");
-                                progressCheck[current - 1].classList.add("active");
-                                progressText[current - 1].classList.add("active");
-                                current += 1;
-                    
-                            } else {
-                                alert('El email es invalido!!')
-                            }
+                            alert('El email es invalido!!')
                         }
                     }
                 }
-            } 
+            }
+        } 
             
-        }
+        
     }
 });
 const url = '/add-runner'
