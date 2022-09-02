@@ -1,11 +1,12 @@
 var express = require('express');
 const { app } = require('firebase-admin');
+require('dotenv').config()
 var router = express.Router();
 var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
-mercadopago.configurations.setAccessToken("APP_USR-5349434947659837-081014-8adaee02e62be639b6ff0e2f14318b93-178177205");
 var nodemailer = require("nodemailer")
 
+mercadopago.configurations.setAccessToken(process.env.TOKEN);
 
 //guardando logs
 
@@ -28,19 +29,19 @@ process.on('ReferenceError', function(err) {
 
 // mailer
 
-// const transporter = nodemailer.createTransport({
-//     host: "smtp.gmail.com",
-//     port: 465,
-//     secure: true,
-//     auth: {
-//         user: 'mail aqui',
-//         pass: 'password aqui'
-//     }
-// })
+const transporter = nodemailer.createTransport({
+    host: process.env.SMTP,
+    port: 465,
+    secure: true,
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+    }
+})
 
-// transporter.verify().then(() => {
-//     console.log("Mailer Online");
-// })
+transporter.verify().then(() => {
+    console.log("Mailer Online");
+})
 
 
 // fin mailer
@@ -106,22 +107,22 @@ router.post("/process_payment", (req, res) => {
                 id: data.id
             }
             db.collection('runners').doc(runnerDBI).update(paymentData)
-            // .then(
-            //     async function() {
-            //         try {
-            //             await transporter.sendMail({
-            //                 from: '"Mari Menuco Run" <marimenucorun@gmail.com>',
-            //                 to: runnerEmail2,
-            //                 subject: "Confirmacion de Inscripcion",
-            //                 text: 'Confirmación',
-            //                 html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
+            .then(
+                async function() {
+                    try {
+                        await transporter.sendMail({
+                            from: `"Mari Menuco Run" <${process.env.EMAIL}>`,
+                            to: runnerEmail2,
+                            subject: "Confirmacion de Inscripcion",
+                            text: 'Confirmación',
+                            html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
                             
-            //             })
-            //         } catch (error) {
+                        })
+                    } catch (error) {
                         
-            //         }
-            //     }
-            // )
+                    }
+                }
+            )
 
 
            
