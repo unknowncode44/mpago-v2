@@ -28,19 +28,19 @@ process.on('ReferenceError', function(err) {
 
 // mailer
 
-const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-        user: 'marimenucorun@gmail.com',
-        pass: 'pvtxwddilfpwmfaf'
-    }
-})
+// const transporter = nodemailer.createTransport({
+//     host: "smtp.gmail.com",
+//     port: 465,
+//     secure: true,
+//     auth: {
+//         user: 'mail aqui',
+//         pass: 'password aqui'
+//     }
+// })
 
-transporter.verify().then(() => {
-    console.log("Mailer Online");
-})
+// transporter.verify().then(() => {
+//     console.log("Mailer Online");
+// })
 
 
 // fin mailer
@@ -105,22 +105,23 @@ router.post("/process_payment", (req, res) => {
                 status_detail: data.status_detail,
                 id: data.id
             }
-            db.collection('runners').doc(runnerDBI).update(paymentData).then(
-                async function() {
-                    try {
-                        await transporter.sendMail({
-                            from: '"Mari Menuco Run" <marimenucorun@gmail.com>',
-                            to: runnerEmail2,
-                            subject: "Confirmacion de Inscripcion",
-                            text: 'Confirmación',
-                            html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
+            db.collection('runners').doc(runnerDBI).update(paymentData)
+            // .then(
+            //     async function() {
+            //         try {
+            //             await transporter.sendMail({
+            //                 from: '"Mari Menuco Run" <marimenucorun@gmail.com>',
+            //                 to: runnerEmail2,
+            //                 subject: "Confirmacion de Inscripcion",
+            //                 text: 'Confirmación',
+            //                 html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
                             
-                        })
-                    } catch (error) {
+            //             })
+            //         } catch (error) {
                         
-                    }
-                }
-            )
+            //         }
+            //     }
+            // )
 
 
            
