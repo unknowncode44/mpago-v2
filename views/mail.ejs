@@ -52,6 +52,42 @@
             text-transform: uppercase;
             margin: 2% 0%;
             padding: 3% 0%;
+            
+        }
+
+        @media only screen and (min-device-width: 800px){
+            .flex-container .flex-items:nth-child(1) {
+                font-size: 3em;
+                padding: 1% 0%;
+                margin: 0%;
+                width: 60%;
+            }
+
+            .flex-container .flex-items:nth-child(2) {
+                font-size: 15em !important;
+                padding: 0% 0% !important;
+            }
+
+            .horizontal-flex .hflex-items:nth-child(2) {
+                max-width: 60%;
+                color: var(--white);
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1.5em;
+            }
+
+            .horizontal-flex .hflex-items:nth-child(2) span {
+                min-width: 100%;
+                text-align: center;
+               
+            }
+
+
+            .flex-container .flex-items:nth-child(2) img {
+                width: 10rem !important;
+        }
+            
         }
 
         .flex-container .flex-items:nth-child(2) {
@@ -69,6 +105,21 @@
             padding: 3% 0%;
         }
 
+        .flex-container .flex-items:nth-child(2) img {
+            width: 15rem;
+        }
+
+        .flex-container .flex-items:nth-child(2) h4 {
+            margin: 0%;
+            color: var(--secondary);
+            font-size: 0.15em;
+            font-weight: 500;
+            font-style: italic;
+            border-radius: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
         .horizontal-flex {
             display: flex;
             flex-direction: row;
@@ -77,6 +128,7 @@
             align-items: stretch;
             align-content: center;
             min-width: 100%;
+            font-size: 24px;
         }
 
         .horizontal-flex .hflex-items:nth-child(1) {
@@ -90,10 +142,21 @@
             min-width: 60%;
             color: var(--white);
             text-transform: uppercase;
-            font-style: italic;
-            font-weight: 500;
-            font-size: 2.7em;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.5em;
         }
+
+        .horizontal-flex .hflex-items:nth-child(2) b {           
+            font-weight: 500 !important;            
+        }
+
+        .horizontal-flex .hflex-items:nth-child(2) a { 
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        
 
         .horizontal-flex .hflex-items:nth-child(2) ul {
             text-decoration: none;
@@ -106,6 +169,81 @@
             background-color: transparent;
         }
 
+        /* FOOTER */
+        .flex-footer-container {
+            display: flex;
+            width: 100%;
+            min-height: 100px;
+            background-color: var(--primary);
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: normal;
+            align-content: normal;
+            }
+
+            .flex-footer-items:nth-child(1) {
+                margin-top: 2rem;
+                max-width: 30%;
+                display: block;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: auto;
+                order: 0;
+            }
+
+            .flex-footer-items:nth-child(1) img {
+                width: 100%; 
+            }
+
+            .flex-footer-items:nth-child(1) h5 {
+                color: var(--white);
+                text-transform: uppercase;
+                align-items: center;
+                text-align: center;
+                margin: 0%;
+                font-size: 1.2em;
+            }
+
+            .flex-footer-items:nth-child(2) {
+                margin-top: 2rem;
+                display: block;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: auto;
+                order: 0;
+            }
+
+            .flex-footer-items:nth-child(2) img {
+                width: 100%; 
+            }
+
+            .flex-footer-items:nth-child(2) h5 {
+                color: var(--white);
+                text-transform: uppercase;
+                align-items: center;
+                text-align: center;
+                margin: 0%;
+                font-size: 1.2em;
+            }
+
+            
+
+            .flex-footer-items:nth-child(2) {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+        }
+
         
     </style>
 
@@ -114,27 +252,38 @@
             Pago Confirmado!
         </div>
         <div class="flex-items">
-            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <img src="/images/checkmark-circle-outline.svg">
+            <h4>Gracias por participar! Tu inscripcion esta completa</h4>
+            
         </div>
         <div class="flex-items horizontal-flex">
-            <!-- <h4>Gracias por participar! Tu inscripcion esta completa, debajo puedes ver los datos de corredor</h4> -->
+            
             <div class="hflex-items">
-
+                
             </div>
             <div class="hflex-items">
-                <ul>
-                    <li>Nombre: Tomas Decaboteau</li>
-                    <li>Email: tomi@gmail.com</li>
-                    <li>Numero de Corredor: 047</li>
-                    <li>Numero de confirmacion de pago: 121312132</li>
-                </ul>
+                <p>
+                    Hola <b>Tomas</b> tu inscripción a la distancia de <b>21k</b> se realizo con éxito, tu número de corredor es <b>099</b> 
+                    <br><br> 
+                    <span>Equipo de <a href="mmrun.com.ar">Mari Menuco Run</a></span>
+                </p>
             </div>
             <div class="hflex-items">
 
             </div>
         </div>
         <div class="flex-items">
+            <div class="flex-footer-container">
 
+                <div class="flex-footer-items">
+                    <img src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
+                </div>
+                
+                <div class="flex-footer-items">
+                    <h5>Desarrollado por</h5>
+                    <img src="/images/HV Devs - SVG-02.svg" alt="">
+                </div>
+             </div>
         </div>
     </div>
 </body>

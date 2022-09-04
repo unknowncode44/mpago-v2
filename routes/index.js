@@ -63,7 +63,7 @@ router.get('/pmt', (req, res) => {
     res.render('payment_page');
 })
 
-router.get('/test', (req, res) => {
+router.get('/test', async (req, res) => {
     res.render('mail')
 })
 
@@ -71,9 +71,6 @@ router.get('/test', (req, res) => {
 router.get('/distances', (req, res, next) => {
     res.render('distances');
 })
-
-
-
 
 router.post("/process_payment", (req, res) => {
     const { body } = req;
