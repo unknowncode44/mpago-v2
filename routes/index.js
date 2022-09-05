@@ -13,16 +13,16 @@ mercadopago.configurations.setAccessToken(process.env.TOKEN);
 var fs = require('fs');
 var util = require('util');
 
-var log_file_err=fs.createWriteStream('./logs/error.log',{flags:'a'}); 
+var log_file_err = fs.createWriteStream('./logs/error.log', { flags: 'a' });
 
 process.on('uncaughtException', function(err) {
     console.log('Caught exception: ' + err);
-    log_file_err.write(util.format('Caught exception: '+err) + '\n');
+    log_file_err.write(util.format('Caught exception: ' + err) + '\n');
 });
 
 process.on('ReferenceError', function(err) {
     console.log('Reference Error: ' + err);
-    log_file_err.write(util.format('Caught exception: '+err) + '\n');
+    log_file_err.write(util.format('Caught exception: ' + err) + '\n');
 });
 
 // fin guardando logs
@@ -44,6 +44,10 @@ transporter.verify().then(() => {
 })
 
 
+
+
+
+
 // fin mailer
 
 var id = ''
@@ -63,7 +67,7 @@ router.get('/pmt', (req, res) => {
     res.render('payment_page');
 })
 
-router.get('/test', async (req, res) => {
+router.get('/test', async(req, res) => {
     res.render('mail')
 })
 
@@ -72,11 +76,20 @@ router.get('/distances', (req, res, next) => {
     res.render('distances');
 })
 
+router.get('/mail', async(req, res) => {
+    sendMail('matiaz.orellana@gmail.com', 'Matias', '21k', '099').then(() => {
+        console.log('hello world');
+    });
+
+})
+
 router.post("/process_payment", (req, res) => {
     const { body } = req;
     const { payer } = body;
     const runnerDBI = body.runnerDBI;
     const runnerEmail2 = body.runnerEmail;
+    const runnerNam3 = body.runnerNam3;
+    const runnerDistance = body.runnerDistance
     const runnerNumber = body.strRunnerNbr;
     const paymentData = {
         transaction_amount: Number(body.transactionAmount),
@@ -104,39 +117,23 @@ router.post("/process_payment", (req, res) => {
                 id: data.id
             }
             db.collection('runners').doc(runnerDBI).update(paymentData)
-            .then(
-                async function() {
-                    try {
-                        await transporter.sendMail({
-                            from: `"Mari Menuco Run" <${process.env.EMAIL}>`,
-                            to: runnerEmail2,
-                            subject: "Confirmacion de Inscripcion",
-                            text: 'Confirmación',
-                            html: `<b>Tu numero de corredor es: ${runnerNumber}</b>`,
-                            
-                        })
-                    } catch (error) {
-                        
-                    }
-                }
-            )
-
-
-           
+                .then(
+                    sendMail(runnerEmail2, runnerNam3, runnerDistance, runnerNumber)
+                )
             res.status(201).json({
                 detail: data.status_detail,
                 status: data.status,
                 id: data.id
             });
-            
-            
+
+
         })
 
-        .catch(function(error) {
-            console.log(error);
-            const { errorMessage, errorStatus } = validateError(error);
-            res.status(errorStatus).json({ error_message: errorMessage });
-        });
+    .catch(function(error) {
+        console.log(error);
+        const { errorMessage, errorStatus } = validateError(error);
+        res.status(errorStatus).json({ error_message: errorMessage });
+    });
 });
 
 function validateError(error) {
@@ -182,14 +179,12 @@ router.post('/add-runner', async function(req, res) {
     let runnerNbr = Math.max(...runnerNbrs);
     console.log(runnerNbr);
     let strRunnerNbr = '';
-    if(runnerNbr > 100){
+    if (runnerNbr > 100) {
         strRunnerNbr = `${runnerNbr+1}`
-    }
-    else {
-        if (runnerNbr > 10){
+    } else {
+        if (runnerNbr > 10) {
             strRunnerNbr = `0${runnerNbr+1}`
-        }
-        else {
+        } else {
             strRunnerNbr = `00${runnerNbr+1}`
         }
     }
@@ -217,7 +212,7 @@ router.post('/add-runner', async function(req, res) {
 
     var _transaction_amount = Number(transactionAmount).toFixed(2).toString()
 
-    
+
 
 
     var runnerDBI;
@@ -228,7 +223,7 @@ router.post('/add-runner', async function(req, res) {
         res.render('payment_page', { strRunnerNbr, runnerEmail, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
     })
 
-    
+
 
 })
 
@@ -257,6 +252,78 @@ router.get('/dashboard', async function(req, res, next) {
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     res.render('dashboard', { title: 'Panel de Control', runners });
 });
+
+
+async function sendMail(email, name, distance, runnerNbr) {
+    let htmlConfirmMail = fs.createReadStream('./views/mail2.html')
+    try {
+        await transporter.sendMail({
+            from: `"Mari Menuco Run" <${process.env.EMAIL}>`,
+            to: email,
+            subject: "Confirmacion de Inscripcion",
+            // adjuntos
+
+            attachments: [{
+                    filename: 'checkmark-circle-outline.svg',
+                    path: './public/images/checkmark-circle-outline.svg',
+                    cid: 'check'
+                },
+                {
+                    filename: 'MMR-Isotipo-Negativo.png',
+                    path: './public/images/MMR2022/MMR-Isotipo-Potivo-PNG.png',
+                    cid: 'mmrun'
+                },
+                {
+                    filename: 'HV Devs - SVG-02.svg',
+                    path: './public/images/HV Devs - SVG-02.svg',
+                    cid: 'hvdevs'
+                },
+            ],
+
+            text: 'Confirmación',
+            html: `<div class="flex-container">
+            <div class="flex-items">
+                <h4>Pago Confirmado!</h4>
+            </div>
+            <div class="flex-items">
+                <h4>Gracias por participar! Tu inscripcion esta completa</h4>
+            </div>
+            <div class="flex-items horizontal-flex">
+                <div class="hflex-items">
+                </div>
+                <div class="hflex-items">
+                    <p>
+                        Hola <b>${name}</b> tu inscripción a la distancia de <b>${distance}</b> se realizo con éxito, tu número de corredor es <b>${runnerNbr}</b>
+                        <br><br>
+                        <span>Equipo de <a href="mmrun.com.ar">Mari Menuco Run</a></span>
+                    </p>
+                </div>
+                <div class="hflex-items">
+    
+                </div>
+            </div>
+            <div class="flex-items">
+                <div class="flex-footer-container">
+    
+                    <div class="flex-footer-items">
+                        <img src="cid:mmrun" alt="" width="200px">
+                    </div>
+    
+                    <div class="flex-footer-items">
+                        <img src="cid:hvdevs" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>`
+
+        })
+    } catch (error) {
+
+    }
+
+
+
+}
 
 
 
