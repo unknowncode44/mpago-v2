@@ -6,6 +6,8 @@ function loadCardForm() {
     const productCost = document.getElementById('amount').value;
     const runnerDBI = document.getElementById('runnerDBI').value;
     const runnerEmail = document.getElementById('runnerEmail2').value;
+    const runnerNam3 = document.getElementById('runnerName2').value;
+    const runnerDistance = document.getElementById('runnerDistance').value;
     const strRunnerNbr = document.getElementById('strRunnerNbr').value;
     const productDescription = document.getElementById('product-description').innerText;
     const payButton = document.getElementById("form-checkout__submit");
@@ -91,6 +93,8 @@ function loadCardForm() {
                         },
                         body: JSON.stringify({
                             runnerEmail,
+                            runnerNam3,
+                            runnerDistance,
                             strRunnerNbr,
                             runnerDBI,
                             token,
