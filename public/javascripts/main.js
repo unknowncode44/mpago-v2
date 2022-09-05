@@ -184,9 +184,9 @@ nextBtnFirst.addEventListener("click", async () => {
                                     if(partner.socio == club_id.value) {
                                         partnerName = 'SI'
                                         rPrice.value = originalPrice
-                                        discount = Number(rPrice.value)*0.1
+                                        discount = Number(rPrice.value)*0;
                                         originalPrice = `${(rPrice.value).toString()}`;
-                                        rPrice.value = (Number(rPrice.value)*0.9).toString();   
+                                        rPrice.value = (Number(rPrice.value)*1).toString();   
                                     }
                                 })
 
