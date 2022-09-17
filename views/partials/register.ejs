@@ -39,176 +39,187 @@
                                         <div class="page slide-page">
                                             <div class="title">Datos Personales:</div>
 
-                                                <div class="flex-container">
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Elige una distancia</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <select id="categoriesSelect" name="cat"></select>
-                                                                        <input id="runnerUID" name="runnerUID" type="hidden">
-                                                                        <% if (runnersLenght) { %>                                                                   
-                                                                            <script>
-                                                                                document.getElementById('runnerUID').value = '<%= runnersLenght++ %>'
-                                                                            </script>
-                                                                            <% } %>
-                                                                    </div>
-                                                                 </div>
+                                            <div class="flex-container">
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Elige una distancia</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <select id="categoriesSelect" name="cat"></select>
+                                                                    <input id="runnerUID" name="runnerUID"
+                                                                        type="hidden">
+                                                                    <% if (runnersLenght) { %>
+                                                                    <script>
+                                                                        document.getElementById('runnerUID').value =
+                                                                            '<%= runnersLenght++ %>'
+                                                                    </script>
+                                                                    <% } %>
+                                                                </div>
                                                             </div>
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Precio</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content price">
-                                                                        <input id="transactionAmount" name="transactionAmount" type="hidden" style="color: var(--secondary)" value="1000">
-                                                                        <p id="transactionP">-</p>
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                         </div>
-                                                    </div>
-
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Nombre y Apellido</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="r-name" name="runnerName" type="text">    
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Edad</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <select id="ageSelect" name="ageSelect"></select>
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                         </div>
-                                                    </div>
-
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Genero</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <select name="genre" id="genre" class="rGenre" value="">
-                                                                            <option value="Femenino">Femenino</option>
-                                                                            <option value="Masculino">Masculino</option>
-                                                                        </select>
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Fecha Nac</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="birth" name="birth" type="date">
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                         </div>
-                                                    </div>
-
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>DNI</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="r-id" name="runnerID" type="text" placeholder="DNI">
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p># de Socio</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="partner-id" name="partner_id" type="text" placeholder="Opcional">
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                         </div>
-                                                    </div>
-
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>email</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <input id="r-email" name="runnerEmail" type="text" placeholder="email@email.com">
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <p>Camiseta</p>
-                                                                    </div>
-                                                                    <div class="flex-items-content">
-                                                                        <select name="tShirtSize" id="t-size" class="t-size" value="">
-                                                                            <option value="S">Talle S</option>
-                                                                            <option value="M">Talle M</option>
-                                                                            <option value="L">Talle L</option>
-                                                                            <option value="XL">Talle XL</option>
-                                                                            <option value="XXL">Talle XXL</option>
-                                                                            <option value="XXXL">Talle XXXL</option>
-                                                                            <option value="XXXXL">Talle XXXXL</option>
-                                                                        </select>
-                                                                        
-                                                                    </div>
-                                                                    
-                                                                    
-                                                                   
-                                                                 </div>
-                                                                 
-                                                            </div>
-                                                            
                                                         </div>
-                                                        <div class="flex-items-content see-sizes">
-                                                            <button type="button" class="open-modal" data-open="modal1">Ver Medidas</button>
-                                                        </div>
-                                                        
-                                                    </div>
-
-                                                    
-
-
-
-                                                    <div class="flex-items">
-                                                        <div class="flex-container-inner">
-                                                            <div class="flex-items-inner">
-                                                                <div class="flex-container-content">
-                                                                    <div class="flex-items-content">
-                                                                        <button id="home_btn" type="button" class="firstNext mt-3 next">Siguiente</button>
-                                                                    </div>
-                                                                 </div>
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Precio</p>
+                                                                </div>
+                                                                <div class="flex-items-content price">
+                                                                    <input id="transactionAmount"
+                                                                        name="transactionAmount" type="hidden"
+                                                                        style="color: var(--secondary)" value="1000">
+                                                                    <p id="transactionP">-</p>
+                                                                </div>
                                                             </div>
-                                                         </div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Nombre y Apellido</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <input id="r-name" name="runnerName" type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Edad</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <select id="ageSelect" name="ageSelect"></select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Genero</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <select name="genre" id="genre" class="rGenre"
+                                                                        value="">
+                                                                        <option value="Femenino">Femenino</option>
+                                                                        <option value="Masculino">Masculino</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Fecha Nac</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <input id="birth" name="birth" type="date">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>DNI</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <input id="r-id" name="runnerID" type="text"
+                                                                        placeholder="DNI">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p># de Socio</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <input id="partner-id" name="partner_id" type="text"
+                                                                        placeholder="Opcional">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>email</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <input id="r-email" name="runnerEmail" type="text"
+                                                                        placeholder="email@email.com">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <p>Camiseta</p>
+                                                                </div>
+                                                                <div class="flex-items-content">
+                                                                    <select name="tShirtSize" id="t-size" class="t-size"
+                                                                        value="">
+                                                                        <option value="S">Talle S</option>
+                                                                        <option value="M">Talle M</option>
+                                                                        <option value="L">Talle L</option>
+                                                                        <option value="XL">Talle XL</option>
+                                                                        <option value="XXL">Talle XXL</option>
+                                                                        <option value="XXXL">Talle XXXL</option>
+                                                                        <option value="XXXXL">Talle XXXXL</option>
+                                                                    </select>
+
+                                                                </div>
+
+
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="flex-items-content see-sizes">
+                                                        <button type="button" class="open-modal" data-open="modal1">Ver
+                                                            Medidas</button>
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+                                                <div class="flex-items">
+                                                    <div class="flex-container-inner">
+                                                        <div class="flex-items-inner">
+                                                            <div class="flex-container-content">
+                                                                <div class="flex-items-content">
+                                                                    <button id="home_btn" type="button"
+                                                                        class="firstNext mt-3 next">Siguiente</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="page">
                                             <div class="title">
@@ -218,23 +229,31 @@
                                                 <div class="row row-custom3">
 
                                                     <div class="col-6 text-end">Categoria</div>
-                                                    <div class="col-6 text-start"><input type="text" id="cat" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="cat" disabled>
+                                                    </div>
                                                     <div class="col-6 text-end">Nombre</div>
-                                                    <div class="col-6 text-start"><input type="text" id="runnerName" name="runnerName" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerName"
+                                                            name="runnerName" disabled></div>
                                                     <div class="col-6 text-end">DNI</div>
-                                                    <div class="col-6 text-start"><input type="text" id="runnerID" name="runnerID" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerID"
+                                                            name="runnerID" disabled></div>
                                                     <div class="col-6 text-end">Socio</div>
-                                                    <div class="col-6 text-start"><input type="text" id="partnerID" name="partnerID" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="partnerID"
+                                                            name="partnerID" disabled></div>
                                                     <div class="col-6 text-end">Talle</div>
-                                                    <div class="col-6 text-start"><input type="text" id="tsize" name="tsize" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="tsize"
+                                                            name="tsize" disabled></div>
                                                     <div class="col-6 text-end">Precio $</div>
-                                                    <div class="col-6 text-start"><input type="text" id="price" name="price" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="price"
+                                                            name="price" disabled></div>
                                                     <div class="col-6 text-end">Desc. socio $</div>
-                                                    <div class="col-6 text-start"><input type="text" id="platform_cost" name="platform_cost" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="platform_cost"
+                                                            name="platform_cost" disabled></div>
                                                     <div class="col-6 mb-4 text-end">
                                                         <strong>Total $</strong>
                                                     </div>
-                                                    <div class="col-6 mb-4 text-start total"><input type="text" id="total_cost" name="total_cost" disabled></div>
+                                                    <div class="col-6 mb-4 text-start total"><input type="text"
+                                                            id="total_cost" name="total_cost" disabled></div>
                                                     </strong>
 
                                                     <div class="field mb-2 btns">
@@ -266,7 +285,8 @@
                                             <input id="token" name="token" type="hidden">
                                             <input id="paymentMethodId" type="hidden">
 
-                                            <input id="description" name="description" type="hidden" value="Carrera MM Run">
+                                            <input id="description" name="description" type="hidden"
+                                                value="Carrera MM Run">
                                             <p id="payment-status">Waiting Payment</p>
                                         </div>
 
@@ -285,7 +305,7 @@
     <!-- modal -->
 
     <style>
-                .modal { 
+        .modal {
             position: fixed;
             top: 0;
             left: 0;
@@ -312,12 +332,12 @@
             cursor: default;
             overflow: hidden;
         }
-        
+
         .modal-header,
         .modal-footer {
             background: var(--lightgray);
         }
-        
+
         .modal-header {
             display: flex;
             align-items: center;
@@ -331,10 +351,10 @@
             font-size: 22px;
             font-weight: 500;
             font-style: italic;
-            color:var(--secondary);
+            color: var(--secondary);
             text-transform: uppercase;
             margin-bottom: 0.25rem;
-            
+
         }
 
         .modal-content2 {
@@ -348,18 +368,18 @@
         .modal-dialog .modal-content2 img {
             max-width: 100%;
             border-radius: 3%;
-            
+
 
         }
-        
+
         .modal-header .close-modal {
             font-size: 1.5rem;
             border: none;
             background-color: transparent;
-            color:var(--secondary);
+            color: var(--secondary);
         }
-        
-        .modal p + p {
+
+        .modal p+p {
             margin-top: 1rem;
         }
 
@@ -368,21 +388,21 @@
             opacity: 0;
             transition: all 0.16s ease-in;
         }
-            
+
         .modal.is-visible {
             visibility: visible;
             opacity: 1;
         }
     </style>
-    
-    
+
+
     <div class="modal" id="modal1" data-animation="slideInOutLeft">
         <div class="modal-dialog">
             <header class="modal-header">
                 <p>Medidas</p>
                 <button class="close-modal" aria-label="modal-close" data-close>
-                    ✕  
-                    </button>
+                    ✕
+                </button>
             </header>
             <section class="modal-content2">
                 <img src="/images/talles.jpeg" alt="">
