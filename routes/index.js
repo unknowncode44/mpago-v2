@@ -6,7 +6,7 @@ var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
 var nodemailer = require("nodemailer")
 
-mercadopago.configurations.setAccessToken(process.env.TOKEN);//Token MP - La cuenta vendedora
+mercadopago.configurations.setAccessToken(process.env.TOKEN); //Token MP - La cuenta vendedora
 
 //guardando logs
 
@@ -34,8 +34,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: process.env.EMAIL,// Email
-        pass: process.env.PASSWORD,// Contraseña
+        user: process.env.EMAIL, // Email
+        pass: process.env.PASSWORD, // Contraseña
     }
 })
 
@@ -117,8 +117,8 @@ router.post("/process_payment", (req, res) => {
                 id: data.id
             }
             db.collection('runners').doc(runnerDBI).update(paymentData)
-            
-            if (data.status == 'approved'){ // Si el pago es aprovado...
+
+            if (data.status == 'approved') { // Si el pago es aprovado...
                 sendMail(runnerEmail2, runnerNam3, runnerDistance, runnerNumber) //Envia el mail
             }
 
@@ -164,7 +164,7 @@ router.post('/add-runner', async function(req, res) {
     const { body } = req;
     const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth, tShirtSize } = body;
 
-    const request = await db.collection('runners').get();//
+    const request = await db.collection('runners').get(); //
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     var runnersLenght = runners.length;
