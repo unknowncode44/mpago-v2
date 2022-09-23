@@ -38,6 +38,10 @@
     
     @media only screen and (max-device-width: 480px) {
 
+        .carousel {
+            margin-bottom: 4rem;
+        }          
+
         .flex-cont {
             padding-left: 0% !important;
             margin-top: 0% !important;

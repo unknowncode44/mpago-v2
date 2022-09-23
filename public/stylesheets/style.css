@@ -6,6 +6,16 @@
     scroll-behavior: contain;
 }
 
+.carousel {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  
+}
+
+.carousel h1 {
+  color: var(--secondary) !important;
+}
+
 :root {
     --primary: #461D6C;
     --lighter25: #582487;
