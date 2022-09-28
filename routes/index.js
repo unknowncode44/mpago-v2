@@ -6,7 +6,9 @@ var db = require('../config/firebase-config')
 var mercadopago = require('mercadopago');
 var nodemailer = require("nodemailer")
 
-mercadopago.configurations.setAccessToken(process.env.TOKEN);//Token MP - La cuenta vendedora
+mercadopago.configurations.setAccessToken(process.env.TOKEN); //Token MP - La cuenta vendedora
+// mercadopago.configurations.setAccessToken('TEST-5195066021992733-073114-bc76bf9a1232db75e73471a5602d017b-65060542');
+
 
 //guardando logs
 
@@ -34,8 +36,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: process.env.EMAIL,// Email
-        pass: process.env.PASSWORD,// Contraseña
+        user: process.env.EMAIL, // Email
+        pass: process.env.PASSWORD, // Contraseña
     }
 })
 
@@ -89,10 +91,15 @@ router.post("/process_payment", (req, res) => {
     const runnerDBI = body.runnerDBI;
     const runnerEmail2 = body.runnerEmail;
     const runnerNam3 = body.runnerNam3;
-    const runnerDistance = body.runnerDistance
+    const runnerDistance = body.runnerDistance;
     const runnerNumber = body.strRunnerNbr;
+
+    let transaction_amount
+
+    console.log(runnerDistance);
+
     const paymentData = {
-        transaction_amount: Number(body.transactionAmount),
+        transaction_amount: body.transactionAmount,
         token: body.token,
         description: body.description,
         installments: Number(body.installments),
@@ -117,8 +124,8 @@ router.post("/process_payment", (req, res) => {
                 id: data.id
             }
             db.collection('runners').doc(runnerDBI).update(paymentData)
-            
-            if (data.status == 'approved'){ // Si el pago es aprovado...
+
+            if (data.status == 'approved') { // Si el pago es aprovado...
                 sendMail(runnerEmail2, runnerNam3, runnerDistance, runnerNumber) //Envia el mail
             }
 
@@ -164,7 +171,7 @@ router.post('/add-runner', async function(req, res) {
     const { body } = req;
     const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth, tShirtSize } = body;
 
-    const request = await db.collection('runners').get();//
+    const request = await db.collection('runners').get(); //
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     var runnersLenght = runners.length;
@@ -191,8 +198,25 @@ router.post('/add-runner', async function(req, res) {
         }
     }
 
+    let transaction_amount = null
+
+    switch (cat) {
+        case 'Kids':
+            transaction_amount = '1000';
+            break
+        case '5k':
+            transaction_amount = '4700';
+            break
+        case '10k':
+            transaction_amount = '5300';
+            break
+        case '21k':
+            transaction_amount = '5800';
+            break
+    }
+
     let payment_data = {
-        amount: transactionAmount,
+        amount: transaction_amount,
     };
 
 
@@ -212,7 +236,7 @@ router.post('/add-runner', async function(req, res) {
 
     }
 
-    var _transaction_amount = Number(transactionAmount).toFixed(2).toString()
+    var _transaction_amount = Number(transaction_amount).toFixed(2).toString()
 
 
 

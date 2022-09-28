@@ -1,6 +1,8 @@
 // const mercadoPagoPublicKey = document.getElementById("mercado-pago-public-key").value;
 const mercadoPagoPublicKey = 'APP_USR-29383ab6-e5df-48fb-8ba4-d2037bcfcfda'
-const mercadopago = new MercadoPago(mercadoPagoPublicKey);//La llave publica del vendedor
+
+// const mercadoPagoPublicKey = 'TEST-6a941031-1068-447c-a42f-fef05ae965a3'
+const mercadopago = new MercadoPago(mercadoPagoPublicKey); //La llave publica del vendedor
 
 function loadCardForm() {
     const productCost = document.getElementById('amount').value;
@@ -85,6 +87,7 @@ function loadCardForm() {
                     identificationNumber,
                     identificationType,
                 } = cardForm.getCardFormData();
+
 
                 fetch("/process_payment", {
                         method: "POST",

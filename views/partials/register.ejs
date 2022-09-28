@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-lg-8 text-center justify-content-center col-sm-12">
                             <div class="form-outer">
-                                <form action="add-runner" method="post">
+                                <form id="mmrun-rform" action="add-runner" method="post">
                                     <div class="r-form">
                                         <div class="page slide-page">
                                             <div class="title">Datos Personales:</div>
@@ -49,14 +49,13 @@
                                                                 </div>
                                                                 <div class="flex-items-content">
                                                                     <select id="categoriesSelect" name="cat"></select>
-                                                                    <input id="runnerUID" name="runnerUID"
-                                                                        type="hidden">
+                                                                    <input id="runnerUID" name="runnerUID" type="hidden">
                                                                     <% if (runnersLenght) { %>
-                                                                    <script>
-                                                                        document.getElementById('runnerUID').value =
-                                                                            '<%= runnersLenght++ %>'
-                                                                    </script>
-                                                                    <% } %>
+                                                                        <script>
+                                                                            document.getElementById('runnerUID').value =
+                                                                                '<%= runnersLenght++ %>'
+                                                                        </script>
+                                                                        <% } %>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -66,9 +65,7 @@
                                                                     <p>Precio</p>
                                                                 </div>
                                                                 <div class="flex-items-content price">
-                                                                    <input id="transactionAmount"
-                                                                        name="transactionAmount" type="hidden"
-                                                                        style="color: var(--secondary)" value="1000">
+                                                                    <input id="transactionAmount" name="transactionAmount" type="hidden" style="color: var(--secondary)" value="1000">
                                                                     <p id="transactionP">-</p>
                                                                 </div>
                                                             </div>
@@ -109,8 +106,7 @@
                                                                     <p>Genero</p>
                                                                 </div>
                                                                 <div class="flex-items-content">
-                                                                    <select name="genre" id="genre" class="rGenre"
-                                                                        value="">
+                                                                    <select name="genre" id="genre" class="rGenre" value="">
                                                                         <option value="Femenino">Femenino</option>
                                                                         <option value="Masculino">Masculino</option>
                                                                     </select>
@@ -138,8 +134,7 @@
                                                                     <p>DNI</p>
                                                                 </div>
                                                                 <div class="flex-items-content">
-                                                                    <input id="r-id" name="runnerID" type="text"
-                                                                        placeholder="DNI">
+                                                                    <input id="r-id" name="runnerID" type="text" placeholder="DNI">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -149,8 +144,7 @@
                                                                     <p># de Socio</p>
                                                                 </div>
                                                                 <div class="flex-items-content">
-                                                                    <input id="partner-id" name="partner_id" type="text"
-                                                                        placeholder="Opcional">
+                                                                    <input id="partner-id" name="partner_id" type="text" placeholder="Opcional">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -165,8 +159,7 @@
                                                                     <p>email</p>
                                                                 </div>
                                                                 <div class="flex-items-content">
-                                                                    <input id="r-email" name="runnerEmail" type="text"
-                                                                        placeholder="email@email.com">
+                                                                    <input id="r-email" name="runnerEmail" type="text" placeholder="email@email.com">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -176,8 +169,7 @@
                                                                     <p>Camiseta</p>
                                                                 </div>
                                                                 <div class="flex-items-content">
-                                                                    <select name="tShirtSize" id="t-size" class="t-size"
-                                                                        value="">
+                                                                    <select name="tShirtSize" id="t-size" class="t-size" value="">
                                                                         <option value="S">Talle S</option>
                                                                         <option value="M">Talle M</option>
                                                                         <option value="L">Talle L</option>
@@ -212,8 +204,7 @@
                                                         <div class="flex-items-inner">
                                                             <div class="flex-container-content">
                                                                 <div class="flex-items-content">
-                                                                    <button id="home_btn" type="button"
-                                                                        class="firstNext mt-3 next">Siguiente</button>
+                                                                    <button id="home_btn" type="button" class="firstNext mt-3 next">Siguiente</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -232,28 +223,21 @@
                                                     <div class="col-6 text-start"><input type="text" id="cat" disabled>
                                                     </div>
                                                     <div class="col-6 text-end">Nombre</div>
-                                                    <div class="col-6 text-start"><input type="text" id="runnerName"
-                                                            name="runnerName" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerName" name="runnerName" disabled></div>
                                                     <div class="col-6 text-end">DNI</div>
-                                                    <div class="col-6 text-start"><input type="text" id="runnerID"
-                                                            name="runnerID" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="runnerID" name="runnerID" disabled></div>
                                                     <div class="col-6 text-end">Socio</div>
-                                                    <div class="col-6 text-start"><input type="text" id="partnerID"
-                                                            name="partnerID" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="partnerID" name="partnerID" disabled></div>
                                                     <div class="col-6 text-end">Talle</div>
-                                                    <div class="col-6 text-start"><input type="text" id="tsize"
-                                                            name="tsize" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="tsize" name="tsize" disabled></div>
                                                     <div class="col-6 text-end">Precio $</div>
-                                                    <div class="col-6 text-start"><input type="text" id="price"
-                                                            name="price" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="price" name="price" disabled></div>
                                                     <div class="col-6 text-end">Desc. socio $</div>
-                                                    <div class="col-6 text-start"><input type="text" id="platform_cost"
-                                                            name="platform_cost" disabled></div>
+                                                    <div class="col-6 text-start"><input type="text" id="platform_cost" name="platform_cost" disabled></div>
                                                     <div class="col-6 mb-4 text-end">
                                                         <strong>Total $</strong>
                                                     </div>
-                                                    <div class="col-6 mb-4 text-start total"><input type="text"
-                                                            id="total_cost" name="total_cost" disabled></div>
+                                                    <div class="col-6 mb-4 text-start total"><input type="text" id="total_cost" name="total_cost" disabled></div>
                                                     </strong>
 
                                                     <div class="field mb-2 btns">
@@ -285,8 +269,7 @@
                                             <input id="token" name="token" type="hidden">
                                             <input id="paymentMethodId" type="hidden">
 
-                                            <input id="description" name="description" type="hidden"
-                                                value="Carrera MM Run">
+                                            <input id="description" name="description" type="hidden" value="Carrera MM Run">
                                             <p id="payment-status">Waiting Payment</p>
                                         </div>
 
@@ -321,7 +304,7 @@
             opacity: 0;
             transition: all 0.16s ease-in;
         }
-
+        
         .modal-dialog {
             position: relative;
             min-width: 800px;
@@ -332,20 +315,19 @@
             cursor: default;
             overflow: hidden;
         }
-
+        
         .modal-header,
         .modal-footer {
             background: var(--lightgray);
         }
-
+        
         .modal-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0% 2% 0% 2% !important;
-
         }
-
+        
         .modal-header p {
             margin-top: 0.25rem;
             font-size: 22px;
@@ -354,9 +336,8 @@
             color: var(--secondary);
             text-transform: uppercase;
             margin-bottom: 0.25rem;
-
         }
-
+        
         .modal-content2 {
             display: flex;
             background-color: var(--primary);
@@ -364,31 +345,29 @@
             justify-content: center;
             padding: 0.5% 5% 0.5% 5%;
         }
-
+        
         .modal-dialog .modal-content2 img {
             max-width: 100%;
             border-radius: 3%;
-
-
         }
-
+        
         .modal-header .close-modal {
             font-size: 1.5rem;
             border: none;
             background-color: transparent;
             color: var(--secondary);
         }
-
+        
         .modal p+p {
             margin-top: 1rem;
         }
-
+        
         .modal {
             visibility: hidden;
             opacity: 0;
             transition: all 0.16s ease-in;
         }
-
+        
         .modal.is-visible {
             visibility: visible;
             opacity: 1;

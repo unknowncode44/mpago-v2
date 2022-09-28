@@ -32,6 +32,12 @@ menuItem.addEventListener('click', () => {
     }
 })
 
+window.onhashchange = function() {
+    let form = document.getElementById('mmrun-rform')
+    form.reset()
+
+}
+
 
 // ## EFECTO NAVBAR ON SCROLL ##
 
@@ -60,28 +66,28 @@ var amountP = document.getElementById('transactionP')
 
 const openEls = document.querySelectorAll("[data-open]");
 var isVisible = "is-visible";
- 
-for(const el of openEls) {
-  el.addEventListener("click", function() {
-    const modalId = this.dataset.open;
-    document.getElementById(modalId).classList.add(isVisible);
-  });
+
+for (const el of openEls) {
+    el.addEventListener("click", function() {
+        const modalId = this.dataset.open;
+        document.getElementById(modalId).classList.add(isVisible);
+    });
 }
 
 const closeEls = document.querySelectorAll("[data-close]");
 
- 
+
 for (const el of closeEls) {
-  el.addEventListener("click", function() {
-    this.parentElement.parentElement.parentElement.classList.remove(isVisible);
-  });
+    el.addEventListener("click", function() {
+        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
+    });
 }
 
 
 document.addEventListener("click", e => {
-  if (e.target == document.querySelector(".modal.is-visible")) {
-    document.querySelector(".modal.is-visible").classList.remove(isVisible);
-  }
+    if (e.target == document.querySelector(".modal.is-visible")) {
+        document.querySelector(".modal.is-visible").classList.remove(isVisible);
+    }
 });
 
 //* MODAL TALLES *//
@@ -148,47 +154,45 @@ var birth = document.getElementById('birth');
 
 
 
-nextBtnFirst.addEventListener("click", async () => {
+nextBtnFirst.addEventListener("click", async() => {
     var originalPrice = amount.value;
-    if(rName.value === ''){
+    if (rName.value === '') {
         alert('Campo Nombre es obligatorio')
-    }
-    else {
-        if(club_id.value === ''){
+    } else {
+        if (club_id.value === '') {
             club_id.value = 0;
         }
-        
-        if(rEmail.value === ''){
+
+        if (rEmail.value === '') {
             alert('Campo Email es obligatorio')
-        }
-        else {
+        } else {
             if (birth.value == '') {
                 alert('Fecha de nacimiento es obligatoria!')
             } else {
                 if (genre.value == '') {
                     alert('Debes indicar un genero!')
                 } else {
-                    if(rCat.value == ''){
+                    if (rCat.value == '') {
                         alert('Debes Elegir una Distancia!')
                     } else {
                         var validEmail = validateEmail(rEmail.value)
                         if (validEmail) {
                             var partnerName = 'No';
                             var discount = 0;
-                            
+
                             var partners = await readPartnersJson()
 
 
-                            
-                                partners.map(partner => {
-                                    if(partner.socio == club_id.value) {
-                                        partnerName = 'SI'
-                                        rPrice.value = originalPrice
-                                        discount = Number(rPrice.value)*0;
-                                        originalPrice = `${(rPrice.value).toString()}`;
-                                        rPrice.value = (Number(rPrice.value)*1).toString();   
-                                    }
-                                })
+
+                            partners.map(partner => {
+                                if (partner.socio == club_id.value) {
+                                    partnerName = 'SI'
+                                    rPrice.value = originalPrice
+                                    discount = Number(rPrice.value) * 0;
+                                    originalPrice = `${(rPrice.value).toString()}`;
+                                    rPrice.value = (Number(rPrice.value) * 1).toString();
+                                }
+                            })
 
                             document.getElementById('cat').value = rCat.value;
                             document.getElementById('partnerID').value = partnerName.toString();
@@ -198,25 +202,25 @@ nextBtnFirst.addEventListener("click", async () => {
                             document.getElementById('price').value = originalPrice;
                             document.getElementById('platform_cost').value = `-${(discount.toFixed(2)).toString()}`;
                             document.getElementById('total_cost').value = ` ${(Number(rPrice.value).toFixed(2)).toString()}`;
-                
-                
-                
+
+
+
                             slidePage.style.marginLeft = "-100%";
                             progressBar[current - 1].classList.add("active");
                             bullet[current - 1].classList.add("active");
                             progressCheck[current - 1].classList.add("active");
                             progressText[current - 1].classList.add("active");
                             current += 1;
-                
+
                         } else {
                             alert('El email es invalido!!')
                         }
                     }
                 }
             }
-        } 
-            
-        
+        }
+
+
     }
 });
 const url = '/add-runner'
@@ -235,8 +239,8 @@ const params = {
 };
 
 
-async function readPartnersJson(){
-    var list = [] 
+async function readPartnersJson() {
+    var list = []
     await fetch('/javascripts/docs/socios3.json').then(
         response => {
             return response.json();
@@ -249,8 +253,8 @@ async function readPartnersJson(){
 
 prevBtnSec.addEventListener("click", function(event) {
     event.preventDefault();
-    rCat.value = ''; 
-    document.getElementById('partnerID').value = ''; 
+    rCat.value = '';
+    document.getElementById('partnerID').value = '';
     slidePage.style.marginLeft = "0%";
     bullet[current - 2].classList.remove("active");
     progressCheck[current - 2].classList.remove("active");
@@ -290,4 +294,3 @@ for (let i = 0; i < ages.length; i++) {
     el.value = e; // los valores seran los mismos que el texto
     agesSelect.appendChild(el) // se los anexamos al select
 }
-
