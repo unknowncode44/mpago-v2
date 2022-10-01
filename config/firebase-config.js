@@ -1,6 +1,7 @@
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
+
 require('dotenv').config()
 
 const serviceAccount = require('./mmrun-fda85-firebase-adminsdk-6y0sv-d53810779e.json')

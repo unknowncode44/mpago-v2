@@ -1,0 +1,71 @@
+:root {
+    --primary: #461D6C;
+    --lighter25: #582487;
+    --secondary: #00FABA;
+    --opposite: #b9e293;
+    --black1: #222;
+    --black2: #262626;
+    --grey: #ccc;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    min-height: 100vh;
+    color: var(--white);
+}
+
+.form {
+    position: relative;
+    width: 340px;
+    padding: 40px 40px 60px;
+    background: var(--primary);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05);
+}
+
+.form h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.form .input {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.form .input .inputBox {
+    margin-top: 20px;
+}
+
+.form .input .inputBox label {
+    display: block;
+    font-size: 18px;
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.form .input .inputBox input {
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    padding: 5px 15px;
+    font-size: 18px;
+}

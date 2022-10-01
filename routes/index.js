@@ -3,11 +3,24 @@ const { app } = require('firebase-admin');
 require('dotenv').config()
 var router = express.Router();
 var db = require('../config/firebase-config')
+var dbf = require('../public/inscr.json')
 var mercadopago = require('mercadopago');
 var nodemailer = require("nodemailer")
 
 mercadopago.configurations.setAccessToken(process.env.TOKEN); //Token MP - La cuenta vendedora
 // mercadopago.configurations.setAccessToken('TEST-5195066021992733-073114-bc76bf9a1232db75e73471a5602d017b-65060542');
+
+// for (let i = 0; i < dbf.length; i++) {
+//     const e = dbf[i];
+//     loadData(e).then(() => {
+//         console.log(`${e.name} cargado correctamente`);
+//     })
+
+// }
+
+// async function loadData(runner) {
+//     await db.collection('runners2').add(runner)
+// }
 
 
 //guardando logs
@@ -58,7 +71,7 @@ var id = ''
 // ruta inicial, es asyncrona por que recoge datos de la base de datos
 
 router.get('/', async function(req, res, next) {
-    const request = await db.collection('runners').get();
+    const request = await db.collection('runners2').get();
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     var runnersLenght = runners.length;
@@ -73,17 +86,40 @@ router.get('/test', async(req, res) => {
     res.render('mail')
 })
 
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+
+router.post('/check-mail', async(req, res) => {
+
+    let { mail, password } = req.body
+    if (mail === process.env.MAILSECURE) {
+        if (password === process.env.PASSWORDSECURE) {
+            const request = await db.collection('runners2').get();
+            const { docs } = request;
+            const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+            res.render('dashboard', { title: 'Panel de Control', runners });
+        } else {
+            res.render('error')
+        }
+
+    } else {
+        res.render('error')
+    }
+
+})
+
 
 router.get('/distances', (req, res, next) => {
     res.render('distances');
 })
 
-router.get('/mail', async(req, res) => {
-    sendMail('matiaz.orellana@gmail.com', 'Matias', '21k', '099').then(() => {
-        console.log('hello world');
-    });
+// router.get('/mail', async(req, res) => {
+//     sendMail('matiaz.orellana@gmail.com', 'Matias', '21k', '099').then(() => {
+//         console.log('hello world');
+//     });
 
-})
+// })
 
 router.post("/process_payment", (req, res) => {
     const { body } = req;
@@ -123,7 +159,7 @@ router.post("/process_payment", (req, res) => {
                 status_detail: data.status_detail,
                 id: data.id
             }
-            db.collection('runners').doc(runnerDBI).update(paymentData)
+            db.collection('runners2').doc(runnerDBI).update(paymentData)
 
             if (data.status == 'approved') { // Si el pago es aprovado...
                 sendMail(runnerEmail2, runnerNam3, runnerDistance, runnerNumber) //Envia el mail
@@ -162,6 +198,8 @@ function validateError(error) {
 
 
 
+
+
 /*POST ADD RUNNER*/
 //esta ruta se ejecuta cuando hacemos click en el boton del formulario
 // en la etiqueta form del html debemos incluirla en action asi:
@@ -171,10 +209,11 @@ router.post('/add-runner', async function(req, res) {
     const { body } = req;
     const { cat, runnerName, ageSelect, partner_id, runnerEmail, description, runnerID, transactionAmount, genre, birth, tShirtSize } = body;
 
-    const request = await db.collection('runners').get(); //
+    const request = await db.collection('runners2').get(); //
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     var runnersLenght = runners.length;
+
 
 
 
@@ -243,7 +282,7 @@ router.post('/add-runner', async function(req, res) {
 
     var runnerDBI;
     // grabamos datos en firebase
-    await db.collection('runners').add(newRunner).then((doc) => {
+    await db.collection('runners2').add(newRunner).then((doc) => {
         runnerDBI = doc.id
     }).then(() => {
         res.render('payment_page', { strRunnerNbr, runnerEmail, cat, ageSelect, _transaction_amount, description, runnerName, runnerDBI, genre, birth }); // para dirigirnos nuevamente a '/'
@@ -254,17 +293,20 @@ router.post('/add-runner', async function(req, res) {
 })
 
 /*GET DELETE RUNNER*/
-router.get('/borrar/:id', (req, res) => {
-    let id = req.params.id;
-    db.collection('runners').doc(id).delete();
-
-    res.redirect('/dashboard') // para dirigirnos nuevamente a '/'    
-})
+// router.get('/borrar/:id', (req, res) => {
+//     let id = req.params.id;
+//     db.collection('runners').doc(id).delete().then(async() => {
+//         const request = await db.collection('runners2').get();
+//         const { docs } = request;
+//         const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+//         res.render('dashboard', { title: 'Panel de Control', runners });
+//     });
+// })
 
 /*GET RUNNER*/
 router.get('/runner/:id', async(req, res) => {
     let id = req.params.id;
-    const request = await db.collection('runners').doc(id).get();
+    const request = await db.collection('runners2').doc(id).get();
     const runner = { id: id, data: request.data() }
 
 
@@ -272,12 +314,12 @@ router.get('/runner/:id', async(req, res) => {
 })
 
 /*render dashboard*/
-router.get('/dashboard', async function(req, res, next) {
-    const request = await db.collection('runners').get();
-    const { docs } = request;
-    const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
-    res.render('dashboard', { title: 'Panel de Control', runners });
-});
+// router.get('/dashboard', async function(req, res, next) {
+//     const request = await db.collection('runners2').get();
+//     const { docs } = request;
+//     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+//     res.render('dashboard', { title: 'Panel de Control', runners });
+// });
 
 
 async function sendMail(email, name, distance, runnerNbr) {
