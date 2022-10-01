@@ -212,10 +212,7 @@ router.post('/add-runner', async function(req, res) {
     const request = await db.collection('runners2').get(); //
     const { docs } = request;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
-    var runnersLenght = runners.length;
-
-
-
+    // var runnersLenght = runners.length;
 
     let runnerNbrs = [];
 

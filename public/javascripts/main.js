@@ -180,19 +180,19 @@ nextBtnFirst.addEventListener("click", async() => {
                             var partnerName = 'No';
                             var discount = 0;
 
-                            var partners = await readPartnersJson()
+                            // var partners = await readPartnersJson()
 
 
 
-                            partners.map(partner => {
-                                if (partner.socio == club_id.value) {
-                                    partnerName = 'SI'
-                                    rPrice.value = originalPrice
-                                    discount = Number(rPrice.value) * 0;
-                                    originalPrice = `${(rPrice.value).toString()}`;
-                                    rPrice.value = (Number(rPrice.value) * 1).toString();
-                                }
-                            })
+                            // partners.map(partner => {
+                            //     if (partner.socio == club_id.value) {
+                            //         partnerName = 'SI'
+                            //         rPrice.value = originalPrice
+                            //         discount = Number(rPrice.value) * 0;
+                            //         originalPrice = `${(rPrice.value).toString()}`;
+                            //         rPrice.value = (Number(rPrice.value) * 1).toString();
+                            //     }
+                            // })
 
                             document.getElementById('cat').value = rCat.value;
                             document.getElementById('partnerID').value = partnerName.toString();
