@@ -238,16 +238,16 @@ router.post('/add-runner', async function(req, res) {
 
     switch (cat) {
         case 'Kids':
-            transaction_amount = '1000';
+            transaction_amount = '1150';
             break
         case '5k':
-            transaction_amount = '4700';
+            transaction_amount = '5405';
             break
         case '10k':
-            transaction_amount = '5300';
+            transaction_amount = '6095';
             break
         case '21k':
-            transaction_amount = '5800';
+            transaction_amount = '6670';
             break
     }
 

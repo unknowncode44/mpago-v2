@@ -98,20 +98,20 @@ document.addEventListener("click", e => {
 async function getAmount(_cat) {
     switch (_cat) {
         case 'Kids':
-            amount.value = '1000';
-            amountP.textContent = '1000';
+            amount.value = '1150';
+            amountP.textContent = '1150';
             break
         case '5k':
-            amount.value = '4700';
-            amountP.textContent = '4700';
+            amount.value = '5405';
+            amountP.textContent = '5405';
             break
         case '10k':
-            amount.value = '5300';
-            amountP.textContent = '5300';
+            amount.value = '6095';
+            amountP.textContent = '6095';
             break
         case '21k':
-            amount.value = '5800';
-            amountP.textContent = '5800';
+            amount.value = '6670';
+            amountP.textContent = '6670';
             break
     }
 }
