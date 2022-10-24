@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso</title>
+
+
+    <link rel='stylesheet' href='/stylesheets/partials/responsive.css' />
+    <link rel='stylesheet' href='/stylesheets/partials/responsive.mobile.css' />
+
+    <link rel='stylesheet' href='/stylesheets/partials/login.css' />
+    <link rel='stylesheet' href='/stylesheets/partials/appointments.css' />
+    <!-- Importamos nuestro propio script -->
+    <!-- <script type="module" src="/javascripts/main.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.js" integrity="sha512-Xaje5GN/tSuxnQNdbOMppDPWWpPMN0WGfay1St6ckxBqnm3hB66iVqBbLXmujadwsH9KOUVHJZ3GR9QpAEF1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.extensions.min.js" integrity="sha512-b95VfzeGbNkiv1J9/EwCaZ2dEB0Ny0jk5siyY3rqGUtanNizkHwV0CTE4dXf1qhDlIbPBeDNvtY0CejM7JYoUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.css" integrity="sha512-5MGDCtVeXPQtSGLs2lG9mkb1tWc35ZSaBgJca+YMJxOIgLUaopFR28hmwJCk0W2KR8Ydt7vg3E+KS5XwbNFmMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <!-- Importamos los icons de Ionic -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="app-header">
+        <img src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
+    </div>
+    <div class="app-wrapper">
+        <div class="app-pages1">
+            <div class="app-form" id="dni-form">
+                <h2>Ingresa tu DNI</h2>
+                <div class="input">
+                    <div class="inputBox">
+                        <input type="number" name="dni" placeholder="DNI" id="dni" value="39289597">
+                    </div>
+                    <div class="inputBox">
+                        <br><br><br>
+                        <input type="button" id="btn" onclick="checkDNI()" placeholder="Siguiente" value="Siguiente">
+                    </div>
+
+                </div>
+                <div class="error-text" id="error-text">
+                    <ion-icon class="icon" name="close-circle-outline"></ion-icon><br><br>
+                    <h3>DNI no encontrado</h3><br>
+                    <p>Si ya te inscribiste, podes contactar al equipo de Mari Menuco Run haciendo click <strong><a>acá</a></strong></p><br>
+                    <p>Si no podes inscribirte haciendo click <strong><a>acá</a></strong></p>
+                    <input type="button" id="btn-back" onclick="errorGoBack()" placeholder="Volver" value="Volver">
+                </div>
+
+            </div>
+
+
+            <div class="app-form2" id="appointment-form">
+                <h2>Elije tu turno</h2>
+                <div class="app-days">
+                    <div id="day-1" onclick="dayOneSelect()" class="day-1">
+                        <p>Jueves</p>
+                        <p>03/11/22</p>
+                    </div>
+                    <div id="day-2" onclick="dayTwoSelect()" class="day-2">
+                        <p>Viernes</p>
+                        <p>04/11/22</p>
+                    </div>
+                    <div id="day-3" onclick="dayThreeSelect()" class="day-3">
+                        <p>Sabado</p>
+                        <p>05/11/22</p>
+                    </div>
+                </div>
+
+                <div id="place-1" class="app-place1">
+                    <h3>
+                        <%= appointments1[0].data.place %>
+                    </h3>
+                    <p>
+                        <%= appointments1[0].data.address %>
+                    </p>
+                </div>
+                <div id="place-2" class="app-place2">
+                    <h3>
+                        <%= appointments2[0].data.place %>
+                    </h3>
+                    <p>
+                        <%= appointments2[0].data.address %>
+                    </p>
+                </div>
+                <div id="place-3" class="app-place2">
+                    <h3>
+                        <%= appointments3[0].data.place %>
+                    </h3>
+                    <p>
+                        <%= appointments3[0].data.address %>
+                    </p>
+                </div>
+
+                <div id="appointment-box-1" class="appointment-box-1">
+                    <% appointments1.map(item => { %>
+                        <% if(item.data.status === 'available') { %>
+                            <div id="appointment-btn<%= item.id %>" onclick="selectAppointment('<%= item.id %>')" class="appointment">
+                                <p>
+                                    <%= item.data.time %>
+                                </p>
+                            </div>
+
+                            <% } %>
+                                <% }) %>
+                </div>
+
+                <div id="appointment-box-2" class="appointment-box-2">
+                    <% appointments2.map(item => { %>
+                        <% if(item.data.status === 'available') { %>
+                            <div id="appointment-btn<%= item.id %>" onclick="selectAppointment('<%= item.id %>')" class="appointment">
+                                <p>
+                                    <%= item.data.time %>
+                                </p>
+                            </div>
+
+                            <% } %>
+                                <% }) %>
+                </div>
+
+                <div id="appointment-box-3" class="appointment-box-3">
+                    <% appointments3.map(item => { %>
+                        <% if(item.data.status === 'available') { %>
+                            <div id="appointment-btn<%= item.id %>" onclick="selectAppointment('<%= item.id %>')" class="appointment">
+                                <p>
+                                    <%= item.data.time %>
+                                </p>
+                            </div>
+
+                            <% } %>
+                                <% }) %>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="app-form3" id="field-form">
+                <h2>Ingresa tu DNI</h2>
+                <div class="input">
+                    <div class="inputBox">
+                        <input type="number" name="dni" placeholder="DNI" id="dni">
+                    </div>
+                    <div class="inputBox">
+                        <br><br><br>
+                        <input type="button" id="btn" onclick="checkDNI()" placeholder="Siguiente" value="Siguiente">
+                    </div>
+
+                </div>
+                <div class="error-text" id="error-text">
+                    <ion-icon class="icon" name="close-circle-outline"></ion-icon><br><br>
+                    <h3>DNI no encontrado</h3><br>
+                    <p>Si ya te inscribiste, podes contactar al equipo de Mari Menuco Run haciendo click <strong><a>acá</a></strong></p><br>
+                    <p>Si no podes inscribirte haciendo click <strong><a>acá</a></strong></p>
+                    <input type="button" id="btn-back" onclick="errorGoBack()" placeholder="Volver" value="Volver">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <% 
+    var app1 = appointments1
+    var app2 = appointments2
+    var app3 = appointments3 
+    
+    %>
+        <% var runners = approvedRunnersArray %>
+
+            <p style="display: none;" id="data1">
+                <%= JSON.stringify(app1) %>
+            </p>
+            <p style="display: none;" id="data2">
+                <%= JSON.stringify(app2) %>
+            </p>
+            <p style="display: none;" id="data3">
+                <%= JSON.stringify(app3) %>
+            </p>
+            <p style="display: none;" id="runners">
+                <%= JSON.stringify(runners) %>
+            </p>
+
+            <script>
+                // obtenemos los turnos
+                var app1Str = document.getElementById('data1').textContent;
+                var appointments = JSON.parse(app1Str);
+
+                var app2Str = document.getElementById('data2').textContent;
+                var appointments = JSON.parse(app1Str);
+
+                var app1Str = document.getElementById('data3').textContent;
+                var appointments = JSON.parse(app1Str);
+
+                //obtenemos los corredores
+                var runnersStr = document.getElementById('runners').textContent;
+                var runners = JSON.parse(runnersStr);
+
+                // error dni
+                var formBox = document.getElementById('dni-form');
+                var appFormBox = document.getElementById('appointment-form');
+                var fieldFormBox = document.getElementById('field-form');
+                var dni = document.getElementById('dni')
+                var nextBtn = document.getElementById('btn');
+                var errorText = document.getElementById('error-text')
+
+                function checkDNI() {
+                    let _arr = runners
+                    for (let i = 0; i < _arr.length; i++) {
+                        const e = _arr[i];
+                        let runnerID = e.data.runnerID.toString().replace(/\s/g, '');
+                        if (runnerID === dni.value) {
+                            formBox.classList.add('dni-ok')
+                            appFormBox.classList.add('dni-ok')
+                            fieldFormBox.classList.add('dni-ok')
+                            break
+                        } else {
+                            formBox.classList.add('error')
+                            errorText.classList.add('active')
+                        }
+                    }
+                };
+
+                function errorGoBack() {
+                    formBox.classList.remove('error');
+                    errorText.classList.remove('active');
+                };
+
+                // seleccionar dia
+                var dayBtn1 = document.getElementById('day-1');
+                var dayBtn2 = document.getElementById('day-2');
+                var dayBtn3 = document.getElementById('day-3')
+
+                // lugares
+                var place1 = document.getElementById('place-1');
+                var place2 = document.getElementById('place-2');
+                var place3 = document.getElementById('place-3');
+
+                var appBoxOne = document.getElementById('appointment-box-1');
+                var appBoxTwo = document.getElementById('appointment-box-2');
+                var appBoxThree = document.getElementById('appointment-box-3');
+
+                function dayOneSelect() {
+                    dayBtn2.classList.remove('active');
+                    dayBtn3.classList.remove('active');
+
+                    place2.classList.remove('active');
+                    place3.classList.remove('active');
+
+                    appBoxTwo.classList.remove('active');
+                    appBoxThree.classList.remove('active');
+
+                    dayBtn1.classList.add('active');
+                    place1.classList.add('active');
+                    appBoxOne.classList.add('active');
+
+
+                }
+
+                function dayTwoSelect() {
+                    dayBtn1.classList.remove('active')
+                    dayBtn3.classList.remove('active')
+
+                    place1.classList.remove('active')
+                    place3.classList.remove('active')
+
+                    appBoxOne.classList.remove('active');
+                    appBoxThree.classList.remove('active');
+
+                    dayBtn2.classList.add('active')
+                    place2.classList.add('active')
+                    appBoxTwo.classList.add('active');
+
+
+                }
+
+                function dayThreeSelect() {
+                    dayBtn1.classList.remove('active')
+                    dayBtn2.classList.remove('active')
+
+                    place1.classList.remove('active')
+                    place2.classList.remove('active')
+
+                    appBoxOne.classList.remove('active');
+                    appBoxTwo.classList.remove('active');
+
+                    dayBtn3.classList.add('active')
+                    place3.classList.add('active')
+                    appBoxThree.classList.add('active');
+
+                    // todo show appointment box
+
+                }
+
+                let currentSelection = ''
+
+                function selectAppointment(id) {
+                    var appArr1 = appBoxOne.children
+                    for (var i = 0; i < appArr1.length; i++) {
+                        const e = appArr1[i]
+                        e.classList.remove('active')
+                    }
+
+                    var appArr2 = appBoxTwo.children
+                    for (var i = 0; i < appArr2.length; i++) {
+                        const e = appArr2[i]
+                        e.classList.remove('active')
+                    }
+
+                    var appArr3 = appBoxThree.children
+                    for (var i = 0; i < appArr3.length; i++) {
+                        const e = appArr3[i]
+                        e.classList.remove('active')
+                    }
+                    var appointmentBtn = document.getElementById(`appointment-btn${id}`)
+                    appointmentBtn.classList.add('active')
+                }
+            </script>
+
+
+
+
+</body>
+
+</html>
