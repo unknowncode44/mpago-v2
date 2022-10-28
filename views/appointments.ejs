@@ -36,10 +36,12 @@
 </style>
 
 <body>
-    <div class="app-header">
-        <img src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
+    <div id="app-header" class="app-header">
+        <img id="header-logo" src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
     </div>
     <div class="app-wrapper">
+        <div class="overlay-left"></div>
+        <div class="overlay-right"></div>
         <div class="app-pages1">
             <div class="app-form" id="dni-form">
                 <h2>Ingresa tu DNI</h2>
@@ -117,6 +119,14 @@
 
                             <% } %>
                                 <% }) %>
+
+                                    <div id="next-btn-wrapper1" class="nextBtnWrpr">
+                                        <div class="goBackOneBtn" onclick="returnHome()">Volver</div>
+                                        <div class="nextBtn" onclick="nextThird()">
+                                            <strong id="next-btn1">Siguiente</strong>
+                                            <div id="loader1" class="loader"></div>
+                                        </div>
+                                    </div>
                 </div>
 
                 <div id="appointment-box-2" class="appointment-box-2">
@@ -130,6 +140,13 @@
 
                             <% } %>
                                 <% }) %>
+                                    <div id="next-btn-wrapper2" class="nextBtnWrpr">
+                                        <div class="goBackOneBtn" onclick="returnHome()">Volver</div>
+                                        <div class="nextBtn" onclick="nextThird()">
+                                            <strong id="next-btn2">Siguiente</strong>
+                                            <div id="loader2" class="loader"></div>
+                                        </div>
+                                    </div>
                 </div>
 
                 <div id="appointment-box-3" class="appointment-box-3">
@@ -143,6 +160,13 @@
 
                             <% } %>
                                 <% }) %>
+                                    <div id="next-btn-wrapper3" class="nextBtnWrpr">
+                                        <div class="goBackOneBtn" onclick="returnHome()">Volver</div>
+                                        <div class="nextBtn" onclick="nextThird()">
+                                            <strong id="next-btn3">Siguiente</strong>
+                                            <div id="loader3" class="loader"></div>
+                                        </div>
+                                    </div>
                 </div>
 
 
@@ -151,24 +175,48 @@
 
 
             <div class="app-form3" id="field-form">
-                <h2>Ingresa tu DNI</h2>
-                <div class="input">
-                    <div class="inputBox">
-                        <input type="number" name="dni" placeholder="DNI" id="dni">
+                <h2>Resumen</h2>
+                <ul>
+                    <li><strong>Corredor:</strong>
+                        <p id="runnerUID"></p>
+                    </li>
+                    <li><strong>Nombre:</strong>
+                        <p id="runnerName"></p>
+                    </li>
+                    <li><strong>DNI:</strong>
+                        <p id="runnerID"></p>
+                    </li>
+                    <li><strong>Circuito:</strong>
+                        <p id="cat"></p>
+                        <li><strong>Turno:</strong>
+                            <p id="runnerApp"></p>
+                        </li>
+                        <li><strong>Lugar:</strong>
+                            <p id="runner-app-place"></p>
+                        </li>
+                </ul>
+                <br>
+                <h3>Completa Los siguientes datos de corredor para confirmar turno</h3>
+                <div class="app-input1">
+                    <div class="app-date-input">
+                        <label for="runnerDOB">Fecha Nac.</label>
+                        <input id="dob" name="runnerDOB" type="date">
                     </div>
-                    <div class="inputBox">
-                        <br><br><br>
-                        <input type="button" id="btn" onclick="checkDNI()" placeholder="Siguiente" value="Siguiente">
+                    <div class="app-date-input">
+                        <label for="runnerAge1">Edad</label>
+                        <input id="age" name="runnerAge1" type="number">
                     </div>
 
                 </div>
-                <div class="error-text" id="error-text">
-                    <ion-icon class="icon" name="close-circle-outline"></ion-icon><br><br>
-                    <h3>DNI no encontrado</h3><br>
-                    <p>Si ya te inscribiste, podes contactar al equipo de Mari Menuco Run haciendo click <strong><a>acá</a></strong></p><br>
-                    <p>Si no podes inscribirte haciendo click <strong><a>acá</a></strong></p>
-                    <input type="button" id="btn-back" onclick="errorGoBack()" placeholder="Volver" value="Volver">
+                <div class="app-input2">
+                    <label for="app-email">Email</label>
+                    <input id="email" name="app-email" type="email">
                 </div>
+                <div class="input-btn2">
+                    <div class="return-to-app-btn" onclick="return2()">Volver</div>
+                    <div onclick="registerAppointment()" class="confirm-btn">Confirmar</div>
+                </div>
+
 
             </div>
         </div>
@@ -218,9 +266,15 @@
                 var formBox = document.getElementById('dni-form');
                 var appFormBox = document.getElementById('appointment-form');
                 var fieldFormBox = document.getElementById('field-form');
-                var dni = document.getElementById('dni')
+                var dni = document.getElementById('dni');
+                var header = document.getElementById('app-header');
+                var logo = document.getElementById('header-logo');
                 var nextBtn = document.getElementById('btn');
-                var errorText = document.getElementById('error-text')
+                var errorText = document.getElementById('error-text');
+
+                var user = ''
+                var appday = ''
+                var appointmentS = ''
 
                 function checkDNI() {
                     let _arr = runners
@@ -228,11 +282,16 @@
                         const e = _arr[i];
                         let runnerID = e.data.runnerID.toString().replace(/\s/g, '');
                         if (runnerID === dni.value) {
+                            user = e.id
+                            formBox.classList.remove('error')
+                            errorText.classList.remove('active')
+
                             formBox.classList.add('dni-ok')
                             appFormBox.classList.add('dni-ok')
                             fieldFormBox.classList.add('dni-ok')
                             break
                         } else {
+                            user = '';
                             formBox.classList.add('error')
                             errorText.classList.add('active')
                         }
@@ -240,6 +299,7 @@
                 };
 
                 function errorGoBack() {
+                    user = '';
                     formBox.classList.remove('error');
                     errorText.classList.remove('active');
                 };
@@ -258,7 +318,13 @@
                 var appBoxTwo = document.getElementById('appointment-box-2');
                 var appBoxThree = document.getElementById('appointment-box-3');
 
+                var nextBtnWrapper1 = document.getElementById('next-btn-wrapper1');
+                var nextBtnWrapper2 = document.getElementById('next-btn-wrapper2');
+                var nextBtnWrapper3 = document.getElementById('next-btn-wrapper3');
+
                 function dayOneSelect() {
+                    appday = '';
+                    appday = 'app1';
                     dayBtn2.classList.remove('active');
                     dayBtn3.classList.remove('active');
 
@@ -268,14 +334,23 @@
                     appBoxTwo.classList.remove('active');
                     appBoxThree.classList.remove('active');
 
+                    nextBtnWrapper1.classList.remove('active');
+                    nextBtnWrapper2.classList.remove('active');
+                    nextBtnWrapper3.classList.remove('active');
+
+
                     dayBtn1.classList.add('active');
                     place1.classList.add('active');
                     appBoxOne.classList.add('active');
+                    header.classList.add('active')
+                    logo.classList.add('active')
 
 
                 }
 
                 function dayTwoSelect() {
+                    appday = '';
+                    appday = 'app2';
                     dayBtn1.classList.remove('active')
                     dayBtn3.classList.remove('active')
 
@@ -285,14 +360,23 @@
                     appBoxOne.classList.remove('active');
                     appBoxThree.classList.remove('active');
 
+                    nextBtnWrapper1.classList.remove('active');
+                    nextBtnWrapper2.classList.remove('active');
+                    nextBtnWrapper3.classList.remove('active');
+
+
                     dayBtn2.classList.add('active')
                     place2.classList.add('active')
                     appBoxTwo.classList.add('active');
+                    header.classList.add('active')
+                    logo.classList.add('active')
 
 
                 }
 
                 function dayThreeSelect() {
+                    appday = '';
+                    appday = 'app3';
                     dayBtn1.classList.remove('active')
                     dayBtn2.classList.remove('active')
 
@@ -302,17 +386,25 @@
                     appBoxOne.classList.remove('active');
                     appBoxTwo.classList.remove('active');
 
+                    nextBtnWrapper1.classList.remove('active');
+                    nextBtnWrapper2.classList.remove('active');
+                    nextBtnWrapper3.classList.remove('active');
+
                     dayBtn3.classList.add('active')
                     place3.classList.add('active')
                     appBoxThree.classList.add('active');
+                    header.classList.add('active')
+                    logo.classList.add('active')
 
-                    // todo show appointment box
 
                 }
 
                 let currentSelection = ''
 
                 function selectAppointment(id) {
+                    appointmentS = '';
+                    appointmentS = id;
+                    nextBtnWrapper1.classList.remove('active');
                     var appArr1 = appBoxOne.children
                     for (var i = 0; i < appArr1.length; i++) {
                         const e = appArr1[i]
@@ -331,7 +423,200 @@
                         e.classList.remove('active')
                     }
                     var appointmentBtn = document.getElementById(`appointment-btn${id}`)
-                    appointmentBtn.classList.add('active')
+                    appointmentBtn.classList.add('active');
+                    if (appBoxOne.classList.contains('active')) {
+                        nextBtnWrapper2.classList.remove('active');
+                        nextBtnWrapper3.classList.remove('active');
+                        nextBtnWrapper1.classList.add('active');
+                    }
+                    if (appBoxTwo.classList.contains('active')) {
+                        nextBtnWrapper1.classList.remove('active');
+                        nextBtnWrapper3.classList.remove('active');
+                        nextBtnWrapper2.classList.add('active');
+                    }
+                    if (appBoxThree.classList.contains('active')) {
+                        nextBtnWrapper1.classList.remove('active');
+                        nextBtnWrapper2.classList.remove('active');
+                        nextBtnWrapper3.classList.add('active');
+                    }
+
+                }
+
+                async function returnHome() {
+
+                    formBox.classList.remove('error')
+                    errorText.classList.remove('active')
+                    formBox.classList.remove('dni-ok')
+                    appFormBox.classList.remove('dni-ok')
+                    fieldFormBox.classList.remove('dni-ok')
+                    nextBtnWrapper1.classList.remove('active');
+                    nextBtnWrapper2.classList.remove('active');
+                    nextBtnWrapper3.classList.remove('active');
+
+                    formBox.classList.add('return')
+                    appFormBox.classList.add('return')
+                    fieldFormBox.classList.add('return')
+
+                    setTimeout(() => removeReturn(), 1000)
+
+                    function removeReturn() {
+                        formBox.classList.remove('return')
+                        appFormBox.classList.remove('return')
+                        fieldFormBox.classList.remove('return')
+                        header.classList.remove('active')
+                        logo.classList.remove('active')
+                    }
+
+
+                    appday = ''
+                    user = ''
+                    appointmentS = ''
+                    dni.value = dni.value;
+
+                }
+                var runnerUID = document.getElementById('runnerUID');
+                var runnerName = document.getElementById('runnerName');
+                var runner_ID = document.getElementById('runnerID');
+                var runnerCat = document.getElementById('cat');
+                var runnerApp = document.getElementById('runnerApp');
+                var runnerAppPlace = document.getElementById('runner-app-place');
+
+                var nextBtn1 = document.getElementById('next-btn1');
+                var nextBtn2 = document.getElementById('next-btn2');
+                var nextBtn3 = document.getElementById('next-btn3');
+
+                var loader1 = document.getElementById('loader1');
+                var loader2 = document.getElementById('loader2');
+                var loader3 = document.getElementById('loader3');
+
+                async function nextThird() {
+                    console.log(appday + ' ' + user + ' ' + appointmentS)
+
+                    nextBtn1.style.display = 'none'
+                    loader1.classList.add('active')
+
+                    nextBtn2.style.display = 'none'
+                    loader2.classList.add('active')
+
+                    nextBtn3.style.display = 'none'
+                    loader3.classList.add('active')
+
+                    await fetch(`http://localhost:3040/turnos/findUser?userID=${user}&appointmentID=${appointmentS}&day=${appday}`)
+                        .then(response => response.json())
+                        .then((data) => {
+                            console.log(data);
+                            let _dni = ''
+                            if (data.user._fieldsProto.runnerID.valueType === 'integerValue') {
+                                _dni = data.user._fieldsProto.runnerID.integerValue.toString()
+                            } else {
+                                _dni = data.user._fieldsProto.runnerID.stringValue.toString()
+                            }
+                            runnerUID.textContent = data.user._fieldsProto.runnerUID.integerValue.toString();
+                            runnerName.textContent = data.user._fieldsProto.name.stringValue.toString();
+                            runner_ID.textContent = _dni;
+                            runnerCat.textContent = data.user._fieldsProto.catValue.stringValue.toString();
+                            runnerApp.textContent = `${data.appointment._fieldsProto.date.stringValue.toString()} a las ${data.appointment._fieldsProto.time.stringValue.toString().slice(0, -3)}`
+                            runnerAppPlace.textContent = data.appointment._fieldsProto.place.stringValue.toString()
+
+                            formBox.classList.remove('error')
+
+                            formBox.classList.add('app-ok')
+                            appFormBox.classList.add('app-ok')
+                            fieldFormBox.classList.add('app-ok')
+
+                            nextBtn1.style.display = 'flex'
+                            loader1.classList.remove('active')
+
+                            nextBtn2.style.display = 'flex'
+                            loader2.classList.remove('active')
+
+                            nextBtn3.style.display = 'flex'
+                            loader3.classList.remove('active')
+
+
+
+                        })
+
+                }
+
+                async function registerAppointment() {
+
+                    var email = document.getElementById('email')
+                    var dob = document.getElementById('dob')
+                    var age = document.getElementById('age')
+                    if (dob.value === '') {
+                        alert('Fecha de Nacimiento es Necesaria')
+                    } else {
+                        if (age.value === '') {
+                            alert('Edad es Necesaria')
+                        } else {
+                            if (email.value === '') {
+                                alert('Email es necesario')
+                            } else {
+                                if (!validateEmail(email.value)) {
+                                    alert('Email invalido')
+                                } else {
+                                    await fetch(`http://localhost:3040/turnos/confirm?userID=${user}&appID=${appointmentS}&email=${email.value}&dob=${dob.value}&age=${age.value}&day=${appday}`, {
+                                            method: 'POST',
+                                        })
+                                        .then(
+                                            response => console.log(response)
+                                        )
+
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    /*
+
+                    esto deberia hacer: 
+                    un POST, con los datos del turno elegido. 
+                    un update de los datos del corredor si no estan.
+                    mandar un mail de confirmacion
+                    renderizar una pantalla de confirmacion
+                    o renderizar una pantalla de error
+
+                    */
+
+
+                }
+
+                const validateEmail = (email) => {
+                    return String(email)
+                        .toLowerCase()
+                        .match(
+                            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+                        );
+                };
+
+                function return2() {
+
+                    runnerUID.textContent = '';
+                    runnerName.textContent = '';
+                    runner_ID.textContent = '';
+                    runnerCat.textContent = '';
+                    runnerApp.textContent = '';
+                    runnerAppPlace.textContent = '';
+
+
+                    formBox.classList.remove('app-ok')
+                    appFormBox.classList.remove('app-ok')
+                    fieldFormBox.classList.remove('app-ok')
+
+
+                    formBox.classList.add('return2')
+                    appFormBox.classList.add('return2')
+                    fieldFormBox.classList.add('return2')
+
+
+                    formBox.classList.remove('return2')
+                    appFormBox.classList.remove('return2')
+                    fieldFormBox.classList.remove('return2')
+                    dni.value = dni.value;
+
                 }
             </script>
 

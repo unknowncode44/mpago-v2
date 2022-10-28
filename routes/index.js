@@ -98,8 +98,8 @@ async function clean(appointment) {
 }
 
 
-async function giveAppointment(appID, runnerID) {
-    await db.collection('app2').doc(appID).update({ status: 'given', runner: runnerID })
+async function giveAppointment(appID, runnerID, day) {
+    await db.collection(day).doc(appID).update({ status: 'given', runner: runnerID })
 }
 
 
@@ -109,6 +109,7 @@ var fs = require('fs');
 var util = require('util');
 const { json } = require('express');
 const { getApp } = require('firebase-admin/app');
+const { async } = require('rsvp');
 
 var log_file_err = fs.createWriteStream('./logs/error.log', { flags: 'a' });
 
@@ -168,9 +169,7 @@ router.get('/turnos', async(req, res) => {
     const app2 = await getAppointments('app2')
     const app3 = await getAppointments('app3')
 
-    console.log(app1.length);
-    console.log(app2.length);
-    console.log(app3.length);
+
 
     var appointments1 = []
     for (let i = 0; i < app1.length; i++) {
@@ -200,29 +199,114 @@ router.get('/turnos', async(req, res) => {
     const { docs } = requestRunners;
     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
     let approvedRunnersArray = []
+    let lenght = 0
     for (let i = 0; i < runners.length; i++) {
         const e = runners[i];
+
         if (e.data.status == 'approved') {
             approvedRunnersArray.push(e)
+            lenght++
         }
+
     }
 
+    appointments1.sort((a, b) => {
+        let fa = a.data.time;
+        let fb = b.data.time;
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    });
 
+    appointments2.sort((a, b) => {
+        let fa = a.data.time;
+        let fb = b.data.time;
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    });
+
+    appointments3.sort((a, b) => {
+        let fa = a.data.time;
+        let fb = b.data.time;
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    });
+
+    console.log(lenght.toString())
 
     res.render('appointments', { appointments1, appointments2, appointments3, approvedRunnersArray })
 })
 
+router.get('/turnos/findUser', async(req, res) => {
+    const { userID, appointmentID, day } = req.query;
+    var appointment = await db.collection(day).doc(appointmentID).get();
+    var user = await db.collection('runners2').doc(userID).get();
 
-
-router.post('/appointments/confirm', async(req, res) => {
-    const { appID, userID } = req.body
-    try {
-        await giveAppointment(appID, userID).then(
-            res.sendStatus(200)
-        )
-    } catch (e) {
-        res.sendStatus(404)
+    if (appointment && user) {
+        res.status(200).json({ appointment: appointment, user: user })
+    } else {
+        res.status(404)
     }
+
+})
+
+
+
+router.post('/turnos/confirm', async(req, res) => {
+    console.log(req.query)
+    const { appID, userID, age, dob, email, day } = req.query
+    var doc = {}
+    await db.collection('runners2').doc(userID).get().then(
+        data => {
+            doc = data
+        }
+    )
+    var _age = doc._fieldsProto.runnerAge.stringValue
+    var _email = doc._fieldsProto.email.stringValue
+    var _dob = doc._fieldsProto.runnerBirthDate.stringValue
+
+    if (_email === '-') {
+        console.log('reemplazar email');
+        await db.collection('runners2').doc(userID).update({ email: email });
+    }
+
+    if (_age === '-') {
+        console.log('reemplazar age');
+        await db.collection('runners2').doc(userID).update({ runnerAge: age });
+    }
+
+    if (_dob === '-') {
+        console.log('reemplazar dob');
+        await db.collection('runners2').doc(userID).update({ runnerBirthDate: dob });
+    }
+
+    await giveAppointment(appID, userID, day).then(
+        res.sendStatus(200)
+    )
+
+
+
+    // try {
+    //     await giveAppointment(appID, userID).then(
+    //         res.sendStatus(200)
+    //     )
+    // } catch (e) {
+    //     res.sendStatus(404)
+    // }
 })
 
 router.get('/test', async(req, res) => {
