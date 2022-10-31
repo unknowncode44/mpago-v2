@@ -113,6 +113,7 @@ async function getAmount(_cat) {
             amount.value = '6670';
             amountP.textContent = '6670';
             break
+
     }
 }
 
@@ -173,7 +174,7 @@ nextBtnFirst.addEventListener("click", async() => {
                     alert('Debes indicar un genero!')
                 } else {
                     if (rCat.value == '') {
-                        alert('Debes Elegir una Distancia!')
+                        alert('La Inscripcion esta cerrada!')
                     } else {
                         var validEmail = validateEmail(rEmail.value)
                         if (validEmail) {
@@ -263,7 +264,7 @@ prevBtnSec.addEventListener("click", function(event) {
 });
 
 // ## Crear Categorias ##
-var categories = ['', '5k', '10k', '21k'] // listamos las categorias
+var categories = ['', '', '', ''] // listamos las categorias
 var select = document.getElementById('categoriesSelect') // identificamos el elemento select del html
 
 

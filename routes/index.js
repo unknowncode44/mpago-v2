@@ -132,7 +132,7 @@ var fs = require('fs');
 var util = require('util');
 const { json } = require('express');
 const { getApp } = require('firebase-admin/app');
-const { async } = require('rsvp');
+
 
 var log_file_err = fs.createWriteStream('./logs/error.log', { flags: 'a' });
 
