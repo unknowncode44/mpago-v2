@@ -75,7 +75,6 @@ let arrext = []
 
 async function getAppointments(day) {
     let apparr = []
-    await db.collection(day).orderBy("time", "asc")
     const request = await db.collection(day).get();
     const { docs } = request;
     const getAppointments = docs.map(runner => ({ id: runner.id, data: runner.data() }));
@@ -90,7 +89,25 @@ async function getAppointments(day) {
     return apparr
 }
 
+// getAppointments('app3').then(async(array) => {
+//     for (let i = 0; i < array.length; i++) {
+//         const e = array[i];
+//         if (e.data.status === 'given') {
+//             await resetAppointment(e.id, 'app3').then(() => {
+//                 console.log(`${e.id} modificado`);
+//             })
+//         }
+//     }
+// })
 
+
+// getAppointments('app3').then((_app1) => {
+//     for (let i = 0; i < _app1.length; i++) {
+//         const e = _app1[i];
+//         resetAppointment(e.id, 'app3').then(() => console.log('actualizado'))
+
+//     }
+// })
 
 
 async function clean(appointment) {
@@ -101,6 +118,12 @@ async function clean(appointment) {
 async function giveAppointment(appID, runnerID, day) {
     await db.collection(day).doc(appID).update({ status: 'given', runner: runnerID })
 }
+
+async function resetAppointment(appID, day) {
+    await db.collection(day).doc(appID).update({ status: 'available', runner: 'x' })
+}
+
+
 
 
 //guardando logs
@@ -268,16 +291,82 @@ router.get('/turnos/findUser', async(req, res) => {
 
 router.post('/turnos/confirm', async(req, res) => {
     console.log(req.query)
-    const { appID, userID, age, dob, email, day } = req.query
-    var doc = {}
-    await db.collection('runners2').doc(userID).get().then(
-        data => {
-            doc = data
-        }
-    )
+    const { appID, userID, age, dob, email, day, rApp } = req.query
+    var doc = await db.collection('runners2').doc(userID).get()
+
     var _age = doc._fieldsProto.runnerAge.stringValue
     var _email = doc._fieldsProto.email.stringValue
     var _dob = doc._fieldsProto.runnerBirthDate.stringValue
+
+    if (rApp !== '') {
+        const app1 = await getAppointments('app1')
+        const app2 = await getAppointments('app2')
+        const app3 = await getAppointments('app3')
+
+
+
+        var appointments1 = []
+        for (let i = 0; i < app1.length; i++) {
+            const e = app1[i];
+            var f = e;
+            f.data.time = e.data.time.slice(0, -3);
+            appointments1.push(f);
+        }
+
+        var appointments2 = []
+        for (let i = 0; i < app2.length; i++) {
+            const e = app2[i];
+            var f = e;
+            f.data.time = e.data.time.slice(0, -3);
+            appointments2.push(f);
+        }
+
+        var appointments3 = []
+        for (let i = 0; i < app3.length; i++) {
+            const e = app3[i];
+            var f = e;
+            f.data.time = e.data.time.slice(0, -3);
+            appointments3.push(f);
+        }
+
+        appointments1.concat(appointments2)
+        appointments1.concat(appointments3)
+        console.log(appointments1.length);
+
+        for (let i = 0; i < appointments1.length; i++) {
+            const e = appointments1[i];
+            let dayR = '';
+            for (let t = 0; t < app1.length; t++) {
+                const y = app1[t];
+                if (y.id === e.id) {
+                    dayR = 'app1'
+                    break
+                }
+            }
+            for (let t = 0; t < app2.length; t++) {
+                const y = app2[t];
+                if (y.id === e.id) {
+                    dayR = 'app2'
+                    break
+                }
+            }
+            for (let t = 0; t < app3.length; t++) {
+                const y = app3[t];
+                if (y.id === e.id) {
+                    dayR = 'app3'
+                    break
+                }
+            }
+            if (rApp === e.data.runner) {
+                console.log('encontrado');
+                db.collection(dayR).doc(e.id).update({ runner: 'x', status: 'available' })
+                break
+            }
+
+
+        }
+
+    }
 
     if (_email === '-') {
         console.log('reemplazar email');
@@ -294,20 +383,21 @@ router.post('/turnos/confirm', async(req, res) => {
         await db.collection('runners2').doc(userID).update({ runnerBirthDate: dob });
     }
 
-    await giveAppointment(appID, userID, day).then(
-        res.sendStatus(200)
-    )
+    await db.collection('runners2').doc(userID).set({ apppointment: appID }, { merge: true })
+        .then(async() => {
+            var appDoc = await db.collection(day).doc(appID).get();
+            await giveAppointment(appID, userID, day)
+                .then(async() => {
+                    await sendAppConfirmation(email, appDoc._fieldsProto)
+                }).then(() => {
+                    res.sendStatus(200)
+                });
+
+        })
 
 
-
-    // try {
-    //     await giveAppointment(appID, userID).then(
-    //         res.sendStatus(200)
-    //     )
-    // } catch (e) {
-    //     res.sendStatus(404)
-    // }
 })
+
 
 router.get('/test', async(req, res) => {
     res.render('mail')
@@ -323,9 +413,76 @@ router.post('/check-mail', async(req, res) => {
     if (mail === process.env.MAILSECURE) {
         if (password === process.env.PASSWORDSECURE) {
             const request = await db.collection('runners2').get();
-            const { docs } = request;
-            const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
-            res.render('dashboard', { title: 'Panel de Control', runners });
+            let arr = [];
+            await getAppointments('app1').then((array) => {
+                array.sort((a, b) => {
+                    let fa = a.data.time;
+                    let fb = b.data.time;
+                    if (fa < fb) {
+                        return -1;
+                    }
+                    if (fa > fb) {
+                        return 1;
+                    }
+                    return 0;
+                })
+                arr = array
+            }).then(async() => {
+                await getAppointments('app2').then((array2) => {
+                    array2.sort((a, b) => {
+                        let fa = a.data.time;
+                        let fb = b.data.time;
+                        if (fa < fb) {
+                            return -1;
+                        }
+                        if (fa > fb) {
+                            return 1;
+                        }
+                        return 0;
+                    })
+                    for (let i = 0; i < array2.length; i++) {
+                        const e = array2[i];
+                        arr.push(e)
+                    }
+                })
+            }).then(async() => {
+                await getAppointments('app3').then((array3) => {
+                    array3.sort((a, b) => {
+                        let fa = a.data.time;
+                        let fb = b.data.time;
+                        if (fa < fb) {
+                            return -1;
+                        }
+                        if (fa > fb) {
+                            return 1;
+                        }
+                        return 0;
+                    })
+                    for (let i = 0; i < array3.length; i++) {
+                        const e = array3[i];
+                        arr.push(e)
+                    }
+                }).then(() => {
+                    const { docs } = request;
+                    const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
+                    runners.sort((a, b) => {
+                        let fa = a.data.runnerUID;
+                        let fb = b.data.runnerUID;
+                        if (fa < fb) {
+                            return -1;
+                        }
+                        if (fa > fb) {
+                            return 1;
+                        }
+                        return 0;
+                    })
+                    res.render('dashboard', { title: 'Panel de Control', runners, arr });
+                })
+            })
+
+
+
+
         } else {
             res.render('error')
         }
@@ -544,6 +701,57 @@ router.get('/runner/:id', async(req, res) => {
 //     const runners = docs.map(runner => ({ id: runner.id, data: runner.data() }));
 //     res.render('dashboard', { title: 'Panel de Control', runners });
 // });
+
+async function sendAppConfirmation(email, appointment) {
+
+    try {
+        await transporter.sendMail({
+            from: `"Mari Menuco Run" <${process.env.EMAIL}>`,
+            to: email,
+            subject: "Confirmacion de Turno",
+            text: 'Confirmación de turno',
+            html: `<div class="flex-container">
+            <div class="flex-items">
+                <h3>Turno Confirmado</h3>
+            </div>
+            <div class="flex-items">
+                <h4>Tu Turno esta confirmado!</h4>
+            </div>
+            <div class="flex-items horizontal-flex">
+                <div class="hflex-items">
+                </div>
+                <div class="hflex-items">
+                    <p>
+                        Hola, confirmamos tu turno para retirar el kit para el dia: ${appointment.date.stringValue} a las ${appointment.time.stringValue} en ${appointment.place.stringValue}, ${appointment.address.stringValue}.
+                        <br><br>
+                        <span>Equipo de <a href="mmrun.com.ar">Mari Menuco Run</a></span>
+                    </p>
+                </div>
+                <div class="hflex-items">
+    
+                </div>
+            </div>
+            <br><br>
+            <br><br>
+            <div class="flex-items">
+                <div class="flex-footer-container">
+    
+                    <div class="flex-footer-items">
+                        <img src="cid:mmrun" alt="" width="200px">
+                    </div>
+    
+                    <div class="flex-footer-items">
+                        <p>Desarrollado por <strong><a href="https://www.facebook.com/HighValleyDevelopers">HV Devs</a></strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>`
+        })
+
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 async function sendMail(email, name, distance, runnerNbr) {
