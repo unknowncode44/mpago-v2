@@ -263,7 +263,7 @@ prevBtnSec.addEventListener("click", function(event) {
 });
 
 // ## Crear Categorias ##
-var categories = ['', 'Kids', '5k', '10k', '21k'] // listamos las categorias
+var categories = ['', '5k', '10k', '21k'] // listamos las categorias
 var select = document.getElementById('categoriesSelect') // identificamos el elemento select del html
 
 
