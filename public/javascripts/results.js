@@ -5,6 +5,7 @@ const uidInputR = document.getElementById('res_uid_r');
 const nameInput = document.getElementById('res_name');
 const nameInputR = document.getElementById('res_name_r');
 const circuitSelect = document.getElementById('res_cat');
+const circuitSelectR = document.getElementById('res_catR');
 const sortSelect = document.getElementById('sort_by');
 const rfilterresp = document.getElementById('rfilter_resp');
 const seeFilters = document.getElementById('seeFilters')
@@ -184,13 +185,13 @@ function filterByRUidR() {
 
 function filterByName() {
     let _value = nameInput.value
-    _value.toLowerCase();
+    let val = _value.toLowerCase();
     console.log(_value);
     if (_value === '') {
         alert('Ingresa Nombre Completo')
     } else {
         var filtered = parsedResults.filter(item => (
-            item.data.corredor.toString().toLowerCase().includes(_value)
+            item.data.corredor.toLowerCase().indexOf(val) > -1
         ));
         if (filtered.length === 0) {
             loadTableData(empty)
@@ -203,13 +204,13 @@ function filterByName() {
 
 function filterByNameR() {
     let _value = nameInputR.value
-    _value.toLowerCase();
-    console.log(_value);
+    let val = _value.toLowerCase();
+    console.log(val);
     if (_value === '') {
         alert('Ingresa Nombre Completo')
     } else {
-        var filtered = parsedResults.filter(item => (
-            item.data.corredor.toString().toLowerCase().includes(_value)
+        let filtered = parsedResults.filter(item => (
+            item.data.corredor.toString().toLowerCase().indexOf(val) > -1
         ));
         if (filtered.length === 0) {
             loadUlData(empty)
@@ -231,11 +232,27 @@ function filterByCircuit() {
             item.data.general === _value
         ));
         if (filtered.length === 0) {
-            loadUlData(empty)
             loadTableData(empty)
         } else {
-            loadUlData(filtered)
             loadTableData(filtered)
+        }
+    }
+
+}
+
+function filterByCircuitR() {
+    let _value = circuitSelectR.value
+    console.log(_value);
+    if (_value === '') {
+        alert('Circuito no puede quedar vacio')
+    } else {
+        var filtered = parsedResults.filter(item => (
+            item.data.general === _value
+        ));
+        if (filtered.length === 0) {
+            loadUlData(empty)
+        } else {
+            loadUlData(filtered)
         }
     }
     collapseMenu()
