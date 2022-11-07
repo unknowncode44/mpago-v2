@@ -38,26 +38,31 @@
                 <img id="header-logo" src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
             </div>
         </div>
-        <div class="results_filter_resp">
+        <br>
+        <p id="seeFilters" style="margin: 5px 0px 0px 0px; display: none; font-weight:500; color: var(--primary); text-decoration: underline; font-size: 18px; text-transform:uppercase" onclick="showMenu()">Ver filtros
+            <ion-icon name="funnel"></ion-icon>
+        </p>
+        <div id="rfilter_resp" class="results_filter_resp">
 
             <div class="results_filter_options_wrapper">
+
                 <div class="input_uid">
                     <div class="res_input">
                         <label for="res_uid">Numero de Corredor</label>
-                        <input type="text" id="res_uid" placeholder="Nro. Corredor">
+                        <input type="text" id="res_uid_r" placeholder="Nro. Corredor">
                     </div>
                     <div class="res_btn">
-                        <div class="btn_search" id="res_uid_btn" onclick="filterByRUid()">Buscar</div>
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByRUidR()">Buscar</div>
                     </div>
                 </div>
 
                 <div class="input_uid">
                     <div class="res_input">
-                        <label for="res_uid">Nombre Completo</label>
-                        <input type="text" id="res_name" placeholder="Nombre Completo">
+                        <label for="res_name_r">Nombre Completo</label>
+                        <input type="text" id="res_name_r" placeholder="Nombre Completo">
                     </div>
                     <div class="res_btn">
-                        <div class="btn_search" id="res_uid_btn" onclick="filterByName()">Buscar</div>
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByNameR()">Buscar</div>
                     </div>
                 </div>
 
@@ -149,7 +154,6 @@
                     <div class="res_select">
                         <label for="res_cat">Filtrar por Circuito</label>
                         <select id="res_cat" placeholder="DNI">
-                            <option value="Kids">Kids</option>
                             <option value="5K">5K</option>
                             <option value="10K">10K</option>
                             <option value="21K">21K</option>
@@ -189,7 +193,7 @@
 
             </div>
         </div>
-
+        <p onclick="reset()" style="width: 1400px; text-align: end; margin: 4px 0px 4px 0px; font-weight: 500; text-transform: uppercase; color: var(--primary); font-style:italic">Limpiar Filtros</p>
         <div class="results-table">
             <div class="table-wrapper">
                 <p id="results_array" style="display: none;">

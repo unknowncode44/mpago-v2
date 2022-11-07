@@ -1,9 +1,14 @@
 var results = document.getElementById('results_array').textContent;
 const tableBody = document.getElementById('table_body');
 const uidInput = document.getElementById('res_uid');
+const uidInputR = document.getElementById('res_uid_r');
 const nameInput = document.getElementById('res_name');
+const nameInputR = document.getElementById('res_name_r');
 const circuitSelect = document.getElementById('res_cat');
 const sortSelect = document.getElementById('sort_by');
+const rfilterresp = document.getElementById('rfilter_resp');
+const seeFilters = document.getElementById('seeFilters')
+var collapsed = false;
 var parsedResults = JSON.parse(results)
 
 
@@ -139,6 +144,26 @@ parsedResults.forEach(item => {
 // filtering
 function filterByRUid() {
     let _value = uidInput.value
+    console.log(_value.value);
+    if (_value === '') {
+        alert('Ingresa Numero')
+    } else {
+        var filtered = parsedResults.filter(item => (
+            item.data.dorsal.toString() === _value
+        ));
+        if (filtered.length === 0) {
+
+            loadTableData(empty)
+        } else {
+
+            loadTableData(filtered)
+        }
+    }
+
+}
+
+function filterByRUidR() {
+    let _value = uidInputR.value
     if (_value === '') {
         alert('Ingresa Numero')
     } else {
@@ -147,12 +172,13 @@ function filterByRUid() {
         ));
         if (filtered.length === 0) {
             loadUlData(empty)
-            loadTableData(empty)
+
         } else {
             loadUlData(filtered)
-            loadTableData(filtered)
+
         }
     }
+    collapseMenu();
 
 }
 
@@ -167,13 +193,31 @@ function filterByName() {
             item.data.corredor.toString().toLowerCase() === _value
         ));
         if (filtered.length === 0) {
-            loadUlData(empty)
             loadTableData(empty)
         } else {
-            loadUlData(filtered)
             loadTableData(filtered)
         }
     }
+
+}
+
+function filterByNameR() {
+    let _value = nameInputR.value
+    _value.toLowerCase();
+    console.log(_value);
+    if (_value === '') {
+        alert('Ingresa Nombre Completo')
+    } else {
+        var filtered = parsedResults.filter(item => (
+            item.data.corredor.toString().toLowerCase() === _value
+        ));
+        if (filtered.length === 0) {
+            loadUlData(empty)
+        } else {
+            loadUlData(filtered)
+        }
+    }
+    collapseMenu()
 
 }
 
@@ -194,6 +238,7 @@ function filterByCircuit() {
             loadTableData(filtered)
         }
     }
+    collapseMenu()
 
 }
 
@@ -212,39 +257,51 @@ function sortBy() {
     switch (sortSelect.value) {
         case "ta":
             sortByTimeA()
+            collapseMenu()
             break;
         case "td":
             sortByTimeD()
+            collapseMenu()
             break;
         case "rua":
             sortByRunnerUIDA()
+            collapseMenu()
             break;
         case "rud":
             sortByRunnerUIDD()
+            collapseMenu()
             break;
         case "nom":
             sortByNameA()
+            collapseMenu()
             break;
         case "cit":
             sortByCity()
+            collapseMenu()
             break;
         case "gena":
             sortByPosGA()
+            collapseMenu()
             break;
         case "gend":
             sortByPosGD()
+            collapseMenu()
             break;
         case "gencata":
             sortByPosCA()
+            collapseMenu()
             break;
         case "gencatd":
             sortByPosCD()
+            collapseMenu()
             break;
         case "gensexa":
             sortByPosSA()
+            collapseMenu()
             break;
         case "gensexd":
             sortByPosSD()
+            collapseMenu()
             break;
     }
 
@@ -264,7 +321,7 @@ function sortByTimeA() {
     })
     tableBody.innerHTML = ''
     respUl.innerHTML = ''
-    loadUlData(filtered)
+    loadUlData(parsedResults)
     loadTableData(parsedResults)
 }
 
@@ -503,9 +560,21 @@ function reset() {
     parsedResults = JSON.parse(results);
     tableBody.innerHTML = '';
     loadTableData(parsedResults);
+    loadUlData(parsedResults)
 
 }
 
 loadTableData(parsedResults);
 
 loadUlData(parsedResults);
+
+function collapseMenu() {
+    seeFilters.style.display = 'block'
+    rfilterresp.classList.add('active')
+}
+
+function showMenu() {
+    reset()
+    seeFilters.style.display = 'none'
+    rfilterresp.classList.remove('active')
+}

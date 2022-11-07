@@ -66,6 +66,15 @@ body {
         justify-content: center;
         align-items: center;
         padding: 1rem 0px;
+        transition: 0.5s;
+    }
+    .results_filter_resp.active {
+        display: none;
+        transition: 0.5s;
+    }
+    .results_filter_resp.active .results_filter_options_wrapper {
+        display: none !important;
+        transition: 0.5s;
     }
     .results_filter_resp .results_filter_options_wrapper {
         min-height: 100px;
@@ -82,6 +91,11 @@ body {
         background: var(--primary);
         border-radius: 15px;
         color: white;
+        transition: 0.5s;
+    }
+    .results_filter_resp.active .results_filter_options_wrapper .input_uid {
+        display: none;
+        transition: 0.5s;
     }
     .results_filter_resp .results_filter_options_wrapper .input_uid {
         display: flex;
@@ -254,7 +268,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0px;
+    padding: 1rem 0px 0px 0px;
 }
 
 .results_filters .results_filter_options_wrapper {
