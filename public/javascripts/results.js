@@ -190,7 +190,7 @@ function filterByName() {
         alert('Ingresa Nombre Completo')
     } else {
         var filtered = parsedResults.filter(item => (
-            item.data.corredor.toString().toLowerCase() === _value
+            item.data.corredor.toString().toLowerCase().includes(_value)
         ));
         if (filtered.length === 0) {
             loadTableData(empty)
@@ -209,7 +209,7 @@ function filterByNameR() {
         alert('Ingresa Nombre Completo')
     } else {
         var filtered = parsedResults.filter(item => (
-            item.data.corredor.toString().toLowerCase() === _value
+            item.data.corredor.toString().toLowerCase().includes(_value)
         ));
         if (filtered.length === 0) {
             loadUlData(empty)
