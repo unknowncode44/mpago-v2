@@ -3,7 +3,7 @@ const { app } = require('firebase-admin');
 require('dotenv').config()
 var router = express.Router();
 var db = require('../config/firebase-config')
-var dbf = require('../public/inscr.json')
+var dbf = require('../public/results_final2.json')
 var mercadopago = require('mercadopago');
 var nodemailer = require("nodemailer")
 var datefns = require("date-fns")
@@ -15,14 +15,16 @@ mercadopago.configurations.setAccessToken(process.env.TOKEN); //Token MP - La cu
 // for (let i = 0; i < dbf.length; i++) {
 //     const e = dbf[i];
 //     loadData(e).then(() => {
-//         console.log(`${e.name} cargado correctamente`);
+//         console.log(`${e.dorsal} cargado correctamente`);
 //     })
 
 // }
 
 // async function loadData(runner) {
-//     await db.collection('runners2').add(runner)
+//     await db.collection('results_final').add(runner)
 // }
+
+
 
 
 var firstDay = datefns.format(new Date(2022, 10, 3), 'dd.MM.yy');
@@ -284,6 +286,30 @@ router.get('/turnos/findUser', async(req, res) => {
     } else {
         res.status(404)
     }
+
+})
+
+
+
+router.get('/results', async(req, res) => {
+    var request = await db.collection('results_final').get();
+    const { docs } = request
+    var results = docs.map(result => ({ id: result.id, data: result.data() }));
+
+    results.sort((a, b) => {
+        let fa = a.data.tiempo_bruto;
+        let fb = b.data.tiempo_bruto;
+        if (fa < fb) {
+            return -1;
+        }
+        if (fa > fb) {
+            return 1;
+        }
+        return 0;
+    })
+
+    res.render('positions', { results })
+
 
 })
 
@@ -579,7 +605,6 @@ function validateError(error) {
 
     return { errorMessage, errorStatus };
 }
-
 
 
 
