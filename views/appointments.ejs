@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso</title>
+    <title>Turnos - MMRun</title>
 
 
     <link rel='stylesheet' href='/stylesheets/partials/responsive.css' />
@@ -50,8 +50,10 @@
                         <input type="number" name="dni" placeholder="DNI" id="dni" value="39289597">
                     </div>
                     <div class="inputBox">
-                        <br><br><br>
+                        <br><br>
                         <input type="button" id="btn" onclick="checkDNI()" placeholder="Siguiente" value="Siguiente">
+                        <br>
+                        <div id="loader-home" class="loader-home"></div>
                     </div>
 
                 </div>
@@ -60,6 +62,21 @@
                     <h3>DNI no encontrado</h3><br>
                     <p>Si ya te inscribiste, podes contactar al equipo de Mari Menuco Run haciendo click <strong><a>acá</a></strong></p><br>
                     <p>Si no podes inscribirte haciendo click <strong><a>acá</a></strong></p>
+                    <input type="button" id="btn-back" onclick="errorGoBack()" placeholder="Volver" value="Volver">
+                </div>
+                <div class="error-text-h" id="has-appointment">
+                    <ion-icon class="icon" name="close-circle-outline"></ion-icon><br><br>
+                    <h3>Ya tienes un turno registrado:</h3><br>
+                    <br>
+                    <p><strong>Fecha: </strong><span id="h-app-date"></span></p>
+                    <p><strong>Hora: </strong><span id="h-app-time"></span></p>
+                    <p><strong>Lugar: </strong><span id="h-app-place"></span></p>
+                    <p><strong>Direccion: </strong><span id="h-app-address"></span></p>
+                    <br>
+                    <br>
+                    <p onclick="changeApp()"><strong>Cambiar turno</strong></p>
+                    <br>
+                    <br>
                     <input type="button" id="btn-back" onclick="errorGoBack()" placeholder="Volver" value="Volver">
                 </div>
 
@@ -99,7 +116,7 @@
                         <%= appointments2[0].data.address %>
                     </p>
                 </div>
-                <div id="place-3" class="app-place2">
+                <div id="place-3" class="app-place3">
                     <h3>
                         <%= appointments3[0].data.place %>
                     </h3>
@@ -107,6 +124,7 @@
                         <%= appointments3[0].data.address %>
                     </p>
                 </div>
+
 
                 <div id="appointment-box-1" class="appointment-box-1">
                     <% appointments1.map(item => { %>
@@ -168,6 +186,9 @@
                                         </div>
                                     </div>
                 </div>
+                <br>
+                <p id="return-home-p" onclick="returnHome()"><strong>Volver</strong></p>
+
 
 
 
@@ -175,6 +196,14 @@
 
 
             <div class="app-form3" id="field-form">
+                <div class="confirmation-msg">
+                    <h2>Confirmado</h2>
+                    <ion-icon class="icon" name="checkmark-circle-outline"></ion-icon><br><br>
+                    <h3>Ya Confirmamos tu turno</h3><br>
+                    <p>Recibiras un mail de confirmación a: <strong id="mail-confirmed"></strong></p><br>
+                    <p>Si querés sacar un turno para otro corredor hace click <strong><a href="/turnos">acá</a></strong></p>
+                    <br><br>
+                </div>
                 <h2>Resumen</h2>
                 <ul>
                     <li><strong>Corredor:</strong>
@@ -212,9 +241,12 @@
                     <label for="app-email">Email</label>
                     <input id="email" name="app-email" type="email">
                 </div>
-                <div class="input-btn2">
+                <div id="input-btn-tn" class="input-btn2">
                     <div class="return-to-app-btn" onclick="return2()">Volver</div>
-                    <div onclick="registerAppointment()" class="confirm-btn">Confirmar</div>
+                    <div onclick="registerAppointment()" class="confirm-btn">
+                        <span id="success-confirm-text">Confirmar</span>
+                        <div id="loader-success" class="loader"></div>
+                    </div>
                 </div>
 
 
@@ -250,19 +282,34 @@
             <script>
                 // obtenemos los turnos
                 var app1Str = document.getElementById('data1').textContent;
-                var appointments = JSON.parse(app1Str);
+                var appointments1 = JSON.parse(app1Str);
 
                 var app2Str = document.getElementById('data2').textContent;
-                var appointments = JSON.parse(app1Str);
+                var appointments2 = JSON.parse(app2Str);
 
-                var app1Str = document.getElementById('data3').textContent;
-                var appointments = JSON.parse(app1Str);
+                var app3Str = document.getElementById('data3').textContent;
+                var appointments3 = JSON.parse(app3Str);
+
+                let arraymrg1 = appointments1.concat(appointments2)
+                let arrAppComplete = arraymrg1.concat(appointments3)
+
+                var confirmedAppointments = []
+
+                arrAppComplete.map((appointment) => {
+                    if (appointment.data.status === 'given') {
+                        confirmedAppointments.push(appointment)
+                    }
+                })
+
+                console.log(confirmedAppointments)
 
                 //obtenemos los corredores
                 var runnersStr = document.getElementById('runners').textContent;
                 var runners = JSON.parse(runnersStr);
 
                 // error dni
+                var loaderhome = document.getElementById('loader-home');
+                var loaderSuccess = document.getElementById('loader-success');
                 var formBox = document.getElementById('dni-form');
                 var appFormBox = document.getElementById('appointment-form');
                 var fieldFormBox = document.getElementById('field-form');
@@ -271,37 +318,99 @@
                 var logo = document.getElementById('header-logo');
                 var nextBtn = document.getElementById('btn');
                 var errorText = document.getElementById('error-text');
+                var errorTextApp = document.getElementById('has-appointment');
 
-                var user = ''
-                var appday = ''
-                var appointmentS = ''
+
+                var returnHomeP = document.getElementById('return-home-p')
+
+                var user = '';
+                var appday = '';
+                var appointmentS = '';
+                var oldApp = '';
 
                 function checkDNI() {
+                    loaderhome.classList.add('active')
                     let _arr = runners
-                    for (let i = 0; i < _arr.length; i++) {
-                        const e = _arr[i];
-                        let runnerID = e.data.runnerID.toString().replace(/\s/g, '');
-                        if (runnerID === dni.value) {
-                            user = e.id
-                            formBox.classList.remove('error')
-                            errorText.classList.remove('active')
+                    setTimeout(() => {
 
-                            formBox.classList.add('dni-ok')
-                            appFormBox.classList.add('dni-ok')
-                            fieldFormBox.classList.add('dni-ok')
-                            break
-                        } else {
-                            user = '';
-                            formBox.classList.add('error')
-                            errorText.classList.add('active')
+                        for (let i = 0; i < _arr.length; i++) {
+                            const e = _arr[i];
+                            let runnerID = e.data.runnerID.toString().replace(/\s/g, '');
+                            if (runnerID === dni.value) {
+                                if (!e.data.apppointment) {
+                                    user = e.id
+                                    loaderhome.classList.remove('active');
+                                    formBox.classList.remove('error');
+                                    errorText.classList.remove('active');
+                                    errorTextApp.classList.remove('active');
+
+                                    formBox.classList.add('dni-ok')
+                                    appFormBox.classList.add('dni-ok')
+                                    fieldFormBox.classList.add('dni-ok')
+
+                                    break
+                                } else {
+                                    console.log(e.id)
+                                    for (let r = 0; r < confirmedAppointments.length; i++) {
+                                        t = confirmedAppointments[r]
+                                        if (t.id = e.id) {
+                                            user = t.id;
+                                            document.getElementById('h-app-date').textContent = t.data.date
+                                            document.getElementById('h-app-time').textContent = t.data.time
+                                            document.getElementById('h-app-place').textContent = t.data.place
+                                            document.getElementById('h-app-address').textContent = t.data.address
+                                            oldApp = t.id
+                                            console.log(t.id)
+                                            break
+                                        }
+                                    }
+                                    loaderhome.classList.remove('active')
+                                    formBox.classList.add('error')
+                                    errorTextApp.classList.add('active')
+
+                                    break
+                                }
+
+                            } else {
+                                user = '';
+                                setTimeout(() => {
+                                    if (!errorTextApp.classList.contains('active')) {
+                                        loaderhome.classList.remove('active')
+                                        formBox.classList.add('error')
+                                        errorText.classList.add('active')
+                                    }
+
+                                }, 600)
+
+                            }
                         }
-                    }
+
+                    }, 600)
+
+
                 };
+
+                function changeApp() {
+                    loaderhome.classList.remove('active');
+                    formBox.classList.remove('error');
+                    errorText.classList.remove('active');
+                    errorTextApp.classList.remove('active');
+
+                    formBox.classList.add('dni-ok')
+                    appFormBox.classList.add('dni-ok')
+                    fieldFormBox.classList.add('dni-ok')
+
+                    loaderhome.classList.remove('active')
+                    formBox.classList.add('error')
+                    errorTextApp.classList.add('active')
+                }
 
                 function errorGoBack() {
                     user = '';
+                    oldApp = '';
                     formBox.classList.remove('error');
                     errorText.classList.remove('active');
+                    errorTextApp.classList.remove('active')
                 };
 
                 // seleccionar dia
@@ -323,6 +432,7 @@
                 var nextBtnWrapper3 = document.getElementById('next-btn-wrapper3');
 
                 function dayOneSelect() {
+                    returnHomeP.style.display = 'none';
                     appday = '';
                     appday = 'app1';
                     dayBtn2.classList.remove('active');
@@ -349,6 +459,7 @@
                 }
 
                 function dayTwoSelect() {
+                    returnHomeP.style.display = 'none';
                     appday = '';
                     appday = 'app2';
                     dayBtn1.classList.remove('active')
@@ -375,6 +486,7 @@
                 }
 
                 function dayThreeSelect() {
+                    returnHomeP.style.display = 'none';
                     appday = '';
                     appday = 'app3';
                     dayBtn1.classList.remove('active')
@@ -442,13 +554,32 @@
 
                 }
 
+
+
                 async function returnHome() {
 
                     formBox.classList.remove('error')
                     errorText.classList.remove('active')
                     formBox.classList.remove('dni-ok')
                     appFormBox.classList.remove('dni-ok')
+                    errorTextApp.classList.remove('active')
                     fieldFormBox.classList.remove('dni-ok')
+                    nextBtnWrapper1.classList.remove('active');
+                    nextBtnWrapper2.classList.remove('active');
+                    nextBtnWrapper3.classList.remove('active');
+
+                    dayBtn1.classList.remove('active');
+                    dayBtn2.classList.remove('active');
+                    dayBtn3.classList.remove('active');
+
+                    place1.classList.remove('active');
+                    place2.classList.remove('active');
+                    place3.classList.remove('active');
+
+                    appBoxOne.classList.remove('active');
+                    appBoxTwo.classList.remove('active');
+                    appBoxThree.classList.remove('active');
+
                     nextBtnWrapper1.classList.remove('active');
                     nextBtnWrapper2.classList.remove('active');
                     nextBtnWrapper3.classList.remove('active');
@@ -457,7 +588,7 @@
                     appFormBox.classList.add('return')
                     fieldFormBox.classList.add('return')
 
-                    setTimeout(() => removeReturn(), 1000)
+                    setTimeout(() => removeReturn(), 500)
 
                     function removeReturn() {
                         formBox.classList.remove('return')
@@ -485,6 +616,8 @@
                 var nextBtn2 = document.getElementById('next-btn2');
                 var nextBtn3 = document.getElementById('next-btn3');
 
+
+
                 var loader1 = document.getElementById('loader1');
                 var loader2 = document.getElementById('loader2');
                 var loader3 = document.getElementById('loader3');
@@ -501,7 +634,7 @@
                     nextBtn3.style.display = 'none'
                     loader3.classList.add('active')
 
-                    await fetch(`http://localhost:3040/turnos/findUser?userID=${user}&appointmentID=${appointmentS}&day=${appday}`)
+                    await fetch(`http://mmrun.com.ar//turnos/findUser?userID=${user}&appointmentID=${appointmentS}&day=${appday}`)
                         .then(response => response.json())
                         .then((data) => {
                             console.log(data);
@@ -511,7 +644,15 @@
                             } else {
                                 _dni = data.user._fieldsProto.runnerID.stringValue.toString()
                             }
-                            runnerUID.textContent = data.user._fieldsProto.runnerUID.integerValue.toString();
+
+                            let _uid = ''
+                            if (data.user._fieldsProto.runnerUID.valueType === 'integerValue') {
+                                _uid = data.user._fieldsProto.runnerUID.integerValue.toString()
+                            } else {
+                                _uid = data.user._fieldsProto.runnerUID.stringValue.toString()
+                            }
+
+                            runnerUID.textContent = _uid;
                             runnerName.textContent = data.user._fieldsProto.name.stringValue.toString();
                             runner_ID.textContent = _dni;
                             runnerCat.textContent = data.user._fieldsProto.catValue.stringValue.toString();
@@ -544,6 +685,9 @@
                     var email = document.getElementById('email')
                     var dob = document.getElementById('dob')
                     var age = document.getElementById('age')
+
+
+
                     if (dob.value === '') {
                         alert('Fecha de Nacimiento es Necesaria')
                     } else {
@@ -556,12 +700,21 @@
                                 if (!validateEmail(email.value)) {
                                     alert('Email invalido')
                                 } else {
-                                    await fetch(`http://localhost:3040/turnos/confirm?userID=${user}&appID=${appointmentS}&email=${email.value}&dob=${dob.value}&age=${age.value}&day=${appday}`, {
+                                    document.getElementById('success-confirm-text').style.display = 'none';
+                                    loaderSuccess.classList.add('active');
+                                    await fetch(`http://mmrun.com.ar/turnos/confirm?userID=${user}&appID=${appointmentS}&email=${email.value}&dob=${dob.value}&age=${age.value}&day=${appday}&rApp=${oldApp}`, {
                                             method: 'POST',
                                         })
-                                        .then(
-                                            response => console.log(response)
-                                        )
+                                        .then((response) => {
+                                            setTimeout(() => {
+                                                document.getElementById('mail-confirmed').textContent = email.value
+                                                document.getElementById('input-btn-tn').style.display = 'none';
+                                                document.getElementById('success-confirm-text').style.display = 'flex';
+                                                loaderSuccess.classList.remove('active');
+                                                fieldFormBox.classList.add('confirmed')
+                                                console.log(response)
+                                            }, 500)
+                                        })
 
                                 }
                             }
@@ -569,17 +722,6 @@
                         }
 
                     }
-
-                    /*
-
-                    esto deberia hacer: 
-                    un POST, con los datos del turno elegido. 
-                    un update de los datos del corredor si no estan.
-                    mandar un mail de confirmacion
-                    renderizar una pantalla de confirmacion
-                    o renderizar una pantalla de error
-
-                    */
 
 
                 }

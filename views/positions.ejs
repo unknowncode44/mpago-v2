@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posiciones - MMRun</title>
+
+
+    <link rel='stylesheet' href='/stylesheets/partials/responsive.css' />
+    <link rel='stylesheet' href='/stylesheets/partials/responsive.mobile.css' />
+
+    <link rel='stylesheet' href='/stylesheets/partials/results.css' />
+    <!-- Importamos nuestro propio script -->
+    <!-- <script type="module" src="/javascripts/main.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.js" integrity="sha512-Xaje5GN/tSuxnQNdbOMppDPWWpPMN0WGfay1St6ckxBqnm3hB66iVqBbLXmujadwsH9KOUVHJZ3GR9QpAEF1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.extensions.min.js" integrity="sha512-b95VfzeGbNkiv1J9/EwCaZ2dEB0Ny0jk5siyY3rqGUtanNizkHwV0CTE4dXf1qhDlIbPBeDNvtY0CejM7JYoUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.10/fullpage.min.css" integrity="sha512-5MGDCtVeXPQtSGLs2lG9mkb1tWc35ZSaBgJca+YMJxOIgLUaopFR28hmwJCk0W2KR8Ydt7vg3E+KS5XwbNFmMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,900;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+        eruda.init();
+    </script>
+
+    <!-- Importamos los icons de Ionic -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="results_wrapper">
+        <div class="results_header">
+            <div class="header_logo">
+                <img id="header-logo" src="/images/MMR2022/MMR-Isotipo-Negativo.png" alt="">
+            </div>
+        </div>
+        <br>
+        <p id="seeFilters" style="margin: 5px 0px 0px 0px; display: none; font-weight:500; color: var(--primary); text-decoration: underline; font-size: 18px; text-transform:uppercase" onclick="showMenu()">Ver filtros
+            <ion-icon name="funnel"></ion-icon>
+        </p>
+        <div id="rfilter_resp" class="results_filter_resp">
+
+            <div class="results_filter_options_wrapper">
+
+                <div class="input_uid">
+                    <div class="res_input">
+                        <label for="res_uid">Numero de Corredor</label>
+                        <input type="text" id="res_uid_r" placeholder="Nro. Corredor">
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByRUidR()">Buscar</div>
+                    </div>
+                </div>
+
+                <div class="input_uid">
+                    <div class="res_input">
+                        <label for="res_name_r">Nombre o Apellido</label>
+                        <input type="text" id="res_name_r" placeholder="Nombre o Apellido">
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByNameR()">Buscar</div>
+                    </div>
+                </div>
+
+
+                <div class="input_uid">
+                    <div class="res_select">
+                        <label for="res_cat">Filtrar por Circuito</label>
+                        <select id="res_catR" placeholder="DNI">
+                            <option value=""></option>
+                            <option value="5K">5K</option>
+                            <option value="10K">10K</option>
+                            <option value="21K">21K</option>
+                        </select>
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_cat_btn" onclick="filterByCircuitR()">Filtrar</div>
+                    </div>
+                </div>
+
+                <div class="input_uid">
+                    <div class="res_select">
+                        <label for="res_cat">Ordenar por</label>
+                        <select id="sort_by" placeholder="DNI">
+                            <option value="ta">Tiempo Asc.</option>
+                            <option value="td">Tiempo Desc.</option>
+                            <option value="rua">Numero Corr. Asc.</option>
+                            <option value="rud">Numero Corr. Desc..</option>
+                            <option value="gena">Posicion General Asc.</option>
+                            <option value="gend">Posicion General Desc</option>
+                            <option value="gencata">Posicion Categ. Asc.</option>
+                            <option value="gencatd">Posicion Categ. Desc.</option>
+                            <option value="gensexa">Posicion Sexo Asc.</option>
+                            <option value="gensexd">Posicion Sexo Desc.</option>
+                            <option value="nom">Nombre Alfabetico</option>
+                            <option value="cit">Localidad Alfabetico</option>
+                            
+                        </select>
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_cat_btn" onclick="sortBy()">Ordenar</div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="results_table_resp">
+            <div class="rt_header">
+                <div>Dorsal</div>
+                <div>Corredor </div>
+                <div>General</div>
+                <div>Ver</div>
+            </div>
+            <div class="list-wrapper">
+                <ul id="ul_results_table_resp">
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="results_filters">
+            <div class="results_filter_options_wrapper">
+                <div class="input_uid">
+                    <div class="res_input">
+                        <label for="res_uid">Numero de Corredor</label>
+                        <input type="text" id="res_uid" placeholder="Nro. Corredor">
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByRUid()">Buscar</div>
+                    </div>
+                </div>
+
+                <div class="input_uid">
+                    <div class="res_input">
+                        <label for="res_uid">Nombre o Apellido</label>
+                        <input type="text" id="res_name" placeholder="Nombre o Apellido">
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_uid_btn" onclick="filterByName()">Buscar</div>
+                    </div>
+                </div>
+
+
+                <div class="input_uid">
+                    <div class="res_select">
+                        <label for="res_cat">Filtrar por Circuito</label>
+                        <select id="res_cat" placeholder="DNI">
+                            <option value=""></option>
+                            <option value="5K">5K</option>
+                            <option value="10K">10K</option>
+                            <option value="21K">21K</option>
+                        </select>
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_cat_btn" onclick="filterByCircuit()">Filtrar</div>
+                    </div>
+                </div>
+
+                <div class="input_uid">
+                    <div class="res_select">
+                        <label for="res_cat">Ordenar por</label>
+                        <select id="sort_by" placeholder="DNI">
+                            <option value="ta">Tiempo Asc.</option>
+                            <option value="td">Tiempo Desc.</option>
+                            <option value="rua">Numero Corr. Asc.</option>
+                            <option value="rud">Numero Corr. Desc..</option>
+                            <option value="gena">Posicion General Asc.</option>
+                            <option value="gend">Posicion General Desc</option>
+                            <option value="gencata">Posicion Categ. Asc.</option>
+                            <option value="gencatd">Posicion Categ. Desc.</option>
+                            <option value="gensexa">Posicion Sexo Asc.</option>
+                            <option value="gensexd">Posicion Sexo Desc.</option>
+                            <option value="nom">Nombre Alfabetico</option>
+                            <option value="cit">Localidad Alfabetico</option>
+                            
+                        </select>
+                    </div>
+                    <div class="res_btn">
+                        <div class="btn_search" id="res_cat_btn" onclick="sortBy()">Ordenar</div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <p onclick="reset()" style="width: 1400px; text-align: end; margin: 4px 0px 4px 0px; font-weight: 500; text-transform: uppercase; color: var(--primary); font-style:italic">Limpiar Filtros</p>
+        <div class="results-table">
+            <div class="table-wrapper">
+                <p id="results_array" style="display: none;">
+                    <%= JSON.stringify(results) %>
+                </p>
+
+                <table>
+
+                    <thead>
+                        <th scope="col">Dorsal</th>
+                        <th scope="col">Corredor</th>
+                        <th scope="col">General</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">General Sexo</th>
+                        <th scope="col">Tiempo Bruto</th>
+                        <th scope="col">Posicion Categ.</th>
+                        <th scope="col">Posicion Gral.</th>
+                        <th scope="col">Posicion Sexo</th>
+                        <th scope="col">Tiempo Neto</th>
+                    </thead>
+
+                    <tbody id="table_body">
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/results.js"></script>
+</body>
+
+</html>
