@@ -363,6 +363,7 @@
                             <th scope="col">Lugar</th>
                             <th scope="col">Estado</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Nro Corredor</th>
                         </thead>
 
                         <tbody>
@@ -370,47 +371,52 @@
                                 <% let status = ''%>
                                     <% if(item.data.status === 'given'){ %>
                                         <% let name = '' %>
-                                            <% runners.map(item2 => { %>
-                                                <% if(item2.id === item.data.runner){ %>
-                                                    <% name = item2.data.name } %>
-                                                        <% }) %>
-                                                            <tr class="table-success p-0">
-                                                                <th scope="row">
-                                                                    <%= item.data.date %>
-                                                                </th>
-                                                                <td>
-                                                                    <%= item.data.time %>
-                                                                </td>
-                                                                <td>
-                                                                    <%= item.data.place %>
-                                                                </td>
-                                                                <td>
-                                                                    Reservado
-                                                                </td>
-                                                                <td>
-                                                                    <%= name %>
-                                                                </td>
-                                                            </tr>
-                                                            <% } else { %>
-                                                                <tr class="table p-0">
-                                                                    <th scope="row">
-                                                                        <%= item.data.date %>
-                                                                    </th>
-                                                                    <td>
-                                                                        <%= item.data.time %>
-                                                                    </td>
-                                                                    <td>
-                                                                        <%= item.data.place %>
-                                                                    </td>
-                                                                    <td>
-                                                                        Disponible
-                                                                    </td>
-                                                                    <td>
-                                                                        <%= status %>
-                                                                    </td>
-                                                                </tr>
-                                                                <% } %>
-                                                                    <% })%>
+                                            <% let nro = '' %>
+                                                <% runners.map(item2 => { %>
+                                                    <% if(item2.id === item.data.runner){ %>
+                                                        <% name = item2.data.name  %>
+                                                            <% nro = item2.data.runnerUID } %>
+                                                                <% }) %>
+                                                                    <tr class="table-success p-0">
+                                                                        <th scope="row">
+                                                                            <%= item.data.date %>
+                                                                        </th>
+                                                                        <td>
+                                                                            <%= item.data.time %>
+                                                                        </td>
+                                                                        <td>
+                                                                            <%= item.data.place %>
+                                                                        </td>
+                                                                        <td>
+                                                                            Reservado
+                                                                        </td>
+                                                                        <td>
+                                                                            <%= name %>
+                                                                        </td>
+                                                                        <td>
+                                                                            <%= nro %>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <% } else { %>
+                                                                        <tr class="table p-0">
+                                                                            <th scope="row">
+                                                                                <%= item.data.date %>
+                                                                            </th>
+                                                                            <td>
+                                                                                <%= item.data.time %>
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= item.data.place %>
+                                                                            </td>
+                                                                            <td>
+                                                                                Disponible
+                                                                            </td>
+                                                                            <td>
+                                                                                <%= status %>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <% } %>
+                                                                            <% })%>
                         </tbody>
 
                     </table>
