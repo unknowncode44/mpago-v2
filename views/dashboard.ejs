@@ -57,14 +57,24 @@
         
         .table {
             overflow-x: auto;
+            max-width: 100%;
+            table-layout: fixed;
         }
         
         .table thead th {
-            font-size: 12px;
+            font-size: 16px;
         }
         
         .table tbody td {
-            font-size: 12px;
+            font-size: 18px;
+            word-wrap: break-word;
+        }
+        
+        @media (max-width: 1770px) {
+            .table tbody td {
+                font-size: 14px;
+                word-wrap: break-word;
+            }
         }
         
         .wrapper {
@@ -149,7 +159,8 @@
         }
         
         .wrapper .content .table-wrapper {
-            max-width: 100%;
+            padding: 1rem 2rem;
+            max-width: calc(100%);
             max-height: 95%;
             overflow: auto;
             border: 1px solid var(--white);
@@ -172,7 +183,6 @@
                 <ul>
                     <li onclick="showRunners()">Corredores</li>
                     <li onclick="showAppointments()">Turnos</li>
-                    <li>Posiciones</li>
                 </ul>
             </div>
         </div>
@@ -187,9 +197,9 @@
                         <thead>
                             <th scope="col" onclick="sortTable(0)">#</th>
                             <th scope="col">Distancia</th>
-                            <th scope="col">Genero</th>
+
                             <th scope="col">Edad</th>
-                            <th scope="col">Fecha de nacimiento</th>
+                            <th scope="col">Fecha-Nac</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">DNI</th>
                             <th scope="col">Talle</th>
@@ -209,9 +219,7 @@
                                         <td>
                                             <%= item.data.catValue %>
                                         </td>
-                                        <td>
-                                            <%= item.data.runnerGenre %>
-                                        </td>
+
                                         <td>
                                             <%= item.data.runnerAge %>
                                         </td>
@@ -241,16 +249,7 @@
                                                 <!-- acciones -->
                                                 <td class="py-1">
                                                     <div class="row p-0 m-0">
-                                                        <div class="col p-0 m-0">
-                                                            <div class="btn btn-primary">
-                                                                <ion-icon name="settings-outline"></ion-icon>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col p-0 m-0">
-                                                            <div class="btn btn-success">
-                                                                <ion-icon name="mail-outline"></ion-icon>
-                                                            </div>
-                                                        </div>
+
                                                         <div class="col p-0 m-0">
                                                             <div class="btn btn-danger">
                                                                 <a href="borrar/<%= item.id %>">
@@ -271,9 +270,7 @@
                                             <td>
                                                 <%= item.data.catValue %>
                                             </td>
-                                            <td>
-                                                <%= item.data.runnerGenre %>
-                                            </td>
+
                                             <td>
                                                 <%= item.data.runnerAge %>
                                             </td>
@@ -327,16 +324,7 @@
 
                                                                                             <td class="py-1">
                                                                                                 <div class="row p-0 m-0">
-                                                                                                    <div class="col p-0 m-0">
-                                                                                                        <div class="btn btn-primary">
-                                                                                                            <ion-icon name="settings-outline"></ion-icon>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                    <div class="col p-0 m-0">
-                                                                                                        <div class="btn btn-success">
-                                                                                                            <ion-icon name="mail-outline"></ion-icon>
-                                                                                                        </div>
-                                                                                                    </div>
+
                                                                                                     <div class="col p-0 m-0">
                                                                                                         <div class="btn btn-danger">
                                                                                                             <a href="borrar/<%= item.id %>">
