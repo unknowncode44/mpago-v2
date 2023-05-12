@@ -1,5 +1,4 @@
 var express = require('express');
-const { app } = require('firebase-admin');
 require('dotenv').config()
 var router = express.Router();
 
@@ -401,7 +400,7 @@ router.post('/check-mail', async(req, res) => {
         if (password === process.env.PASSWORDSECURE) {
 
             // obtenemos los usuarios 
-            const request = await db.collection('runners2').get();
+            const request = await db.collection('runnersTest').get();
             let arr = [];
 
             // y los turnos y los ordenamos

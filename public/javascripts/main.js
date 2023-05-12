@@ -63,7 +63,6 @@ var amount = document.getElementById('transactionAmount') // precio
 var amountP = document.getElementById('transactionP')
 
 // MODAL TALLES
-
 const openEls = document.querySelectorAll("[data-open]");
 var isVisible = "is-visible";
 
@@ -181,10 +180,9 @@ nextBtnFirst.addEventListener("click", async() => {
                             var partnerName = 'No';
                             var discount = 0;
 
+                            // aca haciamos la comprobacion del numero de usuario
+
                             // var partners = await readPartnersJson()
-
-
-
                             // partners.map(partner => {
                             //     if (partner.socio == club_id.value) {
                             //         partnerName = 'SI'
@@ -264,7 +262,7 @@ prevBtnSec.addEventListener("click", function(event) {
 });
 
 // ## Crear Categorias ##
-var categories = ['', '', '', ''] // listamos las categorias
+var categories = ['Kids', '5k', '10k', '20k'] // listamos las categorias
 var select = document.getElementById('categoriesSelect') // identificamos el elemento select del html
 
 
